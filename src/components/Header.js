@@ -15,37 +15,7 @@ const Header = () => {
   return (
     <header className="header">
       {/* Top Bar with Logo and Social Links */}
-      <div className="top-bar bg-dark text-white py-2">
-        <Container>
-          <Row className="align-items-center">
-            <Col md={6}>
-              <Link to="/" className="navbar-brand">
-                <img 
-                  src="https://globalinfluencershub.com/wp-content/uploads/2025/01/PNG-01-300x101.png" 
-                  alt="Global Influencers Hub" 
-                  height="50"
-                  className="logo"
-                />
-              </Link>
-            </Col>
-            <Col md={6} className="text-end">
-              <div className="social-links">
-                {socialLinks.map((social) => (
-                  <a 
-                    key={social.id}
-                    href={social.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="social-link me-3"
-                  >
-                    <i className={social.icon}></i>
-                  </a>
-                ))}
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+     
 
       {/* Main Navigation */}
       <Navbar 
@@ -110,12 +80,12 @@ const Header = () => {
         }
         
         .main-nav {
-          background: linear-gradient(135deg, #f4891d 0%, #f68b1f 100%) !important;
+          background: linear-gradient(135deg,rgb(251, 251, 251) 0%,rgb(255, 255, 255) 100%) !important;
           box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .nav-link {
-          color: white !important;
+          color:  #1e3c72 !important;
           font-weight: 500;
           padding: 1rem 1.5rem !important;
           transition: all 0.3s ease;

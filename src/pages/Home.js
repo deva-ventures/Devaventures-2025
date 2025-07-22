@@ -1,12 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import "../App.css";
-import { Container, Row, Col,Card, Button, Image} from 'react-bootstrap';
+import { Container, Row, Col,Card, Button, Image,Navbar,Nav,} from 'react-bootstrap';
+import { Link, useLocation } from 'react-router-dom';
+import { navigationData } from '../data/mockData';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+ 
+import Header from '../components/Header';
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const headingStyle = {
     fontSize: 'clamp(2.5rem, 6vw, 6rem)',
     fontWeight: 'bold',
     letterSpacing: '-1px',
+    color: '#0f3052'
   };
 
   const courses = [
@@ -14,25 +25,25 @@ const Home = () => {
       title: "Learn UI Design with Figma from Scratch",
       instructor: "Daniele Buffa",
       score: "4.9/5",
-      image: "/grid1.jpg", // Replace with your actual path or public folder
+      image: "/grid1.png", // Replace with your actual path or public folder
     },
     {
       title: "Nordic Design Intensive Course: Complete Branding",
       instructor: "Hmmm Creative Studio",
       score: "5/5",
-      image: "/grid2.jpg",
+      image: "/grid2.png",
     },
     {
       title: "Innovative Web Design in Figma: A Step-by-Step Process",
       instructor: "Louis Paquet",
       score: "5/5",
-      image: "/grid3.webp",
+      image: "/grid3.png",
     },
     {
       title: "Learn Figma from 0 to 100 (10 Courses)",
       instructor: "Mirko Santangelo",
       score: "5/5",
-      image: "/grid4.jpg",
+      image: "/grid1.png",
     },
   ];
   
@@ -85,11 +96,97 @@ const Home = () => {
     },
   ];
 
+
+  const images = [
+    { src: 'f1.png', link: 'https://example.com/page1' },
+    { src: '/f2.png', link: 'https://example.com/page2' },
+    { src: '/f3.png', link: 'https://example.com/page3' },
+    { src: '/f1.png', link: 'https://example.com/page4' },
+    { src: '/f2.png', link: 'https://example.com/page5' },
+    { src: '/f3.png', link: 'https://example.com/page6' },
+  ];
+
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 768 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 768, min: 0 },
+      items: 1,
+    },
+  };
+
+
+  const videos = [
+    { src: '/video1.mp4', link: 'https://example.com/1' },
+    { src: '/video2.mp4', link: 'https://example.com/2' },
+    { src: '/video3.mp4', link: 'https://example.com/3' },
+    { src: '/video1.mp4', link: 'https://example.com/4' },
+    { src: '/video2.mp4', link: 'https://example.com/5' },
+    { src: '/video3.mp4', link: 'https://example.com/3' },
+    { src: '/video1.mp4', link: 'https://example.com/1' },
+    { src: '/video2.mp4', link: 'https://example.com/2' },
+    { src: '/video3.mp4', link: 'https://example.com/3' },
+    { src: '/video1.mp4', link: 'https://example.com/1' },
+    { src: '/video2.mp4', link: 'https://example.com/2' },
+    { src: '/video3.mp4', link: 'https://example.com/3' },
+  ];
+
+  const settings = {
+    infinite: true,
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '0px',
+        },
+      },
+    ],
+  };
+
+
+
+  const [expanded, setExpanded] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
+
   return (
     <>
     <div className="bg-light ">
     {/* Header */}
-    <header className="d-flex justify-content-between align-items-center px-4 py-3 bg-white border-bottom sticky-top">
+
+
+    <Header/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {/* <header className="d-flex justify-content-between align-items-center px-4 py-3 bg-white border-bottom sticky-top">
       <div className="d-flex align-items-center gap-4">
         <span className="fs-4 fw-bold">W.</span>
         <nav className="d-none d-md-flex gap-3 text-muted">
@@ -113,28 +210,21 @@ const Home = () => {
         <button className="btn btn-dark btn-sm">Be Pro</button>
         <button className="btn btn-outline-secondary btn-sm">Submit Website</button>
       </div>
-    </header>
+    </header> */}
 
-    {/* SOTD Box */}
-    <div className="position-absolute top-0 start-0 m-4 border p-2 rounded bg-white text-center small">
-      <div className="text-muted">SOTD</div>
-      <div className="fw-bold fs-5">7.42</div>
-      <div className="text-muted">/10</div>
-    </div>
+    
 
     {/* Main Content */}
     <main className="text-center mt-5 pt-5 ">
-      <p className="text-muted small">Site of the Day - Jul 16, 2025</p>
-      <h1 className="display-1 fw-bold">ROBOT</h1>
-
-     
-    </main>
+      <p className="text-muted small">Welcome to</p>
+      <h1 className="display-1 fw-bold" style={{ color: '#0f3052' }}>Global Influencers Hub</h1>
+     </main>
     
   </div>
   <section className="position-relative ">
   <div className="container-fluid px-0 ">
     <img
-      src="/robot-layered.jpg"
+      src="/robot-layered.png"
       alt="Robot Visual Layered"
       className="img-fluid w-100"
       style={{ objectFit: "cover", height: "100vh" }}
@@ -145,8 +235,8 @@ const Home = () => {
 <section className="py-5 bg-light text-center">
       <Container>
         <small className="text-muted d-block mb-2">Latest</small>
-        <h1 style={headingStyle} className="mb-3">
-          NOMINEES
+        <h1  style={headingStyle } className="mb-3">
+         Featured Story
           
         </h1>
         <p className="text-muted fs-5">
@@ -155,52 +245,65 @@ const Home = () => {
       </Container>
     </section>
 
-    <section className="bg-light py-5">
-      <Container fluid>
-        {/* Top 3 Images */}
-        <Row className="g-4 px-3">
-          <Col xs={12} md={4}>
-            <img
-              src="/68753a223515a578350963.png"
-              alt="MetaMask Banner"
-              className="img-fluid w-100"
-              style={{ borderRadius: '15px', padding: '10px', background: '#fff' }}
-            />
-          </Col>
-          <Col xs={12} md={4}>
-            <img
-              src="/68640a8e36911382168227.jpg"
-              alt="Symphony Poster"
-              className="img-fluid w-100"
-              style={{ borderRadius: '15px', padding: '10px', background: '#fff' }}
-            />
-          </Col>
-          <Col xs={12} md={4}>
-            <img
-              src="/686264200de10782688314.jpg"
-              alt="Earbuds Aether"
-              className="img-fluid w-100"
-              style={{ borderRadius: '15px', padding: '10px', background: '#fff' }}
-            />
-          </Col>
-        </Row>
+   
 
-        
-      </Container>
-    </section>
+    <div className="my-5 px-3">
+  <Carousel
+    responsive={responsive}
+    infinite
+    autoPlay
+    autoPlaySpeed={3000}
+    keyBoardControl
+    transitionDuration={500}
+    containerClass="carousel-container"
+    itemClass="carousel-item-padding-40-px"
+  >
+    {images.map((img, index) => (
+      <div key={index} className="p-2">
+        <a href={img.link} target="_blank" rel="noopener noreferrer">
+          <img
+            src={img.src}
+            alt={`Slide ${index}`}
+            style={{
+              width: '100%',
+              borderRadius: '12px',
+              boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
+            }}
+          />
+        </a>
+      </div>
+    ))}
+  </Carousel>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <div style={{ backgroundColor: "#f9f9f9", padding: "50px 0", margin: "0", width: "100vw" }}>
       <div style={{ paddingLeft: 30, paddingRight: 30 }}>
         <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
           <div style={{ paddingLeft: "20px", paddingRight: "20px" }}>
-            <p className="text-muted fw-semibold mb-2">Winners</p>
+            {/* <p className="text-muted fw-semibold mb-2">Winners</p> */}
             <h2 className="fw-bold mb-5" style={{ fontSize: "2.5rem" }}>
-              Recent Sites <br /> of the Day.
+              Trending
             </h2>
           </div>
 
-          <Row className="g-4" style={{ marginLeft: 0, marginRight: 0 }}>
+          {/* <Row className="g-4" style={{ marginLeft: 0, marginRight: 0 }}>
             {sites.map((site, idx) => (
               <Col key={idx} xs={12} sm={6} md={4}>
                 <Card className="border-0 shadow-sm rounded-4 h-100">
@@ -229,7 +332,48 @@ const Home = () => {
                 </Card>
               </Col>
             ))}
-          </Row>
+          </Row> */}
+
+<div
+      style={{
+        width: '100%',
+        margin: 'auto',
+        
+      }}
+    >
+      <Slider {...settings}>
+        {videos.map((video, index) => (
+          <div
+            key={index}
+            style={{
+              padding: '10px',
+              transform: 'scale(0.9)',
+              transition: 'transform 0.3s ease',
+              perspective: '1000px',
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
+            <a href={video.link} target="_blank" rel="noopener noreferrer">
+              <video
+                src={video.src}
+                muted
+                controls
+                style={{
+                  width: '370px',     // You can adjust this
+                  height: '450px',    // And this
+                  borderRadius: '20px',
+                  boxShadow: '0 8px 20px rgba(0, 0, 0, 0.2)',
+                  transition: 'all 0.1s ease',
+                  objectFit: 'cover',
+                }}
+              />
+            </a>
+          </div>
+        ))}
+      </Slider>
+    </div>
+
         </Container>
       </div>
     </div>
@@ -239,8 +383,8 @@ const Home = () => {
     <div style={{ background: '#f8f9fa', padding: '40px 0', margin: 0, width: '100vw' }}>
   <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
     <div style={{ paddingLeft: '50px', paddingRight: '50px' }}>
-      <h2 className="mb-5 fw-bold" style={{ fontSize: '2.5rem' }}>
-        Learn from the <br /> best instructors.
+      <h2 className="mb-5 fw-bold" style={{ fontSize: '2.5rem',color: '#0f3052' }}>
+       Your Journey <br /> To Influence.
       </h2>
     </div>
     <Row xs={1} sm={2} md={2} lg={4} className="g-4" style={{ marginLeft: 0, marginRight: 0, paddingLeft: '50px', paddingRight: '50px' }}>
@@ -322,53 +466,9 @@ const Home = () => {
 </div>
 
 
-<section className="py-5 bg-light text-center">
-      <Container>
-        <small className="text-muted d-block mb-2">Latest</small>
-        <h1 style={headingStyle} className="mb-3">
-          NOMINEES
-          
-        </h1>
-        <p className="text-muted fs-5">
-          Vote for the latest websites on <br /> awwwards
-        </p>
-      </Container>
-    </section>
 
-    <section className="bg-light py-5">
-      <Container fluid>
-        {/* Top 3 Images */}
-        <Row className="g-4 px-3">
-          <Col xs={12} md={4}>
-            <img
-              src="/68753a223515a578350963.png"
-              alt="MetaMask Banner"
-              className="img-fluid w-100"
-              style={{ borderRadius: '15px', padding: '10px', background: '#fff' }}
-            />
-          </Col>
-          <Col xs={12} md={4}>
-            <img
-              src="/68640a8e36911382168227.jpg"
-              alt="Symphony Poster"
-              className="img-fluid w-100"
-              style={{ borderRadius: '15px', padding: '10px', background: '#fff' }}
-            />
-          </Col>
-          <Col xs={12} md={4}>
-            <img
-              src="/686264200de10782688314.jpg"
-              alt="Earbuds Aether"
-              className="img-fluid w-100"
-              style={{ borderRadius: '15px', padding: '10px', background: '#fff' }}
-            />
-          </Col>
-        </Row>
 
-        
-      </Container>
-    </section>
-
+   
 
 
     <div style={{ background: '#f8f9fa', padding: '40px 0', margin: 0, width: '100vw' }}>
