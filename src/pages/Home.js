@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import "../App.css";
-import { Container, Row, Col,Card, Button, Image,Navbar,Nav,} from 'react-bootstrap';
-import { Link, useLocation } from 'react-router-dom';
-import { navigationData } from '../data/mockData';
+import { Container, Row, Col,Card, Button} from 'react-bootstrap';
+import {useLocation} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -12,8 +11,10 @@ import 'slick-carousel/slick/slick-theme.css';
  
 import Header from '../components/Header';
 const Home = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const headingStyle = {
+
+  const scrollRef = useRef(null);
+
+   const headingStyle = {
     fontSize: 'clamp(2.5rem, 6vw, 6rem)',
     fontWeight: 'bold',
     letterSpacing: '-1px',
@@ -22,28 +23,24 @@ const Home = () => {
 
   const courses = [
     {
-      title: "Learn UI Design with Figma from Scratch",
-      instructor: "Daniele Buffa",
-      score: "4.9/5",
-      image: "/grid1.png", // Replace with your actual path or public folder
+      title: "Influencers Academy: Elevate Your Influence, Own the Spotlight",
+      instructor: "Where Future Influencers Learn to Lead",
+      image: "/grid1.png", 
     },
     {
-      title: "Nordic Design Intensive Course: Complete Branding",
-      instructor: "Hmmm Creative Studio",
-      score: "5/5",
+      title: "Influencer Journey — Where Story Meets Strength",
+      instructor: "Creators. Changemakers. Their Stories, Unfiltered",
       image: "/grid2.png",
     },
     {
-      title: "Innovative Web Design in Figma: A Step-by-Step Process",
-      instructor: "Louis Paquet",
-      score: "5/5",
+      title: "Share Your Spotlight - Be Seen by the World. Be the Next Icon",
+      instructor: "Turn your journey into inspiration",
       image: "/grid3.png",
     },
     {
       title: "Learn Figma from 0 to 100 (10 Courses)",
       instructor: "Mirko Santangelo",
-      score: "5/5",
-      image: "/grid1.png",
+      image: "/grid4.png",
     },
   ];
   
@@ -123,40 +120,54 @@ const Home = () => {
   };
 
 
+  // const videos = [
+  //   { src: '/video1.mp4', link: 'https://example.com/1' },
+  //   { src: '/video2.mp4', link: 'https://example.com/2' },
+  //   { src: '/video3.mp4', link: 'https://example.com/3' },
+  //   { src: '/video1.mp4', link: 'https://example.com/4' },
+  //   { src: '/video2.mp4', link: 'https://example.com/5' },
+  //   { src: '/video3.mp4', link: 'https://example.com/3' },
+  //   { src: '/video1.mp4', link: 'https://example.com/1' },
+  //   { src: '/video2.mp4', link: 'https://example.com/2' },
+  //   { src: '/video3.mp4', link: 'https://example.com/3' },
+  //   { src: '/video1.mp4', link: 'https://example.com/1' },
+  //   { src: '/video2.mp4', link: 'https://example.com/2' },
+  //   { src: '/video3.mp4', link: 'https://example.com/3' },
+  // ];
   const videos = [
-    { src: '/video1.mp4', link: 'https://example.com/1' },
-    { src: '/video2.mp4', link: 'https://example.com/2' },
-    { src: '/video3.mp4', link: 'https://example.com/3' },
-    { src: '/video1.mp4', link: 'https://example.com/4' },
-    { src: '/video2.mp4', link: 'https://example.com/5' },
-    { src: '/video3.mp4', link: 'https://example.com/3' },
-    { src: '/video1.mp4', link: 'https://example.com/1' },
-    { src: '/video2.mp4', link: 'https://example.com/2' },
-    { src: '/video3.mp4', link: 'https://example.com/3' },
-    { src: '/video1.mp4', link: 'https://example.com/1' },
-    { src: '/video2.mp4', link: 'https://example.com/2' },
-    { src: '/video3.mp4', link: 'https://example.com/3' },
+    '/video1.mp4',
+    '/video2.mp4',
+    '/video3.mp4',
+    '/video1.mp4',
+    '/video2.mp4',
+    '/video3.mp4',
+    '/video1.mp4',
+    '/video2.mp4',
+    '/video3.mp4',
+    
   ];
 
-  const settings = {
-    infinite: true,
-    centerMode: true,
-    centerPadding: '60px',
-    slidesToShow: 3,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: '0px',
-        },
-      },
-    ],
-  };
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    let scrollPosition = 0;
 
+    const scrollStep = () => {
+      if (scrollContainer) {
+        scrollPosition += 1;
+        scrollContainer.scrollLeft = scrollPosition;
+
+        if (
+          scrollContainer.scrollLeft + scrollContainer.clientWidth >=
+          scrollContainer.scrollWidth
+        ) {
+          scrollPosition = 0;
+        }
+      }
+    };
+
+    const interval = setInterval(scrollStep, 20);
+    return () => clearInterval(interval);
+  }, []);
 
 
   const [expanded, setExpanded] = useState(false);
@@ -334,46 +345,50 @@ const Home = () => {
             ))}
           </Row> */}
 
-<div
-      style={{
-        width: '100%',
-        margin: 'auto',
-        
-      }}
-    >
-      <Slider {...settings}>
-        {videos.map((video, index) => (
+<Container fluid className="py-5 bg-light">
+      <div
+        ref={scrollRef}
+        style={{
+          display: 'flex',
+          gap: '20px',
+          overflowX: 'auto',
+          padding: '10px 20px',
+          scrollBehavior: 'smooth',
+          maskImage:
+            'linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)',
+        }}
+      >
+        {videos.map((src, index) => (
           <div
             key={index}
             style={{
-              padding: '10px',
-              transform: 'scale(0.9)',
-              transition: 'transform 0.3s ease',
-              perspective: '1000px',
-              display: 'flex',
-              justifyContent: 'center',
+              width: '200px',
+              height: '200px',
+              borderRadius: '50%',
+              overflow: 'hidden',
+              flex: '0 0 auto',
+              transform: `rotate(${index % 2 === 0 ? '-5deg' : '5deg'})`,
+              border: '4px solid white',
             }}
           >
-            <a href={video.link} target="_blank" rel="noopener noreferrer">
-              <video
-                src={video.src}
-                muted
-                controls
-                style={{
-                  width: '370px',     // You can adjust this
-                  height: '450px',    // And this
-                  borderRadius: '20px',
-                  boxShadow: '0 8px 20px rgba(0, 0, 0, 0.2)',
-                  transition: 'all 0.1s ease',
-                  objectFit: 'cover',
-                }}
-              />
-            </a>
+            <video
+              src={src}
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                borderRadius: '50%',
+                transform: `rotate(${index % 2 === 0 ? '5deg' : '-5deg'})`,
+              }}
+            />
           </div>
         ))}
-      </Slider>
-    </div>
-
+      </div>
+    </Container>
         </Container>
       </div>
     </div>
@@ -404,11 +419,9 @@ const Home = () => {
             <Card.Body>
               <Card.Title style={{ fontSize: '1rem' }}>{course.title}</Card.Title>
               <div className="text-muted" style={{ fontSize: '0.875rem' }}>
-                <strong>Instructor:</strong> {course.instructor}
+                {course.instructor}
               </div>
-              <div className="mt-3">
-                <strong>Score</strong> <span>{course.score}</span>
-              </div>
+              
             </Card.Body>
           </Card>
         </Col>
@@ -464,58 +477,6 @@ const Home = () => {
     </Row>
   </Container>
 </div>
-
-
-
-
-   
-
-
-    <div style={{ background: '#f8f9fa', padding: '40px 0', margin: 0, width: '100vw' }}>
-  <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
-    <div style={{ paddingLeft: '50px', paddingRight: '50px' }}>
-      <h2 className="mb-5 fw-bold" style={{ fontSize: '2.5rem' }}>
-        Learn from the <br /> best instructors.
-      </h2>
-    </div>
-    <Row xs={1} sm={2} md={2} lg={4} className="g-4" style={{ marginLeft: 0, marginRight: 0, paddingLeft: '50px', paddingRight: '50px' }}>
-      {courses.map((course, idx) => (
-        <Col key={idx}>
-          <Card className="h-100 border-0 shadow-sm" style={{ borderRadius: '16px' }}>
-            <Card.Img
-              variant="top"
-              src={course.image}
-              style={{
-                borderTopLeftRadius: '16px',
-                borderTopRightRadius: '16px',
-                height: '320px',
-                objectFit: 'cover'
-              }}
-            />
-            <Card.Body>
-              <Card.Title style={{ fontSize: '1rem' }}>{course.title}</Card.Title>
-              <div className="text-muted" style={{ fontSize: '0.875rem' }}>
-                <strong>Instructor:</strong> {course.instructor}
-              </div>
-              <div className="mt-3">
-                <strong>Score</strong> <span>{course.score}</span>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-      ))}
-    </Row>
-  </Container>
-</div>
-
-
-
-
-
-
-
-
-
 
     <div className="bg-light py-5">
       <Container fluid>
