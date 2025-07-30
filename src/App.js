@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import InfluencerJourneys from './pages/InfluencerJourneys';
+import Storyfluence from './pages/InfluencerJourneys';
 import Trending from './pages/Trending';
 import Bidding from './pages/Bidding';
 import AmplifyYourBrand from './pages/AmplifyYourBrand';
@@ -18,13 +18,13 @@ function App() {
   return (
     <Router>
       <div className="App">
-      {/* <Header /> */}
+      <Header />
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<About />} />
             <Route path="/say-hello" element={<Contact />} />
-            <Route path="/influencer-journeys" element={<InfluencerJourneys />} />
+            <Route path="/influencer-journeys" element={<Storyfluence />} />
             <Route path="/trending" element={<Trending />} />
             <Route path="/bidding" element={<Bidding />} />
             <Route path="/amplify-your-brand" element={<AmplifyYourBrand />} />

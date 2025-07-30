@@ -13,73 +13,25 @@ const InfluencerJourneys = () => {
         <Container>
           <Row className="justify-content-center">
             <Col lg={8} className="text-center">
-              <h1 className="journeys-title">Influencer Journeys</h1>
+              <h1 className="journeys-title">At Global Influencers Hub,</h1>
               <p className="journeys-subtitle">
-                Discover the inspiring stories of social media influencers who have transformed their passions into powerful platforms for change and connection.
+              We focus on the power of storytelling, showcasing the true, unfiltered journeys of influencers
+              who inspire and impact their communities.
               </p>
             </Col>
           </Row>
         </Container>
       </section>
 
-      {/* Featured Journeys */}
-      <section className="featured-journeys py-5">
-        <Container>
-          <Row className="justify-content-center mb-5">
-            <Col lg={8} className="text-center">
-              <h2 className="section-title">Featured Journeys</h2>
-              <div className="section-divider"></div>
-            </Col>
-          </Row>
-          <Row>
-            {featuredStories.map((story) => (
-              <Col lg={4} md={6} className="mb-4" key={story.id}>
-                <Card className="journey-card h-100">
-                  <div className="journey-image-container">
-                    <Card.Img 
-                      variant="top" 
-                      src={story.image} 
-                      alt={story.title}
-                      className="journey-image"
-                    />
-                    <div className="journey-overlay">
-                      <Button 
-                        as={Link} 
-                        to={`/story/${story.slug}`} 
-                        variant="light" 
-                        size="sm"
-                      >
-                        Read Full Story
-                      </Button>
-                    </div>
-                  </div>
-                  <Card.Body className="d-flex flex-column">
-                    <Card.Title className="journey-title">
-                      <Link to={`/story/${story.slug}`} className="journey-link">
-                        {story.title}
-                      </Link>
-                    </Card.Title>
-                    <Card.Text className="journey-excerpt">
-                      {story.excerpt}
-                    </Card.Text>
-                    <div className="journey-meta">
-                      <span className="journey-category">Featured Story</span>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
+      
 
       {/* All Journeys */}
       <section className="all-journeys py-5 bg-light">
         <Container>
           <Row className="justify-content-center mb-5">
             <Col lg={8} className="text-center">
-              <h2 className="section-title">All Journeys</h2>
-              <div className="section-divider"></div>
+              
+              
             </Col>
           </Row>
           <Row>
@@ -121,42 +73,11 @@ const InfluencerJourneys = () => {
         </Container>
       </section>
 
-      {/* Call to Action */}
-      <section className="cta-section py-5">
-        <Container>
-          <Row className="justify-content-center">
-            <Col lg={8} className="text-center">
-              <h2 className="cta-title">Share Your Journey</h2>
-              <p className="cta-description">
-                Have an inspiring story to tell? Join our community of influencers and share your journey with the world.
-              </p>
-              <div className="cta-buttons">
-                <Button 
-                  as={Link} 
-                  to="/share-your-spotlight" 
-                  variant="primary" 
-                  size="lg" 
-                  className="me-3"
-                >
-                  Share Your Story
-                </Button>
-                <Button 
-                  as={Link} 
-                  to="/influencer-academy" 
-                  variant="outline-primary" 
-                  size="lg"
-                >
-                  Join Academy
-                </Button>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      
 
       <style jsx>{`
         .journeys-hero {
-          background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+          background: linear-gradient(135deg,#0f3052);
           color: white;
         }
         

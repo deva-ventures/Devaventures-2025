@@ -9,13 +9,13 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
  
-import Header from '../components/Header';
 const Home = () => {
 
   const scrollRef = useRef(null);
 
    const headingStyle = {
     fontSize: 'clamp(2.5rem, 6vw, 6rem)',
+    letterSpacing: '-5.05px',
     fontWeight: 'bold',
     letterSpacing: '-1px',
     color: '#0f3052'
@@ -120,7 +120,7 @@ const Home = () => {
   };
 
 
-  // const videos = [
+  
   //   { src: '/video1.mp4', link: 'https://example.com/1' },
   //   { src: '/video2.mp4', link: 'https://example.com/2' },
   //   { src: '/video3.mp4', link: 'https://example.com/3' },
@@ -180,10 +180,10 @@ const Home = () => {
   return (
     <>
     <div className="bg-light ">
-    {/* Header */}
+    
 
 
-    <Header/>
+  
 
 
 
@@ -228,7 +228,7 @@ const Home = () => {
     {/* Main Content */}
     <main className="text-center mt-5 pt-5 ">
       <p className="text-muted small">Welcome to</p>
-      <h1 className="display-1 fw-bold" style={{ color: '#0f3052' }}>Global Influencers Hub</h1>
+      <h1 className="display-1 fw-bold" style={{ color: '#0f3052',letterSpacing: '-5.05px' }}>Global Influencers Hub</h1>
      </main>
     
   </div>
@@ -443,73 +443,96 @@ const Home = () => {
   </Container>
 </div>
 
-<div className="bg-light py-5 min-vh-100">
-  <Container fluid >
-    <Row className="justify-content-center" >
-      <Col xs={12} md={6} lg={5} className="mb-4" >
-        <Card className="h-100 text-white border-0" style={{ backgroundColor: '#1c1c1c' }}>
-          <Card.Img
-            variant="top"
-            src="/pastel2.jpg"
-            alt="Newfolk Member"
-          />
-          <Card.Body>
-            <div className="text-muted small mb-1">COLLECTION</div>
-            <Card.Title className="text-white fs-5">UX/UI</Card.Title>
-          </Card.Body>
-        </Card>
-      </Col>
-
-      <Col xs={12} md={6} lg={6} className="mb-4" >
-        <Card className="h-100 text-white border-0" style={{ backgroundColor: '#1c1c1c',height:'300px' }}>
-          <Card.Img
-            variant="top"
-            src="/pastel1.jpg"
-            alt="Garden Party"
-           
-          />
-          <Card.Body>
-            <div className="text-muted small mb-1">COLLECTION</div>
-            <Card.Title className="text-white fs-5">Inspiration</Card.Title>
-          </Card.Body>
-        </Card>
-      </Col>
-    </Row>
-  </Container>
-</div>
+<div className="bg-light py-5">
+      <Container fluid>
+        <Row className="g-4 justify-content-start px-3">
+          {/* Card 1 */}
+          
+<Col xs={12} md={6}>
+  <Card
+    className="h-100 text-white border-0"
+    style={{
+      backgroundImage: `url('/Micro-Influencers.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      borderRadius: '15px',
+    }}
+  >
+    <Card.Body
+      className="d-flex flex-column justify-content-end align-items-center"
+      style={{
+        height: '550px',
+        backgroundColor: 'rgba(0, 0, 0, 0.4)', // optional for contrast
+        borderRadius: '15px',
+        paddingBottom: '40px', 
+      }}
+    >
+      <Button variant="outline-light">Read More</Button>
+    </Card.Body>
+  </Card>
+</Col>
+      {/* Card 2 */}
+          <Col xs={12} md={6}>
+            <Card className="h-100 text-white border-0" style={{ backgroundImage: `url('/howInfluencers.png')`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '15px' }}>
+            <Card.Body
+      className="d-flex flex-column justify-content-end align-items-center"
+      style={{
+        height: '400px',
+        backgroundColor: 'rgba(0, 0, 0, 0.4)', // optional for contrast
+        borderRadius: '15px',
+        paddingBottom: '40px', 
+      }}
+    >
+      <Button variant="outline-light">Read More</Button>
+    </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </div>
 
     <div className="bg-light py-5">
       <Container fluid>
         <Row className="g-4 justify-content-start px-3">
           {/* Card 1 */}
+          
+<Col xs={12} md={6}>
+  <Card
+    className="h-100 text-white border-0"
+    style={{
+      backgroundImage: `url('/influencerPower.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      borderRadius: '15px',
+    }}
+  >
+    <Card.Body
+      className="d-flex flex-column justify-content-end align-items-center"
+      style={{
+        height: '550px',
+        backgroundColor: 'rgba(0, 0, 0, 0.4)', // optional for contrast
+        borderRadius: '15px',
+        paddingBottom: '40px', 
+      }}
+    >
+      <Button variant="outline-light">Read More</Button>
+    </Card.Body>
+  </Card>
+</Col>
+      {/* Card 2 */}
           <Col xs={12} md={6}>
-            <Card className="h-100 text-white border-0" style={{ backgroundImage: `url('/site1.png')`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '15px' }}>
-              <Card.Body className="d-flex flex-column justify-content-between" style={{ height: '350px' }}>
-                <div>
-                  <p className="text-light small">Share your work</p>
-                  <h2 className="fw-bold">Submit your website for<br />visibility and<br />recognition</h2>
-                  <Button variant="outline-light" className="mt-3">Submit Website</Button>
-                </div>
-                <div className="text-end">
-                  <small className="text-light">Got questions? Read our FAQs</small>
-                </div>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          {/* Card 2 */}
-          <Col xs={12} md={6}>
-            <Card className="h-100 text-white border-0" style={{ backgroundImage: `url('/site2.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '15px' }}>
-              <Card.Body className="d-flex flex-column justify-content-between" style={{ height: '550px' }}>
-                <div>
-                  <p className="text-light small">Be a member</p>
-                  <h2 className="fw-bold">Get access to special<br />pro features</h2>
-                  <Button variant="outline-light" className="mt-3">Be Pro</Button>
-                </div>
-                <div className="text-end">
-                  <small className="text-light">Got questions? Read our FAQs</small>
-                </div>
-              </Card.Body>
+            <Card className="h-100 text-white border-0" style={{ backgroundImage: `url('/bagYourFirst.png')`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '15px' }}>
+            <Card.Body
+      className="d-flex flex-column justify-content-end align-items-center"
+      style={{
+        height: '400px',
+        backgroundColor: 'rgba(0, 0, 0, 0.4)', // optional for contrast
+        borderRadius: '15px',
+        paddingBottom: '40px', 
+      }}
+    >
+      <Button variant="outline-light">Read More</Button>
+    </Card.Body>
             </Card>
           </Col>
         </Row>

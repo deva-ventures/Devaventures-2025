@@ -3,9 +3,9 @@
 export const navigationData = [
   { id: 1, name: 'Home', path: '/' },
   { id: 2, name: 'About Us', path: '/about-us' },
-  { id: 3, name: 'Influencer Journeys', path: '/influencer-journeys' },
+  { id: 3, name: 'Storyfluence', path: '/influencer-journeys' },
   { id: 4, name: 'Trending', path: '/trending' },
-  { id: 5, name: 'The Bidding Room', path: '/bidding' },
+  { id: 5, name: 'Bidfluence', path: '/bidding' },
   { id: 6, name: 'Amplify Your Brand', path: '/amplify-your-brand' },
   { id: 7, name: 'Share Your Spotlight', path: '/share-your-spotlight' },
   { id: 8, name: 'Influencer Academy', path: '/influencer-academy' },
