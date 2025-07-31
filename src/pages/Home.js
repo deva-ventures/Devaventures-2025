@@ -309,7 +309,7 @@ const Home = () => {
         <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
           <div style={{ paddingLeft: "20px", paddingRight: "20px" }}>
             {/* <p className="text-muted fw-semibold mb-2">Winners</p> */}
-            <h2 className="fw-bold mb-5" style={{ fontSize: "2.5rem" }}>
+            <h2 className="fw-bold mb-5" style={{ fontSize: "2.5rem",color: '#0f3052' }}> 
               Trending
             </h2>
           </div>
@@ -434,9 +434,9 @@ const Home = () => {
   <Container fluid style={{ paddingLeft: 50, paddingRight: 50 }}>
     <Row style={{ marginLeft: 0, marginRight: 0 }}>
       <Col md={8} sm={12} style={{ paddingLeft: '20px' }}>
-        <p className="text-muted small mb-2">Collections</p>
-        <h1 className="display-5 fw-bold">
-          Explore a wide <br /> variety of collections.
+       
+        <h1 className="display-5 fw-bold" style={{color: '#0f3052'}}>
+        Influencer <br/> Academy 
         </h1>
       </Col>
     </Row>
@@ -462,7 +462,6 @@ const Home = () => {
       className="d-flex flex-column justify-content-end align-items-center"
       style={{
         height: '550px',
-        backgroundColor: 'rgba(0, 0, 0, 0.4)', // optional for contrast
         borderRadius: '15px',
         paddingBottom: '40px', 
       }}
@@ -478,7 +477,6 @@ const Home = () => {
       className="d-flex flex-column justify-content-end align-items-center"
       style={{
         height: '400px',
-        backgroundColor: 'rgba(0, 0, 0, 0.4)', // optional for contrast
         borderRadius: '15px',
         paddingBottom: '40px', 
       }}
@@ -510,7 +508,6 @@ const Home = () => {
       className="d-flex flex-column justify-content-end align-items-center"
       style={{
         height: '550px',
-        backgroundColor: 'rgba(0, 0, 0, 0.4)', // optional for contrast
         borderRadius: '15px',
         paddingBottom: '40px', 
       }}
@@ -526,7 +523,6 @@ const Home = () => {
       className="d-flex flex-column justify-content-end align-items-center"
       style={{
         height: '400px',
-        backgroundColor: 'rgba(0, 0, 0, 0.4)', // optional for contrast
         borderRadius: '15px',
         paddingBottom: '40px', 
       }}

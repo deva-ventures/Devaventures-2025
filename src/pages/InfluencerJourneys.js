@@ -1,284 +1,392 @@
-import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { featuredStories, trendingStories } from '../data/mockData';
+// import React from 'react';
+// import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+// import { Link } from 'react-router-dom';
+// import { featuredStories, trendingStories } from '../data/mockData';
 
+// const InfluencerJourneys = () => {
+//   const allStories = [...featuredStories, ...trendingStories];
+
+//   return (
+//     <div className="influencer-journeys-page">
+//       {/* Hero Section */}
+//       <section className="journeys-hero py-5">
+//         <Container>
+//           <Row className="justify-content-center">
+//             <Col lg={8} className="text-center">
+//               <h1 className="journeys-title">At Global Influencers Hub,</h1>
+//               <p className="journeys-subtitle">
+//               We focus on the power of storytelling, showcasing the true, unfiltered journeys of influencers
+//               who inspire and impact their communities.
+//               </p>
+//             </Col>
+//           </Row>
+//         </Container>
+//       </section>
+
+      
+
+//       {/* All Journeys */}
+//       <section className="all-journeys py-5 bg-light">
+//         <Container>
+//           <Row className="justify-content-center mb-5">
+//             <Col lg={8} className="text-center">
+              
+              
+//             </Col>
+//           </Row>
+//           <Row>
+//             {allStories.map((story) => (
+//               <Col lg={4} md={6} className="mb-4" key={story.id}>
+//                 <Card className="journey-card h-100">
+//                   <div className="journey-image-container">
+//                     <Card.Img 
+//                       variant="top" 
+//                       src={story.image} 
+//                       alt={story.title}
+//                       className="journey-image"
+//                     />
+//                     <div className="journey-overlay">
+//                       <Button 
+//                         as={Link} 
+//                         to={`/story/${story.slug}`} 
+//                         variant="light" 
+//                         size="sm"
+//                       >
+//                         Read Story
+//                       </Button>
+//                     </div>
+//                   </div>
+//                   <Card.Body className="d-flex flex-column">
+//                     <Card.Title className="journey-title">
+//                       <Link to={`/story/${story.slug}`} className="journey-link">
+//                         {story.title}
+//                       </Link>
+//                     </Card.Title>
+//                     <Card.Text className="journey-excerpt">
+//                       {story.excerpt || 'Discover the inspiring journey of this influencer...'}
+//                     </Card.Text>
+//                   </Card.Body>
+//                 </Card>
+//               </Col>
+//             ))}
+//           </Row>
+//         </Container>
+//       </section>
+
+      
+
+//       <style jsx>{`
+//         .journeys-hero {
+//           background: linear-gradient(135deg,#0f3052);
+//           color: white;
+//         }
+        
+//         .journeys-title {
+//           font-size: 3rem;
+//           font-weight: 700;
+//           margin-bottom: 1.5rem;
+//         }
+        
+//         .journeys-subtitle {
+//           font-size: 1.2rem;
+//           opacity: 0.9;
+//           line-height: 1.6;
+//         }
+        
+//         .section-title {
+//           font-size: 2.5rem;
+//           font-weight: 600;
+//           color: #1e3c72;
+//           margin-bottom: 1rem;
+//         }
+        
+//         .section-divider {
+//           width: 80px;
+//           height: 4px;
+//           background: linear-gradient(135deg, #f4891d 0%, #f68b1f 100%);
+//           margin: 0 auto 2rem;
+//         }
+        
+//         .journey-card {
+//           border: none;
+//           box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+//           transition: transform 0.3s ease, box-shadow 0.3s ease;
+//           overflow: hidden;
+//         }
+        
+//         .journey-card:hover {
+//           transform: translateY(-5px);
+//           box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+//         }
+        
+//         .journey-image-container {
+//           position: relative;
+//           overflow: hidden;
+//         }
+        
+//         .journey-image {
+//           height: 250px;
+//           object-fit: cover;
+//           transition: transform 0.3s ease;
+//         }
+        
+//         .journey-overlay {
+//           position: absolute;
+//           top: 0;
+//           left: 0;
+//           right: 0;
+//           bottom: 0;
+//           background: rgba(0,0,0,0.7);
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//           opacity: 0;
+//           transition: opacity 0.3s ease;
+//         }
+        
+//         .journey-card:hover .journey-overlay {
+//           opacity: 1;
+//         }
+        
+//         .journey-card:hover .journey-image {
+//           transform: scale(1.1);
+//         }
+        
+//         .journey-title {
+//           font-size: 1.2rem;
+//           font-weight: 600;
+//           color: #1e3c72;
+//           margin-bottom: 0.5rem;
+//         }
+        
+//         .journey-link {
+//           color: #1e3c72;
+//           text-decoration: none;
+//           transition: color 0.3s ease;
+//         }
+        
+//         .journey-link:hover {
+//           color: #f4891d;
+//           text-decoration: none;
+//         }
+        
+//         .journey-excerpt {
+//           color: #666;
+//           font-size: 0.9rem;
+//           flex-grow: 1;
+//           line-height: 1.5;
+//         }
+        
+//         .journey-meta {
+//           margin-top: auto;
+//         }
+        
+//         .journey-category {
+//           background: linear-gradient(135deg, #f4891d 0%, #f68b1f 100%);
+//           color: white;
+//           padding: 0.25rem 0.75rem;
+//           border-radius: 20px;
+//           font-size: 0.8rem;
+//           font-weight: 600;
+//         }
+        
+//         .cta-section {
+//           background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+//         }
+        
+//         .cta-title {
+//           font-size: 2.5rem;
+//           font-weight: 600;
+//           color: #1e3c72;
+//           margin-bottom: 1rem;
+//         }
+        
+//         .cta-description {
+//           font-size: 1.1rem;
+//           color: #666;
+//           margin-bottom: 2rem;
+//           line-height: 1.6;
+//         }
+        
+//         .cta-buttons {
+//           display: flex;
+//           justify-content: center;
+//           gap: 1rem;
+//           flex-wrap: wrap;
+//         }
+        
+//         .btn-primary {
+//           background: linear-gradient(135deg, #f4891d 0%, #f68b1f 100%);
+//           border: none;
+//           padding: 0.75rem 2rem;
+//           font-weight: 600;
+//           transition: all 0.3s ease;
+//         }
+        
+//         .btn-primary:hover {
+//           background: linear-gradient(135deg, #e67e1a 0%, #e57a1a 100%);
+//           transform: translateY(-2px);
+//           box-shadow: 0 4px 15px rgba(244, 137, 29, 0.3);
+//         }
+        
+//         .btn-outline-primary {
+//           border: 2px solid #1e3c72;
+//           color: #1e3c72;
+//           padding: 0.75rem 2rem;
+//           font-weight: 600;
+//           transition: all 0.3s ease;
+//         }
+        
+//         .btn-outline-primary:hover {
+//           background: #1e3c72;
+//           color: white;
+//           transform: translateY(-2px);
+//         }
+        
+//         @media (max-width: 991.98px) {
+//           .journeys-title {
+//             font-size: 2.5rem;
+//           }
+          
+//           .journeys-subtitle {
+//             font-size: 1.1rem;
+//           }
+          
+//           .section-title, .cta-title {
+//             font-size: 2rem;
+//           }
+//         }
+        
+//         @media (max-width: 767.98px) {
+//           .journeys-title {
+//             font-size: 2rem;
+//           }
+          
+//           .journeys-subtitle {
+//             font-size: 1rem;
+//           }
+          
+//           .cta-buttons {
+//             flex-direction: column;
+//             align-items: center;
+//           }
+          
+//           .cta-buttons .btn {
+//             width: 100%;
+//             max-width: 300px;
+//           }
+//         }
+//       `}</style>
+//     </div>
+//   );
+// };
+
+// export default InfluencerJourneys; 
+
+
+
+
+
+import React from 'react';
+import { Container, Row, Col, Badge } from 'react-bootstrap';
+import { featuredStories, trendingStories } from '../data/mockData';
+import { Carousel, Card, Button } from 'react-bootstrap';
 const InfluencerJourneys = () => {
   const allStories = [...featuredStories, ...trendingStories];
-
+  const groupedStories = [];
+  for (let i = 0; i < trendingStories.length; i += 3) {
+    groupedStories.push(trendingStories.slice(i, i + 3));
+  }
   return (
-    <div className="influencer-journeys-page">
-      {/* Hero Section */}
-      <section className="journeys-hero py-5">
-        <Container>
-          <Row className="justify-content-center">
-            <Col lg={8} className="text-center">
-              <h1 className="journeys-title">At Global Influencers Hub,</h1>
-              <p className="journeys-subtitle">
-              We focus on the power of storytelling, showcasing the true, unfiltered journeys of influencers
-              who inspire and impact their communities.
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
+    <>
+    <div
+      style={{
+        backgroundImage: `url('/aboutUs.jpg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '90vh',
+        color: 'white',
+        display: 'flex',
+        alignItems: 'center',
+      }}
+    >
       
-
-      {/* All Journeys */}
-      <section className="all-journeys py-5 bg-light">
-        <Container>
-          <Row className="justify-content-center mb-5">
-            <Col lg={8} className="text-center">
-              
-              
-            </Col>
-          </Row>
-          <Row>
-            {allStories.map((story) => (
-              <Col lg={4} md={6} className="mb-4" key={story.id}>
-                <Card className="journey-card h-100">
-                  <div className="journey-image-container">
-                    <Card.Img 
-                      variant="top" 
-                      src={story.image} 
-                      alt={story.title}
-                      className="journey-image"
-                    />
-                    <div className="journey-overlay">
-                      <Button 
-                        as={Link} 
-                        to={`/story/${story.slug}`} 
-                        variant="light" 
-                        size="sm"
-                      >
-                        Read Story
-                      </Button>
-                    </div>
-                  </div>
-                  <Card.Body className="d-flex flex-column">
-                    <Card.Title className="journey-title">
-                      <Link to={`/story/${story.slug}`} className="journey-link">
-                        {story.title}
-                      </Link>
-                    </Card.Title>
-                    <Card.Text className="journey-excerpt">
-                      {story.excerpt || 'Discover the inspiring journey of this influencer...'}
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-
-      
-
-      <style jsx>{`
-        .journeys-hero {
-          background: linear-gradient(135deg,#0f3052);
-          color: white;
-        }
-        
-        .journeys-title {
-          font-size: 3rem;
-          font-weight: 700;
-          margin-bottom: 1.5rem;
-        }
-        
-        .journeys-subtitle {
-          font-size: 1.2rem;
-          opacity: 0.9;
-          line-height: 1.6;
-        }
-        
-        .section-title {
-          font-size: 2.5rem;
-          font-weight: 600;
-          color: #1e3c72;
-          margin-bottom: 1rem;
-        }
-        
-        .section-divider {
-          width: 80px;
-          height: 4px;
-          background: linear-gradient(135deg, #f4891d 0%, #f68b1f 100%);
-          margin: 0 auto 2rem;
-        }
-        
-        .journey-card {
-          border: none;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          overflow: hidden;
-        }
-        
-        .journey-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-        
-        .journey-image-container {
-          position: relative;
-          overflow: hidden;
-        }
-        
-        .journey-image {
-          height: 250px;
-          object-fit: cover;
-          transition: transform 0.3s ease;
-        }
-        
-        .journey-overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: rgba(0,0,0,0.7);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          opacity: 0;
-          transition: opacity 0.3s ease;
-        }
-        
-        .journey-card:hover .journey-overlay {
-          opacity: 1;
-        }
-        
-        .journey-card:hover .journey-image {
-          transform: scale(1.1);
-        }
-        
-        .journey-title {
-          font-size: 1.2rem;
-          font-weight: 600;
-          color: #1e3c72;
-          margin-bottom: 0.5rem;
-        }
-        
-        .journey-link {
-          color: #1e3c72;
-          text-decoration: none;
-          transition: color 0.3s ease;
-        }
-        
-        .journey-link:hover {
-          color: #f4891d;
-          text-decoration: none;
-        }
-        
-        .journey-excerpt {
-          color: #666;
-          font-size: 0.9rem;
-          flex-grow: 1;
-          line-height: 1.5;
-        }
-        
-        .journey-meta {
-          margin-top: auto;
-        }
-        
-        .journey-category {
-          background: linear-gradient(135deg, #f4891d 0%, #f68b1f 100%);
-          color: white;
-          padding: 0.25rem 0.75rem;
-          border-radius: 20px;
-          font-size: 0.8rem;
-          font-weight: 600;
-        }
-        
-        .cta-section {
-          background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-        
-        .cta-title {
-          font-size: 2.5rem;
-          font-weight: 600;
-          color: #1e3c72;
-          margin-bottom: 1rem;
-        }
-        
-        .cta-description {
-          font-size: 1.1rem;
-          color: #666;
-          margin-bottom: 2rem;
-          line-height: 1.6;
-        }
-        
-        .cta-buttons {
-          display: flex;
-          justify-content: center;
-          gap: 1rem;
-          flex-wrap: wrap;
-        }
-        
-        .btn-primary {
-          background: linear-gradient(135deg, #f4891d 0%, #f68b1f 100%);
-          border: none;
-          padding: 0.75rem 2rem;
-          font-weight: 600;
-          transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-          background: linear-gradient(135deg, #e67e1a 0%, #e57a1a 100%);
-          transform: translateY(-2px);
-          box-shadow: 0 4px 15px rgba(244, 137, 29, 0.3);
-        }
-        
-        .btn-outline-primary {
-          border: 2px solid #1e3c72;
-          color: #1e3c72;
-          padding: 0.75rem 2rem;
-          font-weight: 600;
-          transition: all 0.3s ease;
-        }
-        
-        .btn-outline-primary:hover {
-          background: #1e3c72;
-          color: white;
-          transform: translateY(-2px);
-        }
-        
-        @media (max-width: 991.98px) {
-          .journeys-title {
-            font-size: 2.5rem;
-          }
-          
-          .journeys-subtitle {
-            font-size: 1.1rem;
-          }
-          
-          .section-title, .cta-title {
-            font-size: 2rem;
-          }
-        }
-        
-        @media (max-width: 767.98px) {
-          .journeys-title {
-            font-size: 2rem;
-          }
-          
-          .journeys-subtitle {
-            font-size: 1rem;
-          }
-          
-          .cta-buttons {
-            flex-direction: column;
-            align-items: center;
-          }
-          
-          .cta-buttons .btn {
-            width: 100%;
-            max-width: 300px;
-          }
-        }
-      `}</style>
     </div>
+    <div className="px-3 py-5">
+      <h4 className="fw-bold mb-4" style={{marginLeft:"230px",color: '#0f3052'}}>Articles</h4>
+      <Carousel indicators={false} controls={true} interval={5000}>
+  {groupedStories.map((group, index) => (
+    <Carousel.Item key={index}>
+      <Row
+        className="justify-content-center"
+        style={{
+          marginLeft: '0',
+          marginRight: '0',
+          padding: '15px',
+          gap: '0px',
+        }}
+      >
+        {group.map((story) => (
+          <Col
+            key={story.id}
+            xs={12}
+            md={4}
+            lg={3}
+            style={{
+              paddingLeft: '0',
+              paddingRight: '0',
+              margin: '0',
+              maxWidth: '33.33%', 
+            }}
+          >
+            <Card
+              className="text-white"
+              style={{
+                height: '650px',
+                width: '400px',
+                borderRadius: '20px',
+                overflow: 'hidden',
+                position: 'relative',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundImage: `url(${story.image})`,
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
+              }}
+            >
+              <div
+                className="d-flex flex-column justify-content-end h-100 p-3"
+                style={{
+                  background: 'linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2))',
+                }}
+              >
+                <h5 style={{ fontWeight: '600' }}>{story.title}</h5>
+                <a
+                  href={`/blogs/${story.slug}`}
+                  className="text-white mt-2"
+                  style={{
+                    textDecoration: 'none',
+                    fontWeight: 'bold',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '5px',
+                    fontSize: '0.9rem',
+                  }}
+                >
+                  Read More ↗
+                </a>
+              </div>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Carousel.Item>
+  ))}
+</Carousel>
+
+
+    </div>
+  </>
   );
 };
 
-export default InfluencerJourneys; 
+export default InfluencerJourneys;
