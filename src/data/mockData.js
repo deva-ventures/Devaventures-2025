@@ -8,7 +8,7 @@ export const navigationData = [
   { id: 5, name: 'Bidfluence', path: '/bidding' },
   { id: 6, name: 'Amplify Your Brand', path: '/amplify-your-brand' },
   { id: 7, name: 'Share Your Spotlight', path: '/share-your-spotlight' },
-  { id: 8, name: 'Influencer Academy', path: '/influencer-academy' },
+  { id: 8, name: 'Masterfluence', path: '/influencer-academy' },
   { id: 9, name: 'Say Hello', path: '/say-hello' }
 ];
 

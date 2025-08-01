@@ -1,14 +1,14 @@
 import React, {useEffect, useState, useRef} from 'react';
 import "../App.css";
-import { Container, Row, Col,Card, Button} from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
 import {useLocation} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Carousel from 'react-multi-carousel';
+// import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
- 
+import { BsArrowRight, BsGeoAltFill } from 'react-icons/bs';
 const Home = () => {
 
   const scrollRef = useRef(null);
@@ -147,6 +147,26 @@ const Home = () => {
     
   ];
 
+  const berlinImages = [
+    '/f2.png',
+    '/f3.png',
+    '/f1.png',
+  ];
+  
+  const viennaImages = [
+    '/f1.png',
+    '/f3.png',
+    '/f2.png',
+  ];
+
+
+
+
+
+
+
+
+
   useEffect(() => {
     const scrollContainer = scrollRef.current;
     let scrollPosition = 0;
@@ -255,10 +275,74 @@ const Home = () => {
         </p>
       </Container>
     </section>
+    <Container fluid className="py-5 px-3">
+      <Row className="g-3 justify-content-center">
+        {/* Static Large Card - Prague */}
+        <Col xs={12} lg={6}>
+          <Card className="text-white h-100" style={{
+            borderRadius: '20px',
+            backgroundImage: `url('/f1.png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            height: '100%',
+            minHeight: '400px',
+            overflow: 'hidden',
+            
+          }}>
+            <Card.Body className="d-flex flex-column justify-content-between h-100 p-4"
+              style={{
+                background: 'linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2))',
+              }}>
+              
+              
+              
+            </Card.Body>
+          </Card>
+        </Col>
 
-   
+        {/* Carousel Card - Berlin */}
+        <Col xs={12} md={6} lg={3}>
+          <Carousel controls={true} indicators={false} fade interval={4000}>
+            {berlinImages.map((src, idx) => (
+              <Carousel.Item key={idx}>
+                <Card className="text-white h-100" style={{
+                  borderRadius: '20px',
+                  backgroundImage: `url(${src})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  minHeight: '400px',
+                  overflow: 'hidden',
+                }}>
+                  
+                </Card>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </Col>
 
-    <div className="my-5 px-3">
+        {/* Carousel Card - Vienna */}
+        <Col xs={12} md={6} lg={3}>
+          <Carousel controls={true} indicators={false} fade interval={4000}>
+            {viennaImages.map((src, idx) => (
+              <Carousel.Item key={idx}>
+                <Card className="text-white h-100" style={{
+                  borderRadius: '20px',
+                  backgroundImage: `url(${src})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  minHeight: '400px',
+                  overflow: 'hidden',
+                }}>
+                  
+                </Card>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </Col>
+      </Row>
+    </Container>
+
+    {/* <div className="my-5 px-3">
   <Carousel
     responsive={responsive}
     infinite
@@ -285,7 +369,7 @@ const Home = () => {
       </div>
     ))}
   </Carousel>
-</div>
+</div> */}
 
 
 
@@ -436,7 +520,7 @@ const Home = () => {
       <Col md={8} sm={12} style={{ paddingLeft: '20px' }}>
        
         <h1 className="display-5 fw-bold" style={{color: '#0f3052'}}>
-        Influencer <br/> Academy 
+      Master <br/> Fluence
         </h1>
       </Col>
     </Row>
@@ -448,6 +532,43 @@ const Home = () => {
         <Row className="g-4 justify-content-start px-3">
           {/* Card 1 */}
           
+          {/* <Col xs={12} md={6}>
+  <Card
+    className="h-100 text-white border-0"
+    style={{
+      backgroundImage: `url('/Micro-Influencers.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      borderRadius: '15px',
+    }}
+  >
+    <Card.Body
+      className="d-flex justify-content-center"
+      style={{
+        height: '550px',
+        borderRadius: '15px',
+        paddingTop: '250px',
+        paddingRight: '3px' // adjust this value to match subheadline position
+      }}
+    >
+      <Button
+        variant="outline-light"
+        style={{
+          width: '120px',
+          height: '38px',
+          fontSize: '14px',
+          fontWeight: '500',
+          borderRadius: '6px',
+          borderWidth: '1px',
+          backgroundColor: 'rgba(255, 255, 255, 0.05)', // subtle background as seen in image
+        }}
+      >
+        Read More
+      </Button>
+    </Card.Body>
+  </Card>
+</Col> */}
+
 <Col xs={12} md={6}>
   <Card
     className="h-100 text-white border-0"
@@ -459,32 +580,66 @@ const Home = () => {
     }}
   >
     <Card.Body
-      className="d-flex flex-column justify-content-end align-items-center"
       style={{
         height: '550px',
         borderRadius: '15px',
-        paddingBottom: '40px', 
+        paddingTop: '250px',   // vertical alignment with subheadline
+        paddingLeft: '45px',   // horizontal alignment with subheadline text
       }}
     >
-      <Button variant="outline-light">Read More</Button>
+      <Button
+        variant="outline-light"
+        style={{
+          width: '120px',
+          height: '38px',
+          fontSize: '14px',
+          fontWeight: '500',
+          borderRadius: '6px',
+          borderWidth: '1px',
+          backgroundColor: 'rgba(255, 255, 255, 0.05)',
+        }}
+      >
+        Read More
+      </Button>
     </Card.Body>
   </Card>
 </Col>
+
+
+
+
       {/* Card 2 */}
-          <Col xs={12} md={6}>
-            <Card className="h-100 text-white border-0" style={{ backgroundImage: `url('/howInfluencers.png')`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '15px' }}>
-            <Card.Body
-      className="d-flex flex-column justify-content-end align-items-center"
-      style={{
-        height: '400px',
-        borderRadius: '15px',
-        paddingBottom: '40px', 
-      }}
-    >
-      <Button variant="outline-light">Read More</Button>
+      <Col xs={12} md={6}>
+  <Card
+    className="h-100 text-white border-0 position-relative"
+    style={{
+      backgroundImage: `url('/howInfluencers.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      borderRadius: '15px',
+      height: '400px',
+    }}
+  >
+    <Card.Body style={{ height: '100%', position: 'relative' }}>
+      <Button
+        variant="outline-light"
+        style={{
+          position: 'absolute',
+          top: '280px',   // distance from top
+          right: '70px',   // distance from left
+          padding: '6px 20px',
+          fontSize: '14px',
+          borderRadius: '6px',
+          fontWeight: 500,
+        }}
+      >
+        Read More
+      </Button>
     </Card.Body>
-            </Card>
-          </Col>
+  </Card>
+</Col>
+
+
         </Row>
       </Container>
     </div>
@@ -525,10 +680,11 @@ const Home = () => {
         height: '400px',
         borderRadius: '15px',
         paddingBottom: '40px', 
+       
       }}
     >
-      <Button variant="outline-light">Read More</Button>
-    </Card.Body>
+      <Button variant="outline-light" >Read More</Button>
+    </Card.Body >
             </Card>
           </Col>
         </Row>
