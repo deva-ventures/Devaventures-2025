@@ -161,9 +161,25 @@ const Home = () => {
 
 
 
-
-
-
+  // const videoStyle = {
+  //   // position: 'fixed',
+  //   top: 0,
+  //   left: 0,
+  //   minWidth: '100%',
+  //   minHeight: '50%',
+  //   objectFit: 'cover',
+  //   zIndex: -1,
+  // };
+  
+  const videoStyle = {
+    // position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100vw',
+    height: '100vh',
+    objectFit: 'cover',
+    zIndex: -1,
+  };
 
 
 
@@ -199,7 +215,7 @@ const Home = () => {
 
   return (
     <>
-    <div className="bg-light ">
+
     
 
 
@@ -246,22 +262,18 @@ const Home = () => {
     
 
     {/* Main Content */}
-    <main className="text-center mt-5 pt-5 ">
+    {/* <main className="text-center mt-5 pt-5 ">
       <p className="text-muted small">Welcome to</p>
       <h1 className="display-1 fw-bold" style={{ color: '#0f3052',letterSpacing: '-5.05px' }}>Global Influencers Hub</h1>
-     </main>
-    
-  </div>
-  <section className="position-relative ">
-  <div className="container-fluid px-0 ">
-    <img
-      src="/robot-layered.png"
-      alt="Robot Visual Layered"
-      className="img-fluid w-100"
-      style={{ objectFit: "cover", height: "100vh" }}
-    />
-  </div>
-</section>
+     </main> */}
+    <div>
+      <video autoPlay muted loop style={videoStyle}>
+        <source src="/landingVideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      </div>
+ 
+ 
 
 <section className="py-5 bg-light text-center">
       <Container>
