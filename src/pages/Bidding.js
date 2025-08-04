@@ -64,13 +64,6 @@ const Bidding = () => {
     );
   };
   
-
-
-
-
-
-
-  
   const backgroundStyle = {
     backgroundImage: `url('/aboutUs.jpg')`, // Make sure image is in public folder
     backgroundSize: 'cover',
@@ -81,7 +74,7 @@ const Bidding = () => {
   };
 
   const sectionStyle = {
-    backgroundColor: '#111', // dark background
+    backgroundColor: '#0f3052', 
     color: 'white',
     // padding: '60px 0',
     fontFamily: 'Georgia, serif',

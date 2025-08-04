@@ -1,89 +1,149 @@
 import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button,Image } from 'react-bootstrap';
 
 const ShareYourSpotlight = () => {
+  const backgroundStyle = {
+    backgroundImage: `url('/aboutUs.jpg')`, // Make sure image is in public folder
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    height: '100vh',
+    width: '100vw',
+  };
   return (
-    <div className="share-spotlight-page">
-      <section className="spotlight-hero py-5">
-        <Container>
-          <Row className="justify-content-center">
-            <Col lg={8} className="text-center">
-              <h1 className="spotlight-title">Share Your Spotlight</h1>
-              <p className="spotlight-subtitle">
-                Your story. Your Stage. Your moment. Share your journey with the world.
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+  <>
+  <Container fluid style={backgroundStyle}>
+  </Container>
 
-      <section className="spotlight-content py-5">
-        <Container>
-          <Row className="justify-content-center">
-            <Col lg={8} className="text-center">
-              <Card className="coming-soon-card">
-                <Card.Body className="p-5">
-                  <h2 className="coming-soon-title">Coming Soon</h2>
-                  <p className="coming-soon-text">
-                    Share Your Spotlight feature is under development. Soon you'll be able to 
-                    submit your story and get featured on our platform.
-                  </p>
-                  <Button variant="primary" size="lg">
-                    Get Notified
-                  </Button>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+  <Container className="py-5">
+      <Row className="align-items-center">
+        {/* Left - Circular Image */}
+        <Col xs={12} md={6} className="text-center mb-4 mb-md-0">
+          <div
+            style={{
+              width: "300px",
+              height: "380px",
+              margin: "0 auto",
+              borderRadius: "50% / 30%",
+              overflow: "hidden",
+              boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
+            }}
+          >
+            <Image
+              src="/partnerships.jpg" // replace with your image in /public
+              alt="Spotlight"
+              fluid
+              style={{ objectFit: "cover", height: "100%", width: "100%" }}
+            />
+          </div>
+        </Col>
 
-      <style jsx>{`
-        .spotlight-hero {
-          background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-          color: white;
-        }
-        
-        .spotlight-title {
-          font-size: 3rem;
-          font-weight: 700;
-          margin-bottom: 1.5rem;
-        }
-        
-        .spotlight-subtitle {
-          font-size: 1.2rem;
-          opacity: 0.9;
-          line-height: 1.6;
-        }
-        
-        .coming-soon-card {
-          border: none;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-          border-radius: 15px;
-        }
-        
-        .coming-soon-title {
-          font-size: 2.5rem;
-          font-weight: 600;
-          color: #1e3c72;
-          margin-bottom: 1rem;
-        }
-        
-        .coming-soon-text {
-          font-size: 1.1rem;
-          color: #666;
-          line-height: 1.6;
-          margin-bottom: 2rem;
-        }
-        
-        .btn-primary {
-          background: linear-gradient(135deg, #f4891d 0%, #f68b1f 100%);
-          border: none;
-          padding: 0.75rem 2rem;
-          font-weight: 600;
-        }
-      `}</style>
-    </div>
+        {/* Right - Text Content */}
+        <Col xs={12} md={6}>
+         
+          <h3 className="fw-bold mb-3" style={{ color: "#0f3052" }}>
+            Hey there!<br/> If you’ve clicked on Share Your Spotlight, buddy, we already know you’ve got <br/> something special up your sleeve!
+          </h3>
+          <p style={{ color: "#666", fontSize: "1.05rem" }}>
+            Do you have a story to share?<br />
+            Need a platform to amplify your journey?<br />
+            Or know someone whose story deserves more recognition?
+          </p>
+
+          <Button
+            style={{
+              backgroundColor: "#0f3052",
+              color: "#fff",
+              border: "none",
+              borderRadius: "8px",
+              padding: "10px 22px",
+              fontWeight: 500,
+            }}
+          >
+            Submit Story
+          </Button>
+        </Col>
+      </Row>
+    </Container>
+
+    <Container className="py-5">
+      <Row className="g-4">
+        {/* Card 1 */}
+        <Col xs={12} md={6}>
+          <div
+            style={{
+              backgroundColor: "#d8f3dc",
+              borderRadius: "16px",
+              padding: "25px",
+              height: "100%",
+              position: "relative",
+              overflow: "hidden",
+            }}
+          >
+            <h5 className="fw-bold mb-2">Not Everyone Makes the Cut</h5>
+            <p className="mb-0">
+              Only the most compelling, authentic influencers will be chosen to share their journey with the world. Will you be one of them?
+            </p>
+          </div>
+        </Col>
+
+        {/* Card 2 */}
+        <Col xs={12} md={6}>
+          <div
+            style={{
+              backgroundColor: "#cce3ff",
+              borderRadius: "16px",
+              padding: "25px",
+              height: "100%",
+              position: "relative",
+              overflow: "hidden",
+            }}
+          >
+            <h5 className="fw-bold mb-2">Gain Global Exposure</h5>
+            <p className="mb-0">
+              By sharing your story, you’re not just getting featured—you’re stepping into a global community of influencers, making connections, and growing your personal brand.
+            </p>
+          </div>
+        </Col>
+      </Row>
+    </Container>
+
+    <Container
+      fluid
+      className="py-5 px-3"
+      style={{ backgroundColor: "#0f3052"}}
+    >
+      <Row
+        className="justify-content-center align-items-center text-white"
+        style={{
+          backgroundColor: "#184d81",
+          borderRadius: "20px",
+          padding: "40px 20px",
+          minHeight: "300px",
+        }}
+      >
+        <Col xs={12} md={6} className="text-center">
+          <h2 className="fw-bold" style={{ color: "#ffffff" }}>
+          Submit your story now or get in touch with us!
+          </h2>
+          <p className="my-3" style={{ color: "#ccc", maxWidth: "100%" }}>
+          Our executive team will carefully curate your submission and give it the attention it truly deserves
+          </p>
+          <Button
+            style={{
+              backgroundColor: "white",
+              border: "none",
+              borderRadius: "8px",
+              padding: "10px 24px",
+              color: "#0f3052",
+            }}
+          >
+            Submit Your Story
+          </Button>
+        </Col>
+      </Row>
+    </Container>
+  </>
   );
 };
 

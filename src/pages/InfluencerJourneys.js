@@ -301,7 +301,7 @@ const InfluencerJourneys = () => {
     <>
     <div
       style={{
-        backgroundImage: `url('/aboutUs.jpg')`,
+        backgroundImage: `url('/storyFluenceBanner.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '90vh',
