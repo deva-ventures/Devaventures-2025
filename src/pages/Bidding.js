@@ -65,7 +65,7 @@ const Bidding = () => {
   };
   
   const backgroundStyle = {
-    backgroundImage: `url('/aboutUs.jpg')`, // Make sure image is in public folder
+    backgroundImage: `url('/biddingBanner.png')`, 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -74,10 +74,9 @@ const Bidding = () => {
   };
 
   const sectionStyle = {
-    backgroundColor: '#0f3052', 
+    backgroundColor: 'black', 
     color: 'white',
-    // padding: '60px 0',
-    fontFamily: 'Georgia, serif',
+    
   };
 
   const textBlockStyle = {
@@ -104,9 +103,8 @@ const Bidding = () => {
   const overlayImageStyle = {
     width: '100%',
     height:"300px",
-  marginLeft:"100px",
+    marginLeft:"300px",
     maxWidth: '250px',
-   
     zIndex: 2,
     position: 'relative'
   };
@@ -142,7 +140,7 @@ const Bidding = () => {
           {/* MIDDLE OVERLAPPING IMAGE */}
           <Col md={2} className="d-flex justify-content-center mb-4 mb-md-0">
             <img
-              src="/grid1.jpg"
+              src="/grid1.jpeg"
               alt="Overlay"
               style={overlayImageStyle}
             />
@@ -151,7 +149,7 @@ const Bidding = () => {
           {/* RIGHT FULL IMAGE */}
           <Col md={5}>
             <img
-              src="/pastel1.jpg"
+              src="/pastel1.jpeg"
               alt="Right Full"
               style={rightImageStyle}
             />
@@ -160,16 +158,13 @@ const Bidding = () => {
       </Container>
     </div>
   
-    <div style={{ backgroundColor: 'white', // dark background
-    color: 'white',
-    // padding: '60px 0',
-    fontFamily: 'Georgia, serif',}}>
+    <div style={{ backgroundColor: 'white', color: 'white'}}>
       <Container fluid>
         <Row className="align-items-center">
           {/* RIGHT FULL IMAGE */}
           <Col md={5}>
             <img
-              src="/grid1.jpg"
+              src="/white1.jpg"
               alt="Right Full"
               style={rightImageStyle}
             />
@@ -178,12 +173,12 @@ const Bidding = () => {
           {/* MIDDLE OVERLAPPING IMAGE */}
           <Col md={2} className="d-flex justify-content-center mb-4 mb-md-0">
             <img
-              src="/pastel1.jpg"
+              src="/black2.jpeg"
               alt="Overlay"
               style={{
                 width: '100%',
                 height: "300px",
-                marginRight: "150px",
+                marginRight: "350px",
                 maxWidth: '250px',
                 zIndex: 2,
                 position: 'relative'

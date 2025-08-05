@@ -13,6 +13,21 @@ const Home = () => {
 
   const scrollRef = useRef(null);
 
+
+  const videoStyle = {
+    width: '100%',
+    height: 'auto',
+    borderRadius: '20px',
+    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
+    display: 'block',
+    margin: 'auto',
+  };
+
+  const wrapperStyle = {
+    backgroundColor: '#f9f9f9',
+    padding: '60px 15px', // 15px padding for mobile responsiveness
+    textAlign: 'center',
+  };
    const headingStyle = {
     fontSize: 'clamp(2.5rem, 6vw, 6rem)',
     letterSpacing: '-5.05px',
@@ -171,16 +186,7 @@ const Home = () => {
   //   zIndex: -1,
   // };
   
-  const videoStyle = {
-    // position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100vw',
-    height: '100vh',
-    objectFit: 'cover',
-    zIndex: -1,
-  };
-
+  
 
 
   useEffect(() => {
@@ -266,13 +272,18 @@ const Home = () => {
       <p className="text-muted small">Welcome to</p>
       <h1 className="display-1 fw-bold" style={{ color: '#0f3052',letterSpacing: '-5.05px' }}>Global Influencers Hub</h1>
      </main> */}
-    <div>
-      <video autoPlay muted loop style={videoStyle}>
-        <source src="/landingVideo.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      </div>
- 
+  <div style={wrapperStyle}>
+      <Container fluid>
+        <Row className="justify-content-center">
+          <Col xs={12} sm={10} md={8} lg={6}>
+            <video autoPlay muted loop playsInline style={videoStyle}>
+              <source src="/landingVideo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </Col>
+        </Row>
+      </Container>
+    </div>
  
 
 <section className="py-5 bg-light text-center">
