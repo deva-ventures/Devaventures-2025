@@ -1,50 +1,30 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-
+import { Link } from 'react-router-dom';
 const InfluencerAcademy = () => {
   return (
     <>
+<div
+      style={{
+        backgroundImage: `url('/masterFluenceBanner.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '90vh',
+        color: 'white',
+        display: 'flex',
+        alignItems: 'center',
+      }}
+    >
+      
+    </div>
+
+
+
+
    <div className="bg-light py-5">
       <Container fluid>
         <Row className="g-4 justify-content-start px-3">
-          {/* Card 1 */}
           
-          {/* <Col xs={12} md={6}>
-  <Card
-    className="h-100 text-white border-0"
-    style={{
-      backgroundImage: `url('/Micro-Influencers.png')`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      borderRadius: '15px',
-    }}
-  >
-    <Card.Body
-      className="d-flex justify-content-center"
-      style={{
-        height: '550px',
-        borderRadius: '15px',
-        paddingTop: '250px',
-        paddingRight: '3px' // adjust this value to match subheadline position
-      }}
-    >
-      <Button
-        variant="outline-light"
-        style={{
-          width: '120px',
-          height: '38px',
-          fontSize: '14px',
-          fontWeight: '500',
-          borderRadius: '6px',
-          borderWidth: '1px',
-          backgroundColor: 'rgba(255, 255, 255, 0.05)', // subtle background as seen in image
-        }}
-      >
-        Read More
-      </Button>
-    </Card.Body>
-  </Card>
-</Col> */}
 
 <Col xs={12} md={6}>
   <Card
@@ -64,20 +44,22 @@ const InfluencerAcademy = () => {
         paddingLeft: '45px',   // horizontal alignment with subheadline text
       }}
     >
-      <Button
-        variant="outline-light"
-        style={{
-          width: '120px',
-          height: '38px',
-          fontSize: '14px',
-          fontWeight: '500',
-          borderRadius: '6px',
-          borderWidth: '1px',
-          backgroundColor: 'rgba(255, 255, 255, 0.05)',
-        }}
-      >
-        Read More
-      </Button>
+      <a href="/articles/riseOfMicro" target="_blank" rel="noopener noreferrer">
+  <Button
+    variant="outline-light"
+    style={{
+      width: '120px',
+      height: '38px',
+      fontSize: '14px',
+      fontWeight: '500',
+      borderRadius: '6px',
+      borderWidth: '1px',
+      backgroundColor: 'rgba(255, 255, 255, 0.05)',
+    }}
+  >
+    Read More
+  </Button>
+</a>
     </Card.Body>
   </Card>
 </Col>
@@ -98,6 +80,7 @@ const InfluencerAcademy = () => {
     }}
   >
     <Card.Body style={{ height: '100%', position: 'relative' }}>
+    <a href="/articles/influencerPowerMoves" target="_blank" rel="noopener noreferrer">
       <Button
         variant="outline-light"
         style={{
@@ -112,10 +95,10 @@ const InfluencerAcademy = () => {
       >
         Read More
       </Button>
+      </a>
     </Card.Body>
   </Card>
 </Col>
-
 
         </Row>
       </Container>

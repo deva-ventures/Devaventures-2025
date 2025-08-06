@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Image, Card, Button } from 'react-bootstrap';
-
+import { Link } from 'react-router-dom';
 const AmplifyYourBrand = () => {
   const backgroundStyle = {
-    backgroundImage: `url('/aboutUs.jpg')`, // Make sure image is in public folder
+    backgroundImage: `url('/amplifyYourBrandBanner.png')`, // Make sure image is in public folder
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -29,17 +29,18 @@ const AmplifyYourBrand = () => {
   }}
 >
   <h5 className="fw-bold mb-4" style={{ fontSize: "18px", letterSpacing: "1px" }}>
-    WINTER GETAWAY
+  Why Advertise on Global Influencers Hub?
   </h5>
   <p style={{ fontSize: "14px", lineHeight: "1.6" }}>
-    Ut efficitur a urna sed mattis. Integer auctor maximus neque sed
-    lacinia. Praesent eget velit ullamcorper, tincidunt eros vel,
-    pellentesque felis.
+  Stand Out Where It Matters Most.
+Global Influencers Hub isn’t just a website—it’s a movement. As a high-traffic platform celebrating social
+media influencers, we bring together influencers, their fans, and brands ready to make an impact. Here’s why you’ll want to join us:
   </p>
   <p style={{ fontSize: "14px", lineHeight: "1.6" }}>
-    Donec vehicula, augue et sollicitudin mollis, diam quam pellentesque
-    dui, eu luctus nisi urna ac leo. Praesent eget mauris convallis,
-    consequat quam non, mollis neque. Phasellus ut erat mi.
+  Unrivaled Reach: Engage with a diverse and growing audience of millions worldwide.
+Influencer-Driven Traffic: Our audience isn’t just big—it’s engaged, curious, and loyal.
+Brand Credibility: Associate with a premium platform known for authentic and inspiring content.
+Customizable Campaigns: We craft ad experiences that work for your brand and goals.
   </p>
 </div>
 
@@ -48,16 +49,19 @@ const AmplifyYourBrand = () => {
       <Container fluid>
         <Row>
           <Col md={4} className="mb-4 mb-md-0">
+          <h5>Advertising Opportunities</h5>
             <p style={{ fontSize: "14px", lineHeight: "1.7", marginBottom: 0 }}>
-              Donec ut risus vitae diam efficitur fermentum. Quisque urna urna,
-              mollis sit amet eleifend nec, maximus vel dolor. Nulla malesuada
-              nunc a felis commodo pulvinar vulputate nec ligula.
+            Whether you’re looking to boost brand visibility or drive conversions, we’ve got you covered:
             </p>
+            <p>Homepage Features: Be the first thing our audience sees with premium banner placements.
+Sponsored Stories: Let us tell your brand’s story alongside the journeys of top influencers.
+Video Ads: Embed your videos into influencer interviews, reels, or story highlights.</p>
           </Col>
           <Col md={4} className="mb-4 mb-md-0">
             <p style={{ fontSize: "14px", lineHeight: "1.7", marginBottom: 0 }}>
-              Integer a tincidunt sapien, sit amet sodales massa convallis eget.
-              Vivamus a maximus est, vel feugiat neque.
+            Newsletter Spotlights: Get direct access to our highly engaged subscriber base.
+Social Media Campaigns: Collaborate with us to amplify your message across our platforms.
+Event Sponsorships: Stand out by sponsoring influencer meetups, launch parties, or virtual webinars.
             </p>
           </Col>
          
@@ -80,36 +84,19 @@ const AmplifyYourBrand = () => {
               className="fw-bold mb-4"
               style={{ fontSize: "18px", letterSpacing: "1px" }}
             >
-              WHERE YOU’LL STAY
+              Who Should Advertise?
             </h5>
             <p style={{ fontSize: "14px", lineHeight: "1.6" }}>
-              Curabitur lobortis quis massa quis facilisis. Proin et ipsum
-              dapibus, pulvinar enim vel, scelerisque diam. Ut blandit sem vel
-              sem tempor fringilla. Duis eros quam, condimentum vitae
-              sollicitudin eu, tempor vitae risus. Morbi auctor volutpat
-              lacinia.
+            Our platform is perfect for:
             </p>
             <p style={{ fontSize: "14px", lineHeight: "1.6" }}>
-              Praesent ultricies dolor dui, condimentum lobortis urna tempus
-              sed.
-            </p>
-            <p style={{ fontSize: "14px", lineHeight: "1.6" }}>
-              Donec arcu lacus, aliquam ac sollicitudin eget, pharetra quis
-              urna.Curabitur lobortis quis massa quis facilisis. Proin et ipsum
-              dapibus, pulvinar enim vel, scelerisque diam. Ut blandit sem vel
-              sem tempor fringilla. Duis eros quam, condimentum vitae
-              sollicitudin eu, tempor vitae risus. Morbi auctor volutpat
-              lacinia.Curabitur lobortis quis massa quis facilisis. Proin et ipsum
-            
-              lacinia.
+            Brands: Looking to connect with influencers and trend-savvy audiences.
+Agencies: Wanting premium placement for their clients in a targeted, high-traffic environment.
+Startups: Eager to build awareness and grow within the influencer ecosystem.
+Creators and Tools: Promoting influencer-focused services, apps, or products.
             </p>
             
-            <p
-              className="mt-3"
-              style={{ fontSize: "14px", fontWeight: "bold", letterSpacing: "1px" }}
-            >
-              DISCOVER MORE →
-            </p>
+        
           </Col>
 
           {/* Right Image Section */}
@@ -118,7 +105,7 @@ const AmplifyYourBrand = () => {
     style={{
       height: "700px",
       width: "100%",
-      backgroundImage: `url('/pastel1.jpg')`,
+      backgroundImage: `url('/amplifyImage.png')`,
       backgroundSize: "cover",
       backgroundPosition: "center",
       borderRadius: "0",
@@ -134,50 +121,57 @@ const AmplifyYourBrand = () => {
     </div>
 
     <Container fluid className="p-0">
-      <Row className="m-0">
-        <Col xs={12} className="p-0">
-          <div
-            style={{
-              position: "relative",
-              width: "100%",
-              height: "80vh",
-              backgroundImage: "url('/grid3.png')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-end",
-              paddingRight: "5%",
-              top:'-250px'
-            }}
+  <Row className="m-0">
+    <Col xs={12} className="p-0">
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          height: "80vh",
+          backgroundImage: "url('/formBanner.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-start", // 👈 shift text to left
+          paddingLeft: "5%", // 👈 add padding on the left instead of right
+          top: "-250px",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "360px",
+            color: "#fff",
+            textAlign: "center",
+          }}
+        >
+          <h5
+            className="fw-bold mb-3"
+            style={{ fontSize: "20px", letterSpacing: "1px" }}
           >
-            <div
-              style={{
-                maxWidth: "360px",
-                color: "#fff",
-                textAlign: "left",
-              }}
-            >
-              <h5 className="fw-bold mb-3" style={{ fontSize: "20px", letterSpacing: "1px" }}>
-                FILL OUT THE FORM
-              </h5>
-              <p style={{ fontSize: "14px", lineHeight: "1.6" }}>
-                Reserve your spot today and take the first step toward unmatched visibility and engagement!
-              </p>
-              <Button
-                style={{
-                  backgroundColor: "#0f3052",
-                  border: "none",
-                  marginTop: "10px",
-                }}
-              >
-                Discover More
-              </Button>
-            </div>
-          </div>
-        </Col>
-      </Row>
-    </Container>
+            FILL OUT THE FORM
+          </h5>
+          <p style={{ fontSize: "14px", lineHeight: "1.6" }}>
+            Reserve your spot today and take the first step toward unmatched
+            visibility and engagement!
+          </p>
+          <Link to="https://docs.google.com/forms/d/e/1FAIpQLScOvJrsMaU_-Jwd37VCvXa-93zuEnNb3un5mC2x0n1NgbfvzQ/viewform">
+  <Button
+    style={{
+      backgroundColor: "#0f3052",
+      border: "none",
+      marginTop: "10px",
+    }}
+  >
+    Discover More
+  </Button>
+</Link>
+        </div>
+      </div>
+    </Col>
+  </Row>
+</Container>
+
   </>
   );
 };

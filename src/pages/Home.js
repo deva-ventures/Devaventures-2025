@@ -1,4 +1,5 @@
 import React, {useEffect, useState, useRef} from 'react';
+import { Link } from 'react-router-dom';
 import "../App.css";
 import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
 import {useLocation} from 'react-router-dom';
@@ -14,19 +15,20 @@ const Home = () => {
   const scrollRef = useRef(null);
 
 
+  const wrapperStyle = {
+    backgroundColor: '#f9f9f9',
+    padding: '60px 15px',
+    textAlign: 'center',
+  };
+  
   const videoStyle = {
-    width: '100%',
+    width: '100%',            // Full width of the column
+    maxWidth: '3400px',       // Increase max width (adjust as needed)
     height: 'auto',
     borderRadius: '20px',
     boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
     display: 'block',
-    margin: 'auto',
-  };
-
-  const wrapperStyle = {
-    backgroundColor: '#f9f9f9',
-    padding: '60px 15px', // 15px padding for mobile responsiveness
-    textAlign: 'center',
+    margin: '0 auto',
   };
    const headingStyle = {
     fontSize: 'clamp(2.5rem, 6vw, 6rem)',
@@ -40,23 +42,27 @@ const Home = () => {
     {
       title: "Influencers Academy: Elevate Your Influence, Own the Spotlight",
       instructor: "Where Future Influencers Learn to Lead",
-      image: "/grid1.png", 
+      image: "/grid1.png",
+      link: "/influencer-academy"
     },
     {
       title: "Influencer Journey — Where Story Meets Strength",
       instructor: "Creators. Changemakers. Their Stories, Unfiltered",
       image: "/grid2.png",
+      link: "/influencer-journeys"
     },
     {
       title: "Share Your Spotlight - Be Seen by the World. Be the Next Icon",
       instructor: "Turn your journey into inspiration",
       image: "/grid3.png",
+      link: "/share-your-spotlight"
     },
     {
-      title: "Learn Figma from 0 to 100 (10 Courses)",
-      instructor: "Mirko Santangelo",
+      title: "Bidding Room- Only the boldest brands and the most ambitious influencers will know.",
+      instructor: "Bid, win, and collaborate",
       image: "/grid4.png",
-    },
+      link: "/bidding"
+    }
   ];
   
   
@@ -163,28 +169,22 @@ const Home = () => {
   ];
 
   const berlinImages = [
-    '/f2.png',
-    '/f3.png',
-    '/f1.png',
+    { src: '/sweta.png', link: '/articles/sweta' },
+    { src: '/f3.png', link: 'https://example.com/f3' },
+    { src: '/sweta.png', link: '/articles/sweta' },
+    { src: '/f3.png', link: 'https://example.com/f3' },
   ];
   
   const viennaImages = [
-    '/f1.png',
-    '/f3.png',
-    '/f2.png',
+    // { src: '/sweta.png', link: '/articles/sweta' },
+    // { src: '/f3.png', link: 'https://example.com/f3' },
+    // { src: '/sweta.png', link: '/articles/sweta' },
+    // { src: '/f3.png', link: 'https://example.com/f3' },
   ];
 
 
 
-  // const videoStyle = {
-  //   // position: 'fixed',
-  //   top: 0,
-  //   left: 0,
-  //   minWidth: '100%',
-  //   minHeight: '50%',
-  //   objectFit: 'cover',
-  //   zIndex: -1,
-  // };
+  
   
   
 
@@ -222,22 +222,6 @@ const Home = () => {
   return (
     <>
 
-    
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
 
     {/* <header className="d-flex justify-content-between align-items-center px-4 py-3 bg-white border-bottom sticky-top">
       <div className="d-flex align-items-center gap-4">
@@ -268,20 +252,20 @@ const Home = () => {
     
 
     {/* Main Content */}
-    {/* <main className="text-center mt-5 pt-5 ">
+     <main className="text-center mt-5 pt-5 ">
       <p className="text-muted small">Welcome to</p>
       <h1 className="display-1 fw-bold" style={{ color: '#0f3052',letterSpacing: '-5.05px' }}>Global Influencers Hub</h1>
-     </main> */}
+     </main> 
   <div style={wrapperStyle}>
-      <Container fluid>
-        <Row className="justify-content-center">
-          <Col xs={12} sm={10} md={8} lg={6}>
-            <video autoPlay muted loop playsInline style={videoStyle}>
-              <source src="/landingVideo.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </Col>
-        </Row>
+  <Container fluid>
+    <Row className="justify-content-center">
+    <Col xs={12} sm={12} md={10} lg={10} xl={10}>
+  <video autoPlay muted loop playsInline style={videoStyle}>
+    <source src="/landingVideo.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</Col>
+    </Row>
       </Container>
     </div>
  
@@ -293,121 +277,93 @@ const Home = () => {
          Featured Story
           
         </h1>
-        <p className="text-muted fs-5">
-          Vote for the latest websites on <br /> awwwards
-        </p>
+        
       </Container>
     </section>
     <Container fluid className="py-5 px-3">
       <Row className="g-3 justify-content-center">
         {/* Static Large Card - Prague */}
         <Col xs={12} lg={6}>
-          <Card className="text-white h-100" style={{
-            borderRadius: '20px',
-            backgroundImage: `url('/f1.png')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            height: '100%',
-            minHeight: '400px',
-            overflow: 'hidden',
-            
-          }}>
-            <Card.Body className="d-flex flex-column justify-content-between h-100 p-4"
-              style={{
-                background: 'linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2))',
-              }}>
-              
-              
-              
-            </Card.Body>
-          </Card>
-        </Col>
+  <Link to="/articles/pablo" style={{ textDecoration: 'none' }}>
+    <Card
+      className="text-white h-100"
+      style={{
+        borderRadius: '20px',
+        backgroundImage: `url('/pabloMontana.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '100%',
+        minHeight: '400px',
+        overflow: 'hidden',
+      }}
+    >
+      {/* Optional: You can put text, overlay, etc. here */}
+    </Card>
+  </Link>
+</Col>
 
         {/* Carousel Card - Berlin */}
-        <Col xs={12} md={6} lg={3}>
-          <Carousel controls={true} indicators={false} fade interval={4000}>
-            {berlinImages.map((src, idx) => (
-              <Carousel.Item key={idx}>
-                <Card className="text-white h-100" style={{
-                  borderRadius: '20px',
-                  backgroundImage: `url(${src})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  minHeight: '400px',
-                  overflow: 'hidden',
-                }}>
-                  
-                </Card>
-              </Carousel.Item>
-            ))}
-          </Carousel>
-        </Col>
+        <Col xs={12} md={12} lg={6}>
+  <Carousel controls={true} indicators={false} fade interval={4000}>
+    {Array.from({ length: Math.ceil(berlinImages.length / 2) }).map((_, idx) => {
+      const berlin1 = berlinImages[idx * 2];
+      const berlin2 = berlinImages[idx * 2 + 1];
+      const vienna1 = viennaImages[idx * 2];
+      const vienna2 = viennaImages[idx * 2 + 1];
 
-        {/* Carousel Card - Vienna */}
-        <Col xs={12} md={6} lg={3}>
-          <Carousel controls={true} indicators={false} fade interval={4000}>
-            {viennaImages.map((src, idx) => (
-              <Carousel.Item key={idx}>
-                <Card className="text-white h-100" style={{
-                  borderRadius: '20px',
-                  backgroundImage: `url(${src})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  minHeight: '400px',
-                  overflow: 'hidden',
-                }}>
-                  
-                </Card>
-              </Carousel.Item>
-            ))}
-          </Carousel>
-        </Col>
+      return (
+        <Carousel.Item key={idx}>
+          <Row className="g-3">
+            {/* First card */}
+            {berlin1 && (
+              <Col xs={6}>
+                <a
+                  href={berlin1.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: 'none' }}
+                >
+                  <Card
+                    className="text-white h-100"
+                    style={{
+                      borderRadius: '20px',
+                      backgroundImage: `url(${berlin1.src})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      minHeight: '400px',
+                      overflow: 'hidden',
+                    }}
+                  />
+                </a>
+              </Col>
+            )}
+
+            {/* Second card */}
+            {berlin2 && (
+              <Col xs={6}>
+                <Card
+                  className="text-white h-100"
+                  style={{
+                    borderRadius: '20px',
+                    backgroundImage: `url(${berlin2.src})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    minHeight: '400px',
+                    overflow: 'hidden',
+                  }}
+                />
+              </Col>
+            )}
+          </Row>
+        </Carousel.Item>
+      );
+    })}
+  </Carousel>
+</Col>
       </Row>
     </Container>
 
-    {/* <div className="my-5 px-3">
-  <Carousel
-    responsive={responsive}
-    infinite
-    autoPlay
-    autoPlaySpeed={3000}
-    keyBoardControl
-    transitionDuration={500}
-    containerClass="carousel-container"
-    itemClass="carousel-item-padding-40-px"
-  >
-    {images.map((img, index) => (
-      <div key={index} className="p-2">
-        <a href={img.link} target="_blank" rel="noopener noreferrer">
-          <img
-            src={img.src}
-            alt={`Slide ${index}`}
-            style={{
-              width: '100%',
-              borderRadius: '12px',
-              boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
-            }}
-          />
-        </a>
-      </div>
-    ))}
-  </Carousel>
-</div> */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 
 
@@ -510,30 +466,32 @@ const Home = () => {
       </h2>
     </div>
     <Row xs={1} sm={2} md={2} lg={4} className="g-4" style={{ marginLeft: 0, marginRight: 0, paddingLeft: '50px', paddingRight: '50px' }}>
-      {courses.map((course, idx) => (
-        <Col key={idx}>
-          <Card className="h-100 border-0 shadow-sm" style={{ borderRadius: '16px' }}>
-            <Card.Img
-              variant="top"
-              src={course.image}
-              style={{
-                borderTopLeftRadius: '16px',
-                borderTopRightRadius: '16px',
-                height: '320px',
-                objectFit: 'cover'
-              }}
-            />
-            <Card.Body>
-              <Card.Title style={{ fontSize: '1rem' }}>{course.title}</Card.Title>
-              <div className="text-muted" style={{ fontSize: '0.875rem' }}>
-                {course.instructor}
-              </div>
-              
-            </Card.Body>
-          </Card>
-        </Col>
-      ))}
-    </Row>
+  {courses.map((course, idx) => (
+    <Col key={idx}>
+      <Card className="h-100 border-0 shadow-sm" style={{ borderRadius: '16px' }}>
+        <a href={course.link} target="_blank" rel="noopener noreferrer">
+          <Card.Img
+            variant="top"
+            src={course.image}
+            style={{
+              borderTopLeftRadius: '16px',
+              borderTopRightRadius: '16px',
+              height: '320px',
+              objectFit: 'cover',
+              cursor: 'pointer'
+            }}
+          />
+        </a>
+        <Card.Body>
+          <Card.Title style={{ fontSize: '1rem' }}>{course.title}</Card.Title>
+          <div className="text-muted" style={{ fontSize: '0.875rem' }}>
+            {course.instructor}
+          </div>
+        </Card.Body>
+      </Card>
+    </Col>
+  ))}
+</Row>
   </Container>
 </div>
 
@@ -553,44 +511,7 @@ const Home = () => {
 <div className="bg-light py-5">
       <Container fluid>
         <Row className="g-4 justify-content-start px-3">
-          {/* Card 1 */}
           
-          {/* <Col xs={12} md={6}>
-  <Card
-    className="h-100 text-white border-0"
-    style={{
-      backgroundImage: `url('/Micro-Influencers.png')`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      borderRadius: '15px',
-    }}
-  >
-    <Card.Body
-      className="d-flex justify-content-center"
-      style={{
-        height: '550px',
-        borderRadius: '15px',
-        paddingTop: '250px',
-        paddingRight: '3px' // adjust this value to match subheadline position
-      }}
-    >
-      <Button
-        variant="outline-light"
-        style={{
-          width: '120px',
-          height: '38px',
-          fontSize: '14px',
-          fontWeight: '500',
-          borderRadius: '6px',
-          borderWidth: '1px',
-          backgroundColor: 'rgba(255, 255, 255, 0.05)', // subtle background as seen in image
-        }}
-      >
-        Read More
-      </Button>
-    </Card.Body>
-  </Card>
-</Col> */}
 
 <Col xs={12} md={6}>
   <Card
@@ -610,20 +531,22 @@ const Home = () => {
         paddingLeft: '45px',   // horizontal alignment with subheadline text
       }}
     >
-      <Button
-        variant="outline-light"
-        style={{
-          width: '120px',
-          height: '38px',
-          fontSize: '14px',
-          fontWeight: '500',
-          borderRadius: '6px',
-          borderWidth: '1px',
-          backgroundColor: 'rgba(255, 255, 255, 0.05)',
-        }}
-      >
-        Read More
-      </Button>
+      <a href="/articles/riseOfMicro" target="_blank" rel="noopener noreferrer">
+  <Button
+    variant="outline-light"
+    style={{
+      width: '120px',
+      height: '38px',
+      fontSize: '14px',
+      fontWeight: '500',
+      borderRadius: '6px',
+      borderWidth: '1px',
+      backgroundColor: 'rgba(255, 255, 255, 0.05)',
+    }}
+  >
+    Read More
+  </Button>
+</a>
     </Card.Body>
   </Card>
 </Col>
@@ -644,6 +567,7 @@ const Home = () => {
     }}
   >
     <Card.Body style={{ height: '100%', position: 'relative' }}>
+    <a href="/articles/influencerPowerMoves" target="_blank" rel="noopener noreferrer">
       <Button
         variant="outline-light"
         style={{
@@ -658,10 +582,10 @@ const Home = () => {
       >
         Read More
       </Button>
+      </a>
     </Card.Body>
   </Card>
 </Col>
-
 
         </Row>
       </Container>

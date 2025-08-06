@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button,Image } from 'react-bootstrap';
-
+import { Link } from 'react-router-dom';
 const ShareYourSpotlight = () => {
   const backgroundStyle = {
-    backgroundImage: `url('/aboutUs.jpg')`, // Make sure image is in public folder
+    backgroundImage: `url('/shareYourSpotlightBanner.png')`, // Make sure image is in public folder
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -30,7 +30,7 @@ const ShareYourSpotlight = () => {
             }}
           >
             <Image
-              src="/partnerships.jpg" // replace with your image in /public
+              src="/shareYour.jpg" // replace with your image in /public
               alt="Spotlight"
               fluid
               style={{ objectFit: "cover", height: "100%", width: "100%" }}
@@ -50,18 +50,19 @@ const ShareYourSpotlight = () => {
             Or know someone whose story deserves more recognition?
           </p>
 
-          <Button
-            style={{
-              backgroundColor: "#0f3052",
-              color: "#fff",
-              border: "none",
-              borderRadius: "8px",
-              padding: "10px 22px",
-              fontWeight: 500,
-            }}
-          >
-            Submit Story
-          </Button>
+          <Link to="https://docs.google.com/forms/d/e/1FAIpQLSeW3IfgzGfq6p3zpRrd2ltp2URzFy9av5GBV07svhRgmd64jg/viewform">
+  <Button
+    style={{
+      backgroundColor: "white",
+      border: "none",
+      borderRadius: "8px",
+      padding: "10px 24px",
+      color: "#0f3052",
+    }}
+  >
+    Submit Your Story
+  </Button>
+</Link>
         </Col>
       </Row>
     </Container>
@@ -111,12 +112,17 @@ const ShareYourSpotlight = () => {
     <Container
       fluid
       className="py-5 px-3"
-      style={{ backgroundColor: "#0f3052"}}
+      style={{
+        backgroundImage: "url('/shareYourStory.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       <Row
         className="justify-content-center align-items-center text-white"
         style={{
-          backgroundColor: "#184d81",
+          // backgroundColor: "#184d81",
           borderRadius: "20px",
           padding: "40px 20px",
           minHeight: "300px",
@@ -124,22 +130,25 @@ const ShareYourSpotlight = () => {
       >
         <Col xs={12} md={6} className="text-center">
           <h2 className="fw-bold" style={{ color: "#ffffff" }}>
-          Submit your story now or get in touch with us!
+            Submit your story now or get in touch with us!
           </h2>
           <p className="my-3" style={{ color: "#ccc", maxWidth: "100%" }}>
-          Our executive team will carefully curate your submission and give it the attention it truly deserves
+            Our executive team will carefully curate your submission and give it the attention it truly deserves
           </p>
-          <Button
-            style={{
-              backgroundColor: "white",
-              border: "none",
-              borderRadius: "8px",
-              padding: "10px 24px",
-              color: "#0f3052",
-            }}
-          >
-            Submit Your Story
-          </Button>
+          <Link to="https://docs.google.com/forms/d/e/1FAIpQLSeW3IfgzGfq6p3zpRrd2ltp2URzFy9av5GBV07svhRgmd64jg/viewform">
+  <Button
+    style={{
+      backgroundColor: "white",
+      border: "none",
+      borderRadius: "8px",
+      padding: "10px 24px",
+      color: "#0f3052",
+    }}
+  >
+    Submit Your Story
+  </Button>
+</Link>
+          
         </Col>
       </Row>
     </Container>

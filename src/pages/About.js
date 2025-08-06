@@ -10,15 +10,13 @@ const AboutSection = () => {
         <h1 className="fw-bold display-1" style={{ letterSpacing: '-2px', lineHeight: '1.1',color: '#0f3052' }}>
           LEARN MORE<br />ABOUT US
         </h1>
-        <p className="text-muted fs-5 mt-3" style={{ color: '#0f3052' }}>
-          Our community, experiences, and <br className="d-md-none" />products.
-        </p>
+       
       </Container>
     </div>
     <Container
       fluid
       className=" d-flex align-items-center justify-content-center"
-      style={{ paddingTop: '100px', paddingBottom: '100px', minHeight: '100vh' }}
+      style={{  paddingBottom: '100px', }}
     >
       <Row className="justify-content-center">
         <Col xs={12} md={10} lg={28} className="text-center">
@@ -41,7 +39,7 @@ const AboutSection = () => {
     <Container fluid className="bg-light py-5">
       <Row className="justify-content-center">
         <Col xs={12} md={10} lg={8}>
-          <h2 className="fw-bold text-center mb-4">
+          <h2 className="fw-bold text-center mb-4" style={{color: '#0f3052'}}>
           Dive into the diverse experiences of social media influencers shaping the online landscape. 
           </h2>
 

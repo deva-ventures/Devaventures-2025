@@ -71,26 +71,39 @@ export const trendingStories = [
     id: 1,
     title: 'Pankaj Dubey: The Visionary Leader Redefining Entrepreneurship and Impact',
     image: 'https://globalinfluencershub.com/wp-content/uploads/2025/03/1080-x-797_7-1024x756.jpg',
-    slug: 'pankaj-dubey-visionary-leader'
+    slug: '/articles/pankaj'
   },
   {
     id: 2,
     title: 'An Exclusive Interview with Neole Anna Cornelio: From Childhood Passion to Professional Athlete',
     image: 'https://globalinfluencershub.com/wp-content/uploads/2025/03/1080-x-797_111-1024x756.jpg',
-    slug: 'neole-anna-cornelio-interview'
+    slug: '/articles/neole'
   },
   {
     id: 3,
-    title: 'Gunjan Dewan: The Data Scientist Who Became Every Parent\'s Mealtime Muse',
-    image: 'https://globalinfluencershub.com/wp-content/uploads/2025/05/1080-x-797_26-1024x756.jpg',
-    slug: 'gunjan-dewan-data-scientist'
+    title: 'Pablo Montana: The Rhythmic Voyager Crafting Music, Memories, and Magic',
+    image: '/pabloTrendin.jpg',
+    slug: '/articles/pablo'
   },
   {
     id: 4,
-    title: 'Raj Sharma: The Global Comedian with a Desi Heart and a Universal Punchline',
-    image: 'https://globalinfluencershub.com/wp-content/uploads/2025/04/RAJ-_111-1024x756.jpg',
-    slug: 'raj-sharma-global-comedian'
-  }
+    title: 'Pankaj Dubey: The Visionary Leader Redefining Entrepreneurship and Impact',
+    image: 'https://globalinfluencershub.com/wp-content/uploads/2025/03/1080-x-797_7-1024x756.jpg',
+    slug: '/articles/pankaj'
+  },
+  {
+    id: 5,
+    title: 'An Exclusive Interview with Neole Anna Cornelio: From Childhood Passion to Professional Athlete',
+    image: 'https://globalinfluencershub.com/wp-content/uploads/2025/03/1080-x-797_111-1024x756.jpg',
+    slug: '/articles/neole'
+  },
+  {
+    id: 6,
+    title: 'Pablo Montana: The Rhythmic Voyager Crafting Music, Memories, and Magic',
+    image: '/pabloTrendin.jpg',
+    slug: '/articles/pablo'
+  },
+ 
 ];
 
 export const journeyCategories = [

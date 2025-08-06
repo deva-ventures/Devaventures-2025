@@ -361,7 +361,7 @@ const InfluencerJourneys = () => {
               >
                 <h5 style={{ fontWeight: '600' }}>{story.title}</h5>
                 <a
-                  href={`/blogs/${story.slug}`}
+                  href={`${story.slug}`}
                   className="text-white mt-2"
                   style={{
                     textDecoration: 'none',

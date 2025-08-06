@@ -1,15 +1,54 @@
 import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button , Carousel} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { trendingStories, trendingVideos } from '../data/mockData';
-
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 const Trending = () => {
+
+  const people = [
+    {
+      name: 'Pankaj Dubey',
+      des: 'Founder DSPIN | TEDx Speaker | Top 50 Indian Icon | Investor',
+      img: '/pankaj.jpg',
+      youtube: 'https://youtu.be/RUJ-LV58m9I?si=Fzn9UkQRoXSRt5ZM',
+      article: '/articles/pankaj',
+    },
+    {
+      name: 'Pablo Montana',
+      des: 'Musician | Latin Artist | Salsa & Bachata Performer | Traveller',
+      img: '/pabloTrendin.jpg',
+      youtube: 'https://youtu.be/-oq8VYhFcHw?si=FVXr_fPIrhPjG0Ec',
+      article: '/articles/pablo',
+    },
+    {
+      name: 'Sweta Desai',
+      des: 'Reset, Rebuild, Reign | From Late Starts to Global Fashion Weeks & Full House Shows',
+      img: '/swetaTrending.jpg',
+      youtube: 'https://youtu.be/va1t7bxevtc?si=kvmnn3vYRFnyYWpp',
+      article: '/articles/sweta',
+    },
+    {
+      name: 'Pankaj Dubey',
+      des: 'Founder DSPIN | TEDx Speaker | Top 50 Indian Icon | Investor',
+      img: '/pankaj.jpg',
+      youtube: 'https://youtu.be/RUJ-LV58m9I?si=Fzn9UkQRoXSRt5ZM',
+      article: '/articles/pankaj',
+    },
+  ];
+  
+  // Group items into chunks of 3 for each slide
+  const chunkArray = (arr, size) =>
+    Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
+      arr.slice(i * size, i * size + size)
+    );
+  
+  const groupedSlides = chunkArray(people, 3);
   return (
     <div style={{ backgroundColor: "#f5f5f0" }}>
     {/* Hero Section */}
     <div
       style={{
-        backgroundImage: "url('/aboutUs.jpg')",
+        backgroundImage: "url('/trendingBanner.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         minHeight: "90vh",
@@ -47,35 +86,62 @@ const Trending = () => {
 
 {/* Popular Homes Section */}
 <Container className="py-5">
-      <div className="d-flex justify-content-between align-items-center mb-4">
-        <h4 >These aren’t just viral clips — they’re the truths behind the triumphs.</h4>
-        <p >This is where real impact begins — not in noise, but in truth.</p>
+      <div className="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
+        <h4 className="mb-2 mb-md-0">
+          These aren’t just viral clips — they’re the truths behind the triumphs.
+        </h4>
+        <p className="mb-0">
+          This is where real impact begins — not in noise, but in truth.
+        </p>
       </div>
-      <Row className="g-4">
-        {[{
-          name: 'jkfnkas lkemfl', price: '5.500 р/сут.', guests: '1 – 4 чел.', beds: '2 спальных места', img: '/pastel1.jpeg'
-        }, {
-          name: 'wsefh jwenfjk', price: '12.000 р/сут.', guests: '2 – 6 чел.', beds: '4 спальных места', img: '/pastel1.jpeg'
-        }, {
-          name: 'efwnkj jkkkws', price: '17.000 р/сут.', guests: '5 – 12 чел.', beds: '6 спальных мест', img: '/pastel1.jpeg'
-        }].map((home, index) => (
-          <Col md={4} key={index}>
-            <Card className="h-100">
-              <Card.Img variant="top" src={home.img} style={{ borderRadius: '12px' }} />
-              <Card.Body>
-                <div className="d-flex justify-content-between text-muted small mb-2">
-                  <span>{home.guests}</span>
-                  <span>{home.beds}</span>
-                </div>
-                <Card.Title>{home.name}</Card.Title>
-                <Card.Text className="text-end fw-bold">{home.price}</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </Container>
 
+      <Carousel
+        indicators={false}
+        prevIcon={<FaChevronLeft color="#0d6efd" size={24} />}
+        nextIcon={<FaChevronRight color="#0d6efd" size={24} />}
+      >
+        {groupedSlides.map((group, slideIndex) => (
+          <Carousel.Item key={slideIndex}>
+            <Row className="g-4">
+              {group.map((home, index) => (
+                <Col md={4} key={index}>
+                  <Card className="h-100 border-0 shadow-sm">
+                    <Card.Img
+                      variant="top"
+                      src={home.img}
+                      style={{ borderRadius: '12px', height: '280px', objectFit: 'cover' }}
+                    />
+                    <Card.Body>
+                      <div className="text-muted small mb-2">{home.des}</div>
+                      <Card.Title className="fw-bold">{home.name}</Card.Title>
+
+                      <div className="d-flex flex-column mt-3 gap-2">
+                        <a
+                          href={home.youtube}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-outline-primary btn-sm"
+                        >
+                          Click here for YouTube
+                        </a>
+                        <a
+                          href={home.article}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-outline-secondary btn-sm"
+                        >
+                          Click here for Article
+                        </a>
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </Container>
 
 
 
@@ -107,27 +173,25 @@ Beyond every reel is a real story — and that’s what you’ll find here.
     </Container>
 
     {/* Why Choose Us Section */}
-    <div
-      style={{
-        backgroundImage: "url('/formBackground.jpeg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        color: "white",
-        padding: "60px 0",
-      }}
-    >
-      <Container>
-        <h3 className="fw-light">Beyond the Scroll. Into the Soul.</h3>
-        <div className="d-flex flex-wrap gap-3 mt-3">
-          {['Комфортные условия', 'Персонализированный сервис', 'Экологичные материалы', 'Быстрое бронирование', 'Уединенное расположение'].map((item, idx) => (
-            <span key={idx} className="bg-light text-dark px-3 py-2 rounded-pill small">
-              {item}
-            </span>
-          ))}
-        </div>
-      </Container>
-    </div>
-
+    <a
+  href="https://youtu.be/xRje6s3CKR0?si=_pLFshrjog-z-SJ7"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{ textDecoration: "none" }}
+>
+  <div
+    style={{
+      backgroundImage: "url('/formBackground.png')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      minHeight: "400px",
+      padding: "60px 0",
+      cursor: "pointer",
+    }}
+  >
+    {/* Optional content inside the clickable area */}
+  </div>
+</a>
     
 
    

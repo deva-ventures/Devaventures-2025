@@ -13,6 +13,12 @@ import ShareYourSpotlight from './pages/ShareYourSpotlight';
 import InfluencerAcademy from './pages/InfluencerAcademy';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Pablo from './articles/pablo';
+import Sweta from './articles/sweta';
+import Pankaj from './articles/pankaj';
+import Neole from './articles/neole';
+import MicroInfluencerArticle from "./articles/riseOfMicro";
+import InfluencerPowerMoves from "./articles/influencerPowerMoves";
 
 function App() {
   return (
@@ -30,6 +36,17 @@ function App() {
             <Route path="/amplify-your-brand" element={<AmplifyYourBrand />} />
             <Route path="/share-your-spotlight" element={<ShareYourSpotlight />} />
             <Route path="/influencer-academy" element={<InfluencerAcademy />} />
+
+            <Route path="/articles/pablo" element={<Pablo />} />
+            <Route path="/articles/sweta" element={<Sweta />} />
+
+            <Route path="/articles/pankaj" element={<Pankaj />} />
+            <Route path="/articles/neole" element={<Neole />} />
+            <Route path="/articles/riseOfMicro" element={<MicroInfluencerArticle />} />
+            <Route path="/articles/influencerPowerMoves" element={<InfluencerPowerMoves />} />
+
+
+
           </Routes>
         </main>
         <Footer />

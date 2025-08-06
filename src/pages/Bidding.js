@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-
+import { Link } from 'react-router-dom';
 const Bidding = () => {
 
   const CountdownTimer = () => {
@@ -33,16 +33,18 @@ const Bidding = () => {
   
     return (
       <div className="text-center ">
-        <Button
-  style={{
-    backgroundColor: 'white',
-    border: 'none',
-    marginBottom: '20px',
-    color: '#0f3052', // <-- added this
-  }}
->
-  CLICK HERE TO SECURE YOUR SPOT
-</Button>
+       <Link to="https://docs.google.com/forms/d/e/1FAIpQLScOvJrsMaU_-Jwd37VCvXa-93zuEnNb3un5mC2x0n1NgbfvzQ/viewform">
+  <Button
+    style={{
+      backgroundColor: 'white',
+      border: 'none',
+      marginBottom: '20px',
+      color: '#0f3052',
+    }}
+  >
+    CLICK HERE TO SECURE YOUR SPOT
+  </Button>
+</Link>
         <div className="d-flex flex-wrap justify-content-center gap-3">
           {Object.entries(timeLeft).map(([unit, value]) => (
             <div
