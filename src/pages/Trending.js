@@ -1,7 +1,5 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button , Carousel} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { trendingStories, trendingVideos } from '../data/mockData';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 const Trending = () => {
 

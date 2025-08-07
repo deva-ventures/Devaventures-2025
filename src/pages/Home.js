@@ -4,12 +4,11 @@ import "../App.css";
 import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
 import {useLocation} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { BsArrowRight, BsGeoAltFill } from 'react-icons/bs';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+
 const Home = () => {
 
   const scrollRef = useRef(null);
@@ -65,64 +64,10 @@ const Home = () => {
     }
   ];
   
+
+
+
   
-
-  const imageStyle = {
-    width: '100%',
-    height: 'auto',
-    borderRadius: '8px',
-    objectFit: 'cover',
-    display: 'block',
-  };
-
-  const sites = [
-    {
-      title: "Bright Biotech",
-      agency: "Lyon & Lyon",
-      image: "/site1.png", // Put this image in /public folder
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Font_Awesome_5_regular_circle.svg/2048px-Font_Awesome_5_regular_circle.svg.png", // Replace with actual logo/icon
-    },
-    {
-      title: "/nk.studio",
-      agency: "/nk.studio INT",
-      image: "/site2.jpg",
-      logo: "https://seeklogo.com/images/N/nk-studio-logo-08A05F2AE3-seeklogo.com.png",
-    },
-    {
-      title: "Robot",
-      agency: "Malvah PRO",
-      image: "/site3.jpg",
-      logo: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
-    },
-    {
-      title: "Bright Biotech",
-      agency: "Lyon & Lyon",
-      image: "/site1.png", // Put this image in /public folder
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Font_Awesome_5_regular_circle.svg/2048px-Font_Awesome_5_regular_circle.svg.png", // Replace with actual logo/icon
-    },
-    {
-      title: "/nk.studio",
-      agency: "/nk.studio INT",
-      image: "/site2.jpg",
-      logo: "https://seeklogo.com/images/N/nk-studio-logo-08A05F2AE3-seeklogo.com.png",
-    },
-    {
-      title: "Robot",
-      agency: "Malvah PRO",
-      image: "/site3.jpg",
-      logo: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
-    },
-  ];
-
-
-  const images = [
-    { src: 'f1.png', link: 'https://example.com/page1' },
-    { src: '/f2.png', link: 'https://example.com/page2' },
-    { src: '/f3.png', link: 'https://example.com/page3' },
-    { src: '/f1.png', link: 'https://example.com/page4' },
-    { src: '/f2.png', link: 'https://example.com/page5' },
-    { src: '/f3.png', link: 'https://example.com/page6' },
-  ];
 
   const responsive = {
     desktop: {
@@ -142,50 +87,14 @@ const Home = () => {
 
 
   
-  //   { src: '/video1.mp4', link: 'https://example.com/1' },
-  //   { src: '/video2.mp4', link: 'https://example.com/2' },
-  //   { src: '/video3.mp4', link: 'https://example.com/3' },
-  //   { src: '/video1.mp4', link: 'https://example.com/4' },
-  //   { src: '/video2.mp4', link: 'https://example.com/5' },
-  //   { src: '/video3.mp4', link: 'https://example.com/3' },
-  //   { src: '/video1.mp4', link: 'https://example.com/1' },
-  //   { src: '/video2.mp4', link: 'https://example.com/2' },
-  //   { src: '/video3.mp4', link: 'https://example.com/3' },
-  //   { src: '/video1.mp4', link: 'https://example.com/1' },
-  //   { src: '/video2.mp4', link: 'https://example.com/2' },
-  //   { src: '/video3.mp4', link: 'https://example.com/3' },
-  // ];
-  const videos = [
-    '/video1.mp4',
-    '/video2.mp4',
-    '/video3.mp4',
-    '/video1.mp4',
-    '/video2.mp4',
-    '/video3.mp4',
-    '/video1.mp4',
-    '/video2.mp4',
-    '/video3.mp4',
-    
+  
+  const videosWithLinks = [
+    { src: '/video1.mp4', link: 'https://www.instagram.com/reel/DLFbcnKv8Gf/?igsh=MWYzbGtrZDZkbzM0eA==' },
+    { src: '/video2.mp4', link: 'https://www.instagram.com/reel/DLUy-lNNUU-/?igsh=MW9vamJjdnUwZnU3NQ==' },
+    { src: '/video3.mp4', link: 'https://www.instagram.com/reel/DKeyGY9vgaV/?igsh=NHg2ZnhhanAwb3Zq' },
+    // Add more as needed
   ];
 
-  const berlinImages = [
-    { src: '/sweta.png', link: '/articles/sweta' },
-    { src: '/f3.png', link: 'https://example.com/f3' },
-    { src: '/sweta.png', link: '/articles/sweta' },
-    { src: '/f3.png', link: 'https://example.com/f3' },
-  ];
-  
-  const viennaImages = [
-    // { src: '/sweta.png', link: '/articles/sweta' },
-    // { src: '/f3.png', link: 'https://example.com/f3' },
-    // { src: '/sweta.png', link: '/articles/sweta' },
-    // { src: '/f3.png', link: 'https://example.com/f3' },
-  ];
-
-
-
-  
-  
   
 
 
@@ -219,37 +128,53 @@ const Home = () => {
     return location.pathname === path;
   };
 
+
+
+  const carouselItems = [
+    {
+      image: '/sweta.png',
+      
+      link: '/articles/sweta',
+    },
+    {
+      image: '/sohum.png',
+     
+      link: '/articles/sohum',
+    },
+    {
+      image: '/sweta.png',
+      
+      link: '/articles/sweta',
+    },
+   
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? carouselItems.length - 2 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex + 2 >= carouselItems.length ? 0 : prevIndex + 1
+    );
+  };
+
+  const visibleItems = carouselItems.slice(currentIndex, currentIndex + 2);
+
+
+
+
+
+
+
+
+
   return (
     <>
-
-
-    {/* <header className="d-flex justify-content-between align-items-center px-4 py-3 bg-white border-bottom sticky-top">
-      <div className="d-flex align-items-center gap-4">
-        <span className="fs-4 fw-bold">W.</span>
-        <nav className="d-none d-md-flex gap-3 text-muted">
-          <a href="#" className="text-decoration-none text-dark">Explore</a>
-          <a href="#" className="text-decoration-none text-dark">Directory</a>
-          <a href="#" className="text-decoration-none text-dark">
-            Academy <span className="badge bg-dark text-white text-uppercase">New</span>
-          </a>
-          <a href="#" className="text-decoration-none text-dark">Jobs</a>
-          <a href="#" className="text-decoration-none text-dark">Market</a>
-        </nav>
-      </div>
-
-      <div className="flex-grow-1 mx-4">
-        <input type="text" className="form-control" placeholder="Search by Inspiration" />
-      </div>
-
-      <div className="d-flex align-items-center gap-3">
-        <a href="#" className="text-decoration-none text-dark">Log in</a>
-        <a href="#" className="text-decoration-none text-dark">Sign Up</a>
-        <button className="btn btn-dark btn-sm">Be Pro</button>
-        <button className="btn btn-outline-secondary btn-sm">Submit Website</button>
-      </div>
-    </header> */}
-
-    
 
     {/* Main Content */}
      <main className="text-center mt-5 pt-5 ">
@@ -280,90 +205,116 @@ const Home = () => {
         
       </Container>
     </section>
-    <Container fluid className="py-5 px-3">
-      <Row className="g-3 justify-content-center">
-        {/* Static Large Card - Prague */}
-        <Col xs={12} lg={6}>
-  <Link to="/articles/pablo" style={{ textDecoration: 'none' }}>
+    
+
+    
+    <Container fluid className="py-5">
+  <Row className="align-items-stretch">
+    {/* LEFT SIDE STATIC CARD */}
+    <Col lg={6} md={12} className="mb-4">
+  <a
+    href="/articles/pablo" // Replace with your desired link
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ textDecoration: 'none', color: 'inherit' }}
+  >
     <Card
-      className="text-white h-100"
+      className="text-white border-0 h-100"
       style={{
+        height: '100%',
         borderRadius: '20px',
         backgroundImage: `url('/pabloMontana.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        height: '100%',
-        minHeight: '400px',
-        overflow: 'hidden',
+        position: 'relative',
       }}
     >
-      {/* Optional: You can put text, overlay, etc. here */}
     </Card>
-  </Link>
+  </a>
 </Col>
 
-        {/* Carousel Card - Berlin */}
-        <Col xs={12} md={12} lg={6}>
-  <Carousel controls={true} indicators={false} fade interval={4000}>
-    {Array.from({ length: Math.ceil(berlinImages.length / 2) }).map((_, idx) => {
-      const berlin1 = berlinImages[idx * 2];
-      const berlin2 = berlinImages[idx * 2 + 1];
-      const vienna1 = viennaImages[idx * 2];
-      const vienna2 = viennaImages[idx * 2 + 1];
+    {/* RIGHT SIDE CAROUSEL */}
+    <Col lg={6} md={12} className="d-flex align-items-center">
+      <div className="d-flex align-items-center w-100">
+        {/* LEFT ARROW */}
+        <Button
+          variant="light"
+          onClick={handlePrev}
+          className="me-2"
+          style={{
+            height: '40px',
+            width: '40px',
+            borderRadius: '50%',
+            zIndex: 1,
+          }}
+        >
+          <FaChevronLeft />
+        </Button>
 
-      return (
-        <Carousel.Item key={idx}>
-          <Row className="g-3">
-            {/* First card */}
-            {berlin1 && (
-              <Col xs={6}>
-                <a
-                  href={berlin1.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ textDecoration: 'none' }}
-                >
-                  <Card
-                    className="text-white h-100"
+        {/* CARDS */}
+        <div className="d-flex gap-3 w-100">
+          {visibleItems.map((item, index) => (
+            <a
+              key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}
+            >
+              <Card
+                className="text-white border-0"
+                style={{
+                  height: '300px',
+                  borderRadius: '20px',
+                  backgroundImage: `url(${item.image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  position: 'relative',
+                }}
+              >
+                <Card.Body className="d-flex flex-column justify-content-end p-3">
+                  <Card.Title>{item.name}</Card.Title>
+                  <Card.Text>{item.description}</Card.Text>
+                  <span
                     style={{
-                      borderRadius: '20px',
-                      backgroundImage: `url(${berlin1.src})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      minHeight: '400px',
-                      overflow: 'hidden',
+                      backgroundColor: '#ffffffaa',
+                      color: '#000',
+                      fontSize: '12px',
+                      padding: '3px 8px',
+                      borderRadius: '12px',
+                      width: 'fit-content',
                     }}
-                  />
-                </a>
-              </Col>
-            )}
+                  >
+                    {item.role}
+                  </span>
+                </Card.Body>
+              </Card>
+            </a>
+          ))}
+        </div>
 
-            {/* Second card */}
-            {berlin2 && (
-              <Col xs={6}>
-                <Card
-                  className="text-white h-100"
-                  style={{
-                    borderRadius: '20px',
-                    backgroundImage: `url(${berlin2.src})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    minHeight: '400px',
-                    overflow: 'hidden',
-                  }}
-                />
-              </Col>
-            )}
-          </Row>
-        </Carousel.Item>
-      );
-    })}
-  </Carousel>
-</Col>
-      </Row>
-    </Container>
+        {/* RIGHT ARROW */}
+        <Button
+          variant="light"
+          onClick={handleNext}
+          className="ms-2"
+          style={{
+            height: '40px',
+            width: '40px',
+            borderRadius: '50%',
+            zIndex: 1,
+          }}
+        >
+          <FaChevronRight />
+        </Button>
+      </div>
+    </Col>
+  </Row>
+</Container>
 
-    
+
+
+
 
 
 
@@ -377,38 +328,7 @@ const Home = () => {
             </h2>
           </div>
 
-          {/* <Row className="g-4" style={{ marginLeft: 0, marginRight: 0 }}>
-            {sites.map((site, idx) => (
-              <Col key={idx} xs={12} sm={6} md={4}>
-                <Card className="border-0 shadow-sm rounded-4 h-100">
-                  <Card.Img
-                    variant="top"
-                    src={site.image}
-                    style={{
-                      borderRadius: "20px",
-                      height: "450px",
-                      objectFit: "cover",
-                    }}
-                  />
-                  <Card.Body className="px-0">
-                    <h5 className="fw-semibold mb-1">{site.title}</h5>
-                    <div className="d-flex align-items-center gap-2 text-muted">
-                      <Image
-                        src={site.logo}
-                        roundedCircle
-                        width={20}
-                        height={20}
-                        alt="logo"
-                      />
-                      <small>{site.agency}</small>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row> */}
-
-<Container fluid className="py-5 bg-light">
+          <Container fluid className="py-5 bg-light d-flex justify-content-center">
       <div
         ref={scrollRef}
         style={{
@@ -419,23 +339,30 @@ const Home = () => {
           scrollBehavior: 'smooth',
           maskImage:
             'linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)',
+          justifyContent: 'center', // Center the content
+          maxWidth: '100%',
         }}
       >
-        {videos.map((src, index) => (
-          <div
+        {videosWithLinks.map((video, index) => (
+          <a
             key={index}
+            href={video.link}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
-              width: '200px',
-              height: '200px',
+              width: '400px',
+              height: '400px',
               borderRadius: '50%',
               overflow: 'hidden',
               flex: '0 0 auto',
               transform: `rotate(${index % 2 === 0 ? '-5deg' : '5deg'})`,
               border: '4px solid white',
+              display: 'block',
+              textDecoration: 'none',
             }}
           >
             <video
-              src={src}
+              src={video.src}
               autoPlay
               loop
               muted
@@ -448,7 +375,7 @@ const Home = () => {
                 transform: `rotate(${index % 2 === 0 ? '5deg' : '-5deg'})`,
               }}
             />
-          </div>
+          </a>
         ))}
       </div>
     </Container>
@@ -462,7 +389,7 @@ const Home = () => {
   <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
     <div style={{ paddingLeft: '50px', paddingRight: '50px' }}>
       <h2 className="mb-5 fw-bold" style={{ fontSize: '2.5rem',color: '#0f3052' }}>
-       Your Journey <br /> To Influence.
+       Your Journey To Influence.
       </h2>
     </div>
     <Row xs={1} sm={2} md={2} lg={4} className="g-4" style={{ marginLeft: 0, marginRight: 0, paddingLeft: '50px', paddingRight: '50px' }}>
@@ -501,7 +428,7 @@ const Home = () => {
       <Col md={8} sm={12} style={{ paddingLeft: '20px' }}>
        
         <h1 className="display-5 fw-bold" style={{color: '#0f3052'}}>
-      Master <br/> Fluence
+      Master  Fluence
         </h1>
       </Col>
     </Row>
@@ -594,7 +521,7 @@ const Home = () => {
     <div className="bg-light py-5">
       <Container fluid>
         <Row className="g-4 justify-content-start px-3">
-          {/* Card 1 */}
+          {/* Card 3 */}
           
 <Col xs={12} md={6}>
   <Card
@@ -614,7 +541,8 @@ const Home = () => {
         paddingBottom: '40px', 
       }}
     >
-      <Button variant="outline-light">Read More</Button>
+<a href="/articles/howInfluencersAreChanging" target="_blank" rel="noopener noreferrer"> <Button variant="outline-light">Read More</Button></a>
+     
     </Card.Body>
   </Card>
 </Col>
@@ -630,7 +558,8 @@ const Home = () => {
        
       }}
     >
-      <Button variant="outline-light" >Read More</Button>
+<a href="/articles/bagYourFirstBigBrand" target="_blank" rel="noopener noreferrer"> <Button variant="outline-light" >Read More</Button></a>
+      
     </Card.Body >
             </Card>
           </Col>

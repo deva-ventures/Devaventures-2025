@@ -229,6 +229,8 @@
 
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -237,27 +239,70 @@ const Footer = () => {
         {/* Top Section */}
         <Row className="mb-4">
           <Col xs={12} md={3} className="mb-4 mb-md-0">
-            <h5 className="fw-bold">W.</h5>
+            <img
+              src="/giHubLogo.png"
+              alt="Global Influencers Hub"
+              height="40"
+              className="d-inline-block align-top"
+            />
           </Col>
           <Col xs={6} md={2}>
-            <p className="mb-2">Websites</p>
-            <p className="mb-2">Collections</p>
-            <p className="mb-2">Elements</p>
+  <Nav.Link as={Link} to="/" className="px-0 py-1 text-dark">Home</Nav.Link>
+  <Nav.Link as={Link} to="/about-us" className="px-0 py-1 text-dark">About Us</Nav.Link>
+  <Nav.Link as={Link} to="/influencer-journeys" className="px-0 py-1 text-dark">Storyfluence</Nav.Link>
+  
+  
+</Col>
+
+          <Col xs={6} md={2}>
+          <Nav.Link as={Link} to="/trending" className="px-0 py-1 text-dark">Trending</Nav.Link>
+  <Nav.Link as={Link} to="/bidding" className="px-0 py-1 text-dark">Bidfluence</Nav.Link>
+  <Nav.Link as={Link} to="/amplify-your-brand" className="px-0 py-1 text-dark">Amplify Your Brand</Nav.Link>
           </Col>
           <Col xs={6} md={2}>
-            <p className="mb-2">Academy</p>
-            <p className="mb-2">Jobs</p>
-            <p className="mb-2">Market</p>
+          <Nav.Link as={Link} to="/share-your-spotlight" className="px-0 py-1 text-dark">Share Your Spotlight</Nav.Link>
+  <Nav.Link as={Link} to="/influencer-academy" className="px-0 py-1 text-dark">Influencer Academy</Nav.Link>
+  <Nav.Link as={Link} to="/say-hello" className="px-0 py-1 text-dark">Say Hello</Nav.Link>
           </Col>
-          <Col xs={6} md={2}>
-            <p className="mb-2">Directory</p>
-            <p className="mb-2">Conferences</p>
-          </Col>
-          <Col xs={6} md={3}>
-            <p className="mb-2">FAQs</p>
-            <p className="mb-2">About Us</p>
-            <p className="mb-2">Contact Us</p>
-          </Col>
+          <Col xs={12} md={3}>
+  <p className="mb-2 fw-semibold">
+    <i className="bi bi-geo-alt-fill me-2 text-primary"></i>USA HEADQUARTERS:
+  </p>
+  <p className="mb-2 ms-4">5802 Grosvenor Lane<br />Bethesda, MD 20814</p>
+
+  <p className="mb-2 fw-semibold">
+    <i className="bi bi-geo-alt-fill me-2 text-primary"></i>INDIA OFFICE:
+  </p>
+  <p className="mb-2 ms-4">
+    PS Qube, Room No 608 & 609, 6th floor,<br />
+    Street No. 1111 Newtown,<br />
+    Kolkata, West Bengal 700156
+  </p>
+
+  <p className="mb-2">
+    <i className="bi bi-telephone-fill me-2 text-success"></i>
+    <strong>+1 (415) 941-1910</strong> (USA)
+  </p>
+  <p className="mb-2">
+    <i className="bi bi-telephone-fill me-2 text-success"></i>
+    <strong>+1 (301) 442-6047</strong> (USA)
+  </p>
+  <p className="mb-2">
+    <i className="bi bi-telephone-fill me-2 text-success"></i>
+    <strong>+91-9674908532</strong> (INDIA)
+  </p>
+
+  <p className="mb-2 text-break">
+    <i className="bi bi-envelope-fill me-2 text-danger"></i>
+    hello@globalinfluencershub.com
+  </p>
+  <p className="mb-2 text-break">
+    <i className="bi bi-envelope-fill me-2 text-danger"></i>
+    globalinfluencerhub@gmail.com
+  </p>
+</Col>
+
+
         </Row>
 
         {/* Divider */}
@@ -266,12 +311,25 @@ const Footer = () => {
         {/* Bottom Section */}
         <Row className="align-items-center justify-content-between">
           <Col xs={12} md={6} className="text-muted small mb-2 mb-md-0">
-            Cookies Policy &nbsp;&nbsp; | &nbsp;&nbsp; Legal Terms &nbsp;&nbsp; | &nbsp;&nbsp; Privacy Policy
+            
           </Col>
-          <Col xs={12} md="auto" className="text-muted small text-md-end">
-            <strong className="text-dark me-2">Connect:</strong>
-            Instagram &nbsp; LinkedIn &nbsp; Twitter &nbsp; Facebook &nbsp; YouTube &nbsp; TikTok &nbsp; Pinterest
-          </Col>
+          <Col xs={12} md="auto" className="text-muted small mb-2 mb-md-0 d-flex align-items-center gap-3">
+  <strong className="text-dark me-2">Connect:</strong>
+  
+  <a href="https://www.instagram.com/accounts/login/?next=%2Fglobal_influencershub%2F&source=omni_redirect" target="_blank" rel="noopener noreferrer" className="text-muted fs-5">
+    <i className="bi bi-instagram"></i>
+  </a>
+  <a href="https://www.youtube.com/@globalinfluencershub" target="_blank" rel="noopener noreferrer" className="text-muted fs-5">
+    <i className="bi bi-youtube"></i>
+  </a>
+  <a href="https://www.facebook.com/globalinfluencersclub?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="text-muted fs-5">
+    <i className="bi bi-facebook"></i>
+  </a>
+  <a href="https://www.linkedin.com/company/globalinfluencershub/" target="_blank" rel="noopener noreferrer" className="text-muted fs-5">
+    <i className="bi bi-linkedin"></i>
+  </a>
+</Col>
+
         </Row>
       </Container>
     </footer>

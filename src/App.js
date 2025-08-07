@@ -17,9 +17,12 @@ import Pablo from './articles/pablo';
 import Sweta from './articles/sweta';
 import Pankaj from './articles/pankaj';
 import Neole from './articles/neole';
+import Sohum from './articles/sohum';
+
 import MicroInfluencerArticle from "./articles/riseOfMicro";
 import InfluencerPowerMoves from "./articles/influencerPowerMoves";
-
+import HowInfluencersAreChanging from './articles/howInfluencersAreChanging';
+import BagYourFirstBigBrand from './articles/bagYourFirstBigBrand';
 function App() {
   return (
     <Router>
@@ -39,11 +42,14 @@ function App() {
 
             <Route path="/articles/pablo" element={<Pablo />} />
             <Route path="/articles/sweta" element={<Sweta />} />
-
             <Route path="/articles/pankaj" element={<Pankaj />} />
             <Route path="/articles/neole" element={<Neole />} />
+            <Route path="/articles/sohum" element={<Sohum />} />
+
             <Route path="/articles/riseOfMicro" element={<MicroInfluencerArticle />} />
             <Route path="/articles/influencerPowerMoves" element={<InfluencerPowerMoves />} />
+            <Route path="/articles/howInfluencersAreChanging" element={<HowInfluencersAreChanging />} />
+            <Route path="/articles/bagYourFirstBigBrand" element={<BagYourFirstBigBrand />} />
 
 
 

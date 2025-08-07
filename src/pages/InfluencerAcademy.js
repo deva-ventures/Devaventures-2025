@@ -107,7 +107,7 @@ const InfluencerAcademy = () => {
     <div className="bg-light py-5">
       <Container fluid>
         <Row className="g-4 justify-content-start px-3">
-          {/* Card 1 */}
+          {/* Card 3 */}
           
 <Col xs={12} md={6}>
   <Card
@@ -127,7 +127,8 @@ const InfluencerAcademy = () => {
         paddingBottom: '40px', 
       }}
     >
-      <Button variant="outline-light">Read More</Button>
+<a href="/articles/howInfluencersAreChanging" target="_blank" rel="noopener noreferrer"> <Button variant="outline-light">Read More</Button></a>
+     
     </Card.Body>
   </Card>
 </Col>
@@ -143,7 +144,8 @@ const InfluencerAcademy = () => {
        
       }}
     >
-      <Button variant="outline-light" >Read More</Button>
+<a href="/articles/bagYourFirstBigBrand" target="_blank" rel="noopener noreferrer"> <Button variant="outline-light" >Read More</Button></a>
+      
     </Card.Body >
             </Card>
           </Col>
