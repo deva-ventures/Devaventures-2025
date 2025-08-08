@@ -33,7 +33,6 @@ const Home = () => {
     fontSize: 'clamp(2.5rem, 6vw, 6rem)',
     letterSpacing: '-5.05px',
     fontWeight: 'bold',
-    letterSpacing: '-1px',
     color: '#0f3052'
   };
 
@@ -92,7 +91,7 @@ const Home = () => {
     { src: '/video1.mp4', link: 'https://www.instagram.com/reel/DLFbcnKv8Gf/?igsh=MWYzbGtrZDZkbzM0eA==' },
     { src: '/video2.mp4', link: 'https://www.instagram.com/reel/DLUy-lNNUU-/?igsh=MW9vamJjdnUwZnU3NQ==' },
     { src: '/video3.mp4', link: 'https://www.instagram.com/reel/DKeyGY9vgaV/?igsh=NHg2ZnhhanAwb3Zq' },
-    // Add more as needed
+    { src: '/preetha.mp4', link: 'https://www.instagram.com/reel/DITrHUdvmAU/?igsh=M2MyYnQ2b3F0ZXcy' },
   ];
 
   
@@ -177,10 +176,26 @@ const Home = () => {
     <>
 
     {/* Main Content */}
-     <main className="text-center mt-5 pt-5 ">
-      <p className="text-muted small">Welcome to</p>
-      <h1 className="display-1 fw-bold" style={{ color: '#0f3052',letterSpacing: '-5.05px' }}>Global Influencers Hub</h1>
-     </main> 
+    <main className="text-center mt-5 pt-5">
+  <style>
+    {`
+      @media (max-width: 576px) {
+        .gi-heading {
+          font-size: 2.5rem !important;
+          letter-spacing: -1.5px !important;
+        }
+      }
+    `}
+  </style>
+
+  <p className="text-muted small">Welcome to</p>
+  <h1
+    className="display-1 fw-bold gi-heading"
+    style={{ color: '#0f3052', letterSpacing: '-5.05px' }}
+  >
+    Global Influencers Hub
+  </h1>
+</main> 
   <div style={wrapperStyle}>
   <Container fluid>
     <Row className="justify-content-center">
@@ -323,62 +338,66 @@ const Home = () => {
         <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
           <div style={{ paddingLeft: "20px", paddingRight: "20px" }}>
             {/* <p className="text-muted fw-semibold mb-2">Winners</p> */}
-            <h2 className="fw-bold mb-5" style={{ fontSize: "2.5rem",color: '#0f3052' }}> 
+            <h2 className="fw-bold mb-5" style={{ fontSize: "2.5rem",color: '#0f3052', letterSpacing: '-3.05px', }}> 
               Trending
             </h2>
           </div>
 
-          <Container fluid className="py-5 bg-light d-flex justify-content-center">
-      <div
-        ref={scrollRef}
+          <Container fluid className="py-5 bg-light">
+  <div
+    ref={scrollRef}
+    style={{
+      display: 'flex',
+      gap: '20px',
+      overflowX: 'auto',
+      padding: '10px 20px',
+      scrollBehavior: 'smooth',
+      WebkitOverflowScrolling: 'touch', // Enables momentum scrolling on iOS
+      maskImage:
+        'linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)',
+      maxWidth: '100%',
+    }}
+  >
+    {videosWithLinks.map((video, index) => (
+      <a
+        key={index}
+        href={video.link}
+        target="_blank"
+        rel="noopener noreferrer"
         style={{
-          display: 'flex',
-          gap: '20px',
-          overflowX: 'auto',
-          padding: '10px 20px',
-          scrollBehavior: 'smooth',
-          maskImage:
-            'linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)',
-          justifyContent: 'center', // Center the content
-          maxWidth: '100%',
+          minWidth: '250px', // Make width responsive
+          width: '80vw', // Responsive width for mobile
+          maxWidth: '400px',
+          height: '80vw',
+          maxHeight: '400px',
+          borderRadius: '50%',
+          overflow: 'hidden',
+          flex: '0 0 auto',
+          transform: `rotate(${index % 2 === 0 ? '-5deg' : '5deg'})`,
+          border: '4px solid white',
+          display: 'block',
+          textDecoration: 'none',
         }}
       >
-        {videosWithLinks.map((video, index) => (
-          <a
-            key={index}
-            href={video.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              width: '400px',
-              height: '400px',
-              borderRadius: '50%',
-              overflow: 'hidden',
-              flex: '0 0 auto',
-              transform: `rotate(${index % 2 === 0 ? '-5deg' : '5deg'})`,
-              border: '4px solid white',
-              display: 'block',
-              textDecoration: 'none',
-            }}
-          >
-            <video
-              src={video.src}
-              autoPlay
-              loop
-              muted
-              playsInline
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                borderRadius: '50%',
-                transform: `rotate(${index % 2 === 0 ? '5deg' : '-5deg'})`,
-              }}
-            />
-          </a>
-        ))}
-      </div>
-    </Container>
+        <video
+          src={video.src}
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            borderRadius: '50%',
+            transform: `rotate(${index % 2 === 0 ? '5deg' : '-5deg'})`,
+          }}
+        />
+      </a>
+    ))}
+  </div>
+</Container>
+
         </Container>
       </div>
     </div>
@@ -388,7 +407,7 @@ const Home = () => {
     <div style={{ background: '#f8f9fa', padding: '40px 0', margin: 0, width: '100vw' }}>
   <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
     <div style={{ paddingLeft: '50px', paddingRight: '50px' }}>
-      <h2 className="mb-5 fw-bold" style={{ fontSize: '2.5rem',color: '#0f3052' }}>
+      <h2 className="mb-5 fw-bold" style={{ fontSize: '2.5rem',color: '#0f3052',letterSpacing: '-3.05px' }}>
        Your Journey To Influence.
       </h2>
     </div>
@@ -427,7 +446,7 @@ const Home = () => {
     <Row style={{ marginLeft: 0, marginRight: 0 }}>
       <Col md={8} sm={12} style={{ paddingLeft: '20px' }}>
        
-        <h1 className="display-5 fw-bold" style={{color: '#0f3052'}}>
+        <h1 className="display-5 fw-bold" style={{color: '#0f3052',letterSpacing: '-3.05px'}}>
       Master  Fluence
         </h1>
       </Col>
@@ -436,87 +455,103 @@ const Home = () => {
 </div>
 
 <div className="bg-light py-5">
-      <Container fluid>
-        <Row className="g-4 justify-content-start px-3">
-          
+  <style>
+    {`
+      @media (max-width: 767.98px) {
+        .responsive-card-fix {
+          height: auto !important;
+          padding-bottom: 100px;
+        }
 
-<Col xs={12} md={6}>
-  <Card
-    className="h-100 text-white border-0"
-    style={{
-      backgroundImage: `url('/Micro-Influencers.png')`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      borderRadius: '15px',
-    }}
-  >
-    <Card.Body
-      style={{
-        height: '550px',
-        borderRadius: '15px',
-        paddingTop: '250px',   // vertical alignment with subheadline
-        paddingLeft: '45px',   // horizontal alignment with subheadline text
-      }}
-    >
-      <a href="/articles/riseOfMicro" target="_blank" rel="noopener noreferrer">
-  <Button
-    variant="outline-light"
-    style={{
-      width: '120px',
-      height: '38px',
-      fontSize: '14px',
-      fontWeight: '500',
-      borderRadius: '6px',
-      borderWidth: '1px',
-      backgroundColor: 'rgba(255, 255, 255, 0.05)',
-    }}
-  >
-    Read More
-  </Button>
-</a>
-    </Card.Body>
-  </Card>
-</Col>
+        .responsive-button-fix {
+          position: static !important;
+          margin-top: 20px;
+          margin-left: 20px;
+        }
+      }
+    `}
+  </style>
 
-
-
+  <Container fluid>
+    <Row className="g-4 justify-content-start px-3">
+      {/* Card 1 */}
+      <Col xs={12} md={6}>
+        <Card
+          className="h-100 text-white border-0"
+          style={{
+            backgroundImage: `url('/Micro-Influencers.png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            borderRadius: '15px',
+          }}
+        >
+          <Card.Body
+            style={{
+              height: '550px',
+              borderRadius: '15px',
+              paddingTop: '250px',
+              paddingLeft: '45px',
+            }}
+          >
+            <a href="/articles/riseOfMicro" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="outline-light"
+                style={{
+                  width: '120px',
+                  height: '38px',
+                  fontSize: '14px',
+                  fontWeight: '500',
+                  borderRadius: '6px',
+                  borderWidth: '1px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                }}
+              >
+                Read More
+              </Button>
+            </a>
+          </Card.Body>
+        </Card>
+      </Col>
 
       {/* Card 2 */}
       <Col xs={12} md={6}>
-  <Card
-    className="h-100 text-white border-0 position-relative"
-    style={{
-      backgroundImage: `url('/howInfluencers.png')`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      borderRadius: '15px',
-      height: '400px',
-    }}
-  >
-    <Card.Body style={{ height: '100%', position: 'relative' }}>
-    <a href="/articles/influencerPowerMoves" target="_blank" rel="noopener noreferrer">
-      <Button
-        variant="outline-light"
-        style={{
-          position: 'absolute',
-          top: '280px',   // distance from top
-          right: '70px',   // distance from left
-          padding: '6px 20px',
-          fontSize: '14px',
-          borderRadius: '6px',
-          fontWeight: 500,
-        }}
-      >
-        Read More
-      </Button>
-      </a>
-    </Card.Body>
-  </Card>
-</Col>
+        <Card
+          className="h-100 text-white border-0 position-relative responsive-card-fix"
+          style={{
+            backgroundImage: `url('/howInfluencers.png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            borderRadius: '15px',
+            height: '400px',
+          }}
+        >
+          <Card.Body style={{ height: '100%', position: 'relative' }}>
+            <a href="/articles/influencerPowerMoves" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="outline-light"
+                className="responsive-button-fix"
+                style={{
+                  position: 'absolute',
+                  top: '280px',
+                  right: '70px',
+                  padding: '6px 20px',
+                  fontSize: '14px',
+                  borderRadius: '6px',
+                  fontWeight: 500,
+                }}
+              >
+                Read More
+              </Button>
+            </a>
+          </Card.Body>
+        </Card>
+      </Col>
+    </Row>
+  </Container>
+</div>
 
-        </Row>
-      </Container>
-    </div>
+
+
 
     <div className="bg-light py-5">
       <Container fluid>
