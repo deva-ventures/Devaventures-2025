@@ -417,6 +417,18 @@ const Home = () => {
 </div>
 
 <div className="bg-light py-5">
+  <style>{`
+    @media (max-width: 768px) {
+      .responsive-card-fix {
+        height: 550px !important;
+      }
+      .responsive-button-fix {
+        top: 380px !important;
+        right: 20px !important;
+      }
+    }
+  `}</style>
+
   <Container fluid>
     <Row className="g-4 justify-content-start px-3">
       {/* Card 1 */}
@@ -438,7 +450,11 @@ const Home = () => {
               paddingLeft: '45px',
             }}
           >
-            <a href="/articles/riseOfMicro" target="_blank" rel="noopener noreferrer">
+            <a
+              href="/articles/riseOfMicro"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="outline-light"
                 style={{
@@ -470,8 +486,17 @@ const Home = () => {
             height: '400px',
           }}
         >
-          <Card.Body style={{ height: '100%', position: 'relative' }}>
-            <a href="/articles/influencerPowerMoves" target="_blank" rel="noopener noreferrer">
+          <Card.Body
+            style={{
+              height: '100%',
+              position: 'relative',
+            }}
+          >
+            <a
+              href="/articles/influencerPowerMoves"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="outline-light"
                 className="responsive-button-fix"
@@ -494,11 +519,6 @@ const Home = () => {
     </Row>
   </Container>
 </div>
-
-
-
-
-
 
 
 
