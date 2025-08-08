@@ -476,46 +476,83 @@ const Home = () => {
 
       {/* Card 2 */}
       <Col xs={12} md={6}>
-        <Card
-          className="h-100 text-white border-0 position-relative responsive-card-fix"
+  <Card
+    className="h-100 text-white border-0 position-relative responsive-card-fix"
+    style={{
+      backgroundImage: `url('/howInfluencers.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      borderRadius: '15px',
+      height: '400px',
+    }}
+  >
+    <Card.Body
+      className="d-flex flex-column justify-content-end"
+      style={{
+        height: '100%',
+        position: 'relative',
+        padding: '1rem',
+      }}
+    >
+      {/* Text */}
+      <div>
+        <h5 style={{ fontWeight: 'bold' }}>
+          HOW INFLUENCERS ARE CHANGING THE WAY WE SHOP
+        </h5>
+        <p>
+          The Revolution of Shopping has always evolved, but in the age of social media it’s happening faster than ever.
+        </p>
+      </div>
+
+      {/* Button */}
+      <a
+        href="/articles/influencerPowerMoves"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-3 d-block"
+      >
+        <Button
+          variant="outline-light"
+          className="responsive-button-fix d-block d-md-none"
           style={{
-            backgroundImage: `url('/howInfluencers.png')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            borderRadius: '15px',
-            height: '400px',
+            padding: '6px 20px',
+            fontSize: '14px',
+            borderRadius: '6px',
+            fontWeight: 500,
+            width: 'fit-content',
           }}
         >
-          <Card.Body
-            style={{
-              height: '100%',
-              position: 'relative',
-            }}
-          >
-            <a
-              href="/articles/influencerPowerMoves"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                variant="outline-light"
-                className="responsive-button-fix"
-                style={{
-                  position: 'absolute',
-                  top: '280px',
-                  right: '70px',
-                  padding: '6px 20px',
-                  fontSize: '14px',
-                  borderRadius: '6px',
-                  fontWeight: 500,
-                }}
-              >
-                Read More
-              </Button>
-            </a>
-          </Card.Body>
-        </Card>
-      </Col>
+          Read More
+        </Button>
+      </a>
+
+      {/* This button shows only on md+ screens */}
+      <a
+        href="/articles/influencerPowerMoves"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="d-none d-md-block"
+      >
+        <Button
+          variant="outline-light"
+          className="responsive-button-fix"
+          style={{
+            position: 'absolute',
+            top: '280px',
+            right: '70px',
+            padding: '6px 20px',
+            fontSize: '14px',
+            borderRadius: '6px',
+            fontWeight: 500,
+          }}
+        >
+          Read More
+        </Button>
+      </a>
+    </Card.Body>
+  </Card>
+</Col>
+
     </Row>
   </Container>
 </div>
