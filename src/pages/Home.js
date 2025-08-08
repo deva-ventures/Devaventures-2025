@@ -1,7 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react';
-import { Link } from 'react-router-dom';
 import "../App.css";
-import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import {useLocation} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-multi-carousel/lib/styles.css';
@@ -65,26 +64,6 @@ const Home = () => {
   
 
 
-
-  
-
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-      slidesToSlide: 1,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 768 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 768, min: 0 },
-      items: 1,
-    },
-  };
-
-
   
   
   const videosWithLinks = [
@@ -119,16 +98,6 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
-
-  const [expanded, setExpanded] = useState(false);
-  const location = useLocation();
-
-  const isActive = (path) => {
-    return location.pathname === path;
-  };
-
-
-
   const carouselItems = [
     {
       image: '/sweta.png',
@@ -141,9 +110,9 @@ const Home = () => {
       link: '/articles/sohum',
     },
     {
-      image: '/sweta.png',
+      image: '/neole.png',
       
-      link: '/articles/sweta',
+      link: '/articles/neole',
     },
    
   ];
@@ -163,13 +132,6 @@ const Home = () => {
   };
 
   const visibleItems = carouselItems.slice(currentIndex, currentIndex + 2);
-
-
-
-
-
-
-
 
 
   return (
@@ -455,23 +417,6 @@ const Home = () => {
 </div>
 
 <div className="bg-light py-5">
-  <style>
-    {`
-      @media (max-width: 767.98px) {
-        .responsive-card-fix {
-          height: auto !important;
-          padding-bottom: 100px;
-        }
-
-        .responsive-button-fix {
-          position: static !important;
-          margin-top: 20px;
-          margin-left: 20px;
-        }
-      }
-    `}
-  </style>
-
   <Container fluid>
     <Row className="g-4 justify-content-start px-3">
       {/* Card 1 */}
@@ -549,6 +494,10 @@ const Home = () => {
     </Row>
   </Container>
 </div>
+
+
+
+
 
 
 

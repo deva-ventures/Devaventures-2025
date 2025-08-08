@@ -234,11 +234,47 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
+    <>
+    <style>
+      {`
+        @media (max-width: 767px) {
+          .footer-col {
+            margin-bottom: 1.5rem;
+          }
+          .footer-icon {
+            font-size: 1rem;
+            margin-right: 0.5rem;
+          }
+        }
+
+        .footer-icon {
+          font-size: 1.2rem;
+        }
+
+        .footer-link {
+          padding: 0.25rem 0;
+          color: #000;
+          display: block;
+          text-decoration: none;
+        }
+
+        .footer-link:hover {
+          color: #0f3052;
+        }
+
+        .footer-title {
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+        }
+      `}
+    </style>
+
     <footer className="bg-light pt-5 pb-3">
       <Container fluid className="px-4 px-md-5">
         {/* Top Section */}
         <Row className="mb-4">
-          <Col xs={12} md={3} className="mb-4 mb-md-0">
+          {/* Column 1 - Logo */}
+          <Col xs={12} md={1} className="footer-col">
             <img
               src="/giHubLogo.png"
               alt="Global Influencers Hub"
@@ -246,63 +282,80 @@ const Footer = () => {
               className="d-inline-block align-top"
             />
           </Col>
-          <Col xs={6} md={2}>
-  <Nav.Link as={Link} to="/" className="px-0 py-1 text-dark">Home</Nav.Link>
-  <Nav.Link as={Link} to="/about-us" className="px-0 py-1 text-dark">About Us</Nav.Link>
-  <Nav.Link as={Link} to="/influencer-journeys" className="px-0 py-1 text-dark">Storyfluence</Nav.Link>
-  
-  
-</Col>
 
-          <Col xs={6} md={2}>
-          <Nav.Link as={Link} to="/trending" className="px-0 py-1 text-dark">Trending</Nav.Link>
-  <Nav.Link as={Link} to="/bidding" className="px-0 py-1 text-dark">Bidfluence</Nav.Link>
-  <Nav.Link as={Link} to="/amplify-your-brand" className="px-0 py-1 text-dark">Amplify Your Brand</Nav.Link>
+          {/* Column 2 */}
+          <Col xs={6} md={1} className="footer-col">
+            <Nav.Link as={Link} to="/" className="footer-link">Home</Nav.Link>
+            <Nav.Link as={Link} to="/about-us" className="footer-link">About Us</Nav.Link>
+            <Nav.Link as={Link} to="/influencer-journeys" className="footer-link">Storyfluence</Nav.Link>
           </Col>
-          <Col xs={6} md={2}>
-          <Nav.Link as={Link} to="/share-your-spotlight" className="px-0 py-1 text-dark">Share Your Spotlight</Nav.Link>
-  <Nav.Link as={Link} to="/influencer-academy" className="px-0 py-1 text-dark">Influencer Academy</Nav.Link>
-  <Nav.Link as={Link} to="/say-hello" className="px-0 py-1 text-dark">Say Hello</Nav.Link>
+
+          {/* Column 3 */}
+          <Col xs={6} md={1} className="footer-col">
+            <Nav.Link as={Link} to="/trending" className="footer-link">Trending</Nav.Link>
+            <Nav.Link as={Link} to="/bidding" className="footer-link">Bidfluence</Nav.Link>
+            <Nav.Link as={Link} to="/amplify-your-brand" className="footer-link">Amplify Your Brand</Nav.Link>
           </Col>
-          <Col xs={12} md={3}>
-  <p className="mb-2 fw-semibold">
-    <i className="bi bi-geo-alt-fill me-2 text-primary"></i>USA HEADQUARTERS:
-  </p>
-  <p className="mb-2 ms-4">5802 Grosvenor Lane<br />Bethesda, MD 20814</p>
 
-  <p className="mb-2 fw-semibold">
-    <i className="bi bi-geo-alt-fill me-2 text-primary"></i>INDIA OFFICE:
-  </p>
-  <p className="mb-2 ms-4">
-    PS Qube, Room No 608 & 609, 6th floor,<br />
-    Street No. 1111 Newtown,<br />
-    Kolkata, West Bengal 700156
-  </p>
+          {/* Column 4 */}
+          <Col xs={6} md={1} className="footer-col">
+            <Nav.Link as={Link} to="/share-your-spotlight" className="footer-link">Share Your Spotlight</Nav.Link>
+            <Nav.Link as={Link} to="/influencer-academy" className="footer-link">Influencer Academy</Nav.Link>
+            <Nav.Link as={Link} to="/say-hello" className="footer-link">Say Hello</Nav.Link>
+          </Col>
 
-  <p className="mb-2">
-    <i className="bi bi-telephone-fill me-2 text-success"></i>
-    <strong>+1 (415) 941-1910</strong> (USA)
-  </p>
-  <p className="mb-2">
-    <i className="bi bi-telephone-fill me-2 text-success"></i>
-    <strong>+1 (301) 442-6047</strong> (USA)
-  </p>
-  <p className="mb-2">
-    <i className="bi bi-telephone-fill me-2 text-success"></i>
-    <strong>+91-9674908532</strong> (INDIA)
-  </p>
+          {/* Column 5 - USA Address */}
+          <Col xs={6} md={2} className="footer-col">
+            <p className="footer-title">
+              <i className="bi bi-geo-alt-fill footer-icon text-primary"></i>
+              USA HEADQUARTERS:
+            </p>
+            <p className="ms-4">
+              5802 Grosvenor Lane<br />
+              Bethesda, MD 20814
+            </p>
+          </Col>
 
-  <p className="mb-2 text-break">
-    <i className="bi bi-envelope-fill me-2 text-danger"></i>
-    hello@globalinfluencershub.com
-  </p>
-  <p className="mb-2 text-break">
-    <i className="bi bi-envelope-fill me-2 text-danger"></i>
-    globalinfluencerhub@gmail.com
-  </p>
-</Col>
+          {/* Column 6 - INDIA Address */}
+          <Col xs={6} md={2} className="footer-col">
+            <p className="footer-title">
+              <i className="bi bi-geo-alt-fill footer-icon text-primary"></i>
+              INDIA OFFICE:
+            </p>
+            <p className="ms-4">
+              PS Qube, Room No 608 & 609, 6th floor,<br />
+              Street No. 1111, Newtown,<br />
+              Kolkata, West Bengal 700156
+            </p>
+          </Col>
 
+          {/* Column 7 - Phone Numbers */}
+          <Col xs={6} md={2} className="footer-col">
+            <p>
+              <i className="bi bi-telephone-fill footer-icon text-success"></i>
+              <strong>+1 (415) 941-1910</strong> (USA)
+            </p>
+            <p>
+              <i className="bi bi-telephone-fill footer-icon text-success"></i>
+              <strong>+1 (301) 442-6047</strong> (USA)
+            </p>
+            <p>
+              <i className="bi bi-telephone-fill footer-icon text-success"></i>
+              <strong>+91-9674908532</strong> (INDIA)
+            </p>
+          </Col>
 
+          {/* Column 8 - Emails */}
+          <Col xs={6} md={2} className="footer-col">
+            <p>
+              <i className="bi bi-envelope-fill footer-icon text-danger"></i>
+              hello@globalinfluencershub.com
+            </p>
+            <p>
+              <i className="bi bi-envelope-fill footer-icon text-danger"></i>
+              globalinfluencerhub@gmail.com
+            </p>
+          </Col>
         </Row>
 
         {/* Divider */}
@@ -311,28 +364,29 @@ const Footer = () => {
         {/* Bottom Section */}
         <Row className="align-items-center justify-content-between">
           <Col xs={12} md={6} className="text-muted small mb-2 mb-md-0">
-            
+            {/* Optional: Add © 2025 Global Influencers Hub */}
           </Col>
           <Col xs={12} md="auto" className="text-muted small mb-2 mb-md-0 d-flex align-items-center gap-3">
-  <strong className="text-dark me-2">Connect:</strong>
-  
-  <a href="https://www.instagram.com/accounts/login/?next=%2Fglobal_influencershub%2F&source=omni_redirect" target="_blank" rel="noopener noreferrer" className="text-muted fs-5">
-    <i className="bi bi-instagram"></i>
-  </a>
-  <a href="https://www.youtube.com/@globalinfluencershub" target="_blank" rel="noopener noreferrer" className="text-muted fs-5">
-    <i className="bi bi-youtube"></i>
-  </a>
-  <a href="https://www.facebook.com/globalinfluencersclub?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="text-muted fs-5">
-    <i className="bi bi-facebook"></i>
-  </a>
-  <a href="https://www.linkedin.com/company/globalinfluencershub/" target="_blank" rel="noopener noreferrer" className="text-muted fs-5">
-    <i className="bi bi-linkedin"></i>
-  </a>
-</Col>
+            <strong className="text-dark me-2">Connect:</strong>
 
+            <a href="https://www.instagram.com/accounts/login/?next=%2Fglobal_influencershub%2F&source=omni_redirect" target="_blank" rel="noopener noreferrer" className="text-muted fs-5">
+              <i className="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@globalinfluencershub" target="_blank" rel="noopener noreferrer" className="text-muted fs-5">
+              <i className="bi bi-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com/globalinfluencersclub?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="text-muted fs-5">
+              <i className="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/globalinfluencershub/" target="_blank" rel="noopener noreferrer" className="text-muted fs-5">
+              <i className="bi bi-linkedin"></i>
+            </a>
+          </Col>
         </Row>
       </Container>
     </footer>
+    </>
+  
   );
 };
 

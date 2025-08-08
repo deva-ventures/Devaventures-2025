@@ -4,3 +4,14 @@ body {
   
   background-color: #f3f3f3;
 }
+@media (max-width: 767.98px) {
+  .responsive-card-fix {
+    height: auto !important;
+  }
+
+  .responsive-button-fix {
+    position: static !important;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
