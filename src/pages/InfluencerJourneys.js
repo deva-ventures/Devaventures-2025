@@ -299,13 +299,13 @@ const InfluencerJourneys = () => {
   }
   return (
     <>
-   <div
+  <div
   className="storyfluence-banner"
   style={{
     backgroundImage: `url('/storyFluenceBanner.png')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    minHeight: '400px', // fallback if vh fails on mobile
+    minHeight: '400px',
     height: '90vh',
     color: 'white',
     display: 'flex',
@@ -313,11 +313,21 @@ const InfluencerJourneys = () => {
     justifyContent: 'center',
     textAlign: 'center',
     padding: '20px',
+    position: 'relative',
   }}
 >
-  
-</div>
-
+  {/* Optional Text */}
+  <div
+    style={{
+      zIndex: 2,
+      maxWidth: '90%',
+      fontSize: 'clamp(1.2rem, 3vw, 2rem)',
+    }}
+  >
+    
+    
+  </div>
+  </div>
 <div className="px-3 py-5">
   <style>
     {`

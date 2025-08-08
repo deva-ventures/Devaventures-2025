@@ -45,23 +45,37 @@ const Bidding = () => {
     CLICK HERE TO SECURE YOUR SPOT
   </Button>
 </Link>
-        <div className="d-flex flex-wrap justify-content-center gap-3">
-          {Object.entries(timeLeft).map(([unit, value]) => (
-            <div
-              key={unit}
-              style={{
-                backgroundColor: '#243D6F',
-                padding: '30px',
-                width: '120px',
-                borderRadius: '5px',
-                color: 'white',
-              }}
-            >
-              <h2 style={{ fontSize: '36px', margin: 0 }}>{value.toString().padStart(2, '0')}</h2>
-              <p style={{ margin: 0 }}>{unit.charAt(0).toUpperCase() + unit.slice(1)}</p>
-            </div>
-          ))}
-        </div>
+<div
+  className="countdown-timer"
+  style={{
+    overflowX: 'auto',
+    whiteSpace: 'nowrap',
+    display: 'flex',
+    gap: '12px',
+    justifyContent: 'center',
+    padding: '10px',
+  }}
+>
+  {Object.entries(timeLeft).map(([unit, value]) => (
+    <div
+      key={unit}
+      style={{
+        backgroundColor: '#243D6F',
+        padding: '20px 10px',
+        minWidth: '100px',
+        borderRadius: '5px',
+        color: 'white',
+        display: 'inline-block',
+        textAlign: 'center',
+        flex: '0 0 auto',
+      }}
+    >
+      <h2 style={{ fontSize: '24px', margin: 0 }}>{value.toString().padStart(2, '0')}</h2>
+      <p style={{ margin: 0 }}>{unit.charAt(0).toUpperCase() + unit.slice(1)}</p>
+    </div>
+  ))}
+</div>
+
       </div>
     );
   };

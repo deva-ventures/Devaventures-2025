@@ -44,7 +44,7 @@ const Trending = () => {
   return (
     <div style={{ backgroundColor: "#f5f5f0" }}>
     {/* Hero Section */}
-    <div
+    {/* <div
       style={{
         backgroundImage: "url('/trendingBanner.png')",
         backgroundSize: "cover",
@@ -54,32 +54,30 @@ const Trending = () => {
         position: "relative",
       }}
     >
-      <Container className="h-100 d-flex flex-column justify-content-center">
-        <Row>
-          {/* <Col md={7}>
-            <h1 className="fw-bold display-5">
-            Beyond the Scroll. Into the Soul.
-            </h1>
-            <p className="mt-3">
-            This is where real impact begins — not in noise, but in truth.
-            </p>
-            <Button variant="light" className="mt-2">
-              Перейти к бронированию
-            </Button>
-          </Col> */}
+      
+    </div> */}
 
-          {/* <Col md={5} className="d-none d-md-block">
-            <Card style={{ width: "18rem", position: "absolute", bottom: "40px", right: "40px" }}>
-              <Card.Img variant="top" src="/card-promo.jpg" />
-              <Card.Body>
-                <Card.Text>Жилье со скидкой 15% по промокоду FOREST</Card.Text>
-                <Button variant="outline-dark" size="sm">Подробнее</Button>
-              </Card.Body>
-            </Card>
-          </Col> */}
-        </Row>
-      </Container>
-    </div>
+<div
+  className="storyfluence-banner"
+  style={{
+    backgroundImage: `url('/trendingBanner.png')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    minHeight: '400px',
+    height: '90vh',
+    color: 'white',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
+    padding: '20px',
+    position: 'relative',
+  }}
+>
+  
+  </div>
+
+
 
 
 {/* Popular Homes Section */}
