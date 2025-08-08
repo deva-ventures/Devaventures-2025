@@ -5,13 +5,28 @@ import { Container, Row, Col, Image,Accordion } from 'react-bootstrap';
 const AboutSection = () => {
   return (
     <>
-    <div style={{ backgroundColor: '#f5f5f5', padding: '100px 0' }}>
-      <Container className="text-center">
-        <h1 className="fw-bold display-1" style={{ letterSpacing: '-2px', lineHeight: '1.1',color: '#0f3052' }}>
-          LEARN MORE<br />ABOUT US
-        </h1>
-       
-      </Container>
+    <div style={{ backgroundColor: '#f5f5f5', padding: '50px 0' }}>
+      
+<main className="text-center">
+  <style>
+    {`
+      @media (max-width: 576px) {
+        .gi-heading {
+          font-size: 2.5rem !important;
+          letter-spacing: -1.5px !important;
+        }
+      }
+    `}
+  </style>
+
+  
+  <h1
+    className="display-1 fw-bold gi-heading"
+    style={{ color: '#0f3052', letterSpacing: '-5.05px' }}
+  >
+    About Us
+  </h1>
+</main> 
     </div>
     <Container
       fluid
@@ -54,8 +69,17 @@ const AboutSection = () => {
       <Row className="align-items-center justify-content-center">
         {/* Text Column */}
         <Col xs={12} md={6} className="mb-4 mb-md-0">
-        
-          <h2 className="fw-bold display-5 mb-4" style={{ color: '#0f3052' }}>Unlock Your Potential</h2>
+        <style>
+    {`
+      @media (max-width: 576px) {
+        .gi-heading {
+          font-size: 2.5rem !important;
+          letter-spacing: -1.5px !important;
+        }
+      }
+    `}
+  </style>
+          <h1 className="fw-bold display-5 mb-4" style={{ color: '#0f3052' ,letterSpacing: '-3px'}}>Unlock Your Potential</h1>
           <p className="fs-5 text-secondary">
           Unlock Your Potential
           Enhance your skills with our Influencer Academy, offering tailored resources and expert-led workshops.
@@ -90,8 +114,17 @@ const AboutSection = () => {
         </Col>
         {/* Text Column */}
         <Col xs={12} md={6} className="mb-4 mb-md-0">
-          
-          <h2 className="fw-bold display-5 mb-4" style={{ color: '#0f3052' }}>Stay Ahead of the Curve</h2>
+        <style>
+    {`
+      @media (max-width: 576px) {
+        .gi-heading {
+          font-size: 2.5rem !important;
+          letter-spacing: -1.5px !important;
+        }
+      }
+    `}
+  </style>
+          <h2 className="fw-bold display-5 mb-4" style={{ color: '#0f3052',letterSpacing: '-3px' }}>Stay Ahead of the Curve</h2>
           <p className="fs-5 text-secondary">
           Gain insights into trending topics and strategies to amplify your brand visibility through impactful partnerships.
           </p>
@@ -105,8 +138,17 @@ const AboutSection = () => {
       <Row className="align-items-center justify-content-center">
         {/* Text Column */}
         <Col xs={12} md={6} className="mb-4 mb-md-0">
-        
-          <h2 className="fw-bold display-5 mb-4" style={{ color: '#0f3052' }}>The Bidding Room</h2>
+        <style>
+    {`
+      @media (max-width: 576px) {
+        .gi-heading {
+          font-size: 2.5rem !important;
+          letter-spacing: -1.5px !important;
+        }
+      }
+    `}
+  </style>
+          <h2 className="fw-bold display-5 mb-4" style={{ color: '#0f3052',letterSpacing: '-3px' }}>The Bidding Room</h2>
           <p className="fs-5 text-secondary">
           Connect with small businesses showcasing exciting opportunities, and bid on projects that align with your passions.
           </p>
@@ -141,8 +183,17 @@ const AboutSection = () => {
 
         {/* Text Column */}
         <Col xs={12} md={6} className="mb-4 mb-md-0">
-        
-          <h2 className="fw-bold display-5 mb-4" style={{ color: '#0f3052' }}>Our Thriving Community</h2>
+        <style>
+    {`
+      @media (max-width: 576px) {
+        .gi-heading {
+          font-size: 2.5rem !important;
+          letter-spacing: -1.5px !important;
+        }
+      }
+    `}
+  </style>
+          <h2 className="fw-bold display-5 mb-4" style={{ color: '#0f3052' ,letterSpacing: '-3px'}}>Our Thriving Community</h2>
           <p className="fs-5 text-secondary">
           Transform your aspirations into achievements and take the next step in your journey with Global Influencers Hub.
           </p>
