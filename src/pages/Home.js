@@ -494,26 +494,18 @@ const Home = () => {
         padding: '1rem',
       }}
     >
-      {/* Text */}
-      <div>
-        <h5 style={{ fontWeight: 'bold' }}>
-          HOW INFLUENCERS ARE CHANGING THE WAY WE SHOP
-        </h5>
-        <p>
-          The Revolution of Shopping has always evolved, but in the age of social media it’s happening faster than ever.
-        </p>
-      </div>
+      
 
-      {/* Button */}
+      {/* Mobile Button - flows after text */}
       <a
         href="/articles/influencerPowerMoves"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-3 d-block"
+        className="mt-2 d-block d-md-none"
+        style={{ textDecoration: 'none' }}
       >
         <Button
           variant="outline-light"
-          className="responsive-button-fix d-block d-md-none"
           style={{
             padding: '6px 20px',
             fontSize: '14px',
@@ -526,16 +518,16 @@ const Home = () => {
         </Button>
       </a>
 
-      {/* This button shows only on md+ screens */}
+      {/* Desktop Button - stays in absolute position */}
       <a
         href="/articles/influencerPowerMoves"
         target="_blank"
         rel="noopener noreferrer"
         className="d-none d-md-block"
+        style={{ textDecoration: 'none' }}
       >
         <Button
           variant="outline-light"
-          className="responsive-button-fix"
           style={{
             position: 'absolute',
             top: '280px',
