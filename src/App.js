@@ -13,6 +13,8 @@ import ShareYourSpotlight from './pages/ShareYourSpotlight';
 import InfluencerAcademy from './pages/InfluencerAcademy';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import Pablo from './articles/pablo';
 import Sweta from './articles/sweta';
 import Pankaj from './articles/pankaj';

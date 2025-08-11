@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react';
 import "../App.css";
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
 import {useLocation} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-multi-carousel/lib/styles.css';
@@ -62,10 +62,6 @@ const Home = () => {
     }
   ];
   
-
-
-  
-  
   const videosWithLinks = [
     { src: '/video1.mp4', link: 'https://www.instagram.com/reel/DLFbcnKv8Gf/?igsh=MWYzbGtrZDZkbzM0eA==' },
     { src: '/video2.mp4', link: 'https://www.instagram.com/reel/DLUy-lNNUU-/?igsh=MW9vamJjdnUwZnU3NQ==' },
@@ -74,7 +70,6 @@ const Home = () => {
   ];
 
   
-
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -134,6 +129,40 @@ const Home = () => {
   const visibleItems = carouselItems.slice(currentIndex, currentIndex + 2);
 
 
+  const leftCarouselItems = [
+    {
+      img: "/pabloMontana.png",
+      // title: "Small-Town Soul, Global Impact: How Sinchu Raju Turned Setbacks into a Digital Empire",
+      // desc: "“What I’ve learned through my journey is this: be consistent. Whether you’re a man or…",
+      link: "/articles/pablo",
+    },
+    
+  ];
+
+  const rightCards = [
+    {
+      img: "/sweta.png",
+      link: "/articles/sweta",
+    },
+    {
+      img: "/sohum.png",
+      link: "/articles/sohum",
+    },
+    {
+      img: "/neole.png",
+      link: "/articles/neole",
+    },
+    {
+      img: "/sweta.png",
+      link: "/articles/sweta",
+    },
+    
+  ];
+
+
+
+
+
   return (
     <>
 
@@ -185,110 +214,88 @@ const Home = () => {
     
 
     
-    <Container fluid className="py-5">
-  <Row className="align-items-stretch">
-    {/* LEFT SIDE STATIC CARD */}
-    <Col lg={6} md={12} className="mb-4">
-  <a
-    href="/articles/pablo" // Replace with your desired link
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{ textDecoration: 'none', color: 'inherit' }}
-  >
-    <Card
-      className="text-white border-0 h-100"
-      style={{
-        height: '100%',
-        borderRadius: '20px',
-        backgroundImage: `url('/pabloMontana.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        position: 'relative',
-      }}
-    >
-    </Card>
-  </a>
-</Col>
-
-    {/* RIGHT SIDE CAROUSEL */}
-    <Col lg={6} md={12} className="d-flex align-items-center">
-      <div className="d-flex align-items-center w-100">
-        {/* LEFT ARROW */}
-        <Button
-          variant="light"
-          onClick={handlePrev}
-          className="me-2"
-          style={{
-            height: '40px',
-            width: '40px',
-            borderRadius: '50%',
-            zIndex: 1,
-          }}
-        >
-          <FaChevronLeft />
-        </Button>
-
-        {/* CARDS */}
-        <div className="d-flex gap-3 w-100">
-          {visibleItems.map((item, index) => (
-            <a
-              key={index}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}
-            >
-              <Card
-                className="text-white border-0"
-                style={{
-                  height: '300px',
-                  borderRadius: '20px',
-                  backgroundImage: `url(${item.image})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  position: 'relative',
-                }}
-              >
-                <Card.Body className="d-flex flex-column justify-content-end p-3">
-                  <Card.Title>{item.name}</Card.Title>
-                  <Card.Text>{item.description}</Card.Text>
-                  <span
+    <Container fluid className="p-3" style={{ backgroundColor: "#14345A" }}>
+      <Row>
+        {/* LEFT SIDE - Carousel */}
+        <Col xs={12} md={8} className="mb-3">
+          <Carousel indicators={false}>
+            {leftCarouselItems.map((item, idx) => (
+              <Carousel.Item key={idx}>
+                <a href={item.link}>
+                  <img
+                    className="d-block w-100"
+                    src={item.img}
+                    alt={item.title}
                     style={{
-                      backgroundColor: '#ffffffaa',
-                      color: '#000',
-                      fontSize: '12px',
-                      padding: '3px 8px',
-                      borderRadius: '12px',
-                      width: 'fit-content',
+                      objectFit: "cover",
+                      height: "450px",
+                      borderRadius: "4px",
                     }}
-                  >
-                    {item.role}
-                  </span>
-                </Card.Body>
-              </Card>
-            </a>
-          ))}
-        </div>
+                  />
+                </a>
+                {/* Text BELOW the image like screenshot */}
+                <div style={{ background: "#14345A", padding: "15px" }}>
+                  <h5 style={{ color: "white", marginBottom: "8px" }}>
+                    {item.title}
+                  </h5>
+                  <p style={{ color: "white", fontSize: "0.9rem", margin: 0 }}>
+                    {item.desc}
+                  </p>
+                </div>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </Col>
 
-        {/* RIGHT ARROW */}
-        <Button
-          variant="light"
-          onClick={handleNext}
-          className="ms-2"
-          style={{
-            height: '40px',
-            width: '40px',
-            borderRadius: '50%',
-            zIndex: 1,
-          }}
-        >
-          <FaChevronRight />
-        </Button>
-      </div>
-    </Col>
-  </Row>
-</Container>
-
+        {/* RIGHT SIDE - 2×2 GRID */}
+        <Col xs={12} md={4}>
+          <Row className="g-3">
+            {rightCards.map((card, idx) => (
+              <Col xs={6} key={idx}>
+                <a href={card.link} style={{ textDecoration: "none" }}>
+                  <Card className="border-0">
+                    <div style={{ position: "relative" }}>
+                      <Card.Img
+                        src={card.img}
+                        alt={card.title}
+                        style={{
+                          height: "210px",
+                          objectFit: "cover",
+                          borderRadius: "4px",
+                        }}
+                      />
+                      {/* Overlay title */}
+                      <div
+                        style={{
+                          position: "absolute",
+                          bottom: 0,
+                          left: 0,
+                          right: 0,
+                          padding: "8px",
+                          background:
+                            "linear-gradient(to top, rgba(0,0,0,0.6), transparent)",
+                          borderRadius: "0 0 4px 4px",
+                        }}
+                      >
+                        <p
+                          style={{
+                            color: "white",
+                            fontSize: "0.9rem",
+                            margin: 0,
+                          }}
+                        >
+                          {card.title}
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+                </a>
+              </Col>
+            ))}
+          </Row>
+        </Col>
+      </Row>
+    </Container>
 
 
 

@@ -73,12 +73,7 @@ export const trendingStories = [
     image: 'https://globalinfluencershub.com/wp-content/uploads/2025/03/1080-x-797_7-1024x756.jpg',
     slug: '/articles/pankaj'
   },
-  {
-    id: 2,
-    title: 'An Exclusive Interview with Neole Anna Cornelio: From Childhood Passion to Professional Athlete',
-    image: 'https://globalinfluencershub.com/wp-content/uploads/2025/03/1080-x-797_111-1024x756.jpg',
-    slug: '/articles/neole'
-  },
+  
   {
     id: 3,
     title: 'Pablo Montana: The Rhythmic Voyager Crafting Music, Memories, and Magic',
@@ -91,12 +86,7 @@ export const trendingStories = [
     image: 'https://globalinfluencershub.com/wp-content/uploads/2025/03/1080-x-797_7-1024x756.jpg',
     slug: '/articles/pankaj'
   },
-  {
-    id: 5,
-    title: 'An Exclusive Interview with Neole Anna Cornelio: From Childhood Passion to Professional Athlete',
-    image: 'https://globalinfluencershub.com/wp-content/uploads/2025/03/1080-x-797_111-1024x756.jpg',
-    slug: '/articles/neole'
-  },
+  
   {
     id: 6,
     title: 'Pablo Montana: The Rhythmic Voyager Crafting Music, Memories, and Magic',

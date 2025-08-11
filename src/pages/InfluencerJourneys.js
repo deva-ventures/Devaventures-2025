@@ -1,17 +1,78 @@
 import React from 'react';
 import "../App.css";
-import { Row, Col } from 'react-bootstrap';
 import { featuredStories, trendingStories } from '../data/mockData';
-import { Carousel, Card } from 'react-bootstrap';
+import { useNavigate } from "react-router-dom";
+import Slider from "react-slick";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
 const InfluencerJourneys = () => {
-  const allStories = [...featuredStories, ...trendingStories];
-  const groupedStories = [];
-  for (let i = 0; i < trendingStories.length; i += 3) {
-    groupedStories.push(trendingStories.slice(i, i + 3));
-  }
+  const navigate = useNavigate();
+
+  // Custom arrow components
+  const SampleNextArrow = (props) => {
+    const { onClick } = props;
+    return (
+      <div
+        onClick={onClick}
+        style={{
+          position: "absolute",
+          right: "-35px",
+          top: "50%",
+          transform: "translateY(-50%)",
+          cursor: "pointer",
+          color: "#007bff",
+          fontSize: "28px",
+          zIndex: 2,
+        }}
+      >
+        <FaChevronRight />
+      </div>
+    );
+  };
+
+  const SamplePrevArrow = (props) => {
+    const { onClick } = props;
+    return (
+      <div
+        onClick={onClick}
+        style={{
+          position: "absolute",
+          left: "-35px",
+          top: "50%",
+          transform: "translateY(-50%)",
+          cursor: "pointer",
+          color: "#007bff",
+          fontSize: "28px",
+          zIndex: 2,
+        }}
+      >
+        <FaChevronLeft />
+      </div>
+    );
+  };
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 768, // Mobile
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <>
-    <style>{`
+      <style>{`
         @media (max-width: 768px) {
           .storyfluence-banner {
             height: 60vh !important;
@@ -28,7 +89,8 @@ const InfluencerJourneys = () => {
           }
         }
       `}</style>
-  <div
+
+      <div
         className="storyfluence-banner"
         style={{
           backgroundImage: `url('/storyFluenceBanner.png')`,
@@ -44,118 +106,71 @@ const InfluencerJourneys = () => {
           padding: "20px",
           position: "relative",
         }}
-      >
-        
-      </div>
-<div className="px-3 py-5">
-  <style>
-    {`
-      @media (max-width: 767.98px) {
-        .carousel .col-12 {
-          max-width: 100% !important;
-          flex: 0 0 100% !important;
-          display: flex;
-          justify-content: center;
-          padding-bottom: 20px;
-        }
+      ></div>
 
-        .carousel .card {
-          width: 90% !important;
-          height: auto !important;
-        }
-
-        h4.fw-bold {
-          margin-left: 0 !important;
-          text-align: center;
-        }
-      }
-
-      /* Change carousel arrow color to blue */
-      .carousel-control-prev-icon,
-      .carousel-control-next-icon {
-        filter: invert(33%) sepia(100%) saturate(3000%) hue-rotate(200deg);
-      }
-    `}
-  </style>
-
-  <h4 className="fw-bold mb-4" style={{ marginLeft: "230px", color: "#0f3052" }}>
-    Articles
-  </h4>
-
-  <Carousel indicators={false} controls={true} interval={5000}>
-    {groupedStories.map((group, index) => (
-      <Carousel.Item key={index}>
-        <Row
-          className="justify-content-center"
-          style={{
-            marginLeft: "0",
-            marginRight: "0",
-            padding: "15px",
-            gap: "0px",
-          }}
+      <div className="px-3 py-5">
+        <h4
+          className="fw-bold mb-4"
+          style={{ marginLeft: "230px", color: "#0f3052" }}
         >
-          {group.map((story) => (
-            <Col
-              key={story.id}
-              xs={12}
-              md={4}
-              lg={3}
-              style={{
-                paddingLeft: "0",
-                paddingRight: "0",
-                margin: "0",
-                maxWidth: "33.33%",
-              }}
-            >
-              <Card
-                className="text-white"
+          Articles
+        </h4>
+
+        <div style={{ padding: "20px 0" }}>
+          <Slider {...settings}>
+            {trendingStories.map((story) => (
+              <div
+                key={story.id}
                 style={{
-                  height: "650px",
-                  width: "400px",
-                  borderRadius: "20px",
-                  overflow: "hidden",
-                  position: "relative",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundImage: `url(${story.image})`,
-                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
+                  padding: "0 20px", // gap between cards
+                  boxSizing: "border-box",
+                  width: "85%",
                 }}
               >
                 <div
-                  className="d-flex flex-column justify-content-end h-100 p-3"
                   style={{
-                    background: "linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2))",
+                    border: "1px solid #ddd",
+                    borderRadius: "8px",
+                    overflow: "hidden",
+                    background: "#fff",
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                    height: "420px", // increased card height
+                    display: "flex",
+                    flexDirection: "column",
                   }}
                 >
-                  <h5 style={{ fontWeight: "600" }}>{story.title}</h5>
-                  <a
-                    href={`${story.slug}`}
-                    className="text-white mt-2"
+                  <img
+                    src={story.image}
+                    alt={story.title}
                     style={{
-                      textDecoration: "none",
-                      fontWeight: "bold",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "5px",
-                      fontSize: "0.9rem",
+                      width: "100%",
+                      height: "270px", // taller image
+                      objectFit: "cover",
                     }}
-                  >
-                    Read More ↗
-                  </a>
+                  />
+                  <div style={{ padding: "15px", flex: 1 }}>
+                    <h5 style={{ fontSize: "16px", margin: "0 0 8px" }}>
+                      {story.title}
+                    </h5>
+                    <a
+                      href={story.slug}
+                      style={{
+                        display: "inline-block",
+                        marginTop: "auto",
+                        color: "#007bff",
+                        textDecoration: "none",
+                      }}
+                    >
+                      Read More →
+                    </a>
+                  </div>
                 </div>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Carousel.Item>
-    ))}
-  </Carousel>
-</div>
-
-
-
-
-  </>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
+    </>
   );
 };
 
