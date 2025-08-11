@@ -4,8 +4,79 @@ import { featuredStories, trendingStories } from '../data/mockData';
 import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-
+import { Container, Row, Col, Card, Button , Carousel} from 'react-bootstrap';
 const InfluencerJourneys = () => {
+
+  const people = [
+    {
+      name: 'Pankaj Dubey',
+      des: 'Founder DSPIN | TEDx Speaker | Top 50 Indian Icon | Investor',
+      img: '/pankaj.jpg',
+      youtube: 'https://youtu.be/RUJ-LV58m9I?si=Fzn9UkQRoXSRt5ZM',
+      article: '/articles/pankaj',
+    },
+    {
+      name: 'Pablo Montana',
+      des: 'Musician | Latin Artist | Salsa & Bachata Performer | Traveller',
+      img: '/pabloTrendin.jpg',
+      youtube: 'https://youtu.be/-oq8VYhFcHw?si=FVXr_fPIrhPjG0Ec',
+      article: '/articles/pablo',
+    },
+    {
+      name: 'Sweta Desai',
+      des: 'Reset, Rebuild, Reign | From Late Starts to Global Fashion Weeks & Full House Shows',
+      img: '/swetaTrending.jpg',
+      youtube: 'https://youtu.be/va1t7bxevtc?si=kvmnn3vYRFnyYWpp',
+      article: '/articles/sweta',
+    },
+    {
+      name: 'Pankaj Dubey',
+      des: 'Founder DSPIN | TEDx Speaker | Top 50 Indian Icon | Investor',
+      img: '/pankaj.jpg',
+      youtube: 'https://youtu.be/RUJ-LV58m9I?si=Fzn9UkQRoXSRt5ZM',
+      article: '/articles/pankaj',
+    },
+
+    {
+      name: 'Indrani Ghose',
+      des: 'Voice of Indian Travel | Story Weaver | Blogger | Google Guide | Faces of India',
+      img: '/indrani.jpg',
+      youtube: 'https://www.youtube.com/watch?si=nP0lILVMAkMdPW3E&v=TwONuh31_6M&feature=youtu.be',
+      article: '/articles/indrani',
+    },
+    {
+      name: 'Indrajit Lahiri',
+      des: '@foodkaseries Creator | Published Author | Podcaster at @EbongIndrajit | Culinary Storyteller',
+      img: '/indrajit.jpg',
+      youtube: 'https://www.youtube.com/watch?v=6IGV6sb3FzA',
+      article: '/articles/indrajit',
+    },
+
+    {
+      name: 'Sarina Pani',
+      des: 'IFBB Pro Athlete | Coach | Winner – FitFactor India',
+      img: '/sarina.jpg',
+      youtube: 'https://www.youtube.com/watch?v=iKTxQk0GkpA&feature=youtu.be',
+      article: '/articles/sarina',
+    },
+   
+
+    
+    
+    
+  ];
+
+  const chunkArray = (arr, size) =>
+    Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
+      arr.slice(i * size, i * size + size)
+    );
+  
+  const groupedSlides = chunkArray(people, 3);
+
+
+
+
+
   const navigate = useNavigate();
 
   // Custom arrow components
@@ -116,59 +187,54 @@ const InfluencerJourneys = () => {
           Articles
         </h4>
 
-        <div style={{ padding: "20px 0" }}>
-          <Slider {...settings}>
-            {trendingStories.map((story) => (
-              <div
-                key={story.id}
-                style={{
-                  padding: "0 20px", // gap between cards
-                  boxSizing: "border-box",
-                  width: "85%",
-                }}
-              >
-                <div
-                  style={{
-                    border: "1px solid #ddd",
-                    borderRadius: "8px",
-                    overflow: "hidden",
-                    background: "#fff",
-                    boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-                    height: "420px", // increased card height
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <img
-                    src={story.image}
-                    alt={story.title}
-                    style={{
-                      width: "100%",
-                      height: "270px", // taller image
-                      objectFit: "cover",
-                    }}
-                  />
-                  <div style={{ padding: "15px", flex: 1 }}>
-                    <h5 style={{ fontSize: "16px", margin: "0 0 8px" }}>
-                      {story.title}
-                    </h5>
-                    <a
-                      href={story.slug}
-                      style={{
-                        display: "inline-block",
-                        marginTop: "auto",
-                        color: "#007bff",
-                        textDecoration: "none",
-                      }}
-                    >
-                      Read More →
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </Slider>
-        </div>
+        <Container className="py-5">
+      <Carousel
+        indicators={false}
+        prevIcon={<FaChevronLeft color="#0d6efd" size={24} />}
+        nextIcon={<FaChevronRight color="#0d6efd" size={24} />}
+      >
+        {groupedSlides.map((group, slideIndex) => (
+          <Carousel.Item key={slideIndex}>
+            <Row className="g-4">
+              {group.map((home, index) => (
+                <Col md={4} key={index}>
+                  <Card className="h-100 border-0 shadow-sm">
+                    <Card.Img
+                      variant="top"
+                      src={home.img}
+                      style={{ borderRadius: '12px', height: '280px', objectFit: 'cover' }}
+                    />
+                    <Card.Body>
+                      <div className="text-muted small mb-2">{home.des}</div>
+                      <Card.Title className="fw-bold">{home.name}</Card.Title>
+
+                      <div className="d-flex flex-column mt-3 gap-2">
+                        <a
+                          href={home.youtube}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-outline-primary btn-sm"
+                        >
+                          Click here for YouTube
+                        </a>
+                        <a
+                          href={home.article}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-outline-secondary btn-sm"
+                        >
+                          Click here for Article
+                        </a>
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </Container>
       </div>
     </>
   );
