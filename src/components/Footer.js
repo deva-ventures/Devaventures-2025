@@ -307,22 +307,22 @@ const Footer = () => {
           {/* Column 5 - USA Address */}
           <Col xs={6} md={2} className="footer-col">
             <p className="footer-title">
-              <i className="bi bi-geo-alt-fill footer-icon text-primary"></i>
-              USA HEADQUARTERS:
+              {/* <i className="bi bi-geo-alt-fill footer-icon text-primary"></i> */}
+              USA Headquarters:
             </p>
-            <p className="ms-4">
-              5802 Grosvenor Lane<br />
-              Bethesda, MD 20814
+            <p className="ms-6">
+              5802 Grosvenor Lane
+              Bethesda,<br/> MD 20814
             </p>
           </Col>
 
           {/* Column 6 - INDIA Address */}
           <Col xs={6} md={2} className="footer-col">
             <p className="footer-title">
-              <i className="bi bi-geo-alt-fill footer-icon text-primary"></i>
-              INDIA OFFICE:
+              {/* <i className="bi bi-geo-alt-fill footer-icon text-primary"></i> */}
+              INDIA Office:
             </p>
-            <p className="ms-4">
+            <p className="ms-6">
               PS Qube, Room No 608 & 609, 6th floor,<br />
               Street No. 1111, Newtown,<br />
               Kolkata, West Bengal 700156

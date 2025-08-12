@@ -214,7 +214,7 @@ const Home = () => {
     
 
     
-    <Container fluid className="p-3" style={{ backgroundColor: "#14345A" }}>
+    <Container fluid className="p-3" >
       <Row>
         {/* LEFT SIDE - Carousel */}
         <Col xs={12} md={8} className="mb-3">
@@ -228,20 +228,12 @@ const Home = () => {
                     alt={item.title}
                     style={{
                       objectFit: "cover",
-                      height: "450px",
+                      height: "440px",
                       borderRadius: "4px",
                     }}
                   />
                 </a>
-                {/* Text BELOW the image like screenshot */}
-                <div style={{ background: "#14345A", padding: "15px" }}>
-                  <h5 style={{ color: "white", marginBottom: "8px" }}>
-                    {item.title}
-                  </h5>
-                  <p style={{ color: "white", fontSize: "0.9rem", margin: 0 }}>
-                    {item.desc}
-                  </p>
-                </div>
+                
               </Carousel.Item>
             ))}
           </Carousel>

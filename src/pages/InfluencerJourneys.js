@@ -60,10 +60,125 @@ const InfluencerJourneys = () => {
       article: '/articles/sarina',
     },
    
+    
+    
+
+    {
+      name: 'Narender Singh Yadav',
+      des: 'Mountaineer | 22x World Record Holder | Real-Life Adventurer | RunForRam Ultramarathon',
+      img: '/narendra.jpg',
+      youtube: 'https://www.youtube.com/watch?v=wMGq7oVC800',
+      article: '/articles/narender',
+    },
 
     
+
+    {
+      name: 'Preetha Athrey',
+      des: 'Culinary Creator | Marketing Maven | Ex-Twitter Marketing Head',
+      img: '/preetha.jpg',
+      youtube: 'https://www.youtube.com/watch?v=8kKCfXBX9Es',
+      article: '#',
+    },
     
+
+    {
+      name: 'Sanjay Barai',
+      des: 'Teacher | Digital Creator | Relatable Storyteller',
+      img: '/sanjay.jpg',
+      youtube: 'https://www.youtube.com/watch?v=NjaTmt2XHpc',
+      article: '/articles/sanjay',
+    },
     
+
+    {
+      name: 'Gunjan Dewan',
+      des: 'Positive Parenting Coach | Baby-Friendly Recipes | Baby-Led Weaning Expert | Former Data Scientist',
+      img: '/gunjan.jpg',
+      youtube: 'https://www.youtube.com/watch?v=Qk-KwV_Q6xA&feature=youtu.be',
+      article: '/articles/gunjan',
+    },
+    
+
+    {
+      name: 'Pratul Vishera',
+      des: 'Vedic Astrologer, TEDx Speaker & Mythologist | Ep 22 | Global Influencer Hub',
+      img: '/pratul.jpg',
+      youtube: 'https://www.youtube.com/watch?v=OLrppq3rYac',
+      article: '#',
+    },
+   
+
+    {
+      name: 'Avinash Sahani',
+      des: 'Former Indian Army Special Forces | Fitness Enthusiast | Co-Founder @gearsmith',
+      img: '/avinash.jpg',
+      youtube: 'https://www.youtube.com/watch?v=2jaO8wt0baQ',
+      article: '/articles/avinash',
+    },
+    {
+      name: 'Ragendu K R',
+      des: 'IMTC Certified Montessorian | Gentle parenting | BLW & EC',
+      img: '/ragendu.jpg',
+      youtube: 'https://www.youtube.com/watch?v=hxB6QVdpv-I',
+      article: '/articles/ragendu',
+    },
+    
+
+
+{
+  name: 'Raj Sharma',
+  des: 'Comedian | Actor | Host | Co-host of The Treehouse Podcast',
+  img: '/raj.jpg',
+  youtube: 'https://www.youtube.com/watch?v=hxB6QVdpv-I',
+  article: '/articles/raj',
+},
+{
+  name: 'Ragendu K R',
+  des: 'IMTC Certified Montessorian | Gentle parenting | BLW & EC',
+  img: '/ragendu.jpg',
+  youtube: 'https://www.youtube.com/watch?v=hxB6QVdpv-I',
+  article: '/articles/ragendu',
+},
+{
+  name: 'Ragendu K R',
+  des: 'IMTC Certified Montessorian | Gentle parenting | BLW & EC',
+  img: '/ragendu.jpg',
+  youtube: 'https://www.youtube.com/watch?v=hxB6QVdpv-I',
+  article: '/articles/ragendu',
+},
+{
+  name: 'Ragendu K R',
+  des: 'IMTC Certified Montessorian | Gentle parenting | BLW & EC',
+  img: '/ragendu.jpg',
+  youtube: 'https://www.youtube.com/watch?v=hxB6QVdpv-I',
+  article: '/articles/ragendu',
+},
+{
+  name: 'Ragendu K R',
+  des: 'IMTC Certified Montessorian | Gentle parenting | BLW & EC',
+  img: '/ragendu.jpg',
+  youtube: 'https://www.youtube.com/watch?v=hxB6QVdpv-I',
+  article: '/articles/ragendu',
+},
+{
+  name: 'Ragendu K R',
+  des: 'IMTC Certified Montessorian | Gentle parenting | BLW & EC',
+  img: '/ragendu.jpg',
+  youtube: 'https://www.youtube.com/watch?v=hxB6QVdpv-I',
+  article: '/articles/ragendu',
+},
+
+
+
+
+
+
+
+
+
+    
+
   ];
 
   const chunkArray = (arr, size) =>

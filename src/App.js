@@ -23,10 +23,31 @@ import Sohum from './articles/sohum';
 import Indrani from './articles/indrani';
 import Indrajit from './articles/indrajit';
 import Sarina from './articles/sarina';
+import Narender from './articles/narender';
+import Sanjay from './articles/sanjay';
+import Gunjan from './articles/gunjan';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import MicroInfluencerArticle from "./articles/riseOfMicro";
 import InfluencerPowerMoves from "./articles/influencerPowerMoves";
 import HowInfluencersAreChanging from './articles/howInfluencersAreChanging';
 import BagYourFirstBigBrand from './articles/bagYourFirstBigBrand';
+import Avinash from './articles/avinash';
+import Ragendu from './articles/ragendu';
+import Raj from './articles/raj';
+
 function App() {
   return (
     <Router>
@@ -52,6 +73,22 @@ function App() {
             <Route path="/articles/indrani" element={<Indrani />} />
             <Route path="/articles/indrajit" element={<Indrajit />} />
             <Route path="/articles/sarina" element={<Sarina />} />
+            <Route path="/articles/narender" element={<Narender />} />
+            <Route path="/articles/sanjay" element={<Sanjay/>} />
+            <Route path="/articles/gunjan" element={<Gunjan/>} />
+            <Route path="/articles/avinash" element={<Avinash/>} />
+            <Route path="/articles/ragendu" element={<Ragendu/>} />
+            <Route path="/articles/raj" element={<Raj/>} />
+
+
+
+
+
+
+
+
+
+
 
             <Route path="/articles/riseOfMicro" element={<MicroInfluencerArticle />} />
             <Route path="/articles/influencerPowerMoves" element={<InfluencerPowerMoves />} />
