@@ -434,21 +434,28 @@ const Home = () => {
 </div>
 
 <div className="bg-light py-5">
-  <style>{`
-    @media (max-width: 768px) {
-      .responsive-card-fix {
-        height: 550px !important;
+  <style>
+    {`
+      @media (max-width: 768px) {
+        .first-card-body {
+          padding-top: 150px !important;
+          padding-left: 20px !important;
+          height: 400px !important;
+        }
+        .second-card {
+          height: 350px !important;
+        }
+        .second-card-button {
+          top: auto !important;
+          bottom: 20px !important;
+          right: 20px !important;
+        }
       }
-      .responsive-button-fix {
-        top: 380px !important;
-        right: 20px !important;
-      }
-    }
-  `}</style>
+    `}
+  </style>
 
   <Container fluid>
     <Row className="g-4 justify-content-start px-3">
-      {/* Card 1 */}
       <Col xs={12} md={6}>
         <Card
           className="h-100 text-white border-0"
@@ -460,6 +467,7 @@ const Home = () => {
           }}
         >
           <Card.Body
+            className="first-card-body"
             style={{
               height: '550px',
               borderRadius: '15px',
@@ -493,78 +501,52 @@ const Home = () => {
 
       {/* Card 2 */}
       <Col xs={12} md={6}>
-  <Card
-    className="h-100 text-white border-0 position-relative responsive-card-fix"
-    style={{
-      backgroundImage: `url('/howInfluencers.png')`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      borderRadius: '15px',
-      height: '400px',
-    }}
-  >
-    <Card.Body
-      className="d-flex flex-column justify-content-end"
-      style={{
-        height: '100%',
-        position: 'relative',
-        padding: '1rem',
-      }}
-    >
-      
-
-      {/* Mobile Button - flows after text */}
-      <a
-        href="/articles/influencerPowerMoves"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-2 d-block d-md-none"
-        style={{ textDecoration: 'none' }}
-      >
-        <Button
-          variant="outline-light"
+        <Card
+          className="h-100 text-white border-0 position-relative second-card"
           style={{
-            padding: '6px 20px',
-            fontSize: '14px',
-            borderRadius: '6px',
-            fontWeight: 500,
-            width: 'fit-content',
+            backgroundImage: `url('/howInfluencers.png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            borderRadius: '15px',
+            height: '400px',
           }}
         >
-          Read More
-        </Button>
-      </a>
-
-      {/* Desktop Button - stays in absolute position */}
-      <a
-        href="/articles/influencerPowerMoves"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="d-none d-md-block"
-        style={{ textDecoration: 'none' }}
-      >
-        <Button
-          variant="outline-light"
-          style={{
-            position: 'absolute',
-            top: '280px',
-            right: '70px',
-            padding: '6px 20px',
-            fontSize: '14px',
-            borderRadius: '6px',
-            fontWeight: 500,
-          }}
-        >
-          Read More
-        </Button>
-      </a>
-    </Card.Body>
-  </Card>
-</Col>
-
+          <Card.Body style={{ height: '100%', position: 'relative' }}>
+            <a
+              href="/articles/influencerPowerMoves"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline-light"
+                className="second-card-button"
+                style={{
+                  position: 'absolute',
+                  top: '280px',
+                  right: '70px',
+                  padding: '6px 20px',
+                  fontSize: '14px',
+                  borderRadius: '6px',
+                  fontWeight: 500,
+                }}
+              >
+                Read More
+              </Button>
+            </a>
+          </Card.Body>
+        </Card>
+      </Col>
     </Row>
   </Container>
 </div>
+
+
+
+
+
+
+
+
 
 
 
