@@ -258,41 +258,48 @@ const InfluencerJourneys = () => {
 
   return (
     <>
-      <style>{`
-        @media (max-width: 768px) {
-          .storyfluence-banner {
-            height: 60vh !important;
-            background-position: top !important;
-            padding: 15px !important;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .storyfluence-banner {
-            height: 50vh !important;
-            background-position: top !important;
-            padding: 10px !important;
-          }
-        }
-      `}</style>
+      
 
       <div
-        className="storyfluence-banner"
-        style={{
-          backgroundImage: `url('/storyFluenceBanner.png')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          minHeight: "400px",
-          height: "90vh",
-          color: "white",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-          padding: "20px",
-          position: "relative",
-        }}
-      ></div>
+  className="storyfluence-banner"
+  style={{
+    backgroundImage: `url('/storyFluenceBanner.png')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    minHeight: "400px",
+    height: "90vh",
+    color: "white",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    padding: "20px",
+    position: "relative",
+  }}
+>
+  <style>
+    {`
+      @media (max-width: 768px) {
+        .storyfluence-banner {
+          height: 60vh !important; /* reduce height for mobile */
+          min-height: 300px !important;
+          background-position: top center !important; /* show top part of image */
+          padding: 15px !important;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .storyfluence-banner {
+          height: 50vh !important;
+          min-height: 250px !important;
+          background-size: contain !important; /* fit full image inside */
+          background-repeat: no-repeat !important;
+        }
+      }
+    `}
+  </style>
+</div>
+
 
       <div className="px-3 py-5">
         <h4

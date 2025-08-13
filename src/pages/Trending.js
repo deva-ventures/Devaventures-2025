@@ -44,20 +44,8 @@ const Trending = () => {
   return (
     <div style={{ backgroundColor: "#f5f5f0" }}>
     {/* Hero Section */}
-    {/* <div
-      style={{
-        backgroundImage: "url('/trendingBanner.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        minHeight: "90vh",
-        color: "white",
-        position: "relative",
-      }}
-    >
-      
-    </div> */}
-
-<div
+    
+    <div
   className="storyfluence-banner"
   style={{
     backgroundImage: `url('/trendingBanner.png')`,
@@ -74,8 +62,29 @@ const Trending = () => {
     position: 'relative',
   }}
 >
-  
-  </div>
+  <style>
+    {`
+      @media (max-width: 768px) {
+        .storyfluence-banner {
+          height: 60vh !important; /* reduce height for better mobile fit */
+          min-height: 300px !important;
+          background-position: top center !important; /* focus on top part of image */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .storyfluence-banner {
+          height: 50vh !important;
+          min-height: 250px !important;
+          background-size: contain !important; /* fit full image */
+          background-repeat: no-repeat !important;
+          background-position: center top !important;
+        }
+      }
+    `}
+  </style>
+</div>
+
 
 
 
