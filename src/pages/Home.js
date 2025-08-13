@@ -214,80 +214,98 @@ const Home = () => {
     
 
     
-    <Container fluid className="p-3" >
-      <Row>
-        {/* LEFT SIDE - Carousel */}
-        <Col xs={12} md={8} className="mb-3">
-          <Carousel indicators={false}>
-            {leftCarouselItems.map((item, idx) => (
-              <Carousel.Item key={idx}>
-                <a href={item.link}>
-                  <img
-                    className="d-block w-100"
-                    src={item.img}
-                    alt={item.title}
+    <Container fluid className="p-3">
+  <Row>
+    {/* LEFT SIDE - Carousel */}
+    <Col xs={12} md={8} className="mb-3"> {/* width increased earlier to remove padding */}
+      <Carousel indicators={false}>
+        {leftCarouselItems.map((item, idx) => (
+          <Carousel.Item key={idx}>
+            <a href={item.link} style={{ display: "block" }}>
+              <div
+                style={{
+                  position: "relative",
+                  overflow: "hidden",
+                  borderRadius: "4px",
+                }}
+              >
+                <img
+                  className="w-100"
+                  src={item.img}
+                  alt={item.title}
+                  style={{
+                    objectFit: "cover",
+                    aspectRatio: "19 / 7", // shorter height but still responsive
+                  }}
+                />
+              </div>
+            </a>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </Col>
+
+    {/* RIGHT SIDE - 2×2 GRID */}
+    <Col xs={12} md={4}>
+      <Row className="g-3">
+        {rightCards.map((card, idx) => (
+          <Col xs={6} key={idx}>
+            <a href={card.link} style={{ textDecoration: "none" }}>
+              <Card className="border-0">
+                <div
+                  style={{
+                    position: "relative",
+                    overflow: "hidden",
+                    borderRadius: "4px",
+                  }}
+                >
+                  <Card.Img
+                    src={card.img}
+                    alt={card.title}
                     style={{
                       objectFit: "cover",
-                      height: "440px",
-                      borderRadius: "4px",
+                      aspectRatio: "20 / 15", // keeps consistent height for cards
+                      width: "100%",
                     }}
                   />
-                </a>
-                
-              </Carousel.Item>
-            ))}
-          </Carousel>
-        </Col>
-
-        {/* RIGHT SIDE - 2×2 GRID */}
-        <Col xs={12} md={4}>
-          <Row className="g-3">
-            {rightCards.map((card, idx) => (
-              <Col xs={6} key={idx}>
-                <a href={card.link} style={{ textDecoration: "none" }}>
-                  <Card className="border-0">
-                    <div style={{ position: "relative" }}>
-                      <Card.Img
-                        src={card.img}
-                        alt={card.title}
-                        style={{
-                          height: "210px",
-                          objectFit: "cover",
-                          borderRadius: "4px",
-                        }}
-                      />
-                      {/* Overlay title */}
-                      <div
-                        style={{
-                          position: "absolute",
-                          bottom: 0,
-                          left: 0,
-                          right: 0,
-                          padding: "8px",
-                          background:
-                            "linear-gradient(to top, rgba(0,0,0,0.6), transparent)",
-                          borderRadius: "0 0 4px 4px",
-                        }}
-                      >
-                        <p
-                          style={{
-                            color: "white",
-                            fontSize: "0.9rem",
-                            margin: 0,
-                          }}
-                        >
-                          {card.title}
-                        </p>
-                      </div>
-                    </div>
-                  </Card>
-                </a>
-              </Col>
-            ))}
-          </Row>
-        </Col>
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      padding: "8px",
+                      background:
+                        "linear-gradient(to top, rgba(0,0,0,0.6), transparent)",
+                      borderRadius: "0 0 4px 4px",
+                    }}
+                  >
+                    <p
+                      style={{
+                        color: "white",
+                        fontSize: "0.9rem",
+                        margin: 0,
+                      }}
+                    >
+                      {card.title}
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            </a>
+          </Col>
+        ))}
       </Row>
-    </Container>
+    </Col>
+  </Row>
+</Container>
+
+
+
+
+
+
+
 
 
 
