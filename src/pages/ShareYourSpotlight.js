@@ -2,18 +2,42 @@ import React from 'react';
 import { Container, Row, Col, Card, Button,Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 const ShareYourSpotlight = () => {
-  const backgroundStyle = {
-    backgroundImage: `url('/shareYourSpotlightBanner.png')`, // Make sure image is in public folder
+  
+  return (
+  <>
+  <Container
+  fluid
+  style={{
+    backgroundImage: `url('/shareYourSpotlightBanner.png')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     height: '100vh',
     width: '100vw',
-  };
-  return (
-  <>
-  <Container fluid style={backgroundStyle}>
-  </Container>
+  }}
+  className="share-spotlight-banner"
+>
+  <style>
+    {`
+      @media (max-width: 768px) {
+        .share-spotlight-banner {
+          height: 60vh !important;
+          background-position: top center !important;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .share-spotlight-banner {
+          height: 50vh !important;
+          background-size: contain !important;
+          background-position: center top !important;
+          background-repeat: no-repeat !important;
+        }
+      }
+    `}
+  </style>
+</Container>
+
 
   <Container className="py-5">
       <Row className="align-items-center">
