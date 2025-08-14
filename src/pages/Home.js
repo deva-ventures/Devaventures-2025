@@ -37,13 +37,13 @@ const Home = () => {
 
   const courses = [
     {
-      title: "Influencers Academy: Elevate Your Influence, Own the Spotlight",
+      title: "Masterfluence: Elevate Your Influence, Own the Spotlight",
       instructor: "Where Future Influencers Learn to Lead",
       image: "/grid1.png",
       link: "/influencer-academy"
     },
     {
-      title: "Influencer Journey — Where Story Meets Strength",
+      title: "Storyfluence — Where Story Meets Strength",
       instructor: "Creators. Changemakers. Their Stories, Unfiltered",
       image: "/grid2.png",
       link: "/influencer-journeys"
@@ -55,7 +55,7 @@ const Home = () => {
       link: "/share-your-spotlight"
     },
     {
-      title: "Bidding Room- Only the boldest brands and the most ambitious influencers will know.",
+      title: "Bidfluence- Only the boldest brands and the most ambitious influencers will know.",
       instructor: "Bid, win, and collaborate",
       image: "/grid4.png",
       link: "/bidding"
@@ -63,9 +63,9 @@ const Home = () => {
   ];
   
   const videosWithLinks = [
-    { src: '/video1.mp4', link: 'https://www.instagram.com/reel/DLFbcnKv8Gf/?igsh=MWYzbGtrZDZkbzM0eA==' },
-    { src: '/video2.mp4', link: 'https://www.instagram.com/reel/DLUy-lNNUU-/?igsh=MW9vamJjdnUwZnU3NQ==' },
-    { src: '/video3.mp4', link: 'https://www.instagram.com/reel/DKeyGY9vgaV/?igsh=NHg2ZnhhanAwb3Zq' },
+    { src: '/swetaTeaser.mp4', link: 'https://www.instagram.com/pistachiobysweta?igsh=MW5peTB3N2h6ajJw' },
+    { src: '/sohumTeaser.mp4', link: 'https://www.instagram.com/sohumdeb?igsh=MW82Mng4eGE5c3Budw==' },
+    { src: '/rajTeaser.mp4', link: 'https://www.instagram.com/comedianraj?igsh=eDRqYzk5cmxubnZ0' },
     { src: '/preetha.mp4', link: 'https://www.instagram.com/reel/DITrHUdvmAU/?igsh=M2MyYnQ2b3F0ZXcy' },
   ];
 
@@ -131,10 +131,10 @@ const Home = () => {
 
   const leftCarouselItems = [
     {
-      img: "/pabloMontana.png",
+      img: "/sanjay.png",
       // title: "Small-Town Soul, Global Impact: How Sinchu Raju Turned Setbacks into a Digital Empire",
       // desc: "“What I’ve learned through my journey is this: be consistent. Whether you’re a man or…",
-      link: "/articles/pablo",
+      link: "/articles/sanjay",
     },
     
   ];
@@ -153,8 +153,8 @@ const Home = () => {
       link: "/articles/neole",
     },
     {
-      img: "/sweta.png",
-      link: "/articles/sweta",
+      img: "/harish.png",
+      link: "/articles/harish",
     },
     
   ];
@@ -426,7 +426,7 @@ const Home = () => {
       <Col md={8} sm={12} style={{ paddingLeft: '20px' }}>
        
         <h1 className="display-5 fw-bold" style={{color: '#0f3052',letterSpacing: '-3.05px'}}>
-      Master  Fluence
+      Masterfluence
         </h1>
       </Col>
     </Row>

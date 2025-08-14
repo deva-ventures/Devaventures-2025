@@ -73,11 +73,11 @@ const AmplifyYourBrand = () => {
             conversions, we’ve got you covered:
           </p>
           <p>
-            Homepage Features: Be the first thing our audience sees with
-            premium banner placements.
-            Sponsored Stories: Let us tell your brand’s story alongside the
-            journeys of top influencers.
-            Video Ads: Embed your videos into influencer interviews, reels, or
+           <b>Homepage Features:</b>  Be the first thing our audience sees with
+            premium banner placements.<br/>
+            <b>Sponsored Stories:</b> Let us tell your brand’s story alongside the
+            journeys of top influencers.<br/>
+            <b>Video Ads:</b> Embed your videos into influencer interviews, reels, or
             story highlights.
           </p>
         </Col>
@@ -129,20 +129,20 @@ const AmplifyYourBrand = () => {
         >
           <h5
             className="fw-bold mb-4"
-            style={{ fontSize: "18px", letterSpacing: "1px" }}
+            style={{ fontSize: "25px", letterSpacing: "1px",color:"#0f3052" }}
           >
             Who Should Advertise?
           </h5>
-          <p style={{ fontSize: "14px", lineHeight: "1.6" }}>
+          <p style={{ fontSize: "18px", lineHeight: "1.6",fontWeight:"bold" }}>
             Our platform is perfect for:
           </p>
-          <p style={{ fontSize: "14px", lineHeight: "1.6" }}>
-            Brands: Looking to connect with influencers and trend-savvy audiences.
-            Agencies: Wanting premium placement for their clients in a targeted,
-            high-traffic environment.
-            Startups: Eager to build awareness and grow within the influencer ecosystem.
-            Creators and Tools: Promoting influencer-focused services, apps, or products.
-          </p>
+          <ul style={{ fontSize: "14px", lineHeight: "1.6" }}>
+  <li><b>Brands:</b> Looking to connect with influencers and trend-savvy audiences.</li>
+  <li><b>Agencies:</b> Wanting premium placement for their clients in a targeted, high-traffic environment.</li>
+  <li><b>Startups:</b> Eager to build awareness and grow within the influencer ecosystem.</li>
+  <li><b>Creators and Tools:</b> Promoting influencer-focused services, apps, or products.</li>
+</ul>
+
         </Col>
 
         {/* Right Image Section */}

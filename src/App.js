@@ -26,7 +26,14 @@ import Sarina from './articles/sarina';
 import Narender from './articles/narender';
 import Sanjay from './articles/sanjay';
 import Gunjan from './articles/gunjan';
-
+import Avinash from './articles/avinash';
+import Ragendu from './articles/ragendu';
+import Raj from './articles/raj';
+import Vaidehi from './articles/vaidehi';
+import Jitender from './articles/jitender';
+import Niranjan from './articles/niranjan';
+import Sucheta from './articles/sucheta';
+import Sadaf from './articles/sadaf';
 
 
 
@@ -44,9 +51,7 @@ import MicroInfluencerArticle from "./articles/riseOfMicro";
 import InfluencerPowerMoves from "./articles/influencerPowerMoves";
 import HowInfluencersAreChanging from './articles/howInfluencersAreChanging';
 import BagYourFirstBigBrand from './articles/bagYourFirstBigBrand';
-import Avinash from './articles/avinash';
-import Ragendu from './articles/ragendu';
-import Raj from './articles/raj';
+
 
 function App() {
   return (
@@ -79,8 +84,13 @@ function App() {
             <Route path="/articles/avinash" element={<Avinash/>} />
             <Route path="/articles/ragendu" element={<Ragendu/>} />
             <Route path="/articles/raj" element={<Raj/>} />
+            <Route path="/articles/vaidehi" element={<Vaidehi/>} />
 
+            <Route path="/articles/jitender" element={<Jitender/>} />
+            <Route path="/articles/niranjan" element={<Niranjan/>} />
 
+            <Route path="/articles/sucheta" element={<Sucheta/>} />
+            <Route path="/articles/sadaf" element={<Sadaf/>} />
 
 
 

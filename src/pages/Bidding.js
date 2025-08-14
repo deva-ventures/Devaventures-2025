@@ -105,14 +105,13 @@ const Bidding = () => {
   };
 
   const subheadingStyle = {
-    fontSize: '1.5rem',
-    fontStyle: 'italic',
+    fontSize: '1rem',
     marginBottom: '20px',
   };
 
   const paragraphStyle = {
     color: '#ccc',
-    fontSize: '0.95rem',
+    fontSize: '1rem',
     lineHeight: '1.6',
   };
 
@@ -147,8 +146,8 @@ const Bidding = () => {
                 This isn’t just another marketplace—this is a battleground for creativity, innovation, and opportunity.
               </p>
               <p style={paragraphStyle}>
-              For Small Businesses: List your gigs, set your terms, and watch influencers compete to amplify your brand like never before.<br/>
-              For Influencers: Don’t just wait for opportunities—seize them. Bid, win, and collaborate with brands that resonate with your personal brand.
+              <b>For Small Businesses:</b> List your gigs, set your terms, and watch influencers compete to amplify your brand like never before.<br/>
+            <b> For Influencers:</b>  Don’t just wait for opportunities—seize them. Bid, win, and collaborate with brands that resonate with your personal brand.
               </p>
             </div>
           </Col>

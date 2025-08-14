@@ -133,40 +133,101 @@ const InfluencerJourneys = () => {
   youtube: 'https://www.youtube.com/watch?v=hxB6QVdpv-I',
   article: '/articles/raj',
 },
+
+
 {
-  name: 'Ragendu K R',
-  des: 'IMTC Certified Montessorian | Gentle parenting | BLW & EC',
-  img: '/ragendu.jpg',
-  youtube: 'https://www.youtube.com/watch?v=hxB6QVdpv-I',
-  article: '/articles/ragendu',
+  name: 'Neole Anna Cornelio',
+  des: 'Sportsperson | International Athlete| Small Business – Crochet',
+  img: '/neole.jpg',
+  youtube: 'https://www.youtube.com/watch?v=G3Q0pIKETyE&feature=youtu.be',
+  article: '/articles/neole',
+},
+
+{
+  name: 'Vaidehi Rastogi',
+  des: 'Dancer | Hip Hop Kid | Winner – GCC Super Dancer & Dansation Arabia',
+  img: '/vaidehi.png',
+  youtube: 'https://www.youtube.com/watch?v=pSwAvBBWTlU&feature=youtu.be',
+  article: '/articles/vaidehi',
+},
+
+{
+  name: 'Jitender Kumar',
+  des: 'Asia & Commonwealth Champion | Bharat Kesri | Wrestling Mentor | Nation’s Pride | Mat Warrior',
+  img: '/jitendra.png',
+  youtube: 'https://www.youtube.com/watch?v=Iu3AaKsmKSo',
+  article: '/articles/jitender',
+},
+
+{
+  name: 'Pankaj Dubey',
+  des: 'Founder DSPIN | TEDx Speaker | Top 50 Indian Icon | Investor',
+  img: '/pankaj.jpg',
+  youtube: 'https://www.youtube.com/watch?v=RUJ-LV58m9I',
+  article: '/articles/pankaj',
+},
+
+{
+  name: 'Dr. Akshat Chadha',
+  des: 'Medical & Health | BW40 under 40 | Doctor with a Twist | TedX',
+  img: '/akshat.jpg',
+  youtube: 'https://www.youtube.com/watch?v=eNgruHubBmI',
+  article: '#',
+},
+
+{
+  name: 'Dr. Niranjan Samani',
+  des: 'Digital Doctor | Healing with Humour, Educating with Empathy | Reels, Rounds, and Real Talk | Music, Medicine & Mindful Moments',
+  img: '/niranjan.jpg',
+  youtube: 'https://www.youtube.com/watch?v=KdE45Y7trWU&feature=youtu.be',
+  article: '/articles/niranjan',
+},
+
+{
+  name: 'Pablo Montana',
+  des: 'Musician | Latin Artist | Salsa & Bachata Performer | Traveller',
+  img: '/pablo.jpg',
+  youtube: 'https://www.youtube.com/watch?v=-oq8VYhFcHw',
+  article: '/articles/pablo',
+},
+
+{
+  name: 'Sohum Deb',
+  des: 'Aspiring Dancer | Expressive Dancer | Content Creator | Voice of Grace | Breaking Norms with Rhythm',
+  img: '/sohum.jpg',
+  youtube: 'https://www.youtube.com/watch?v=j2zEF0TAoOM&feature=youtu.be',
+  article: '/articles/sohum',
+},
+
+// {
+//   name: 'Yaashi Jain',
+//   des: 'Mountaineer | Asia Book of Records | Mt. Everest Lhotse | 4/7  Summits',
+//   img: '/yaashi.jpg',
+//   youtube: 'https://www.youtube.com/watch?v=WT74kPRWiJM',
+//   article: '/articles/yaashi',
+// },
+
+{
+  name: 'Sucheta Deb Burman',
+  des: 'Athlete | Swimming & Sustainability Record swims | TedX',
+  img: '/sucheta.jpg',
+  youtube: 'https://www.youtube.com/watch?v=KgLj5tclN90',
+  article: '/articles/sucheta',
+},
+
+{
+  name: 'Sadaf Nishat',
+  des: 'Travel Blogger | Adventure Seeker | Founder @wander.tag',
+  img: '/sadaf.jpg',
+  youtube: 'https://www.youtube.com/watch?v=VqgNfjWRtt4',
+  article: '/articles/sadaf',
 },
 {
-  name: 'Ragendu K R',
-  des: 'IMTC Certified Montessorian | Gentle parenting | BLW & EC',
-  img: '/ragendu.jpg',
-  youtube: 'https://www.youtube.com/watch?v=hxB6QVdpv-I',
-  article: '/articles/ragendu',
-},
-{
-  name: 'Ragendu K R',
-  des: 'IMTC Certified Montessorian | Gentle parenting | BLW & EC',
-  img: '/ragendu.jpg',
-  youtube: 'https://www.youtube.com/watch?v=hxB6QVdpv-I',
-  article: '/articles/ragendu',
-},
-{
-  name: 'Ragendu K R',
-  des: 'IMTC Certified Montessorian | Gentle parenting | BLW & EC',
-  img: '/ragendu.jpg',
-  youtube: 'https://www.youtube.com/watch?v=hxB6QVdpv-I',
-  article: '/articles/ragendu',
-},
-{
-  name: 'Ragendu K R',
-  des: 'IMTC Certified Montessorian | Gentle parenting | BLW & EC',
-  img: '/ragendu.jpg',
-  youtube: 'https://www.youtube.com/watch?v=hxB6QVdpv-I',
-  article: '/articles/ragendu',
+  name: 'Dr. Akshat Chadha',
+  des: 'Medical & Health | BW40 under 40 | Doctor with a Twist | TedX',
+  img: '/akshat.jpg',
+  youtube: 'https://www.youtube.com/watch?v=eNgruHubBmI',
+  article: '#',
 },
 
 
@@ -309,54 +370,55 @@ const InfluencerJourneys = () => {
           Articles
         </h4>
 
-        <Container className="py-5">
-      <Carousel
-        indicators={false}
-        prevIcon={<FaChevronLeft color="#0d6efd" size={24} />}
-        nextIcon={<FaChevronRight color="#0d6efd" size={24} />}
-      >
-        {groupedSlides.map((group, slideIndex) => (
-          <Carousel.Item key={slideIndex}>
-            <Row className="g-4">
-              {group.map((home, index) => (
-                <Col md={4} key={index}>
-                  <Card className="h-100 border-0 shadow-sm">
-                    <Card.Img
-                      variant="top"
-                      src={home.img}
-                      style={{ borderRadius: '12px', height: '280px', objectFit: 'cover' }}
-                    />
-                    <Card.Body>
-                      <div className="text-muted small mb-2">{home.des}</div>
-                      <Card.Title className="fw-bold">{home.name}</Card.Title>
+        <Carousel
+  indicators={false}
+  prevIcon={<FaChevronLeft color="#0d6efd" size={24} />}
+  nextIcon={<FaChevronRight color="#0d6efd" size={24} />}
+>
+  {groupedSlides.map((group, slideIndex) => (
+    <Carousel.Item key={slideIndex}>
+      <Container className="py-5">
+        <Row className="g-4">
+          {group.map((home, index) => (
+            <Col md={4} key={index}>
+              <Card className="h-100 border-0 shadow-sm">
+                <Card.Img
+                  variant="top"
+                  src={home.img}
+                  style={{ borderRadius: '12px', height: '280px', objectFit: 'cover' }}
+                />
+                <Card.Body>
+                  <div className="text-muted small mb-2">{home.des}</div>
+                  <Card.Title className="fw-bold">{home.name}</Card.Title>
 
-                      <div className="d-flex flex-column mt-3 gap-2">
-                        <a
-                          href={home.youtube}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn btn-outline-primary btn-sm"
-                        >
-                          Click here for YouTube
-                        </a>
-                        <a
-                          href={home.article}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn btn-outline-secondary btn-sm"
-                        >
-                          Click here for Article
-                        </a>
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              ))}
-            </Row>
-          </Carousel.Item>
-        ))}
-      </Carousel>
-    </Container>
+                  <div className="d-flex flex-column mt-3 gap-2">
+                    <a
+                      href={home.youtube}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-outline-primary btn-sm"
+                    >
+                      Click here for YouTube
+                    </a>
+                    <a
+                      href={home.article}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-outline-secondary btn-sm"
+                    >
+                      Click here for Article
+                    </a>
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </Carousel.Item>
+  ))}
+</Carousel>
+
       </div>
     </>
   );
