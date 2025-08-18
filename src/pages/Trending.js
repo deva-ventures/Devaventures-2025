@@ -96,56 +96,69 @@ const Trending = () => {
         </p>
       </div>
   
-      <Carousel
-        indicators={false}
-        prevIcon={<FaChevronLeft color="#0d6efd" size={24} />}
-        nextIcon={<FaChevronRight color="#0d6efd" size={24} />}
-      >
-        {groupedSlides.map((group, slideIndex) => (
-          <Carousel.Item key={slideIndex}>
-            <Row className="g-4">
-              {group.map((home, index) => (
-                <Col md={4} key={index}>
-                  <Card className="h-100 border-0 shadow-sm">
-                    <Card.Img
-                      variant="top"
-                      src={home.img}
-                      style={{
-                        borderRadius: "12px",
-                        height: "280px",
-                        objectFit: "cover",
-                      }}
-                    />
-                    <Card.Body>
-                      <div className="text-muted small mb-2">{home.des}</div>
-                      <Card.Title className="fw-bold">{home.name}</Card.Title>
-  
-                      <div className="d-flex flex-column mt-3 gap-2">
-                        <a
-                          href={home.youtube}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn btn-outline-primary btn-sm"
-                        >
-                          Click here for YouTube
-                        </a>
-                        <a
-                          href={home.article}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn btn-outline-secondary btn-sm"
-                        >
-                          Click here for Article
-                        </a>
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              ))}
-            </Row>
-          </Carousel.Item>
-        ))}
-      </Carousel>
+      <Row className="g-4" style={{marginTop:"40px"}}>
+  <Col xs={12} sm={6} lg={4}>
+    <Card className="h-100 border-0 shadow-sm">
+      <video
+        src="/swetaTeaser.mp4"
+        controls
+        className="w-100"
+        style={{
+          borderRadius: "12px",
+          height: "auto",
+          maxHeight: "400px", // increased height
+          objectFit: "cover",
+        }}
+      />
+      <Card.Body>
+        <Card.Title className="fw-bold">Sweta Desai</Card.Title>
+        <div className="text-muted small mb-2">Watch the full story</div>
+      </Card.Body>
+    </Card>
+  </Col>
+
+  <Col xs={12} sm={6} lg={4}>
+    <Card className="h-100 border-0 shadow-sm">
+      <video
+        src="/sohumTeaser.mp4"
+        controls
+        className="w-100"
+        style={{
+          borderRadius: "12px",
+          height: "auto",
+          maxHeight: "400px", // increased height
+          objectFit: "cover",
+        }}
+      />
+      <Card.Body>
+        <Card.Title className="fw-bold">Sohum Deb</Card.Title>
+        <div className="text-muted small mb-2">Watch the full story</div>
+      </Card.Body>
+    </Card>
+  </Col>
+
+  <Col xs={12} sm={6} lg={4}>
+    <Card className="h-100 border-0 shadow-sm">
+      <video
+        src="/rajTeaser.mp4"
+        controls
+        className="w-100"
+        style={{
+          borderRadius: "12px",
+          height: "auto",
+          maxHeight: "400px", // increased height
+          objectFit: "cover",
+        }}
+      />
+      <Card.Body>
+        <Card.Title className="fw-bold">Raj Sharma</Card.Title>
+        <div className="text-muted small mb-2">Watch the full story</div>
+      </Card.Body>
+    </Card>
+  </Col>
+</Row>
+
+
     </Container>
   
     {/* About Section */}
