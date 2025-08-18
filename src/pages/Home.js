@@ -132,9 +132,15 @@ const Home = () => {
   const leftCarouselItems = [
     {
       img: "/sanjay.png",
-      // title: "Small-Town Soul, Global Impact: How Sinchu Raju Turned Setbacks into a Digital Empire",
-      // desc: "“What I’ve learned through my journey is this: be consistent. Whether you’re a man or…",
       link: "/articles/sanjay",
+    },
+    {
+      img: "/harish.png",
+      link: "/articles/harish",
+    },
+    {
+      img: "/gunjan.png",
+      link: "/articles/gunjan",
     },
     
   ];
