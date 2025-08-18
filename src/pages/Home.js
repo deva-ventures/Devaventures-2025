@@ -438,9 +438,14 @@ const Home = () => {
     {`
       @media (max-width: 768px) {
         .first-card-body {
-          padding-top: 150px !important;
-          padding-left: 20px !important;
-          height: 400px !important;
+          padding: 0 !important;
+          height: 350px !important;
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+        }
+        .first-card-body a {
+          margin: 0 20px 20px 0; /* button spacing bottom-right */
         }
         .second-card {
           height: 350px !important;
@@ -456,6 +461,7 @@ const Home = () => {
 
   <Container fluid>
     <Row className="g-4 justify-content-start px-3">
+      {/* Card 1 */}
       <Col xs={12} md={6}>
         <Card
           className="h-100 text-white border-0"
@@ -539,12 +545,6 @@ const Home = () => {
     </Row>
   </Container>
 </div>
-
-
-
-
-
-
 
 
 
