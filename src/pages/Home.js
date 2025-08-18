@@ -438,26 +438,19 @@ const Home = () => {
   <style>
     {`
       @media (max-width: 768px) {
-        /* Fix first card */
         .first-card-body {
-          padding-top: 0 !important;
-          padding-left: 20px !important;
-          height: auto !important;
+          padding: 0 !important;
+          height: 350px !important;
           display: flex;
           justify-content: flex-end;
           align-items: flex-end;
         }
         .first-card-body a {
-          margin-bottom: 20px;
+          margin: 0 20px 20px 0; /* button spacing bottom-right */
         }
-        .first-card {
-          height: 400px !important;
-          background-size: contain !important; /* show whole image */
-          background-repeat: no-repeat !important;
-          background-position: center !important;
+        .second-card {
+          height: 350px !important;
         }
-
-        /* Fix second card button */
         .second-card-button {
           top: auto !important;
           bottom: 20px !important;
@@ -469,9 +462,10 @@ const Home = () => {
 
   <Container fluid>
     <Row className="g-4 justify-content-start px-3">
+      {/* Card 1 */}
       <Col xs={12} md={6}>
         <Card
-          className="h-100 text-white border-0 first-card"
+          className="h-100 text-white border-0"
           style={{
             backgroundImage: `url('/Micro-Influencers.png')`,
             backgroundSize: 'cover',
@@ -552,6 +546,7 @@ const Home = () => {
     </Row>
   </Container>
 </div>
+
 
 
 
