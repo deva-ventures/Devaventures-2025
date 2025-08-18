@@ -12,8 +12,43 @@ const AmplifyYourBrand = () => {
   };
   return (
     <>
-    <Container fluid style={backgroundStyle}>
-      </Container>
+    {/* <Container fluid style={backgroundStyle}>
+      </Container> */}
+
+<Container
+  fluid
+  style={{
+    backgroundImage: `url('/amplifyYourBrandBanner.png')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    height: '100vh',
+    width: '100vw',
+  }}
+  className="share-spotlight-banner"
+>
+  <style>
+    {`
+      @media (max-width: 768px) {
+        .share-spotlight-banner {
+          height: 60vh !important;
+          background-position: top center !important;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .share-spotlight-banner {
+          height: 50vh !important;
+          background-size: contain !important;
+          background-position: center top !important;
+          background-repeat: no-repeat !important;
+        }
+      }
+    `}
+  </style>
+</Container>
+
+
       <div style={{ width: "100%", backgroundColor: "#f8f9fa" }}>
   {/* Dark Left Box */}
   <div
@@ -66,33 +101,32 @@ const AmplifyYourBrand = () => {
       <Row>
         <Col md={4} className="mb-4 mb-md-0">
           <h5>Advertising Opportunities</h5>
-          <p
+          {/* <p
             style={{ fontSize: "14px", lineHeight: "1.7", marginBottom: 0 }}
           >
             Whether you’re looking to boost brand visibility or drive
             conversions, we’ve got you covered:
-          </p>
+          </p> */}
           <p>
-           <b>Homepage Features:</b>  Be the first thing our audience sees with
-            premium banner placements.<br/>
-            <b>Sponsored Stories:</b> Let us tell your brand’s story alongside the
-            journeys of top influencers.<br/>
-            <b>Video Ads:</b> Embed your videos into influencer interviews, reels, or
-            story highlights.
+           <b>Homepage Features:</b>  Prime visibility with premium placements.<br/>
+            <b>Sponsored Stories:</b> Share your brand alongside top influencers.<br/>
+            <b>Video Ads:</b> Feature in interviews, reels, or highlights.<br/>
+            <b>Newsletter Spotlights:</b> Reach our engaged subscribers.<br/>
+            <b>Social Campaigns:</b> Amplify your message across platforms.<br/>
+            <b>Event Sponsorships:</b> Shine at meetups, launches, and webinars.<br/>
+
+
+
           </p>
         </Col>
         <Col md={4} className="mb-4 mb-md-0">
-          <p
-            style={{ fontSize: "14px", lineHeight: "1.7", marginBottom: 0 }}
-          >
-            Newsletter Spotlights: Get direct access to our highly engaged
-            subscriber base.
-            Social Media Campaigns: Collaborate with us to amplify your message
-            across our platforms.
-            Event Sponsorships: Stand out by sponsoring influencer meetups,
-            launch parties, or virtual webinars.
-          </p>
-        </Col>
+  <img 
+    src="/amplifyYourBrand.jpg" 
+    alt="Global Influencers Hub Features" 
+    style={{ width: "100%", height: "auto", borderRadius: "8px" }} 
+  />
+</Col>
+
       </Row>
     </Container>
   </div>

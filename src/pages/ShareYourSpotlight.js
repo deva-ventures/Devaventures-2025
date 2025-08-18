@@ -8,7 +8,7 @@ const ShareYourSpotlight = () => {
   <Container
   fluid
   style={{
-    backgroundImage: `url('/shareYourSpotlightBanner.png')`,
+    backgroundImage: `url('/shareYourSpotlightBanner.jpg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',

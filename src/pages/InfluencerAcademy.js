@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const InfluencerAcademy = () => {
   return (
     <>
-<div
+{/* <div
       style={{
         backgroundImage: `url('/masterFluenceBanner.png')`,
         backgroundSize: 'cover',
@@ -16,9 +16,49 @@ const InfluencerAcademy = () => {
       }}
     >
       
+    </div> */}
+
+<div
+      className="storyfluence-banner"
+      style={{
+        backgroundImage: `url('/masterFluenceBanner.png')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "400px",
+        height: "90vh",
+        color: "white",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+        padding: "20px",
+        position: "relative",
+      }}
+    >
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .storyfluence-banner {
+              height: 60vh !important;
+              min-height: 250px !important;
+              background-position: top center !important;
+              margin-bottom: -25px !important; /* reduce gap on tablet/mobile */
+            }
+          }
+  
+          @media (max-width: 480px) {
+            .storyfluence-banner {
+              height: 50vh !important;
+              min-height: 200px !important;
+              background-size: contain !important;
+              background-repeat: no-repeat !important;
+              background-position: center top !important;
+              margin-bottom: -35px !important; /* reduce gap further on small screens */
+            }
+          }
+        `}
+      </style>
     </div>
-
-
 
 
    <div className="bg-light py-5">

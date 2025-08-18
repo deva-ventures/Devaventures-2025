@@ -43,54 +43,50 @@ const Trending = () => {
   const groupedSlides = chunkArray(people, 3);
   return (
     <div style={{ backgroundColor: "#f5f5f0" }}>
-    {/* Hero Section */}
-    
     <div
-  className="storyfluence-banner"
-  style={{
-    backgroundImage: `url('/trendingBanner.png')`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    minHeight: '400px',
-    height: '90vh',
-    color: 'white',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    textAlign: 'center',
-    padding: '20px',
-    position: 'relative',
-  }}
->
-  <style>
-    {`
-      @media (max-width: 768px) {
-        .storyfluence-banner {
-          height: 60vh !important; /* reduce height for better mobile fit */
-          min-height: 300px !important;
-          background-position: top center !important; /* focus on top part of image */
-        }
-      }
-
-      @media (max-width: 480px) {
-        .storyfluence-banner {
-          height: 50vh !important;
-          min-height: 250px !important;
-          background-size: contain !important; /* fit full image */
-          background-repeat: no-repeat !important;
-          background-position: center top !important;
-        }
-      }
-    `}
-  </style>
-</div>
-
-
-
-
-
-{/* Popular Homes Section */}
-<Container className="py-5">
+      className="storyfluence-banner"
+      style={{
+        backgroundImage: `url('/trendingBanner.png')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "400px",
+        height: "90vh",
+        color: "white",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+        padding: "20px",
+        position: "relative",
+      }}
+    >
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .storyfluence-banner {
+              height: 60vh !important;
+              min-height: 250px !important;
+              background-position: top center !important;
+              margin-bottom: -25px !important; /* reduce gap on tablet/mobile */
+            }
+          }
+  
+          @media (max-width: 480px) {
+            .storyfluence-banner {
+              height: 50vh !important;
+              min-height: 200px !important;
+              background-size: contain !important;
+              background-repeat: no-repeat !important;
+              background-position: center top !important;
+              margin-bottom: -35px !important; /* reduce gap further on small screens */
+            }
+          }
+        `}
+      </style>
+    </div>
+  
+    {/* Popular Homes Section */}
+    <Container className="py-5">
       <div className="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
         <h4 className="mb-2 mb-md-0">
           These aren’t just viral clips — they’re the truths behind the triumphs.
@@ -99,7 +95,7 @@ const Trending = () => {
           This is where real impact begins — not in noise, but in truth.
         </p>
       </div>
-
+  
       <Carousel
         indicators={false}
         prevIcon={<FaChevronLeft color="#0d6efd" size={24} />}
@@ -114,12 +110,16 @@ const Trending = () => {
                     <Card.Img
                       variant="top"
                       src={home.img}
-                      style={{ borderRadius: '12px', height: '280px', objectFit: 'cover' }}
+                      style={{
+                        borderRadius: "12px",
+                        height: "280px",
+                        objectFit: "cover",
+                      }}
                     />
                     <Card.Body>
                       <div className="text-muted small mb-2">{home.des}</div>
                       <Card.Title className="fw-bold">{home.name}</Card.Title>
-
+  
                       <div className="d-flex flex-column mt-3 gap-2">
                         <a
                           href={home.youtube}
@@ -147,16 +147,7 @@ const Trending = () => {
         ))}
       </Carousel>
     </Container>
-
-
-
-
-
-
-
-
-
-
+  
     {/* About Section */}
     <Container className="py-5">
       <Row>
@@ -165,42 +156,39 @@ const Trending = () => {
         </Col>
         <Col md={6}>
           <p>
-          Beyond every reel is a real story — and that’s what you’ll find here.
+            Beyond every reel is a real story — and that’s what you’ll find here.
           </p>
           <p>
-          The quiet struggles. The bold leaps. The unseen chapters that shaped the spotlight.
-Beyond every reel is a real story — and that’s what you’ll find here.
-
+            The quiet struggles. The bold leaps. The unseen chapters that shaped
+            the spotlight. Beyond every reel is a real story — and that’s what
+            you’ll find here.
           </p>
-          {/* <a href="#" className="text-decoration-underline">Читать подробнее →</a> */}
         </Col>
       </Row>
     </Container>
-
+  
     {/* Why Choose Us Section */}
     <a
-  href="https://youtu.be/xRje6s3CKR0?si=_pLFshrjog-z-SJ7"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{ textDecoration: "none" }}
->
-  <div
-    style={{
-      backgroundImage: "url('/formBackground.png')",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      minHeight: "400px",
-      padding: "60px 0",
-      cursor: "pointer",
-    }}
-  >
-    {/* Optional content inside the clickable area */}
+      href="https://youtu.be/xRje6s3CKR0?si=_pLFshrjog-z-SJ7"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ textDecoration: "none" }}
+    >
+      <div
+        style={{
+          backgroundImage: "url('/formBackground.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          minHeight: "400px",
+          padding: "60px 0",
+          cursor: "pointer",
+        }}
+      >
+        {/* Optional content inside the clickable area */}
+      </div>
+    </a>
   </div>
-</a>
-    
-
-   
-  </div>
+  
   );
 };
 

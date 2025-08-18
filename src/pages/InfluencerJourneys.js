@@ -2,7 +2,6 @@ import React from 'react';
 import "../App.css";
 import { featuredStories, trendingStories } from '../data/mockData';
 import { useNavigate } from "react-router-dom";
-import Slider from "react-slick";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Container, Row, Col, Card, Button , Carousel} from 'react-bootstrap';
 const InfluencerJourneys = () => {
@@ -342,84 +341,94 @@ const InfluencerJourneys = () => {
     {`
       @media (max-width: 768px) {
         .storyfluence-banner {
-          height: 60vh !important; /* reduce height for mobile */
-          min-height: 300px !important;
-          background-position: top center !important; /* show top part of image */
+          height: 60vh !important;
+          min-height: 250px !important;
+          background-position: top center !important;
           padding: 15px !important;
+          margin-bottom: -30px !important; /* reduce white gap */
+        }
+
+        .articles-heading {
+          margin-left: 0 !important;
+          text-align: center !important; /* center on mobile */
         }
       }
 
       @media (max-width: 480px) {
         .storyfluence-banner {
           height: 50vh !important;
-          min-height: 250px !important;
-          background-size: contain !important; /* fit full image inside */
+          min-height: 200px !important;
+          background-size: contain !important;
           background-repeat: no-repeat !important;
+          margin-bottom: -40px !important; /* extra gap fix */
         }
       }
     `}
   </style>
 </div>
 
+<div className="px-3 py-5">
+  <h4
+    className="fw-bold mb-4 articles-heading"
+    style={{ marginLeft: "230px", color: "#0f3052" }}
+  >
+    Articles
+  </h4>
 
-      <div className="px-3 py-5">
-        <h4
-          className="fw-bold mb-4"
-          style={{ marginLeft: "230px", color: "#0f3052" }}
-        >
-          Articles
-        </h4>
+  <Carousel
+    indicators={false}
+    prevIcon={<FaChevronLeft color="#0d6efd" size={24} />}
+    nextIcon={<FaChevronRight color="#0d6efd" size={24} />}
+  >
+    {groupedSlides.map((group, slideIndex) => (
+      <Carousel.Item key={slideIndex}>
+        <Container className="py-5">
+          <Row className="g-4">
+            {group.map((home, index) => (
+              <Col md={4} key={index}>
+                <Card className="h-100 border-0 shadow-sm">
+                  <Card.Img
+                    variant="top"
+                    src={home.img}
+                    style={{
+                      borderRadius: "12px",
+                      height: "280px",
+                      objectFit: "cover",
+                    }}
+                  />
+                  <Card.Body>
+                    <div className="text-muted small mb-2">{home.des}</div>
+                    <Card.Title className="fw-bold">{home.name}</Card.Title>
 
-        <Carousel
-  indicators={false}
-  prevIcon={<FaChevronLeft color="#0d6efd" size={24} />}
-  nextIcon={<FaChevronRight color="#0d6efd" size={24} />}
->
-  {groupedSlides.map((group, slideIndex) => (
-    <Carousel.Item key={slideIndex}>
-      <Container className="py-5">
-        <Row className="g-4">
-          {group.map((home, index) => (
-            <Col md={4} key={index}>
-              <Card className="h-100 border-0 shadow-sm">
-                <Card.Img
-                  variant="top"
-                  src={home.img}
-                  style={{ borderRadius: '12px', height: '280px', objectFit: 'cover' }}
-                />
-                <Card.Body>
-                  <div className="text-muted small mb-2">{home.des}</div>
-                  <Card.Title className="fw-bold">{home.name}</Card.Title>
+                    <div className="d-flex flex-column mt-3 gap-2">
+                      <a
+                        href={home.youtube}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-outline-primary btn-sm"
+                      >
+                        Click here for YouTube
+                      </a>
+                      <a
+                        href={home.article}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-outline-secondary btn-sm"
+                      >
+                        Click here for Article
+                      </a>
+                    </div>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </Carousel.Item>
+    ))}
+  </Carousel>
+</div>
 
-                  <div className="d-flex flex-column mt-3 gap-2">
-                    <a
-                      href={home.youtube}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-outline-primary btn-sm"
-                    >
-                      Click here for YouTube
-                    </a>
-                    <a
-                      href={home.article}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-outline-secondary btn-sm"
-                    >
-                      Click here for Article
-                    </a>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </Carousel.Item>
-  ))}
-</Carousel>
-
-      </div>
     </>
   );
 };
