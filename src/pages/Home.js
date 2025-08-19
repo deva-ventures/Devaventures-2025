@@ -4,13 +4,25 @@ import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
 import {useLocation} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-multi-carousel/lib/styles.css';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const Home = () => {
 
   const scrollRef = useRef(null);
+  const isMobile = window.innerWidth <= 768; // mobile check
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "20px",
+  };
 
 
   const wrapperStyle = {
@@ -329,58 +341,102 @@ const Home = () => {
           </div>
 
           <Container fluid className="py-5 bg-light">
-  <div
-    ref={scrollRef}
-    style={{
-      display: 'flex',
-      gap: '20px',
-      overflowX: 'auto',
-      padding: '10px 20px',
-      scrollBehavior: 'smooth',
-      WebkitOverflowScrolling: 'touch', // Enables momentum scrolling on iOS
-      maskImage:
-        'linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)',
-      maxWidth: '100%',
-    }}
-  >
-    {videosWithLinks.map((video, index) => (
-      <a
-        key={index}
-        href={video.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          minWidth: '250px', // Make width responsive
-          width: '80vw', // Responsive width for mobile
-          maxWidth: '400px',
-          height: '80vw',
-          maxHeight: '400px',
-          borderRadius: '50%',
-          overflow: 'hidden',
-          flex: '0 0 auto',
-          transform: `rotate(${index % 2 === 0 ? '-5deg' : '5deg'})`,
-          border: '4px solid white',
-          display: 'block',
-          textDecoration: 'none',
-        }}
-      >
-        <video
-          src={video.src}
-          autoPlay
-          loop
-          muted
-          playsInline
+ {/* Desktop / Tablet View - Scrollable */}
+ {!isMobile && (
+        <div
           style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            borderRadius: '50%',
-            transform: `rotate(${index % 2 === 0 ? '5deg' : '-5deg'})`,
+            display: "flex",
+            gap: "20px",
+            overflowX: "auto",
+            padding: "10px 20px",
+            scrollBehavior: "smooth",
+            WebkitOverflowScrolling: "touch",
+            maskImage:
+              "linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)",
+            maxWidth: "100%",
           }}
-        />
-      </a>
-    ))}
-  </div>
+        >
+          {videosWithLinks.map((video, index) => (
+            <a
+              key={index}
+              href={video.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                minWidth: "250px",
+                width: "80vw",
+                maxWidth: "400px",
+                height: "80vw",
+                maxHeight: "400px",
+                borderRadius: "50%",
+                overflow: "hidden",
+                flex: "0 0 auto",
+                transform: `rotate(${index % 2 === 0 ? "-5deg" : "5deg"})`,
+                border: "4px solid white",
+                display: "block",
+                textDecoration: "none",
+              }}
+            >
+              <video
+                src={video.src}
+                autoPlay
+                loop
+                muted
+                playsInline
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  borderRadius: "50%",
+                  transform: `rotate(${index % 2 === 0 ? "5deg" : "-5deg"})`,
+                }}
+              />
+            </a>
+          ))}
+        </div>
+      )}
+
+      {/* Mobile View - Carousel */}
+      {isMobile && (
+        <Slider {...sliderSettings}>
+          {videosWithLinks.map((video, index) => (
+            <div key={index}>
+              <a
+                href={video.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  width: "80vw",
+                  maxWidth: "350px",
+                  height: "80vw",
+                  maxHeight: "350px",
+                  borderRadius: "50%",
+                  overflow: "hidden",
+                  margin: "0 auto",
+                  display: "block",
+                  border: "4px solid white",
+                  transform: `rotate(${index % 2 === 0 ? "-5deg" : "5deg"})`,
+                }}
+              >
+                <video
+                  src={video.src}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    borderRadius: "50%",
+                    transform: `rotate(${index % 2 === 0 ? "5deg" : "-5deg"})`,
+                  }}
+                />
+              </a>
+            </div>
+          ))}
+        </Slider>
+      )}
 </Container>
 
         </Container>
