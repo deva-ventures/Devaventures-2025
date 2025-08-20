@@ -143,8 +143,8 @@ const Home = () => {
 
   const leftCarouselItems = [
     {
-      img: "/sanjay.png",
-      link: "/articles/sanjay",
+      img: "/preetha.png",
+      link: "/articles/preetha",
     },
     {
       img: "/harish.png",
@@ -163,8 +163,8 @@ const Home = () => {
       link: "/articles/sweta",
     },
     {
-      img: "/sohum.png",
-      link: "/articles/sohum",
+      img: "/pankaj.png",
+      link: "/articles/pankaj",
     },
     {
       img: "/neole.png",

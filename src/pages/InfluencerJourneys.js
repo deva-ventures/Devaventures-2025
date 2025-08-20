@@ -77,7 +77,7 @@ const InfluencerJourneys = () => {
       des: 'Culinary Creator | Marketing Maven | Ex-Twitter Marketing Head',
       img: '/preetha.jpg',
       youtube: 'https://www.youtube.com/watch?v=8kKCfXBX9Es',
-      article: '#',
+      article: '/articles/preetha',
     },
     
 

@@ -182,24 +182,33 @@ const Trending = () => {
   
     {/* Why Choose Us Section */}
     <a
-      href="https://youtu.be/xRje6s3CKR0?si=_pLFshrjog-z-SJ7"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{ textDecoration: "none" }}
-    >
-      <div
-        style={{
-          backgroundImage: "url('/formBackground.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          minHeight: "400px",
-          padding: "60px 0",
-          cursor: "pointer",
-        }}
-      >
-        {/* Optional content inside the clickable area */}
-      </div>
-    </a>
+  href="https://youtu.be/xRje6s3CKR0?si=_pLFshrjog-z-SJ7"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{ textDecoration: "none" }}
+>
+  <div
+    style={{
+      minHeight: "400px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      cursor: "pointer",
+      overflow: "hidden",
+    }}
+  >
+    <img
+      src="/formBackground.png"
+      alt="Background"
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "contain", // ensures full image is visible
+      }}
+    />
+  </div>
+</a>
+
   </div>
   
   );
