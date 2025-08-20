@@ -313,7 +313,7 @@ In this heartfelt and humorous conversation with Devika Majumder, Co-founder of 
         <strong>Devika:</strong> And of course—huge thanks to Megha (Dr Niranjan’s manager) for making this happen!
       </p>
       <p>
-        <strong>Megha:</strong> Thank you! It was absolutely lovely.
+        <strong>Dr. Niranjan:</strong> Thank you! It was absolutely lovely.
       </p>
            
            

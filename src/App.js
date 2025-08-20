@@ -48,6 +48,14 @@ import BagYourFirstBigBrand from './articles/bagYourFirstBigBrand';
 import Devan from './articles/devan';
 import Preetha from './articles/preetha';
 import Aakash from './articles/aakash';
+import Rohit from './articles/rohit';
+import Jitesh from './articles/jitesh';
+import Jayant from './articles/jayant';
+import Akansha from './articles/akansha';
+import Radhika from './articles/radhika';
+import Nishant from './articles/nishant';
+import Kshitij from './articles/Kshitij';
+import Sinchu from './articles/sinchu';
 
 
 
@@ -90,8 +98,15 @@ function App() {
             <Route path="/articles/devan" element={<Devan/>} />
             <Route path="/articles/preetha" element={<Preetha/>} />
             <Route path="/articles/aakash" element={<Aakash/>} />
+            <Route path="/articles/rohit" element={<Rohit/>} />
+            <Route path="/articles/jitesh" element={<Jitesh/>} />
+            <Route path="/articles/jayant" element={<Jayant/>} />
+            <Route path="/articles/akansha" element={<Akansha/>} />
 
-
+            <Route path="/articles/radhika" element={<Radhika/>} />
+            <Route path="/articles/nishant" element={<Nishant/>} />
+            <Route path="/articles/kshitij" element={<Kshitij/>} />
+            <Route path="/articles/sinchu" element={<Sinchu/>} />
 
 
 
