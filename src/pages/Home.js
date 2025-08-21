@@ -185,38 +185,42 @@ const Home = () => {
     <>
 
     {/* Main Content */}
-    <main className="text-center mt-5 pt-5">
-  <style>
-    {`
-      @media (max-width: 576px) {
-        .gi-heading {
-          font-size: 2.5rem !important;
-          letter-spacing: -1.5px !important;
-        }
-      }
-    `}
-  </style>
+   
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "100vh", // full screen video
+        overflow: "hidden",
+      }}
+    >
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          zIndex: 1,
+          pointerEvents: "none",
+        }}
+      >
+        <source src="/websitevideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      </div>
 
-  <p className="text-muted small">Welcome to</p>
-  <h1
-    className="display-1 fw-bold gi-heading"
-    style={{ color: '#0f3052', letterSpacing: '-5.05px' }}
-  >
-    Global Influencers Hub
-  </h1>
-</main> 
-  <div style={wrapperStyle}>
-  <Container fluid>
-    <Row className="justify-content-center">
-    <Col xs={12} sm={12} md={10} lg={10} xl={10}>
-  <video autoPlay muted loop playsInline style={videoStyle}>
-    <source src="/landingVideo.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</Col>
-    </Row>
-      </Container>
-    </div>
+
+
+
+
+
  
 
 <section className="py-5 bg-light text-center">

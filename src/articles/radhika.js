@@ -23,7 +23,7 @@ In this lively and candid conversation with DevikaMajumder, Co-founder of Global
               </p>
 
               <p>
-                <strong>Dr. Radhika Priyan Garg:</strong> Hi Devika! Thank you
+                <strong>Dr. Radhika Agarwal:</strong> Hi Devika! Thank you
                 so much for having me here today. Yes, being a doctor and a food
                 blogger—it's definitely an unusual mix, but I think that’s what
                 makes it exciting.

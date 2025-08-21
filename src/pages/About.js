@@ -5,51 +5,26 @@ import { Container, Row, Col, Image,Accordion } from 'react-bootstrap';
 const AboutSection = () => {
   return (
     <>
-    <div style={{ backgroundColor: '#f5f5f5', padding: '50px 0' }}>
-      
-<main className="text-center">
-  <style>
-    {`
-      @media (max-width: 576px) {
-        .gi-heading {
-          font-size: 2.5rem !important;
-          letter-spacing: -1.5px !important;
-        }
-      }
-    `}
-  </style>
-
-  
-  <h1
-    className="display-1 fw-bold gi-heading"
-    style={{ color: '#0f3052', letterSpacing: '-5.05px' }}
-  >
-    About Us
-  </h1>
-</main> 
-    </div>
+    
     <Container
-      fluid
-      className=" d-flex align-items-center justify-content-center"
-      style={{  paddingBottom: '100px', }}
-    >
-      <Row className="justify-content-center">
-        <Col xs={12} md={10} lg={28} className="text-center">
-          <Image
-            src="/aboutUs.jpg"
-            alt="www sculpture"
-            fluid
-            style={{
-              borderRadius: '20px',
-              maxHeight: '90vh',
-              width: '100%',
-              objectFit: 'cover',
-              boxShadow: '0 0 20px rgba(255,255,255,0.1)',
-            }}
-          />
-        </Col>
-      </Row>
-    </Container>
+  fluid
+  className="p-0"
+  style={{ paddingBottom: "100px" }}
+>
+  <Image
+    src="/aboutUs.jpg"
+    alt="www sculpture"
+    fluid
+    style={{
+      borderRadius: "0px", // remove curve if you want full edge-to-edge
+      height: "90vh",
+      width: "100vw",
+      objectFit: "cover",
+      boxShadow: "0 0 20px rgba(255,255,255,0.1)",
+    }}
+  />
+</Container>
+
 
     <Container fluid className="bg-light py-5">
       <Row className="justify-content-center">

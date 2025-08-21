@@ -166,13 +166,13 @@ const InfluencerJourneys = () => {
   article: '/articles/pankaj',
 },
 
-{
-  name: 'Dr. Akshat Chadha',
-  des: 'Medical & Health | BW40 under 40 | Doctor with a Twist | TedX',
-  img: '/akshat.jpg',
-  youtube: 'https://www.youtube.com/watch?v=eNgruHubBmI',
-  article: '#',
-},
+// {
+//   name: 'Dr. Akshat Chadha',
+//   des: 'Medical & Health | BW40 under 40 | Doctor with a Twist | TedX',
+//   img: '/akshat.jpg',
+//   youtube: 'https://www.youtube.com/watch?v=eNgruHubBmI',
+//   article: '#',
+// },
 
 {
   name: 'Dr. Niranjan Samani',
@@ -221,21 +221,106 @@ const InfluencerJourneys = () => {
   youtube: 'https://www.youtube.com/watch?v=VqgNfjWRtt4',
   article: '/articles/sadaf',
 },
+// {
+//   name: 'Dr. Akshat Chadha',
+//   des: 'Medical & Health | BW40 under 40 | Doctor with a Twist | TedX',
+//   img: '/akshat.jpg',
+//   youtube: 'https://www.youtube.com/watch?v=eNgruHubBmI',
+//   article: '#',
+// },
+
+
+
+
 {
-  name: 'Dr. Akshat Chadha',
-  des: 'Medical & Health | BW40 under 40 | Doctor with a Twist | TedX',
-  img: '/akshat.jpg',
-  youtube: 'https://www.youtube.com/watch?v=eNgruHubBmI',
-  article: '#',
+  name: 'Harish Closepet',
+  des: 'Chef | MasterChef Finalist | Co-founder & CEO, Itsy Bitsy | Social Entrepreneur',
+  img: '/harish.webp',
+  youtube: 'https://www.youtube.com/watch?v=HFzPTACj5ek',
+  article: '/articles/harish',
+},
+
+{
+  name: 'Rohit Jain',
+  des: 'Entrepreneur | Oxygen Manufacturer | Finance Influencer | Business Mentor',
+  img: '/rohitJain.jpg',
+  youtube: 'https://www.youtube.com/watch?v=d_qJnGrQW98',
+  article: '/articles/rohit',
+},
+
+{
+  name: 'Jitesh Bulchandani',
+  des: 'Serial Entrepreneur | DhandhaWithJitesh | Startup Mentor | Small-Town Hustler | Business Coach | Inspiration to Youth | Grounded Leader | Digital Creator',
+  img: '/jitesh.jpg',
+  youtube: 'https://www.youtube.com/watch?v=rHxxxGreBco&feature=youtu.be',
+  article: '/articles/jitesh',
 },
 
 
+{
+  name: 'Jayant Sankla',
+  des: 'Singer | Composer | Performer',
+  img: '/jayant.jpg',
+  youtube: 'https://www.youtube.com/watch?v=q70mehZKwbo&feature=youtu.be',
+  article: '/articles/jayant',
+},
+
+{
+  name: 'Akansha Shrivastava',
+  des: 'Obstetrician | Gynaecologist | Laparoscopic Surgeon',
+  img: '/akansha.jpg',
+  youtube: 'https://www.youtube.com/watch?v=URwi0CRmDSY&feature=youtu.be',
+  article: '/articles/akansha',
+},
+
+{
+  name: 'Radhika Agarwal',
+  des: 'Digital Creator | Healing with Science, Living with Spice | Vegetarian Foodie | Travel Buff | Food Meets Fire on Teekhi Mircheee',
+  img: '/radhika.jpg',
+  youtube: 'https://www.youtube.com/watch?v=y1DkcffxSdw&feature=youtu.be',
+  article: '/articles/radhika',
+},
 
 
+{
+  name: 'Nishant Kumar',
+  des: 'CA | Finance Mentor | Founder, Fintax by Nishant | Educator',
+  img: '/nishant.jpg',
+  youtube: 'https://www.youtube.com/watch?v=Sk07doGfZhw&feature=youtu.be',
+  article: '/articles/nishant',
+},
 
+{
+  name: 'Kshitij Sheetak',
+  des: 'Filmmaker | Educator | TEDx Speaker',
+  img: '/kshitij.jpg',
+  youtube: 'https://www.youtube.com/watch?v=1qG-DTrxykg&feature=youtu.be',
+  article: '/articles/kshitij',
+},
 
+{
+  name: 'Devan Rajkumar',
+  des: 'International Chef | TV Personality | Author of Cookbook | Culinary Fusion Maestro',
+  img: '/devanRajkumar.jpg',
+  youtube: 'https://www.youtube.com/watch?v=MXwFYrLESB4&feature=youtu.be',
+  article: '/articles/devan',
+},
 
+{
+  name: 'Aakash Barnabas',
+  des: 'The SoulSync Artist | Lyrics Laced with Life | Stage Lights, Silent Nights & Serendipity',
+  img: '/aakash.jpg',
+  youtube: 'https://www.youtube.com/watch?v=Q4LPsO_qtKE&feature=youtu.be',
+  article: '/articles/aakash',
+},
 
+{
+  name: 'Sinchu Raju',
+  des: 'Iron-Willed. Insight-Driven. Impact-Obsessed. | The Woman Who Turned Her “What If” into “Watch Me.',
+  img: '/sinchu.jpg',
+  youtube: 'https://www.youtube.com/watch?v=oU1cyMe1VDQ&feature=youtu.be',
+  article: '/articles/sinchu',
+},
 
     
 
