@@ -187,34 +187,36 @@ const Home = () => {
     {/* Main Content */}
    
     <div
-      style={{
-        position: "relative",
-        width: "100%",
-        height: "100vh", // full screen video
-        overflow: "hidden",
-      }}
-    >
-      {/* Background Video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          zIndex: 1,
-          pointerEvents: "none",
-        }}
-      >
-        <source src="/websitevideo.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      </div>
+  style={{
+    position: "relative",
+    width: "100%",
+    height: "100vh", // full screen height
+    overflow: "hidden",
+  }}
+>
+  {/* Background Video */}
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    style={{
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      minWidth: "100%",
+      minHeight: "100%",
+      transform: "translate(-50%, -50%)",
+      objectFit: "cover",
+      zIndex: 1,
+      pointerEvents: "none",
+    }}
+  >
+    <source src="/websitevideo.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
 
 
 

@@ -16,10 +16,55 @@ const Contact = () => {
 
   return (
     <>
-    <Container fluid className="py-5 bg-light text-center">
-    <small className="text-muted d-block mb-2">Get in touch</small>
-    <h1 className="fw-bold display-1" style={{color:"#0f3052"}}>CONTACT US</h1>
-  </Container>
+    {/* <Container fluid className="py-5 bg-light text-center mt-5">
+  <small className="text-muted d-block mb-2">Get in touch</small>
+  <h1 className="fw-bold display-1" style={{ color: "#0f3052" }}>
+    CONTACT US
+  </h1>
+</Container> */}
+<div
+  className="storyfluence-banner"
+  style={{
+    backgroundImage: `url('/contactBanner.jpg')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    minHeight: "400px",
+    height: "100vh",
+    color: "white",
+    display: "flex",
+    alignItems: "flex-start", // push content down from the top
+    justifyContent: "center",
+    textAlign: "center",
+    padding: "80px 20px 20px", // 👈 added top padding (80px)
+    position: "relative",
+  }}
+>
+  <style>
+    {`
+      @media (max-width: 768px) {
+        .storyfluence-banner {
+          height: 60vh !important;
+          min-height: 250px !important;
+          background-position: top center !important;
+          margin-bottom: -25px !important;
+          padding-top: 60px !important; /* 👈 smaller top padding on tablet */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .storyfluence-banner {
+          height: 50vh !important;
+          min-height: 200px !important;
+          background-size: contain !important;
+          background-repeat: no-repeat !important;
+          background-position: center top !important;
+          margin-bottom: -35px !important;
+          padding-top: 40px !important; /* 👈 smaller top padding on mobile */
+        }
+      }
+    `}
+  </style>
+</div>
 
   <Container fluid className="py-5 bg-light">
       <Row className="justify-content-center">
