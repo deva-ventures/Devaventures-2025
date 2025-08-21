@@ -204,17 +204,29 @@ const Home = () => {
       position: "absolute",
       top: "50%",
       left: "50%",
-      minWidth: "100%",
-      minHeight: "100%",
+      width: "100%",
+      height: "100%",
       transform: "translate(-50%, -50%)",
-      objectFit: "cover",
+      objectFit: "cover", // default (desktop view)
       zIndex: 1,
       pointerEvents: "none",
     }}
+    className="responsive-video"
   >
     <source src="/websitevideo.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
+
+  <style>
+    {`
+      @media (max-width: 768px) {
+        .responsive-video {
+          object-fit: contain !important;  /* Show full video on tablets & mobile */
+          background-color: black;        /* Add black bars if aspect ratio differs */
+        }
+      }
+    `}
+  </style>
 </div>
 
 
