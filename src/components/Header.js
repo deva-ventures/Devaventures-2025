@@ -34,26 +34,68 @@ const Header = () => {
           className="d-inline-block align-top"
         />
       </Navbar.Brand>
-
+  
       <Navbar.Toggle aria-controls="main-navbar" />
       <Navbar.Collapse id="main-navbar">
         {/* LEFT SIDE MENU */}
         <Nav className="me-auto gap-3 ms-5">
-  <Nav.Link href="/" style={{ color: "rgb(255, 255, 255)" }}>Home</Nav.Link>
-  <Nav.Link href="/about-us" style={{ color: "rgb(255, 255, 255)" }}>About Us</Nav.Link>
-  <Nav.Link href="/influencer-journeys" style={{ color: "rgb(255, 255, 255)" }}>Storyfluence</Nav.Link>
-  <Nav.Link href="/trending" style={{ color: "rgb(255, 255, 255)" }}>Trending</Nav.Link>
-  <Nav.Link href="/bidding" style={{ color: "rgb(255, 255, 255)" }}>Bidfluence</Nav.Link>
-  <Nav.Link href="/amplify-your-brand" style={{ color: "rgb(255, 255, 255)" }}>Amplify Your Brand</Nav.Link>
-  <Nav.Link href="/share-your-spotlight" style={{ color: "rgb(255, 255, 255)" }}>Share Your Spotlight</Nav.Link>
-  <Nav.Link href="/influencer-academy" style={{ color: "rgb(255, 255, 255)" }}>Masterfluence</Nav.Link>
-</Nav>
-
+          <Nav.Link
+            href="/"
+            style={{ color: scrolled ? "black" : "white" }}
+          >
+            Home
+          </Nav.Link>
+          <Nav.Link
+            href="/about-us"
+            style={{ color: scrolled ? "black" : "white" }}
+          >
+            About Us
+          </Nav.Link>
+          <Nav.Link
+            href="/influencer-journeys"
+            style={{ color: scrolled ? "black" : "white" }}
+          >
+            Storyfluence
+          </Nav.Link>
+          <Nav.Link
+            href="/trending"
+            style={{ color: scrolled ? "black" : "white" }}
+          >
+            Trending
+          </Nav.Link>
+          <Nav.Link
+            href="/bidding"
+            style={{ color: scrolled ? "black" : "white" }}
+          >
+            Bidfluence
+          </Nav.Link>
+          <Nav.Link
+            href="/amplify-your-brand"
+            style={{ color: scrolled ? "black" : "white" }}
+          >
+            Amplify Your Brand
+          </Nav.Link>
+          <Nav.Link
+            href="/share-your-spotlight"
+            style={{ color: scrolled ? "black" : "white" }}
+          >
+            Share Your Spotlight
+          </Nav.Link>
+          <Nav.Link
+            href="/influencer-academy"
+            style={{ color: scrolled ? "black" : "white" }}
+          >
+            Masterfluence
+          </Nav.Link>
+        </Nav>
+  
         {/* RIGHT SIDE BUTTON */}
         <div className="d-flex align-items-center gap-2 mt-3 mt-lg-0">
           <a
             href="/say-hello"
-            className="btn btn-outline-light px-3" // changed button to white border
+            className={`btn px-3 ${
+              scrolled ? "btn-outline-dark" : "btn-outline-light"
+            }`}
           >
             Say Hello
           </a>
@@ -61,7 +103,7 @@ const Header = () => {
       </Navbar.Collapse>
     </Container>
   </Navbar>
-
+  
   
   
   );
