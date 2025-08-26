@@ -1,20 +1,85 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card,Image } from "react-bootstrap";
 
 const Niranjan = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
-            <Card.Body>
-              <h2 className="text-center mb-4">Stethoscopes & Spotlights: How Dr. Niranjan Samani Went from Quiet Kid to Viral Healer</h2>
-             
-              <p>
-              From performing surgeries to posting reels, Dr. Niranjan Samani’s journey is as unexpected as it is inspiring. A dedicated doctor by day and a digital creator by passion, he’s proof that you can heal bodies and touch hearts—one patient, one post at a time. Born and raised in Mangalore, Niranjan transformed from a quiet, introverted student into a social media force with over 1.2 million followers, seamlessly blending medicine, music, and meaning.
-In this heartfelt and humorous conversation with Devika Majumder, Co-founder of Global Influencers Hub, Dr. Samani opens up about battling financial struggles, finding confidence through content creation, the power of his mother’s sacrifice, and why sometimes, singing during surgery is exactly what the doctor ordered.
+    <>
+      <Card.Body>
+      <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              If you’re out there feeling like you’re lost, or things don’t make sense right now, just stay put. Be honest. Do your best. Don’t harm anyone. Be true to yourself." - Dr. Niranjan Samani
+              </q>{" "}
+              – <strong>Preetha Athrey</strong>
+            </p>
+          {/* </Col> */}
 
-              </p>
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/niranjanArticle.png" // <-- second image here
+              alt="niranjan"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            From performing surgeries to posting reels, Dr. Niranjan Samani’s journey is as unexpected as it is inspiring. A dedicated doctor by day and a digital creator by passion, he’s proof that you can heal bodies and touch hearts—one patient, one post at a time. Born and raised in Mangalore, Niranjan transformed from a quiet, introverted student into a social media force with over 1.2 million followers, seamlessly blending medicine, music, and meaning.
+
+In this heartfelt and humorous conversation with Devika Majumder, Co-founder of Global Influencers Hub, Dr. Samani opens up about battling financial struggles, finding confidence through content creation, the power of his mother’s sacrifice, and why sometimes, singing during surgery is exactly what the doctor ordered.
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/niranjanArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+            
+              
+    <Container className='pt-5'>
+              
 
               <p>
         <strong>Devika Majumder:</strong> Hi Niranjan, welcome to Global Influencers Hub! We’re so thrilled to have you here. This space is all about exploring the life journeys of inspiring influencers—and we can't wait to dive into yours. Let’s rewind a bit. Tell us about your childhood. What was young Niranjan like?
@@ -197,9 +262,58 @@ In this heartfelt and humorous conversation with Devika Majumder, Co-founder of 
         <strong>Dr. Niranjan:</strong> Absolutely!
       </p>
 
-      <h4 className="mt-5 mb-3" style={{ color: "#0f3052" }}>
-        Rapid Fire Round
-      </h4>
+          
+      <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Niranjan
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/niranjanRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+
+   
+
+
+      <p><strong>Devika:</strong> Alright, let’s spice it up a little—with a rapid-fire round!</p>
+
+      <p><strong>Dr. Niranjan:</strong>Bring it on.</p>
+
+
+
+
       <p><strong>Devika:</strong> Biggest influence in your medical career?</p>
       <p><strong>Dr. Niranjan:</strong> My mom.</p>
       <p><strong>Devika:</strong> First thing you do when faced with a challenging case?</p>
@@ -317,12 +431,11 @@ In this heartfelt and humorous conversation with Devika Majumder, Co-founder of 
       </p>
            
            
-           
+           </Container>
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+         
+       
+    </>
   );
 };
 

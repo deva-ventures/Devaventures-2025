@@ -148,7 +148,7 @@ const Home = () => {
     },
     {
       img: "/harish.png",
-      link: "/articles/harish",
+      link: "/#",
     },
     {
       img: "/niranjan.png",
@@ -239,7 +239,7 @@ const Home = () => {
 
 <section className="py-5 bg-light text-center">
       <Container>
-        <small className="text-muted d-block mb-2">Latest</small>
+        
         <h1  style={headingStyle } className="mb-3">
          Featured Story
           

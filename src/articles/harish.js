@@ -1,21 +1,90 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card ,Image} from "react-bootstrap";
 
 const Harish = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
-            <Card.Body>
-              <h2 className="text-center mb-4">Harish Closepet: A Culinary Visionary with a Passion for Innovation</h2>
+    <>
+          <Card.Body>
+          <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              My life mantra is simple: good things happen to good people. You just need to have patience. I’ve always believed in that
+              </q>{" "}
+              – <strong> Harish Closepet</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/harishArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            Harish Closepet, a celebrated chef and entrepreneur, recently shared his remarkable journey in an insightful conversation with Devika Majumder, co-founder of Global Influencers Hub. From his inquisitive childhood, where he set up his own chemistry lab in a cupboard, to becoming a MasterChef finalist, Harish delves into the defining moments that shaped his passion for food. His story is one of creativity, perseverance, and an unyielding drive to innovate in the culinary space. Here’s an exclusive look at his inspiring journey.
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/harishArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+
+
+    <Container className='pt-5'>
+
+
+
+
+
+
+
               
-              <p>
-             
-              Harish Closepet, a celebrated chef and entrepreneur, recently shared his remarkable journey in an insightful conversation with Devika Majumder, co-founder of Global Influencers Hub. From his inquisitive childhood, where he set up his own chemistry lab in a cupboard, to becoming a MasterChef finalist, Harish delves into the defining moments that shaped his passion for food. His story is one of creativity, perseverance, and an unyielding drive to innovate in the culinary space. Here’s an exclusive look at his inspiring journey.
-
-
-              </p>
 
               <p><strong>Devika Majumder:</strong> Harish, it's such a pleasure to have you here! Let’s start from the very beginning—what was little Harish like as a child?</p>
             <p><strong>Harish Closepet:</strong> I was always very inquisitive! In fact, at home, I had my own little chemistry lab in a small cupboard where I would mix chemicals just to see their reactions. That curiosity extended to food as well. I was fascinated by how ingredients reacted with each other.</p>
@@ -97,9 +166,72 @@ const Harish = () => {
       <p><strong>Harish:</strong> A lot of people have asked me that. I’m thinking of releasing one by the end of next year, but I want it to be different. It won’t be just another cookbook. I’m aiming for something unique, possibly interactive. I’m still brainstorming ideas.</p>
       <p><strong>Devika:</strong> That sounds exciting! What advice would you give to aspiring chefs?</p>
       <p><strong>Harish:</strong> Many chefs get a lot of training, working in big hotels and restaurants. But the problem I see is that they often lose their creativity. If you go to 10 five-star hotels, the breakfast buffet looks identical. Innovation goes out the window. I always tell chefs to work in smaller restaurants where they have the freedom to experiment and innovate. It’s about applying your skills creatively. Don’t get stuck in the corporate grind, where everything’s about P&amp;L. Try to be creative, take risks, and maybe even start your own small restaurant.</p>
-      <p><strong>Devika:</strong> Absolutely! It’s all about staying true to your creativity. Let’s have some fun now with a rapid-fire round!</p>
+     
+     
+      <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Harish
+        </h4>
 
-      {/* Rapid Fire Section (No ul, only p tags) */}
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/harishRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+      <p><strong>Devika:</strong> Absolutely! It’s all about staying true to your creativity. Let’s have some fun now with a rapid-fire round!</p>
       <p><strong>Devika:</strong> One ingredient you cannot live without?</p>
       <p><strong>Harish:</strong> Onion.</p>
       <p><strong>Devika:</strong> Pineapple on pizza: Yay or nay?</p>
@@ -119,11 +251,12 @@ const Harish = () => {
       <p><strong>Devika:</strong> A spice you cannot live without?</p>
       <p><strong>Harish:</strong> Cumin (jeera). I absolutely love it.</p>
       <p><strong>Devika:</strong> Now, let’s talk about your social media presence. You have a buzzing Instagram handle. How do you plan your content and interact with your followers?</p>
+            
+           </Container> 
+            
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+         
+        </>
   );
 };
 

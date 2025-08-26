@@ -1,14 +1,92 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card,Image } from "react-bootstrap";
 
 const Pankaj = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow">
+    <>
             <Card.Body>
-              <h2 className="mb-4 text-center">Pankaj Dubey: The Visionary Leader Redefining Entrepreneurship and Impact</h2>
+
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              My strategy is simple—if you value my product or service, you pay in advance. If not, I don’t do business with you.
+              </q>{" "}
+              – <strong>Pankaj Dubey</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/pankajArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            Pankaj Dubey, a dynamic leader and entrepreneur with a rich and varied career spanning over decades, recently sat down for an engaging conversation with DevikaMajumder, co-founder of Global Influencers Hub. Known for his transformative roles in the automobile industry and his entrepreneurial ventures, Pankaj shared his journey from being a mischievous child to becoming a visionary leader. His story is one of ambition, resilience, and the relentless pursuit of excellence. From his early days of shifting schools due to his father’s transferable job to his groundbreaking work in launching iconic products and startups, Pankaj’s journey is nothing short of inspiring. Here’s a glimpse into their conversation:
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/pankajArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+
+
+
+
+    <Container className="my-5">
+
+
+
+
+
+
+             
               <p><strong>Pankaj Dubey</strong>,a dynamic leader and entrepreneur with a rich and varied career spanning over decades, recently sat down for an engaging conversation with DevikaMajumder, co-founder of Global Influencers Hub. Known for his transformative roles in the automobile industry and his entrepreneurial ventures, Pankaj shared his journey from being a mischievous child to becoming a visionary leader. His story is one of ambition, resilience, and the relentless pursuit of excellence. From his early days of shifting schools due to his father’s transferable job to his groundbreaking work in launching iconic products and startups, Pankaj’s journey is nothing short of inspiring. Here’s a glimpse into their conversation:</p>
               <p><strong>Devika Majumder:</strong> Welcome to Global Influencers Hub, Pankaj! We are thrilled to have you here. Our conversations go beyond surface-level success stories; we dive deep into the roots of influence, starting from childhood. So, tell us about young Pankaj—what was he like?</p>
               <p><strong>Pankaj Dubey:</strong> I was a very naughty child! In my extended family, everyone used to be terrified when I was around. I had a bit of an ‘angry young man’ persona, which mellowed down as I grew older.</p>
@@ -36,6 +114,7 @@ I realized that giving credit might boost sales in the short term, but it could 
 
 
 </p>
+
               <p><strong>Devika:</strong> Can you share a fun memory from those days?</p>
               <p><strong>Pankaj:</strong> One of the most amusing yet insightful moments was that very incident at Hero. Mr. Munjal’s reaction was unforgettable. He turned to the person responsible for the credit decision and said, “Did you think it was your father’s money that you could just give it away?” His words were sharp, but the message was clear—every financial decision must be made with accountability.It was a serious lesson, but the way he delivered it, with such authority and conviction, was both intimidating and, in hindsight, quite humorous. It was a reminder that top management closely monitors every action, and any mistake can have consequences. But at the same time, these are the moments where we learn the most.</p>
               <p><strong>Devika:</strong> That’s an interesting twist in the story! Now, how did the transition from corporate leadership to entrepreneurship happen? What triggered that shift?</p>
@@ -126,6 +205,64 @@ At first, I prepared a very classical song by Yesudas. But I was really nervous,
               <p><strong>Pankaj:</strong> I’d say my transition from the automobile industry to IT, when I launched the telecom business. At the time, I wasn’t entirely sure how I would navigate this new industry, but I figured it out, and it became a great success. That was a defining moment for me—stepping into the unknown and making it work.</p>
               <p><strong>Devika:</strong> Wonderful. And what is your ultimate vision for DSPIN and your personal journey?</p>
               <p><strong>Pankaj:</strong> At this stage, my focus is on making an impact on society. I believe I have received so much in life, and now it’s time to give back. I want to contribute to various startups and help them succeed. But beyond business, I want to make a difference in areas like girl child education, animal welfare, and women’s empowerment. Over the next 10-20 years, I want to create a meaningful impact in these areas. That, to me, is true success.</p>
+             
+             
+             
+                
+              <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Pankaj
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/pankajRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
               <p><strong>Devika:</strong> That’s truly inspiring. Let’s jump into a rapid-fire round now!</p>
               <p><strong>Pankaj:</strong> Sure!</p>
               <p><strong>Devika:</strong>One word that describes your leadership style?</p>
@@ -172,12 +309,10 @@ At first, I prepared a very classical song by Yesudas. But I was really nervous,
            
            
            
-           
+           </Container>
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+          
+    </>
   );
 };
 

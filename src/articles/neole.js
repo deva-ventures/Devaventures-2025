@@ -1,22 +1,87 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card,Image } from "react-bootstrap";
 
 const Neole = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+     
             <Card.Body>
-              <h2 className="text-center mb-4">An Exclusive Interview with Neole Anna Cornelio: From Childhood Passion to Professional Athlete</h2>
-             
-              <p>
-              Neole Anna Corneliois a rising star in athletics, known for her dedication, resilience, and passion for the sport. Beyond her achievements on the track, she is also a creative entrepreneur with a keen interest in fashion and crochet. In this exclusive interview, Devika Majumder, co-founder of the Global Influencers Hub, explores Neole’s journey—from her early love for running to her highly anticipated debut as a senior athlete. She shares insights into her training, mindset, and the philosophy that drives her forward, offering an inspiring glimpse into the life of a multifaceted and determined young athlete.
-              </p>
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              I believe all athletes should trust the training they’ve put in and have faith in their abilities when they step onto the track.
+              </q>{" "}
+              – <strong> Neole Anna</strong>
+            </p>
+          {/* </Col> */}
 
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/neoleArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            Neole Anna Corneliois a rising star in athletics, known for her dedication, resilience, and passion for the sport. Beyond her achievements on the track, she is also a creative entrepreneur with a keen interest in fashion and crochet. In this exclusive interview, Devika Majumder, co-founder of the Global Influencers Hub, explores Neole’s journey—from her early love for running to her highly anticipated debut as a senior athlete. She shares insights into her training, mindset, and the philosophy that drives her forward, offering an inspiring glimpse into the life of a multifaceted and determined young athlete.
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/neoleArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+
+
+    <Container className="my-5">
               <p>
                 <strong>Devika Majumder:</strong> Hi, Neole! Welcome to Global Influencers Hub. Here, we talk about the life journeys of influencers, and today, we’re eager to explore yours. Let’s dive right in! We’d love to hear about your journey—your stories, experiences, and everything in between. Let’s start from the very beginning. Tell us about your early childhood and how your love for sports began.
               </p>
+
 
               <p>
                 <strong>Neole Cornelio:</strong> Hi, Devika! Thank you for having me. My journey with sports started in quite an unexpected way. As a child, I was a little plump, slightly overweight. Wanting me to be more active, my mom randomly signed me up for a school relay race, not knowing what would come of it—she just wanted me to move more.
@@ -47,12 +112,43 @@ I do have cousins who are into comedy and cricket, but no one ever thought that 
               <p>
                 <strong>Devika:</strong> Of course! Having a strong support system is so important. So, what has been the biggest turning point in your life?
               </p>
-              <p>
-                <strong>Neole:</strong> : I would say COVID was a major turning point for me. I have a genetic predisposition to gain weight easily and a naturally low metabolism. In Indian athletics, most female athletes are lean, tall, and have a straight structural build. In contrast, I have a broader frame with bigger thighs, glutes, and arms, making me a heavy-built athlete.
+              
+
+              <div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Neole:</strong> I would say COVID was a major turning point for me. I have a genetic predisposition to gain weight easily and a naturally low metabolism. In Indian athletics, most female athletes are lean, tall, and have a straight structural build. In contrast, I have a broader frame with bigger thighs, glutes, and arms, making me a heavy-built athlete.
 During COVID, I gained a significant amount of weight and struggled to run. Even completing a small repetition felt like a challenge. That period made me question whether athletics was really working out for me. It was a tough realization, but it pushed me to make a crucial decision—I left my old coach and joined a new pro team. I knew my body type was uncommon, so I needed a more scientific and active approach to training.
 Switching to my current coach, Binder Rani, reignited my passion for athletics. That’s when I truly started craving training and chasing performance. COVID was a turning point not just for me, but for many athletes. Those two years tested our patience, with no events and constant uncertainty. Many of us struggled with weight gain and stagnation.
 However, I eventually saw it as an opportunity. I realized I needed more—more training, more effort, and a fresh approach. That shift in mindset made all the difference.
-              </p>
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/neoleArticle2.jpg" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "520px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+
+
+
+
+
+
+
+               
+              
               <p>
                 <strong>Devika:</strong> Wonderful. So, what is one life lesson that sports has taught you—something you’ll carry with you forever?
               </p>
@@ -313,50 +409,517 @@ Many athletes struggle with this because the goal is always to move forward, to 
 
               </p>
 
-
-
-
-
-
               <p>
-                <strong>Devika:</strong> Because it’s got that energy, that beat?
-              </p>
-              <p>
-                <strong>Neole:</strong> : Exactly! It’s got that rhythm and attitude that really hypes me up.
-
-
-
-
-              </p>
-             <p>
-                <strong>Devika:</strong> : Yeah, I get that! So, would you say you mostly listen to English music?
+                <strong>Neole:</strong> I would say, until you’re 18 or 19, just
+                enjoy what you’re doing. There’s no need to put too much
+                pressure on yourself. Just have fun with sports, enjoy your
+                childhood, and embrace your teenage years. You don’t have to
+                stress too much about the future at that stage.
               </p>
               <p>
-                <strong>Neole:</strong> :Yeah, I do. I’m really into English-language music, but I also enjoy Afrobeats a lot.
+                Once you turn 18 or 19, then you can start thinking about
+                turning professional. I realized too late that I didn’t fully
+                enjoy my childhood because I committed to sports too early. I
+                regret missing out on that balance. So, my advice is to have fun
+                while doing sports and not let it become a burden too soon.
+              </p>
 
+              <p>
+                <strong>Devika:</strong> That makes a lot of sense. On a similar
+                note, if you could give one piece of advice to your younger
+                self, what would it be?
+              </p>
+
+              <p>
+                <strong>Neole:</strong> Honestly? I’d tell myself not to stress
+                so much. I’m a big foodie, and I sacrificed a lot—giving up junk
+                food, skipping time with friends, missing out on hangouts—all
+                for training. Looking back, I don’t think it was always worth
+                it.
               </p>
               <p>
-                <strong>Devika:</strong> Oh, nice! Do you have a favorite song that’s always on your playlist?
+                Now, when I see my juniors balancing fun and sports, I realize I
+                could have done the same. So, if I could talk to my younger
+                self, I’d tell them to chill a little, enjoy the moment, and not
+                take everything so seriously.
+              </p>
+
+              <p>
+                <strong>Devika:</strong> That’s great advice! Speaking of food,
+                do you allow yourself cheat days?
+              </p>
+
+              <p>
+                <strong>Neole:</strong> Of course! You have to enjoy your cheat
+                days.
+              </p>
+
+              <p>
+                <strong>Devika:</strong> What does a cheat day look like for
+                you?
+              </p>
+
+              <p>
+                <strong>Neole:</strong> Well, my cheat day is probably different
+                from most people’s. I actually despise oil, so I’m not a big fan
+                of burgers. Pizza is okay, but it’s not my favorite. But I love
+                Korean cuisine! I’m obsessed with ramen, kimbap, and pretty much
+                anything Korean.
               </p>
               <p>
-                <strong>Neole:</strong> Right now, I’m obsessed with Kendrick Lamar’s song Luther. It’s everything to me—I listen to it while running, sleeping, dancing, eating… it’s the only thing I’m playing these days.
+                There’s a shop near my house where I always go. I’ll buy a big
+                bowl of ramen, and that’s my meal for the day—lunch and dinner
+                sorted. I could eat that all day long!
+              </p>
 
+              <p>
+                <strong>Devika:</strong> That sounds amazing! Now, shifting
+                gears a little—tell us about an embarrassing moment you’ve had
+                in your career, either on stage or during competition.
+              </p>
 
-
+              <p>
+                <strong>Neole:</strong> In competitions, nothing major has
+                happened because I’m super conscious about everything being
+                perfect. But in training? Oh, I’ve had my fair share of
+                embarrassing moments!
               </p>
               <p>
-                <strong>Devika:</strong> That makes a lot of sense. Now, do you have a go-to song to pump yourself up before an event?
+                One of the worst? Well, let’s just say I’ve had a few gas
+                incidents while running. You can’t really control it, and when
+                you’re sprinting, well… it just happens. So yeah, plenty of
+                gas-related tragedies during training!
+              </p>
+
+              <p>
+                <strong>Devika:</strong> That’s hilarious! Definitely a
+                relatable experience for many athletes.
+              </p>
+
+              <p>
+                <strong>Devika:</strong> Travel is a big part of your career. Do
+                you have a favorite country you’ve visited so far?
+              </p>
+
+              <p>
+                <strong>Neole:</strong> Internationally, I’ve traveled to three
+                main places—India, Dubai, and Lima. I was born in Dubai, and my
+                dad still works there, so I travel back and forth quite a bit.
+                Since I’ve seen so much of it already, Dubai feels like home.
               </p>
               <p>
-                <strong>Neole:</strong> : Oh, absolutely! I listen to a lot of Cardi B before my events. I love female rap—especially empowering tracks.
-
-
+                Lima, on the other hand, was an incredibly beautiful place. I
+                wouldn’t mind settling there one day! I loved the people, the
+                culture, and just the overall atmosphere. I’m very
+                culture-oriented, so I appreciate places with a strong cultural
+                identity, and Lima definitely had that. Plus, it’s such a clean
+                and well-maintained city!
               </p>
+              <p>
+                Within India, I’ve traveled to almost all the states, but one
+                place that really stood out to me was Panchkula, Haryana. It’s
+                such a beautiful area.
+              </p>
+
+              <p>
+                <strong>Devika:</strong> Oh, I’ll have to look that up!
+              </p>
+
+              <p>
+                <strong>Neole:</strong> Yeah, you should! Panchkula is amazing.
+                The road structure, the way societies are built—it’s all very
+                well-planned and top-notch.
+              </p>
+
+              <p>
+                <strong>Devika:</strong> That sounds wonderful! Now, shifting
+                gears again—what’s the hardest part about being an international
+                athlete that most people don’t know about?
+              </p>
+
+              <p>
+                <strong>Neole:</strong> I think it’s the standard you have to
+                uphold. Once you build yourself up to a certain level, stepping
+                down from that standard isn’t just tough—it can be painful. It
+                affects you as an athlete, your coach, and everyone around you
+                who’s working to push you even further.
+              </p>
+              <p>
+                Many athletes struggle with this because the goal is always to
+                move forward, to take that next step up. You never want to take
+                a step back. Even right now, with an upcoming event, I feel that
+                pressure. I just want to perform better than I did in my last
+                international competition. That’s something all athletes face
+                once they’ve reached a certain level—it’s the constant drive to
+                push beyond your previous best.
+              </p>
+
+              <p>
+                <strong>Devika:</strong> That makes a lot of sense. Now, do you
+                have a go-to song to pump yourself up before an event?
+              </p>
+
+              <p>
+                <strong>Neole:</strong> Oh, absolutely! I listen to a lot of
+                Cardi B before my events. I love female rap—especially empowering
+                tracks.
+              </p>
+
+              <p>
+                <strong>Devika:</strong> Because it’s got that energy, that
+                beat?
+              </p>
+
+              <p>
+                <strong>Neole:</strong> Exactly! It’s got that rhythm and
+                attitude that really hypes me up.
+              </p>
+
+              <p>
+                <strong>Devika:</strong> Yeah, I get that! So, would you say you
+                mostly listen to English music?
+              </p>
+
+              <p>
+                <strong>Neole:</strong> Yeah, I do. I’m really into
+                English-language music, but I also enjoy Afrobeats a lot.
+              </p>
+
+              <p>
+                <strong>Devika:</strong> Oh, nice! Do you have a favorite song
+                that’s always on your playlist?
+              </p>
+
+              <p>
+                <strong>Neole:</strong> Right now, I’m obsessed with Kendrick
+                Lamar’s song Luther. It’s everything to me—I listen to it while
+                running, sleeping, dancing, eating… it’s the only thing I’m
+                playing these days.
+              </p>
+
+              <p>
+                <strong>Devika:</strong> Oh, I totally get that! Once you find a
+                song you love, it just takes over.
+              </p>
+
+              <p>
+                <strong>Neole:</strong> Exactly! It keeps playing in your head
+                nonstop. I had an exam recently, and instead of focusing on my
+                answers, I caught myself singing the song in my head!
+              </p>
+
+              <p>
+                <strong>Devika:</strong> Oh my god! Yeah, that happens!
+              </p>
+
+              <p>
+                <strong>Neole:</strong> Yeah, for sure.
+              </p>
+
+              <p>
+                <strong>Devika:</strong> Now, if you could play one sport for
+                the rest of your life, what would it be?
+              </p>
+              <p>
+                <strong>Neole:</strong> I’m really interested in CrossFit, so I
+                would definitely go for something related to that. There are so
+                many CrossFit leagues, and I’d love to compete professionally. I
+                just love the hype, the intensity—it’s exhilarating.
+              </p>
+              <p>
+                But if CrossFit doesn’t work out, I’d definitely go for
+                wrestling. Any time, hands down.
+              </p>
+              <p>
+                <strong>Devika:</strong> Oh, how cool! Very cool. So, if you
+                could try a sport professionally aside from your own, would it
+                be wrestling or CrossFit?
+              </p>
+              <p>
+                <strong>Neole:</strong> Yeah, mostly CrossFit. That’s what I’m
+                really drawn to.
+              </p>
+              <p>
+                <strong>Devika:</strong> Cool! And would you seriously consider
+                going professional in CrossFit?
+              </p>
+              <p>
+                <strong>Neole:</strong> Yeah! I keep telling my mom that if
+                anything ever happens with my athletic career, I’d go for
+                CrossFit. And she’s just like, “Sure.”
+              </p>
+              <p>
+                <strong>Devika:</strong> Well, you can totally do that! You could
+                still go for it.
+              </p>
+              <p>
+                <strong>Neole:</strong> Yeah, exactly! Why not?
+              </p>
+              <p>
+                <strong>Devika:</strong> So, if Hollywood made a movie about your
+                life, who do you think would play you?
+              </p>
+              <p>
+                <strong>Neole:</strong> Oh, that’s a great question! So, I’m
+                pretty short—I’m 5’3″. My favorite actress is Zendaya, and I
+                would love for her to play me, but she’s so tall and lean! I’m
+                bulkier, and she has that model-like build.
+              </p>
+              <p>
+                <strong>Devika:</strong> Yeah, they’d have to find just the right
+                person.
+              </p>
+              <p>
+                <strong>Neole:</strong> Honestly, I wouldn’t mind playing myself!
+              </p>
+              <p>
+                <strong>Devika:</strong> That’s a great answer! Why not? You
+                could totally do it!
+              </p>
+              <p>
+                <strong>Neole:</strong> Yeah, exactly!
+              </p>
+              <p>
+                <strong>Devika:</strong> Cool. So, talk to us about your social
+                media.
+              </p>
+              <p>
+                <strong>Neole:</strong> My social media is all about creating an
+                environment where people can see how athletes enjoy their
+                training. It’s not always about pressure—we have fun during
+                training, while traveling, and in everyday moments. I want to
+                build a platform where people get a real glimpse of how we live
+                our lives.
+              </p>
+              <p>
+                I’m also working on spreading awareness about the body image of
+                female athletes. I try to post content that helps women feel
+                good about having a strong, muscular physique and embracing their
+                athletic build.
+              </p>
+              <p>
+                <strong>Devika:</strong> That’s wonderful! So, do you handle your
+                own social media?
+              </p>
+              <p>
+                <strong>Neole:</strong> Yeah, it’s all my work!
+              </p>
+              <p>
+                <strong>Devika:</strong> When did you realize that your social
+                media was taking off?
+              </p>
+              <p>
+                <strong>Neole:</strong> Up until my international competition, I
+                had around 4,000 to 5,000 followers. But after my trip to Peru,
+                I posted about my experience, and that’s when things just blew
+                up.
+              </p>
+              <p>
+                Right after that, my Instagram started gaining traction, and
+                suddenly, I had 21,000 or 22,000 followers! It was crazy. We had
+                a 24-hour journey back from Lima to India, and when I finally got
+                internet access and checked my phone, I thought it was a glitch!
+              </p>
+              <p>
+                <strong>Devika:</strong> Oh wow! That must have been such a
+                shock!
+              </p>
+              <p>
+                <strong>Neole:</strong> Yeah! I even got messages from people
+                asking if I was buying followers! I was like, “No! I don’t know
+                what’s happening!” But yeah, that’s when I realized my social
+                media had really taken off.
+              </p>
+              <p>
+                <strong>Devika:</strong> And now, are you taking your social
+                media more seriously?
+              </p>
+              <p>
+                <strong>Neole:</strong> Absolutely! Now that my followers have
+                increased, I feel a greater responsibility. I have a platform,
+                and I want to use it to spread a meaningful message.
+              </p>
+              <p>
+                <strong>Devika:</strong> That’s important. You have a voice, and
+                using it for something positive is always a good thing.
+              </p>
+              <p>
+                <strong>Neole:</strong> Exactly! Once you have a platform, you
+                have the power to influence. And I want to make sure I use that
+                in the right way.
+              </p>
+              <p>
+                <strong>Devika:</strong> Absolutely. So, what’s next for you?
+                What exciting things are coming up?
+              </p>
+              <p>
+                <strong>Neole:</strong> Well, on the 26th, I have an event in
+                Odisha, so I’ll be traveling there. It’s happening at a
+                university, and it’s a pretty big event. Hopefully, I’ll get to
+                stand even for a minute in that competition. It’s a really strong
+                and tough event—very challenging. This will be my debut as a
+                senior athlete, so I have my expectations set. Hopefully, I can
+                reach them.
+              </p>
+              <p>
+                <strong>Devika:</strong> Oh, wow! That sounds incredible. Wishing
+                you all the best for that!
+              </p>
+              <p>
+                <strong>Neole:</strong> Thank you!
+              </p>
+              <p>
+                <strong>Devika:</strong> So, if you had to sum up your life
+                philosophy in a sentence, what would it be?
+              </p>
+              <p>
+                <strong>Neole:</strong> Honestly, just don’t care if people judge
+                you—just go crazy! When people call you cringe, it’s fine.
+                They’re just sad. You can be cringe and still have fun.
+              </p>
+              <p>
+                <strong>Devika:</strong> Yeah, yeah, that’s true! I love that
+                perspective.
+              </p>
+              <p>
+                <strong>Neole:</strong> Right? I still have close friends who
+                tell me, “Oh my god, why did you post that? That’s so cringe.”
+                And I’m just like, “It’s okay. I find it funny, so I’m going to
+                post it.” It’s my platform, after all!
+              </p>
+              <p>
+                <strong>Devika:</strong> Exactly! At the end of the day, you’re
+                not building your platform for anyone else—you’re doing it for
+                yourself.
+              </p>
+              <p>
+                <strong>Neole:</strong> Exactly! If it makes me happy, that’s
+                what matters.
+              </p>
+              <p>
+                <strong>Devika:</strong> Of course, of course. Now, do you have
+                any advice for someone who’s also trying to build their social
+                media platform?
+              </p>
+              <p>
+                <strong>Neole:</strong> Yeah. It’s all about consistency. You
+                need to be constant in your posting or anything you do. We are
+                blessed to have a platform, and with that comes the
+                responsibility to spread positive messages.
+              </p>
+              <p>
+                Cyberbullying is a big no. You can’t troll people online—internet
+                trolling isn’t just socially unacceptable, it actually harms
+                people. It reduces self-esteem and can really trigger someone
+                emotionally. So if you have a platform, don’t use it to hurt
+                others. Instead, do something that benefits people, something
+                positive.
+              </p>
+              <p>
+                <strong>Devika:</strong> Fantastic! I think that’s absolutely on
+                point.
+              </p>
+              <p>
+                <strong>Neole:</strong> Yeah. It’s really sad when someone puts
+                so much effort into their work, and then another person—who
+                barely understands what’s going on—comes in with an unwanted,
+                uninformed opinion. It’s just not right.
+              </p>
+
+              <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Neole
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/neoleRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+
+
+
+
+
+
+
+              <p><strong>Devika:</strong> Absolutely! Now, let’s dive right into some rapid-fire questions.</p>
+            <p><strong>Neole:</strong> Sure, go for it!</p>
+
+            <p><strong>Devika:</strong> Morning or evening workouts?</p>
+            <p><strong>Neole:</strong> Morning. Anytime.</p>
+
+            <p><strong>Devika:</strong> Protein shake or cheat meal?</p>
+            <p><strong>Neole:</strong> Cheat meal.</p>
+
+            <p><strong>Devika:</strong> Of course! Gold medal or world record?</p>
+            <p><strong>Neole:</strong> World record.</p>
+
+            <p><strong>Devika:</strong> Home ground competition or international?</p>
+            <p><strong>Neole:</strong> International.</p>
+
+            <p><strong>Devika:</strong> Favorite sportsperson of all time?</p>
+            <p><strong>Neole:</strong> Shelly-Ann Fraser-Pryce.</p>
+
+            <p><strong>Devika:</strong> One word that describes you?</p>
+            <p><strong>Neole:</strong> Crazy.</p>
+
+            <p><strong>Devika:</strong> If you weren’t an athlete, what would you be?</p>
+            <p><strong>Neole:</strong> A fashion designer.</p>
+
+            <p><strong>Devika:</strong> Oh, lovely! Talk to us a little about your crochet business.</p>
+            <p><strong>Neole:</strong> It’s nothing crazy. I just get orders and crochet them—I make a lot of clothes. I’m very into fashion; I love it. I take inspiration from different things and create something unique. It’s nothing major right now, but I’d love to do it professionally one day.</p>
+
+            <p><strong>Devika:</strong> Oh, cool! So, you could also be a fashion designer in the future?</p>
+            <p><strong>Neole:</strong> Yeah, yeah! I’m actually doing everything on my own right now. I have an entire room dedicated to tailoring—I have my own sewing machine and everything at home. So, if I ever get the opportunity to do something professional in sewing, I’d jump right into it.</p>
+
+            <p><strong>Devika:</strong> Alright, it was wonderful speaking with you, Neole. Thank you!</p>
+            <p><strong>Neole:</strong> Yeah, I look forward to talking again. Thanks for having me!</p>
+
+            <p><strong>Devika:</strong> Of course! Wishing you all the best.</p>
+            <p><strong>Neole:</strong> Thank you so much!</p>
+
+            <p><strong>Devika:</strong> Take care! Bye!</p>
+            <p><strong>Neole:</strong> Bye! Have a great day!</p>
+
+
+
+
+             
+              </Container>
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+        
+    </>
   );
 };
 

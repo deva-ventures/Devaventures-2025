@@ -1,22 +1,82 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card,Image } from 'react-bootstrap';
 
 const Sweta = () => {
   return (
-    <Container className="py-5">
-      <Row>
-        <Col>
-          <h1 className="text-center mb-4">From Pistachios to Paris: Sweta Desai’s Bold Leap from Silence to Style</h1>
-          <p className="lead text-center mb-5">
-          You know her as Pistachioby Sweta, but behind the graceful Instagram reels, the global fashion weeks, and the sleek satin drapes, is a woman who rebuilt her life from scratch at 35. A woman who didn’t just chase dreams, she stitched them into reality. In this no-filter conversation with Devika Majumder, Co-founder of Global Influencers Hub, Sweta Desai takes us through her journey — from a “naughty, nerdy kid” to a boutique boss walking international ramps. Spoiler: It’s not all glam. It’s grit, grace, and a whole lot of guts.
-          </p>
-        </Col>
-      </Row>
+    < >
+         <Card.Body>
+         <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              "I truly believe fashion is all about comfort first. If you’re not comfortable, it’s not fashion for you."
+              </q>{" "}
+              – <strong>Sweta Desai</strong>
+            </p>
+          {/* </Col> */}
 
-      <Row className="mb-4">
-        <Col md={{ span: 10, offset: 1 }}>
-          <Card className="p-4 shadow-sm">
-            <Card.Body>
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/swetaArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            You know her as Pistachio by Sweta, but behind the graceful Instagram reels, the global fashion weeks, and the sleek satin drapes, is a woman who rebuilt her life from scratch at 35. A woman who didn’t just chase dreams, she stitched them into reality. In this no-filter conversation with Devika Majumder, Co-founder ofGlobal Influencers Hub, Sweta Desai takes us through her journey — from a “naughty, nerdy kid” to a boutique boss walking international ramps. Spoiler: It’s not all glam. It’s grit, grace, and a whole lot of guts.
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/swetaArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+
+
+            <Container className="py-5">
               <p><strong>Devika Majumder:</strong> Hi, Sweta. Welcome to Global Influencers Hub.</p>
               <p><strong>Sweta Desai:</strong> Hi! Thank you so much. It’s a pleasure to be here.</p>
               <p><strong>Devika:</strong> We’re so excited to dive into your journey — not just the social media side of it, but the real story behind the search results. And when I say we want to know all about you, I mean we’re going back to childhood! So tell us… what was little Sweta like?</p>
@@ -135,6 +195,50 @@ const Sweta = () => {
 <p><strong>Sweta:</strong> Some are in the pipeline. I can’t share too much yet, but yes, there are collaborations I’m analysing right now. Interestingly, I’ve had offers for web series and even movies — but honestly, that’s not my forte. I’m not interested in going that route.</p>
 <p><strong>Devika:</strong> Makes sense — it’s all about staying in your own lane. What’s next for your brand?</p>
 <p><strong>Sweta:</strong> I’m working on a new collection for the monsoon. But before that, there’s another major event happening in May, which I need to prepare for. After that, I’ll focus entirely on the upcoming line for Pistachio.</p>
+
+
+
+<div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Sweta
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/swetaRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+
 <p><strong>Devika:</strong> Alright, Sweta — let’s end with a fun rapid-fire. Ready?</p>
 <p><strong>Sweta:</strong> Ready!</p>
 <p><strong>Devika:</strong> Coffee or Chai?</p>
@@ -185,12 +289,10 @@ const Sweta = () => {
           
           
           
-          
+          </Container>
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+          </>
+      
   );
 };
 

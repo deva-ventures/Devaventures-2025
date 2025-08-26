@@ -460,7 +460,7 @@ const InfluencerJourneys = () => {
     Articles
   </h4>
 
-  <Carousel
+  {/* <Carousel
     indicators={false}
     prevIcon={<FaChevronLeft color="#0d6efd" size={24} />}
     nextIcon={<FaChevronRight color="#0d6efd" size={24} />}
@@ -511,7 +511,58 @@ const InfluencerJourneys = () => {
         </Container>
       </Carousel.Item>
     ))}
-  </Carousel>
+  </Carousel> */}
+
+
+<Container
+      fluid
+      style={{
+        maxHeight: "90vh", // adjust scroll area height
+        overflowY: "auto", // enables vertical scroll
+        padding: "20px",
+      }}
+    >
+      <Row className="g-4">
+        {people.map((home, index) => (
+          <Col md={4} sm={6} xs={12} key={index}>
+            <Card className="h-100 border-0 shadow-sm">
+              <Card.Img
+                variant="top"
+                src={home.img}
+                style={{
+                  borderRadius: "12px",
+                  height: "280px",
+                  objectFit: "cover",
+                }}
+              />
+              <Card.Body>
+                <div className="text-muted small mb-2">{home.des}</div>
+                <Card.Title className="fw-bold">{home.name}</Card.Title>
+
+                <div className="d-flex flex-column mt-3 gap-2">
+                  <a
+                    href={home.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-outline-primary btn-sm"
+                  >
+                    Click here for YouTube
+                  </a>
+                  <a
+                    href={home.article}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-outline-secondary btn-sm"
+                  >
+                    Click here for Article
+                  </a>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Container>
 </div>
 
     </>

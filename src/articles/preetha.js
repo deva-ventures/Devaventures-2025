@@ -1,19 +1,94 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card , Image} from 'react-bootstrap';
 
 const Preetha = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
-            <Card.Body>
-          <h1 className="text-center mb-4">Preetha Athrey: The Marketing Leader Turned Culinary Influencer</h1>
-          <p className="lead text-center mb-5">
-          Preetha Athrey, a seasoned marketing expert turned content creator, recently joined DevikaMajumder, co-founder of Global Influencers Hub, for an engaging conversation. From her illustrious career in marketing, including her tenure as CMO of Twitter APAC, to her journey into the world of culinary storytelling, Preetha’s transition is nothing short of inspiring. Her platform, Easy Eats with Preetha, has gained remarkable traction, offering quick, nutritious, and delicious recipes for busy professionals and families. Here’s an excerpt from their conversation:
-         </p>
-       
+    < >
+    <Card.Body>
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+                First and foremost, find your space and don’t feel pressured by
+                what others are doing.
+              </q>{" "}
+              – <strong>Preetha Athrey</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/preethaArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
           
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+              Preetha Athrey, a seasoned marketing expert turned content creator,
+              recently joined Devika Majumder, co-founder of Global Influencers Hub,
+              for an engaging conversation. From her illustrious career in marketing,
+              including her tenure as CMO of Twitter APAC, to her journey into the
+              world of culinary storytelling, Preetha’s transition is nothing short of
+              inspiring. Her platform, <strong>Easy Eats with Preetha</strong>, has
+              gained remarkable traction, offering quick, nutritious, and delicious
+              recipes for busy professionals and families. Here’s an excerpt from
+              their conversation:
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/preethaArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+
+
+
+
+    
+          <Container className='pt-5'>
          <p>
                 <strong>Devika Majumder:</strong> Welcome, Preetha, to Global Influencers Hub. 
                 Here, we talk about the real journeys of social media influencers and content 
@@ -123,11 +198,35 @@ const Preetha = () => {
                 <strong>Devika:</strong> And what was the first dish that made you realize, ‘Wow, this is my calling’?
               </p>
 
-              <p>
-                <strong>Preetha:</strong> It goes back a long way—pasta! I love experimenting with pasta. I don’t like heavy sauces, so I prefer simmering 
-                homemade tomato sauce for hours. The house smells amazing when it’s cooking. Then, I toss spaghetti in butter with a little garlic, 
-                fresh thyme, basil, and Parmesan cheese. It’s always a hit at dinners. It’s easy, quick, and delicious!
-              </p>
+              <div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Preetha:</strong> It goes back a
+              long way—pasta! I love experimenting with pasta. I don’t like heavy
+              sauces, so I prefer simmering homemade tomato sauce for hours. The
+              house smells amazing when it’s cooking. Then, I toss spaghetti in
+              butter with a little garlic, fresh thyme, basil, and Parmesan cheese.
+              It’s always a hit at dinners. It’s easy, quick, and delicious!
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/preethaArticle2.jpg" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+
 
               <p>
                 <strong>Devika:</strong> That sounds amazing! And I heard your mom makes something that’s an absolute favorite among your friends?
@@ -249,8 +348,55 @@ const Preetha = () => {
                 <p>Right now, winter foods are my biggest focus. There’s just something special about using seasonal produce—amla, saag, and other fresh market finds. I love visiting local mandis, whether for flowers or vegetables, picking up the freshest ingredients, and turning them into something delicious. That process excites me so much!</p>
              
               
+                <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Preetha
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/preethaRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+
+
+
               
-                <p><strong>Devika:</strong> Butter or olive oil?</p>
+
+
+
+             
+                <p><strong>Devika:</strong>That’s amazing! Now, let’s do a quick rapid-fire round. Butter or olive oil?</p>
                 <p><strong>Preetha:</strong> Olive oil.</p>
 
                 <p><strong>Devika:</strong> One Indian spice that deserves global fame?</p>
@@ -312,15 +458,15 @@ const Preetha = () => {
 
                 <p><strong>Devika:</strong> Likewise! Thank you so much, Preetha!</p>
            
-           
+                </Container>
            
            
            
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+         
+       
+      
+    </>
   );
 };
 
