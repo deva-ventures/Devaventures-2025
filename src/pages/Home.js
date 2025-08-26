@@ -148,7 +148,7 @@ const Home = () => {
     },
     {
       img: "/harish.png",
-      link: "/#",
+      link: "/articles/harish",
     },
     {
       img: "/niranjan.png",

@@ -28,7 +28,7 @@ const Harish = () => {
           {/* Right Side - Complete Image */}
           <Col xs={12} md={6} className="text-center text-md-start">
             <Image
-              src="/harishArticle.png" // <-- second image here
+              src="/harishArticle.webp" // <-- second image here
               alt="Preetha Athrey"
               fluid
               style={{ maxWidth: "100%", height: "auto" }}
