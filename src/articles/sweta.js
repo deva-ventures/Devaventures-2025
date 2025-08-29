@@ -135,13 +135,43 @@ const Sweta = () => {
       <p><strong>Sweta:</strong> Totally. When you branch out — meet new people, attend events, collaborate — you’re not just growing personally, you’re also expanding your brand visibility. Everything works hand-in-hand. The more you’re out there, the more people know you, and that naturally reflects on your work.</p>
       <p><strong>Devika:</strong> So true. It’s all about showing up — online and offline.</p>
       <p><strong>Sweta:</strong> Yes. If you stay in one lane, no one will notice. But when you widen your road, everything flows together.</p>
+     
+     
+     
+     
+     
+     
       <p><strong>Sweta:</strong> I’m also a professor at GLS — I take fashion lectures there.</p>
       <p><strong>Devika:</strong> Oh, wonderful! So you're directly in touch with the new generation — Gen Z. That must give you such insights into their tastes and preferences.</p>
       <p><strong>Sweta:</strong> Absolutely. Interacting with them constantly helps you understand what they like, how they think. And that influences so much. You can’t stay in one place — you have to move with the times.</p>
       <p><strong>Devika:</strong> So in today’s world, do you think a designer also needs to be a digital influencer?</p>
       <p><strong>Sweta:</strong> 100% yes. I strongly believe they should be. Because right now, digital influence is the fastest way to connect with people. Everyone’s on Instagram. Who’s reading newspapers or magazines anymore? If you want growth in your business, you have to be out there. Period.</p>
       <p><strong>Devika:</strong> Spot on. Now, how do you stay authentic while putting yourself out there on social media?</p>
-      <p><strong>Sweta:</strong> Honestly? Just be yourself. That’s the simplest way. You don’t need to act or pretend. If you pretend to be someone else, you’ll have to carry that burden every day. Why do that? Be who you are — and things fall into place.</p>
+   
+      <div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Sweta:</strong> Honestly? Just be yourself. That’s the simplest way. You don’t need to act or pretend. If you pretend to be someone else, you’ll have to carry that burden every day. Why do that? Be who you are — and things fall into place.
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/swetaArticle2.jpg" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+   
       <p><strong>Devika:</strong> Love that. Now tell us — what are some absolute must-haves in every woman’s wardrobe?</p>
       <p><strong>Sweta:</strong> Grooming. It’s not about expensive outfits — but please be groomed. You can wear jeans and a T-shirt, that’s totally fine — but make sure your hair is neat, your nails are clean. That’s the least you can do for yourself. If you can’t do that, you can’t do anything for anyone else.</p>
 <p><strong>Devika:</strong> So true. Self-care speaks louder than labels.</p>

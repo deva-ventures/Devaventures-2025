@@ -136,10 +136,39 @@ These experiences—whether launching telecom at Intex, turning around Yamaha, o
               <p><strong>Devika:</strong> That’s fantastic, Pankaj. I’m going to be in touch with you on another initiative I’m working on—it’s called Youngpreneurs. It’s about instilling an entrepreneurial mindset in teenagers and beyond.</p>
               <p><strong>Pankaj:</strong> That sounds wonderful. As a Mentor of Change at NITI Aayog, I’ve adopted a few schools where we focus on identifying students’ skills at an early stage. The idea is to guide them so that if they want to start a company someday, we can help them right from the ground up.</p>
               <p><strong>Devika:</strong> Absolutely! Now, I’d love to hear more about your entrepreneurial journey. In one of my projects, I worked closely with an ex-CEO of a reputed multinational company who transitioned into entrepreneurship. He went from leading over 30,000 employees to managing just two people in his startup. That kind of shift—where everything was once served on a silver platter, and suddenly, you’re wearing multiple hats—can be overwhelming. As someone who has held leadership positions in corporate giants, how did you navigate that transition?</p>
-              <p><strong>Pankaj:</strong> I consider myself fortunate to have worked in large organizations where I learned from structured teams and processes. But my real entrepreneurial experience began when I joined Polaris. Before that, I worked for a company called Coesfeld, where I had an eye-opening moment. A German executive, Mr. Weipert, once visited and asked me how many people were on my sales team. I proudly said, “About a hundred in marketing, plus another two to three hundred in after-sales and service.” Then I asked him how many people managed global operations from Germany, and he said, “Just three of us.” That shocked me! He explained how they efficiently structured their operations, and though it was theoretical to me at the time, I truly understood it when I moved to Polaris.
+            
+              <div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Pankaj:</strong> I consider myself fortunate to have worked in large organizations where I learned from structured teams and processes. But my real entrepreneurial experience began when I joined Polaris. Before that, I worked for a company called Coesfeld, where I had an eye-opening moment. A German executive, Mr. Weipert, once visited and asked me how many people were on my sales team. I proudly said, “About a hundred in marketing, plus another two to three hundred in after-sales and service.” Then I asked him how many people managed global operations from Germany, and he said, “Just three of us.” That shocked me! He explained how they efficiently structured their operations, and though it was theoretical to me at the time, I truly understood it when I moved to Polaris.
 
 At Polaris, I had my own budget and had to be strategic about spending. I couldn’t afford a 200-member team, so I had to optimize with fewer people. That’s where I learned that in a startup, hiring the right people—self-starters who align with the business model—is critical. You need to be clear about what your company offers, who your customers are, and what kind of team you need to build accordingly.
-.</p>
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/pankajArticle2.jpg" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+            
+            
+            
+            
+            
+            
+            
               <p><strong>Devika:</strong> That’s a valuable lesson. It’s fascinating how these learnings shaped your entrepreneurial approach. So, when you started DSPIN, was your strategy different from your experience at Polaris?</p>
               <p><strong>Pankaj:</strong> Absolutely. At DSPIN, I didn’t want to build a large, traditional team. Instead, I focused on consulting-based operations where we deployed specialized teams for specific projects. That way, we avoided unnecessary overhead costs and ensured profitability from the start. Unlike many entrepreneurs who learn from losses, I was fortunate to gain my startup education at Polaris, where I made mistakes at the company’s expense, not my own. That experience now allows me to implement best practices without suffering losses.</p>
               <p><strong>Devika:</strong> That’s an enviable journey! Most entrepreneurs have to go through financial struggles to gain that experience, but you’ve had the advantage of learning in a corporate setting before applying it to your own venture. Now, shifting gears a bit—you’re a mentor at NITI Aayog and also associated with Stairs. How do you think leadership can drive social change?</p>

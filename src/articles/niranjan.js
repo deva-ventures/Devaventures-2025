@@ -182,7 +182,45 @@ In this heartfelt and humorous conversation with Devika Majumder, Co-founder of 
       <p><strong>Devika Majumder:</strong> Wow. That’s beautiful.</p>
       <p><strong>Dr. Niranjan:</strong> It just flows naturally. I hum, they smile, and the atmosphere feels lighter. That’s the power of music.</p>
       <p><strong>Devika Majumder:</strong> That’s just fantastic. Now, tell us—any fun or memorable moments you’ve had while creating content?</p>
-      <p><strong>Dr. Niranjan:</strong> Oh, definitely! So many. When I started with social media, it was just me, completely solo. No clue about camera angles, video or audio quality, or how to write a good script. I was lost, honestly, just experimenting and posting whatever I could.</p>
+      
+      
+      
+      <div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Dr. Niranjan:</strong> Oh, definitely! So many. When I started with social media, it was just me, completely solo. No clue about camera angles, video or audio quality, or how to write a good script. I was lost, honestly, just experimenting and posting whatever I could.
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/niranjanArticle2.jpg" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
       <p>But as time passed, quite unexpectedly, I started to build a team. Today, one of the core people in my team is Megha—she now handles all of my social media. She’s been a huge support.</p>
       <p>I even went a step further and started my own production house called Techno Media Creations. Now I’m also acting in films, which is a totally new adventure!</p>
       <p>So the fun and joy really come from this unexpected journey—from being totally alone and unsure, to now having this beautiful, dedicated team. I often call them my second family.</p>

@@ -507,13 +507,12 @@ const InfluencerJourneys = () => {
 
 
 <Container
-      fluid
-      style={{
-        maxHeight: "90vh", // adjust scroll area height
-        overflowY: "auto", // enables vertical scroll
-        padding: "20px",
-      }}
-    >
+  style={{
+    maxHeight: "90vh",
+    overflowY: "auto",
+    padding: "10px",
+  }}
+>
       <Row className="g-4">
         {people.map((home, index) => (
           <Col md={4} sm={6} xs={12} key={index}>

@@ -140,8 +140,36 @@ const Harish = () => {
             <p><strong>Harish:</strong> I believe that when you give to the world, you receive happiness in return. Being a chef is about constantly giving beautiful creations to people. The satisfaction people get from eating your food is immense—it’s immeasurable.</p>
 
             <p><strong>Devika:</strong> Absolutely! That’s a beautiful thought. What’s one key lesson that has stayed with you from your MasterChef days?</p>
-            <p><strong>Harish:</strong> One lesson is that age is never a barrier for any adventure. I never thought about how old I was—I just stepped in. Physically, it was tiring for some contestants, but not for me. My mind was stronger than my body. I could stand for 12-14 hours a day without a wince. If your mind is strong, you can achieve anything. Also, if I relate cooking to life—if you have the right ingredients, life will be as sweet as the best dish you can make.</p>
-            <p><strong>Devika:</strong> Wow! That’s a beautiful message. Now, food trends come and go. What’s one trend you think should make a comeback?</p>
+            
+            
+            <div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Harish:</strong> One lesson is that age is never a barrier for any adventure. I never thought about how old I was—I just stepped in. Physically, it was tiring for some contestants, but not for me. My mind was stronger than my body. I could stand for 12-14 hours a day without a wince. If your mind is strong, you can achieve anything. Also, if I relate cooking to life—if you have the right ingredients, life will be as sweet as the best dish you can make.
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/harishArticle2.webp" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+            
+            
+            
+    
+      <p><strong>Devika:</strong> Wow! That’s a beautiful message. Now, food trends come and go. What’s one trend you think should make a comeback?</p>
       <p><strong>Harish:</strong> Recently, I visited a restaurant that brought back very traditional South Indian dishes—recipes from our grandmothers’ and mothers’ times that are not commonly found in restaurants anymore.</p>
       <p>I see a trend where restaurants are taking old recipes, giving them a new look, and presenting them in a modern way—sometimes even renaming them and serving them at premium prices. Our forefathers have created so much culinary richness; we don’t always need to reinvent. Instead, we can reintroduce these forgotten recipes in a contemporary way.</p>
       <p><strong>Devika:</strong> That’s so true! Forgotten recipes deserve a comeback. If you had to create a dish that represents your life, what would it be?</p>
@@ -205,32 +233,7 @@ const Harish = () => {
           />
         </div>
       </Container>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
+    </div>    
       <p><strong>Devika:</strong> Absolutely! It’s all about staying true to your creativity. Let’s have some fun now with a rapid-fire round!</p>
       <p><strong>Devika:</strong> One ingredient you cannot live without?</p>
       <p><strong>Harish:</strong> Onion.</p>
