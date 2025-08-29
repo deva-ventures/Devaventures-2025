@@ -29,14 +29,6 @@ const InfluencerJourneys = () => {
       article: '/articles/sweta',
     },
     {
-      name: 'Pankaj Dubey',
-      des: 'Founder DSPIN | TEDx Speaker | Top 50 Indian Icon | Investor',
-      img: '/pankaj.jpg',
-      youtube: 'https://youtu.be/RUJ-LV58m9I?si=Fzn9UkQRoXSRt5ZM',
-      article: '/articles/pankaj',
-    },
-
-    {
       name: 'Indrani Ghose',
       des: 'Voice of Indian Travel | Story Weaver | Blogger | Google Guide | Faces of India',
       img: '/indrani.jpg',
@@ -104,7 +96,7 @@ const InfluencerJourneys = () => {
       des: 'Vedic Astrologer, TEDx Speaker & Mythologist | Ep 22 | Global Influencer Hub',
       img: '/pratul.jpg',
       youtube: 'https://www.youtube.com/watch?v=OLrppq3rYac',
-      article: '#',
+      article: '/articles/pratul',
     },
    
 

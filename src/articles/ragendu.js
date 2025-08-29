@@ -1,19 +1,90 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card,Image } from 'react-bootstrap';
 
 const Ragendu = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+      
             <Card.Body>
-          <h1 className="text-center mb-4">The Art of Parenthood: Insights from Ragendu K R</h1>
-          <p className="lead text-center mb-5">
-          Ragendu K R is a passionate educator, content creator, and devoted parent, known for her insightful perspectives on modern parenting. With a deep commitment to fostering growth and learning, she navigates the evolving landscape of parenthood with resilience, adaptability, and mindful guidance.
-In this exclusive interview, Devika Majumder, co-founder of Global Influencer Hub, delves into Ragendu’s journey—from her experiences as a parent to the invaluable lessons she has gathered along the way. She shares her thoughts on the importance of family support, the challenges of raising children in today’s fast-paced world, and the joys that make the journey worthwhile. Offering candid reflections and practical wisdom, Ragendu provides a heartfelt and  thought-provoking glimpse into the realities of modern parenting.
 
-          </p>
+    <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              Honestly, I think motherhood made me realize that it’s probably the best qualification I have! 
+              </q>{" "}
+              – <strong>Ragendu K R</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/ragenduArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+              Preetha Athrey, a seasoned marketing expert turned content creator,
+              recently joined Devika Majumder, co-founder of Global Influencers Hub,
+              for an engaging conversation. From her illustrious career in marketing,
+              including her tenure as CMO of Twitter APAC, to her journey into the
+              world of culinary storytelling, Preetha’s transition is nothing short of
+              inspiring. Her platform, <strong>Easy Eats with Preetha</strong>, has
+              gained remarkable traction, offering quick, nutritious, and delicious
+              recipes for busy professionals and families. Here’s an excerpt from
+              their conversation:
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/ragenduArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+    <Container className="my-5">
        
           <p>
             <strong>Devika Majumder:</strong> Hi, Ragendu! This is Devika,
@@ -279,7 +350,36 @@ In this exclusive interview, Devika Majumder, co-founder of Global Influencer Hu
             <p><strong>Devika:</strong> That’s so true. A well-balanced parent is a better parent.</p>
             <p><strong>Ragendu:</strong> Exactly. And I believe that proper planning helps. If you plan your day ahead, it makes things easier. I am someone who needs to plan my day right from the moment I wake up. If I don’t, I feel lost!</p>
             <p><strong>Devika:</strong> Of course! A little structure goes a long way.</p>
-            <p><strong>Ragendu:</strong> Absolutely. Planning gives me a sense of control and allows me to manage my time efficiently.</p>
+           
+           
+            <div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Ragendu:</strong> Absolutely. Planning gives me a sense of control and allows me to manage my time efficiently.
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/ragenduArticle2.jpg" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+           
+           
+           
+           
+           
             <p><strong>Devika:</strong> Right. I think the concept of self-care and motherhood is finally getting the attention it deserves. For instance, my mom wasn’t very familiar with the idea of taking time for herself. It just wasn’t something that was emphasized back then. But now, I feel it’s crucial that we show our kids the importance of self-care—it’s something they need to understand for their own well-being.</p>
             <p><strong>Ragendu:</strong> Absolutely. It’s incredibly important. More than we realize.</p>
             <p><strong>Devika:</strong> Right? And children are always watching us, even when it seems like they’re not paying attention. They absorb everything.</p>
@@ -359,6 +459,57 @@ In this exclusive interview, Devika Majumder, co-founder of Global Influencer Hu
               <p><strong>Ragendu:</strong> Haha, exactly!</p>
               <p><strong>Devika:</strong> Fabulous! Now, let’s talk about your morning routine with the kids. Chaos or calm?</p>
               <p><strong>Ragendu:</strong> It totally depends on my mood. If I wake up calm, the morning is calm. But if I wake up cranky, then everything turns into chaos!</p>
+             
+             
+              <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Ragendu
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/ragenduRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
               <p><strong>Devika:</strong> Time for some rapid-fire questions! Ready?</p>
               <p><strong>Ragendu:</strong> Absolutely!</p>
               <p><strong>Devika:</strong> Diapers or bedtime stories?</p>
@@ -428,11 +579,11 @@ In this exclusive interview, Devika Majumder, co-founder of Global Influencer Hu
 
             <p><strong>Devika:</strong> Thank you so much, Ragendu! It was truly wonderful speaking with you. Wishing you all the best!</p>
             <p><strong>Ragendu:</strong> Thank you!</p>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
     </Container>
+            
+            </Card.Body>
+         
+    </>
   );
 };
 

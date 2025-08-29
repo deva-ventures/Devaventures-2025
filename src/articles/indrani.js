@@ -1,39 +1,85 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card,Image } from "react-bootstrap";
 
 const Indrani = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+      
             <Card.Body>
-              <h2 className="text-center mb-4">Indrani Ghose: Capturing Cultures, One Journey at a Time</h2>
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              I believe every traveller should make it a point to interact with the locals. That’s when you truly start to understand a place—its rhythm, its culture, its soul.
+              </q>{" "}
+              – <strong> Indrani Ghose</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/indraniArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            Indrani Ghose is more than a travel blogger—she is a cultural chronicler, a storyteller of the soul, and a quiet revolutionary in the world of digital exploration. With a lens that sees beyond the ordinary and a pen that weaves experience into emotion, Indrani has transformed her love for travel into a meaningful mosaic of human stories, landscapes, and lived moments. Whether she’s wandering the cobbled streets of Europe, engaging with artisans in India, or sharing glimpses of daily life through her iconic “Faces of India” series, her work is rooted in authenticity and heart.
+
+In this exclusive conversation, Devika Majumder, Co-founder of Global Influencer Hub, sits down with Indrani to trace the contours of a life shaped by passion, purpose, and an insatiable curiosity. From her early beginnings on Blogspot to being recognized as one of India’s most respected travel voices, Indrani shares how she navigated motherhood, creativity, and a shifting digital landscape—all on her own terms. With grace, wit, and warmth, she opens up about the joys and challenges of her journey, offering readers an intimate look into a world where travel is not just a destination but a deeply personal calling.
+         </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/indraniArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
              
-              <p>
-        Indrani Ghose is more than a travel blogger—she is a cultural chronicler,
-        a storyteller of the soul, and a quiet revolutionary in the world of
-        digital exploration. With a lens that sees beyond the ordinary and a pen
-        that weaves experience into emotion, Indrani has transformed her love for
-        travel into a meaningful mosaic of human stories, landscapes, and lived
-        moments. Whether she’s wandering the cobbled streets of Europe, engaging
-        with artisans in India, or sharing glimpses of daily life through her
-        iconic “Faces of India” series, her work is rooted in authenticity and
-        heart.
-      </p>
-
-      <p>
-        In this exclusive conversation, Devika Majumder, Co-founder of Global
-        Influencer Hub, sits down with Indrani to trace the contours of a life
-        shaped by passion, purpose, and an insatiable curiosity. From her early
-        beginnings on Blogspot to being recognized as one of India’s most
-        respected travel voices, Indrani shares how she navigated motherhood,
-        creativity, and a shifting digital landscape—all on her own terms. With
-        grace, wit, and warmth, she opens up about the joys and challenges of her
-        journey, offering readers an intimate look into a world where travel is
-        not just a destination but a deeply personal calling.
-      </p>
-
+    <Container className="my-5">
+           
       <p>
         <strong>Devika Majumder:</strong> Welcome, Indrani, to the Global
         Influencers Hub. This is where we delve into the inspiring journeys of
@@ -301,6 +347,66 @@ const Indrani = () => {
           <p><strong>Indrani:</strong> It’s full of layers and layers of history. There’s so much to see and absorb. We were there for four days, and I still felt like it wasn’t enough. I keep thinking—I wish I could revisit and just stay longer...</p>
           <p><strong>Devika:</strong> Yeah, true. Now how do you hope to inspire your followers through your travel journey? Is there a particular feeling you want to evoke or a message you hope they take with them?</p>
           <p><strong>Indrani:</strong> That’s a good question. I’m not always sure how much I inspire people, honestly. But I do feel that when I visit new places—like my recent trip to Japan—that maybe people find something helpful or inspiring in what I share. I’ve been vlogging a lot about that trip. So let’s say someone’s planning a trip but can only go for five days, while I went for eighteen. I try to curate my experience—rank the highlights, list the top spots—and that way, maybe it helps them plan their own journey more efficiently. They might think, Okay, out of everything she shared, I’ll choose these three places and really make the most of my trip. If what I post helps someone feel more confident about their own travel or discover a place they hadn’t considered before, then yes—I’d be happy to know it inspired them in that way.</p>
+       
+       
+       
+          <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Harish
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/indraniArticleVideo.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
           <p><strong>Devika:</strong> Wonderful. That’s such a practical and thoughtful approach—guiding through experience. Okay, some quick rapid-fire for you! Beach or mountains?</p>
           <p><strong>Indrani:</strong> Mountains.</p>
           <p><strong>Devika:</strong> Solo travel or group adventures?</p>
@@ -473,12 +579,10 @@ const Indrani = () => {
             
             
             
-            
+            </Container>
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+          
+    </>
   );
 };
 

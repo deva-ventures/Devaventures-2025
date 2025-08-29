@@ -1,18 +1,93 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card,Image } from 'react-bootstrap';
 
 const Devan = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+     
             <Card.Body>
-          <h1 className="text-center mb-4">Devan Rajkumar: The Maverick Chef Stirring Up Cultures, Community, and Conscious Cuisine</h1>
-          <p className="lead text-center mb-5">
-          Devan Rajkumar, better known to many as Chef Devan, is a celebrated culinary artist whose charisma in the kitchen is matched only by his humility and heart. In a candid and compelling conversation with Devika Majumder, Co-founder of Global Influencers Hub, the internationally known chef, consultant, and author of Mad Love Cookbook opened up about his journey—from building a loyal community of food lovers to being recognized around the globe.
-With roots in Guyanese tradition and a career shaped by global kitchens, Devan has become one of Canada's most recognizable food personalities—effortlessly blending flavor with feeling. From fan moments that brought tears to his eyes to spontaneous recognitions in places as far as The Netherlands, Devan opened up about the passion that fuels his kitchen, the spiritual journey that shaped his values, and the life mantra that keeps him grounded. Known for his humility, fierce creativity, and spiritual grounding, Devan’s story is a celebration of self-discovery, service, and staying grounded amidst the spotlight.
-         </p>
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              True humility is not thinking less of yourself, it's thinking of yourself less.
+              </q>{" "}
+              – <strong>Devan Rajkumar</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/devanArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            Devan Rajkumar, better known to many as Chef Devan, is a celebrated culinary artist whose
+charisma in the kitchen is matched only by his humility and heart. In a candid and compelling
+conversation with Devika Majumder, Co-founder of Global Influencers Hub, the internationally
+known chef, consultant, and author of Mad Love Cookbook opened up about his journey—from
+building a loyal community of food lovers to being recognized around the globe.
+With roots in Guyanese tradition and a career shaped by global kitchens, Devan has become
+one of Canada’s most recognizable food personalities—effortlessly blending flavor with feeling.
+From fan moments that brought tears to his eyes to spontaneous recognitions in places as far
+as The Netherlands, Devan opened up about the passion that fuels his kitchen, the spiritual
+journey that shaped his values, and the life mantra that keeps him grounded. Known for his
+humility, fierce creativity, and spiritual grounding, Devan’s story is a celebration of self-discovery,
+service, and staying grounded amidst the spotlight.
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/devanArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+
+    <Container className="my-5">
        
           
          <p>
@@ -330,14 +405,42 @@ With roots in Guyanese tradition and a career shaped by global kitchens, Devan h
                 <strong>Devika:</strong> Fabulous! So, what has been your life
                 mantra?
               </p>
-              <p>
-                <strong>Devan:</strong> My mantra ties back to ego and humility.
+              <div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Devan:</strong> My mantra ties back to ego and humility.
                 There’s this line I always repeat to myself: True humility is
                 not thinking less of yourself, it’s thinking of yourself less.
                 That’s what I live by. I even have the word "Seva" tattooed on
                 me. It all connects—doing for others without seeking praise or
                 recognition.
-              </p>
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/devanArticle2.jpg" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+
+
+
+
+
+
+
+             
               <p>
                 Thinking less about myself allows me to think more about others.
                 That doesn’t mean I don’t take care of myself—it’s like putting
@@ -450,6 +553,55 @@ With roots in Guyanese tradition and a career shaped by global kitchens, Devan h
                 the reach of what we do can really go.
               </p>
 
+              <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Devan
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/devanRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
               <p>
                 <strong>Devika:</strong> That’s amazing! Now let’s switch it up
                 a little with a quick rapid fire?
@@ -579,12 +731,11 @@ With roots in Guyanese tradition and a career shaped by global kitchens, Devan h
            
            
            
+    </Container>
            
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+         
+    </>
   );
 };
 

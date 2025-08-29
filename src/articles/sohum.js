@@ -1,21 +1,86 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card ,Image} from "react-bootstrap";
 
 const Sohum = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+     
             <Card.Body>
-              <h2 className="text-center mb-4">Unspoken Rhythms: Sohum Deb’s Journey Through Art and Identity</h2>
-              
-              <p>
-              In a world that often struggles to embrace individuality, Sohum Deb has learned to dance through its noise with grace, expression, and unapologetic authenticity. A self-taught dancer, a corporate professional, and a passionate creator, Sohum recently joined Devika Majumder, co-founder of Global Influencers Hub, for a deeply moving and spirited conversation.
-His journey is not just about choreography—it’s about courage. From navigating societal expectations to finding freedom in movement, Sohum’s story is a beautiful ode to self-expression and the quiet rebellion of following one’s art. With every reel, every expression, and every story he shares, he invites others to own their truth and move fearlessly in a world that rarely understands softness as strength.
-In this heartfelt exchange, Sohum opens up about his inspirations, inner battles, and the power of purpose-driven creativity. Here’s a glimpse into a conversation that moves far beyond dance.
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              If you’re doing something that’s not wrong, not hurting anyone, not disrespecting your family or surroundings, then go ahead and do it.
+              </q>{" "}
+              – <strong>Sohum Deb</strong>
+            </p>
+          {/* </Col> */}
 
-              </p>
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/sohumArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            In a world that often struggles to embrace individuality, Sohum Deb has learned to dance through its noise with grace, expression, and unapologetic authenticity. A self-taught dancer, a corporate professional, and a passionate creator, Sohum recently joined Devika Majumder, co-founder of Global Influencers Hub, for a deeply moving and spirited conversation.
+
+His journey is not just about choreography—it’s about courage. From navigating societal expectations to finding freedom in movement, Sohum’s story is a beautiful ode to self-expression and the quiet rebellion of following one’s art. With every reel, every expression, and every story he shares, he invites others to own their truth and move fearlessly in a world that rarely understands softness as strength.
+
+In this heartfelt exchange, Sohum opens up about his inspirations, inner battles, and the power of purpose-driven creativity. Here’s a glimpse into a conversation that moves far beyond dance.
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/sohumArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+    <Container className="my-5">
+              
 
               <p>
     <strong>Devika Majumder:</strong> Hi, Sohum. Welcome to Global Influencer Hub.
@@ -171,9 +236,38 @@ In this heartfelt exchange, Sohum opens up about his inspirations, inner battles
 <p>
   <strong>Devika:</strong> That’s so beautiful. So, after watching <em>Devdas</em>, did that lead you to pursue Kathak or classical dance?
 </p>
-<p>
-  <strong>Sohum:</strong> Yes, absolutely. By then, we had better access to the internet, and I started searching for Kathak, expressions, and <em>Abhinaya</em>. But back then, the available resources weren’t as helpful as I hoped. Still, Madhuri’s influence was undeniable. Many people ask me, “As a Kathak enthusiast, why do you look up to Madhuri? There are so many better classical dancers out there.” But for me, she was the one who inspired me to take this seriously.
-</p>
+
+<div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Sohum:</strong> Yes, absolutely. By then, we had better access to the internet, and I started searching for Kathak, expressions, and <em>Abhinaya</em>. But back then, the available resources weren’t as helpful as I hoped. Still, Madhuri’s influence was undeniable. Many people ask me, “As a Kathak enthusiast, why do you look up to Madhuri? There are so many better classical dancers out there.” But for me, she was the one who inspired me to take this seriously.
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/sohumArticle2.jpg" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+
+
+
+
+
+
+
+
 <p>
   <strong>Devika:</strong> It’s fascinating how someone from Bollywood had such a profound impact on your classical dance journey.
 </p>
@@ -514,6 +608,60 @@ And it’s not just the logistics. There’s the creative side too. You have to 
       <p>
         <strong>Sohum:</strong> Something no one told me, but I discovered on my own—if you’re doing something that’s not wrong, not hurting anyone, not disrespecting your family or surroundings, then go ahead and do it. If it’s a passion gifted by God, channel it. Otherwise, you’re not just disrespecting yourself, but also the gift you've been given.
       </p>
+
+
+
+      <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Sohum
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/sohumArticleVideo.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
       <p>
         <strong>Devika:</strong> Perfect. I love that. Let's jump into some rapid fire. What’s the first thing you do when you wake up?
       </p>
@@ -650,12 +798,11 @@ And it’s not just the logistics. There’s the creative side too. You have to 
         <strong>Sohum:</strong> Thank you, Bye!
       </p>
 </>
+</Container>
 
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+         
+    </>
   );
 };
 

@@ -1,19 +1,82 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card,Image } from 'react-bootstrap';
 
 const Raj = () => {
   return (
+    <>
+      <Card.Body>
+      <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              The key is consistency and dedication. My advice? Don’t quit your day job too soon. Keep doing what pays the bills while you pursue your dreams
+              </q>{" "}
+              – <strong> Raj Sharma</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/rajArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            Raj Sharma, the internationally acclaimed stand-up comedian known for blending cultural nuance with uproarious humor, recently joined Devika Majumder, Co-founder of Global Influencers Hub, for a laugh-out-loud yet deeply insightful conversation. From sharing the kind of stories that make you laugh till you cry to reflecting on the beauty of making people feel seen through comedy, Raj brings not just jokes but a genuine connection to every performance. With sold-out shows across continents and collaborations with the best in the business, Raj’s journey is one of grit, grace, and giggles. In this special interaction, he opens up about falling (both literally and into laughter), the timeless joy of family humor, and why comedy might just be the purest form of human connection.
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/rajArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+
     <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
-            <Card.Body>
-          <h1 className="text-center mb-4">Raj Sharma: The Global Comedian with a Desi Heart and a Universal Punchline</h1>
-          <p className="lead text-center mb-5">
-          Raj Sharma, the internationally acclaimed stand-up comedian known for blending cultural nuance with uproarious humor, recently joined Devika Majumder, Co-founder of Global Influencers Hub, for a laugh-out-loud yet deeply insightful conversation. From sharing the kind of stories that make you laugh till you cry to reflecting on the beauty of making people feel seen through comedy, Raj brings not just jokes but a genuine connection to every performance. With sold-out shows across continents and collaborations with the best in the business, Raj’s journey is one of grit, grace, and giggles. In this special interaction, he opens up about falling (both literally and into laughter), the timeless joy of family humor, and why comedy might just be the purest form of human connection.
-
-
-          </p>
+        
        
           
           <p><strong>Devika Majumder:</strong> Welcome to Global Influencers Hub, Raj! It’s so great to have you here today. Let’s start by diving into your childhood. Can you share a bit about your early years?</p>
@@ -94,6 +157,54 @@ const Raj = () => {
             <p><strong>Devika:</strong> (laughing) Oh, I’ve got to hear this joke about the nuns now! Can you give us a hint?</p>
             <p><strong>Raj:</strong> Oh, definitely. If you ever message me about it, I’ll send you the full version. Just know it’s... very spicy! (laughs) You’ll be shocked when you hear it, trust me. My mom was a small, five-foot-three Punjabi nurse, and this joke... Well, let’s just say it was her favorite, and I have no idea how she found it so funny.</p>
 
+            <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Raj
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/rajArticleVideo.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+         
+         
+         
+         
+         
+         
+         
+         
+         
             <p><strong>Devika:</strong> (laughs) That sounds like a treasure trove of comedy! Let’s switch gears a bit—let’s go for a rapid-fire round. Ready?</p>
             <p><strong>Raj:</strong> Bring it on!</p>
             <p><strong>Devika:</strong> First joke you ever cracked?</p>
@@ -220,12 +331,11 @@ const Raj = () => {
            
            
            
+    </Container>
            
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+         
+    </>
   );
 };
 

@@ -1,20 +1,86 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card,Image } from "react-bootstrap";
 
 const Jitender = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+      
             <Card.Body>
-              <h2 className="text-center mb-4">"Wrestling with Destiny: The Grit, Glory, and Guts of Jitender Kumar"</h2>
-             
-              <p>
-              Jitender Kumar is not just a wrestler, he is a warrior forged in sweat, sacrifice, and silent resilience. Raised in a modest village in Haryana, Jitender’s journey from dusty akharas to national pride is a testimony to unwavering grit and unbreakable dreams. With every bout, he doesn’t just wrestle an opponent; he wrestles doubt, pain, and the weight of expectations—emerging stronger, wiser, and more grounded. His story is not just about medals and matches; it’s about mentorship, mental fortitude, and a relentless pursuit of excellence.
-In this exclusive conversation, Devika Majumder, Co-founder of Global Influencer Hub, sits down with Jitendra to trace the arc of a life built through discipline, dedication, and the deep values of Indian wrestling. From surviving harsh training days and dietary discipline to navigating social media and planning for the Olympics, Jitender shares the behind-the-scenes truth of what it takes to live and breathe this ancient sport. With honesty, humility, and heart, he opens up about his struggles, his inspirations, and his belief that wrestling is not just a professionbut a way of life.
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              In wrestling, fitness and nutrition are everything. Without them, no matter how talented you are, you won’t survive in serious matches.
+              </q>{" "}
+              – <strong>Jitender Kumar</strong>
+            </p>
+          {/* </Col> */}
 
-              </p>
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/jitenderArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            Jitender Kumar is not just a wrestler, he is a warrior forged in sweat, sacrifice, and silent resilience. Raised in a modest village in Haryana, Jitender’s journey from dusty akharas to national pride is a testimony to unwavering grit and unbreakable dreams. With every bout, he doesn’t just wrestle an opponent; he wrestles doubt, pain, and the weight of expectations—emerging stronger, wiser, and more grounded. His story is not just about medals and matches; it’s about mentorship, mental fortitude, and a relentless pursuit of excellence.
+
+In this exclusive conversation, Devika Majumder, Co-founder of Global Influencer Hub, sits down with Jitendra to trace the arc of a life built through discipline, dedication, and the deep values of Indian wrestling. From surviving harsh training days and dietary discipline to navigating social media and planning for the Olympics, Jitender shares the behind-the-scenes truth of what it takes to live and breathe this ancient sport. With honesty, humility, and heart, he opens up about his struggles, his inspirations, and his belief that wrestling is not just a professionbut a way of life.
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/jitenderArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+
+
+    <Container className="my-5">
+             
 
               <p><strong>Devika Majumder:</strong> Welcome, Jitender, to the Global Influencer Hub. This is where we delve into the inspiring journeys of people whose grit and passion shape their paths. It’s a space where real stories come alive—raw, honest, and deeply human. We’re thrilled to have you with us today. Let’s dive in! I’d love to start by learning a bit about your early life. How did it all begin for you?</p>
 
@@ -80,7 +146,32 @@ In this exclusive conversation, Devika Majumder, Co-founder of Global Influencer
       <p><strong>Jitender:</strong> Exactly. They even tell my father, “Because of you, our kids have direction. Even if they don’t study, at least they have wrestling. It keeps them away from bad habits, and their health improves too.” That’s how it all started. Slowly, one step at a time. Eventually, I made it to the international level.</p>
 
 <p><strong>Devika:</strong> So tell me, Jitendra—which was your first international match?</p>
-<p><strong>Jitender:</strong> My first major international match was at the Asian Wrestling Championship. I was just 15 years old, competing at the senior level.</p>
+
+
+
+<div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Jitender:</strong> My first major international match was at the Asian Wrestling Championship. I was just 15 years old, competing at the senior level.
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/jitenderArticle2.jpg" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
 
 <p><strong>Devika:</strong> That’s incredible! At such a young age! How did that come about? What was the preparation like?</p>
 <p><strong>Jitender:</strong> Honestly, it felt like the level had suddenly gone up. I kept wondering whether I’d face wrestlers like myself—or competitors who were faster, stronger, and more experienced. I thought, “Yeh toh mere se nahoga,” meaning, it would be next-level tough—and it was. The competition was intense. But I pushed through all the way to the semi-finals.</p>
@@ -122,6 +213,54 @@ In this exclusive conversation, Devika Majumder, Co-founder of Global Influencer
 <p><strong>Devika:</strong> That’s awesome. And now, through Instagram, you’re directly connecting with fans who look up to you. Has that interaction been meaningful?</p>
 <p><strong>Jitender:</strong> It has. When I get time—usually on Wednesdays or Sundays—I take a break from the regular training and engage a bit online. Sometimes I go live, or I share training insights. But just like recovery in wrestling, mental refreshment is also important—whether it's steam, massage, or just a chat with fans. It helps me stay connected and balanced.</p>
 
+
+
+<div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Jitender
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/jitenderArticleVideo.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+
+
+
+
+
+
 <p><strong>Devika:</strong> Okay, wonderful! Now let’s switch gears a little—with a rapid fire round. But before we get into that, tell me—what’s your next big goal?</p>
 <p><strong>Jitender:</strong> Right now, my target is the Olympics.</p>
 
@@ -159,12 +298,11 @@ In this exclusive conversation, Devika Majumder, Co-founder of Global Influencer
       <p><strong>Jitender:</strong> Yes, it was. But wrestling, like life, is unpredictable. There are wins and losses, fair and unfair moments—but we move forward. It’s all part of the game.</p>
       <p><strong>Devika:</strong> Absolutely. Jitendra, it was such a pleasure talking to you today. Your story is filled with grit, heart, and inspiration. Thank you so much for sharing it with us—and all the best for the Olympics!</p>
       <p><strong>Jitender:</strong> Thank you! It was wonderful speaking with you.</p> 
+    </Container>
            
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+         
+    </>
   );
 };
 

@@ -1,19 +1,84 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card,Image } from "react-bootstrap";
 
 const Sinchu = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+     
             <Card.Body>
-              <h2 className="text-center mb-4">Small-Town Soul, Global Impact: How Sinchu Raju Turned Setbacks into a Digital Empire</h2>
-             
-              <p>
-              She didn’t start loud, but she started strong. From a quiet childhood in a small Kerala village to becoming a TEDx speaker, bestselling author, and founder of ChilliPixel, Sinchu Raju’s journey is all heart and hustle. In this electrifying conversation with Devika Majumder,Co-founder of Global Influencers Hub, Sinchu opens up about overcoming fear, juggling motherhood with boardroom dreams, and how being laid off became her launchpad. Her story isn’t just about making it big—it’s about making it matter. If you've ever doubted your timing, talent, or trajectory, this one’s for you.
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              What I’ve learned through my journey is this: be consistent. Whether you're a man or a woman, that doesn’t matter. If you're consistent, clear about why you're doing what you do, and stay passionate, success will come.
+              </q>{" "}
+              – <strong>Sinchu Raju</strong>
+            </p>
+          {/* </Col> */}
 
-              </p>
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/sinchuArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            She didn’t start loud, but she started strong. From a quiet childhood in a small Kerala village to becoming a TEDx speaker, bestselling author, and founder of ChilliPixel, Sinchu Raju’s journey is all heart and hustle. In this electrifying conversation with Devika Majumder,Co-founder of Global Influencers Hub, Sinchu opens up about overcoming fear, juggling motherhood with boardroom dreams, and how being laid off became her launchpad. Her story isn’t just about making it big—it’s about making it matter. If you’ve ever doubted your timing, talent, or trajectory, this one’s for you.
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/sinchuArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+
+    <Container className="my-5">
+
+            
 
               <p><strong>Devika:</strong> Hi Sinchu, welcome to Global Influencers Hub! Here, we explore the life journeys of social media changemakers—and we can't wait to dive into yours. And when I say dive, I mean starting right from your childhood. So, tell us—what were you like as a kid?</p>
 
@@ -567,6 +632,54 @@ I’ve drawn a lot of this from my time at Michelin. It’s a 200+ year-old comp
               <p><strong>Devika:</strong> That’s exciting! Congratulations!</p>
               <p><strong>Sinchu:</strong> Thank you.</p>
 
+              <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Sinchu
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/sinchuRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+
+
+
+
+
+
+
+
               <p><strong>Devika:</strong> Fantastic! Now, a little rapid fire.</p>
               <p><strong>Sinchu:</strong> Sure.</p>
               <p><strong>Devika:</strong> First thing you do when you wake up?</p>
@@ -821,11 +934,11 @@ I’ve drawn a lot of this from my time at Michelin. It’s a 200+ year-old comp
             <p>
               <strong>Devika:</strong> Bye-bye!
             </p>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
     </Container>
+
+            </Card.Body>
+        
+    </>
   );
 };
 

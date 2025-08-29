@@ -1,13 +1,81 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card ,Image} from "react-bootstrap";
 
 const Sucheta = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+      
             <Card.Body>
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              Every swim I do, every day I'm in the water, every stroke, every breath—they’re all memorable because it’s every second of my life
+              </q>{" "}
+              – <strong>Sucheta Deb Burman</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/suchetaArticle.webp" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            Sucheta Deb Burman, an accomplished open water swimmer and advocate for environmental sustainability, recently shared her remarkable journey in a candid conversation. From her childhood in Bangalore, where swimming became a way of life under the guidance of her father, to her transition from the corporate world back into the competitive swimming arena, Sucheta’s story is one of passion, perseverance, and purpose. During her conversation with Devika Majumder, co-founder of Global Influencers Hub. she reflects on the challenges she’s overcome, the mental fortitude required for her sport, and the significant role her foundation plays in preserving open waters. Here’s a glimpse into their engaging conversation.
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/suchetaArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+    <Container className="my-5">
       
               
               <p>
@@ -27,6 +95,18 @@ ________________________________________
             <p><strong>Sucheta:</strong> Honestly, I’ve always been drawn to water. The pool I used to swim in, which is called the Swimming Pool in Bangalore, is 75 years old this year! It’s right by a lake, and we would go there in the evenings, witnessing the sunset, just enjoying the beauty of it. Those moments—being in the water, pushing myself as a child—instilled so much in me, like discipline, hard work, and sportsmanship. I wake up at 4 a.m. every day, ready to go to the pool because that discipline is ingrained in me.</p>
 
             <p><strong>Devika:</strong> It’s amazing how that discipline shapes you for life. Were there any moments of fear or hesitation along the way? And if so, how did you overcome them?</p>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             <p><strong>Sucheta:</strong> The biggest fear I’ve had to overcome is swimming in the dark. It’s a process, and I’m still working on it. I’ve only done four swims so far in the dark, but each time, I feel myself overcoming the fear a little more. It's something I’m still facing, but I know I’ll conquer it eventually.</p>
 
             <p><strong>Devika:</strong> It’s inspiring that you’re facing that fear head-on. Now, let’s talk about your foundation, the Open Water Swimmers Foundation. Can you tell us more about it?</p>
@@ -60,7 +140,37 @@ ________________________________________
             <p><strong>Sucheta:</strong> Oh, it has been humbling. We are so minuscule—just tiny specks in the vastness of the sea, the universe. When you’re out there in the water, you realize how small you are. It’s mind-boggling. But it also teaches you appreciation, humility, and gratitude. There’s so much life around you, so much to learn and look forward to. It’s like a sudden epiphany, a realization of things you never thought you’d understand. The vastness of the water puts everything into perspective.</p>
 
             <p><strong>Devika:</strong> That sounds profound. What would your advice be to someone pursuing a similar path?</p>
-            <p><strong>Sucheta:</strong> Be a better person every day. Whether it’s your swimming technique or your mindset, keep improving. Always keep an open mind. If you’re seeking a coach, there’s a reason they’re the coach and you’re the student. Respect their experience and ask questions. Asking questions is so important, and no question is ever a dumb question. It takes courage to ask, and it’s how you grow.</p>
+            
+            <div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Sucheta:</strong> Be a better person every day. Whether it’s your swimming technique or your mindset, keep improving. Always keep an open mind. If you’re seeking a coach, there’s a reason they’re the coach and you’re the student. Respect their experience and ask questions. Asking questions is so important, and no question is ever a dumb question. It takes courage to ask, and it’s how you grow
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/suchetaArticle2.jpg" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+
+            
+            
+            
+            
+            
+           
 
             <p><strong>Devika:</strong> How do you stay calm and composed in the vastness of the water? Is there a mind trick to it?</p>
             <p><strong>Sucheta:</strong> (laughs) Oh, no, no tricks. I have my moments of anger too. Sometimes I’m out there thinking, “What am I doing?” It can get monotonous and lonely, and your mind starts wandering—to conversations you’ve had, things you should have said. But then you’re reminded of the peaceful moments, the fun nights, the lovely meals. The water gives you so much time to introspect. It’s a range of emotions—anger, joy, reflection. It’s quite therapeutic and meditative.</p>
@@ -109,6 +219,51 @@ ________________________________________
 
             <p><strong>Devika:</strong> That’s a powerful message. Do you celebrate after reaching a big goal?</p>
             <p><strong>Sucheta:</strong> Not really. After a swim, I’m literally crawling to find a bed. I need fresh water, a shower, and a place to crash. Recovery takes time, especially after the energy gels and electrolytes. So, celebration can wait—I just need rest.</p>
+            <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Sucheta
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/suchetaRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+
+
+
+
+
 
             <p><strong>Devika:</strong> A quick round of rapid-fire now! Swim with sharks or swim in freezing water?</p>
             <p><strong>Sucheta:</strong> Freezing water, any day! I can train for it.</p>
@@ -140,12 +295,11 @@ ________________________________________
             <p><strong>Devika:</strong> (laughs) They’re the real heroes behind the scenes!</p>
             <p><strong>Sucheta:</strong> (laughs) Absolutely. Bye-bye!</p>
             <p><strong>Devika:</strong> Bye-bye! Take care!</p>
+            </Container>
 
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+         
+    </>
   );
 };
 

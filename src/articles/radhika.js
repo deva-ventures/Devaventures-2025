@@ -1,26 +1,85 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card,Image } from "react-bootstrap";
 
 const Radhika = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+      
             <Card.Body>
-              <h2 className="text-center mb-4">From Curing Ailments to Curating Cravings: The Sizzling Journey of Dr. Radhika Priyan Garg, a.k.a. TikhiMirchi</h2>
-             
-              <p>
-              From prescribing remedies to reviewing ramen, Dr. Radhika Priyan Garg's journey is as spicy and surprising as her Instagram persona, TikhiMirchi, promises. A homeopathic physician by profession and a fiery food and lifestyle influencer by passion, she seamlessly blends science with spice, tradition with trend. In a world quick to label and limit, Dr. Radhika is proof that you don’t have to choose between purpose and personality—you can have both, and serve them hot.
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              People say—“You advise patients to avoid cheese and fried food, but look at your plate!” But what I’ve always said is—moderation is key.
+              </q>{" "}
+              – <strong>Radhika Agarwal</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/radhikaArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            From prescribing remedies to reviewing ramen, Dr. Radhika Priyan Garg’s journey is as spicy and surprising as her Instagram persona, TikhiMirchi, promises. A homeopathic physician by profession and a fiery food and lifestyle influencer by passion, she seamlessly blends science with spice, tradition with trend. In a world quick to label and limit, Dr. Radhika is proof that you don’t have to choose between purpose and personality—you can have both, and serve them hot.
+
 In this lively and candid conversation with DevikaMajumder, Co-founder of Global Influencers Hub, Dr. Radhika opens up about living her dual life, the story behind her bold digital identity, and the moment she fell in love with wood-fired pizzas in Naples.
-             </p>
-             <p>
-                <strong>Devika Majumder:</strong> Hi Radhika! Welcome to Global
-                Influencers Hub. Here, we dive into the lives and journeys of
-                social media influencers—and I have to say, yours is such an
-                interesting one. A doctor, a foodie, and the face behind
-                TikhiMirchi! I can’t wait to hear all about how it started.
-              </p>
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/radhikaArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+    <Container className="my-5">
+
+             
 
               <p>
                 <strong>Dr. Radhika Agarwal:</strong> Hi Devika! Thank you
@@ -378,10 +437,40 @@ In this lively and candid conversation with DevikaMajumder, Co-founder of Global
                 could give one piece of advice to your younger self, what would that
                 be? And why?
               </p>
-              <p>
-                <strong>Radhika:</strong> I’d simply say—follow your heart. Don’t let
-                others influence you.
-              </p>
+
+              <div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Radhika:</strong>  I’d simply say—follow your heart. Don’t let
+              others influence you.
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/radhikaArticle2.jpg" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+
+
+
+
+
+
+
+
+            
               <p>
                 <strong>Devika:</strong> Yes. That resonates deeply. I think as we
                 grow older, we realize how important it is to stay true to ourselves.
@@ -479,6 +568,61 @@ In this lively and candid conversation with DevikaMajumder, Co-founder of Global
               <p><strong>Radhika:</strong> Absolutely! For photo editing, I swear by Lightroom and Snapseed. Both have great pre-built filters—perfect for enhancing food shots, like coffee or dessert. They help you maintain a clean, aesthetic feed.</p>
               <p><strong>Devika:</strong> I've heard great things about both!</p>
               <p><strong>Radhika:</strong> They’re super handy. Then for video content—especially Instagram Reels—I use InShot. It’s simple, user-friendly, and does the job well. Since I focus only on Instagram and not YouTube, these three apps are enough for me. But if you’re into long-form content or YouTube vlogs, you might need a broader set of tools.</p>
+             
+             
+             
+              <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Radhika
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/radhikaRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
               <p><strong>Devika:</strong> Alright, I’m going to jump straight into a rapid-fire round with you. Ready?</p>
               <p><strong>Radhika:</strong> Oh, okay!</p>
 
@@ -619,12 +763,11 @@ In this lively and candid conversation with DevikaMajumder, Co-founder of Global
             <p><strong>Devika:</strong> It was my pleasure. Take care, and all the best!</p>
             <p><strong>Radhika:</strong> Thank you for having me! Goodbye!</p>
 
+    </Container>
              
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+         
+    </>
   );
 };
 

@@ -1,17 +1,84 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card,Image } from 'react-bootstrap';
 
 const Sanjay = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+     
             <Card.Body>
-          <h1 className="text-center mb-4">Sanjay Barai: The Beloved Teacher-Turned-Creator Winning Hearts with Authenticity</h1>
-          <p className="lead text-center mb-5">
-          Sanjay Barai, a passionate teacher turned digital creator, has captured the hearts of many with his authentic and relatable content. In a candid conversation with Devika Majumder, co-founder of Global Influencers Hub, Sanjay shared his unexpected journey from a simple classroom to the world of content creation. Known for his down-to-earth personality and emotionally resonant storytelling, Sanjay’s content strikes a perfect balance between humor, honesty, and everyday moments. What began as a small passion project has now turned into a movement, with millions drawn to his raw, unfiltered approach to life. In this candid conversation, Sanjay shares his personal journey, the pivotal moments that shaped his path, and his unique perspective on life, work, and growth. Explore the essence of their enriching discussion:
-          </p>
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              you don’t need to be brilliant in studies, but you should know how to carry yourself.
+              </q>{" "}
+              – <strong>Sanjay Barai</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/sanjayArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            Sanjay Barai, a passionate teacher turned digital creator, has captured the hearts of many with his authentic and relatable content. In a candid conversation with Devika Majumder, co-founder of Global Influencers Hub, Sanjay shared his unexpected journey from a simple classroom to the world of content creation. Known for his down-to-earth personality and emotionally resonant storytelling, Sanjay’s content strikes a perfect balance between humor, honesty, and everyday moments. What began as a small passion project has now turned into a movement, with millions drawn to his raw, unfiltered approach to life. In this candid conversation, Sanjay shares his personal journey, the pivotal moments that shaped his path, and his unique perspective on life, work, and growth. Explore the essence of their enriching discussion:
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/sanjayArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+
+    <Container className="my-5">
+
+        
        
           <p>
             <strong>Devika Majumder:</strong> Hi Sanjay, welcome to Global Influencers Hub! We’re absolutely thrilled to have you here. This platform is all about exploring the journeys of social media influencers—how they began, how their paths evolved, and the lessons they’ve learned along the way. So let’s dive right into your story, and we’ll start from the very beginning—your childhood. Tell us, what were you like as a child?
@@ -344,6 +411,52 @@ const Sanjay = () => {
               <strong>Sanjay:</strong> Yes. Don’t dwell on what hasn’t happened.
               It’s a waste of time.
             </p>
+
+            <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Sanjay
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/sanjayArticleVideo.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+
+
+
+
+
             <p><strong>Devika:</strong> Love that. Okay—shall we dive into the rapid fire?</p>
             <p><strong>Sanjay:</strong> For the first time, someone’s asking me to do rapid fire! Usually I do this with my friends. [laughs]</p>
             <p><strong>Devika:</strong> Great! So first—if you were a superhero, what would your superpower be?</p>
@@ -400,11 +513,10 @@ const Sanjay = () => {
             <p><strong>Sanjay:</strong> Thank you, Devika.</p>
             <p><strong>Devika:</strong> Bye-bye!</p>
             <p><strong>Sanjay:</strong> Bye!</p>
+         </Container>
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+          
+    </>
   );
 };
 

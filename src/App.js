@@ -35,16 +35,6 @@ import Niranjan from './articles/niranjan';
 import Sucheta from './articles/sucheta';
 import Sadaf from './articles/sadaf';
 import Harish from './articles/harish';
-
-
-
-
-
-
-import MicroInfluencerArticle from "./articles/riseOfMicro";
-import InfluencerPowerMoves from "./articles/influencerPowerMoves";
-import HowInfluencersAreChanging from './articles/howInfluencersAreChanging';
-import BagYourFirstBigBrand from './articles/bagYourFirstBigBrand';
 import Devan from './articles/devan';
 import Preetha from './articles/preetha';
 import Aakash from './articles/aakash';
@@ -56,6 +46,17 @@ import Radhika from './articles/radhika';
 import Nishant from './articles/nishant';
 import Kshitij from './articles/Kshitij';
 import Sinchu from './articles/sinchu';
+import Pratul from './articles/pratul';
+
+
+
+
+
+import MicroInfluencerArticle from "./articles/riseOfMicro";
+import InfluencerPowerMoves from "./articles/influencerPowerMoves";
+import HowInfluencersAreChanging from './articles/howInfluencersAreChanging';
+import BagYourFirstBigBrand from './articles/bagYourFirstBigBrand';
+
 
 
 
@@ -107,6 +108,7 @@ function App() {
             <Route path="/articles/nishant" element={<Nishant/>} />
             <Route path="/articles/kshitij" element={<Kshitij/>} />
             <Route path="/articles/sinchu" element={<Sinchu/>} />
+            <Route path="/articles/pratul" element={<Pratul/>} />
 
 
 

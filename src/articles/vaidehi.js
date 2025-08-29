@@ -1,18 +1,84 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card,Image } from "react-bootstrap";
 
 const Vaidehi = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+     
             <Card.Body>
-              <h2 className="text-center mb-4">Vaidehi Rastogi: The Young Dance Sensation Taking the Stage by Storm</h2>
-             
-              <p>
-              Vaidehi Rastogi, a rising star in the world of dance, recently shared her inspiring journey in an engaging interview with DevikaMajumder, co-founder of Global Influencers Hub. At just 15 years old, Vaidehi has already made a name for herself, performing with Bollywood’s biggest celebrities and showcasing her unique fusion style of Bollywood and hip-hop. From her early dance classes to performing on grand stages, Vaidehi spoke about her passion, inspirations, and aspirations. Here’s a glimpse into their conversation:
-              </p>
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              Be disciplined and manage time well. Time is valuable!
+              </q>{" "}
+              – <strong>Vaidehi Rastogi</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/vaidehiArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            Vaidehi Rastogi, a rising star in the world of dance, recently shared her inspiring journey in an engaging interview with Devika Majumder, co-founder of Global Influencers Hub. At just 15 years old, Vaidehi has already made a name for herself, performing with Bollywood’s biggest celebrities and showcasing her unique fusion style of Bollywood and hip-hop. From her early dance classes to performing on grand stages, Vaidehi spoke about her passion, inspirations, and aspirations. Here’s a glimpse into their conversation:
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/vaidehiArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+
+
+    <Container className="my-5">
+              
 
               <p><strong>Devika Majumder:</strong> Vaidehi, welcome to Global Influencers Hub! It’s incredible that you’re just 15 years old. That’s actually my son’s age! You’re the youngest person I’m interviewing, which makes this really exciting.</p>
       <p><strong>Vaidehi Rastogi:</strong> Thank you so much! I’m really excited to be here.</p>
@@ -85,6 +151,54 @@ const Vaidehi = () => {
       <p><strong>Devika:</strong> How was that experience?</p>
       <p><strong>Vaidehi:</strong> It was amazing! I was around seven or eight years old when I trained. His wife, Soma Ma’am, used to come to a studio here and teach us the basics. I got blisters on my feet, and it was painful, but it was a wonderful experience.</p>
 
+      <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Vaidehi
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/vaidehiArticleVideo.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+
+
+
+
+
+
+
+
       <p><strong>Devika:</strong> That sounds incredible! Now, let’s do a quick rapid-fire round. If you could have any superpower, what would it be?</p>
       <p><strong>Vaidehi:</strong> Teleportation!</p>
 
@@ -140,12 +254,11 @@ const Vaidehi = () => {
 <p><strong>Vaidehi:</strong> Thank you! Bye!</p>
            
            
+    </Container>
            
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+          
+    </>
   );
 };
 

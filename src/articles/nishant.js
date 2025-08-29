@@ -1,19 +1,83 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card,Image } from "react-bootstrap";
 
 const Nishant = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+      
             <Card.Body>
-              <h2 className="text-center mb-4">Mastering Finance & Education: A Conversation with Nishant Kumar</h2>
-             
-              <p>
-              In the ever-evolving world of finance and education, Nishant Kumar has carved a unique path as a mentor, educator, and content creator. His journey—from being a studious child with a passion for music and theatre to becoming a full-time financial educator—reflects dedication, perseverance, and a keen understanding of the financial world. As the founder of Fintax by Nishant and an instructor at Adda247, he has been instrumental in guiding aspiring professionals toward financial literacy and success. In this engaging conversation with DevikaMajumder, co-founder of Global Influencers Hub, Nishant shares his story, insights, and philosophies that shape his work.
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              My mantra is simple—keep working, keep moving forward, and embrace what comes your way.
+              </q>{" "}
+              – <strong>Nishant Kumar</strong>
+            </p>
+          {/* </Col> */}
 
-              </p>
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/nishantArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            In the ever-evolving world of finance and education, Nishant Kumar has carved a unique path as a mentor, educator, and content creator. His journey—from being a studious child with a passion for music and theatre to becoming a full-time financial educator—reflects dedication, perseverance, and a keen understanding of the financial world. As the founder of Fintax by Nishant and an instructor at Adda247, he has been instrumental in guiding aspiring professionals toward financial literacy and success. In this engaging conversation with DevikaMajumder, co-founder of Global Influencers Hub, Nishant shares his story, insights, and philosophies that shape his work.
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/nishantArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+    <Container className="my-5">
+
+              
 
               <p>
                 <strong>Devika Majumder:</strong> Hi Nishant, welcome to Global
@@ -314,13 +378,46 @@ const Nishant = () => {
                   <strong>Devika:</strong> What advice would you give to young
                   people just starting their financial journey?
                 </p>
-                <p>
-                  <strong>Nishant:</strong> Start small but start early. Learn
+
+
+
+                <div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Nishant:</strong> Start small but start early. Learn
                   continuously, have a long-term vision, and set clear financial
                   goals. Your goal could be higher education, a Euro trip, or
                   even early retirement—define it and work towards it. Investing
                   in index funds is a great starting point.
-                </p>
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/nishantArticle2.jpg" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+
+
+
+
+
+
+
+
+
+               
 
                 <p>
                   <strong>Devika:</strong> What role do personal financial
@@ -441,8 +538,50 @@ const Nishant = () => {
                   markets. That level of trust was truly humbling.
                 </p>
 
-                {/* --- Rapid Fire Section --- */}
-                <h4 className="mt-5 mb-3 fw-bold text-center">Rapid Fire Round 🔥</h4>
+             
+
+
+                
+                <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Nishant
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/nishantRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
 
                 <p>
                   <strong>Devika:</strong> Now, let’s do a quick rapid-fire
@@ -539,11 +678,12 @@ const Nishant = () => {
               <p><strong>Nishant:</strong> Thank you.</p>
               <p><strong>Devika:</strong> Thank you for your time. I really hope this conversation makes a huge impact on people.</p>
               <p><strong>Nishant:</strong> Thank you, Devika. It was lovely talking to you!</p>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
+            
     </Container>
+            
+            </Card.Body>
+          
+    </>
   );
 };
 

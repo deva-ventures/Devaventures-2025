@@ -1,18 +1,85 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card,Image } from 'react-bootstrap';
 
 const Narender = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+      
+      
             <Card.Body>
-          <h1 className="text-center mb-4">Narender Singh Yadav: The Record-Breaking Mountaineer Who Rose Above Adversity</h1>
-          <p className="lead text-center mb-5">
-          Narender Singh Yadav, one of India's most inspiring mountaineers with an unshakable spirit and 22 world records to his name, joined Devika Majumder, Co-founder of Global Influencers Hub, for a powerful conversation about his extraordinary life. Known not just for conquering the world's tallest peaks but for weathering storms both on and off the mountain, Narender’s story is one of raw courage and unwavering determination. From discovering mountaineering as a young boy to creating world records and surviving personal and professional setbacks, Narender opened up about the incredible highs and devastating lows that have shaped his journey. Here's a glimpse into their conversation:
-          </p>
-       
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              I’d say—whatever field you choose, learn it from the roots
+              </q>{" "}
+              – <strong>Narender Singh Yadav</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/narenderArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            Narender Singh Yadav, one of India’s most inspiring mountaineers with an unshakable spirit and 22 world records to his name, joined Devika Majumder, Co-founder of Global Influencers Hub, for a powerful conversation about his extraordinary life. Known not just for conquering the world’s tallest peaks but for weathering storms both on and off the mountain, Narender’s story is one of raw courage and unwavering determination. From discovering mountaineering as a young boy to creating world records and surviving personal and professional setbacks, Narender opened up about the incredible highs and devastating lows that have shaped his journey. Here’s a glimpse into their conversation:
+
+ 
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/narenderArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+    <Container className="my-5">
+          
           <p>
             <strong>Devika Majumder:</strong> Welcome to Global Influencers Hub, Narender. Here we talk about the life journeys of social media influencers. So, we’ll go right into yours. Tell us how it all started from the very beginning—right from childhood. We want to know everything about you.
           </p>
@@ -249,6 +316,52 @@ const Narender = () => {
           <p><strong>Narender:</strong> Yes, ma’am, because I plan that carefully. For instance, if an expedition is scheduled for 15 days, I prepare for 20. I carry food for those extra days. Because in mountains, anything can happen—snowstorms, unpredictable weather. So I like to be prepared to avoid panic or unwanted situations. Those extra days can make all the difference.</p>
           <p><strong>Devika:</strong> Makes total sense. Now, if you weren’t a mountaineer and content creator, what would you be doing?</p>
           <p><strong>Narender:</strong> I would’ve been an army officer. I actually cleared the NDA exam and the interview as well.</p>
+        
+          <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Narender
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/narenderRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+        
+        
+        
+        
+        
           <p><strong>Devika:</strong> That’s amazing! Okay, let’s jump into a quick rapid-fire round. One item you never travel without?</p>
           <p><strong>Narender:</strong> Hanuman Chalisa.</p>
           <p><strong>Devika:</strong> Oh lovely! Window seat or aisle seat?</p>
@@ -265,11 +378,11 @@ const Narender = () => {
           <p><strong>Narender:</strong> India. Always.</p>
           <p><strong>Devika:</strong> Incredible. Thank you so much, Narender. I’d really love to stay in touch. You’ve been amazing and truly inspiring. Wishing you all the best!</p>
           <p><strong>Narender:</strong> Thank you, ma’am. Namaste.</p>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+          </Container>
+          
+           </Card.Body>
+          
+    </>
   );
 };
 

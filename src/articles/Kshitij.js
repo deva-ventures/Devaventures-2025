@@ -1,21 +1,86 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card,Image } from "react-bootstrap";
 
 const Kshitij = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+      
             <Card.Body>
-              <h2 className="text-center mb-4">Kshitij Sheetak: A Visionary Filmmaker Revolutionizing Creative Education.</h2>
-             
-              <p>
-              KshitijSheetak is a filmmaker, entrepreneur, and marketing expert who has transformed the landscape of film and photography education with ShootGuru—a platform dedicated to making creative knowledge accessible. With an MBA from Australia and extensive experience in high-profile celebrity campaigns, Kshitij seamlessly blends strategic marketing with artistic storytelling.
-His journey, from corporate boardrooms to founding an initiative that empowers aspiring creators, is a testament to passion, perseverance, and innovation. In this exclusive interview with Devika Majumder, co-founder of Global Influencer Hub, Kshitij shares his inspiring story, the challenges he overcame, and his mission to bridge the knowledge gap in the creative industry.
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              While I might not be able to write a guide on “what to do,” I can definitely write one on “what not to do.
+              </q>{" "}
+              – <strong>Kshitij Sheetak</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/kshitijArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            Kshitij Sheetak is a filmmaker, entrepreneur, and marketing expert who has transformed the landscape of film and photography education with ShootGuru—a platform dedicated to making creative knowledge accessible. With an MBA from Australia and extensive experience in high-profile celebrity campaigns, Kshitij seamlessly blends strategic marketing with artistic storytelling.
+            His journey, from corporate boardrooms to founding an initiative that empowers aspiring creators, is a testament to passion, perseverance, and innovation. In this exclusive interview with Devika Majumder, co-founder of Global Influencer Hub, Kshitij shares his inspiring story, the challenges he overcame, and his mission to bridge the knowledge gap in the creative industry.
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/kshitijArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
 
 
-              </p>
+    <Container className="my-5">
+
+              
               <p>
                 <strong>Devika Majumder:</strong> Welcome to Global Influencers Hub! Here, we explore the inspiring journeys of influencers, and today, we’re thrilled to dive into yours. We’d love to hear about your experiences—your challenges, successes, and everything in between. Let’s start from the very beginning.
               </p>
@@ -228,12 +293,34 @@ His journey, from corporate boardrooms to founding an initiative that empowers a
                 described so far was challenging, but were there any other significant obstacles along the way?
               </p>
 
-              <p>
-                <strong>Kshitij:</strong> The biggest challenge I faced—and one that many people continue to face 
+
+
+              <div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Kshitij:</strong> The biggest challenge I faced—and one that many people continue to face 
                 today—is that I never had a mentor. I never had someone to hold my hand and say, “Listen, what 
                 you're doing here is wrong. Here’s a better way to approach it.” Neither in filmmaking nor in 
                 the business side of things did I have that kind of guidance.
-              </p>
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/kshitijArticle2.jpg" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
 
               <p>
                 <strong>Kshitij:</strong> Because of this, I made a lot of wrong decisions. Just two years into 
@@ -354,6 +441,55 @@ His journey, from corporate boardrooms to founding an initiative that empowers a
             <p><strong>Kshitij:</strong> Of course! But at the same time, when your passion and profession merge, it doesn’t feel like work.</p>
             
             <p><strong>Devika:</strong> That’s a beautiful journey for sure.</p>
+          
+            <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Kshitij
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/kshitijRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+          
+          
+          
+          
+          
+          
+          
+          
+          
             <p><strong>Devika:</strong> Let’s do some rapid fire!</p>
             <p><strong>Kshitij:</strong> Sure, sure.</p>
 
@@ -420,11 +556,11 @@ His journey, from corporate boardrooms to founding an initiative that empowers a
             <p><strong>Devika:</strong> So true. Gratitude is everything. This was such a great conversation!</p>
             <p><strong>Kshitij:</strong> Pleasure! Let’s stay in touch.</p>
             <p><strong>Devika:</strong> Absolutely. Wishing you all the best!</p>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
     </Container>
+           
+            </Card.Body>
+          
+    </>
   );
 };
 

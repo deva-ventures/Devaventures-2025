@@ -1,17 +1,82 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card ,Image} from 'react-bootstrap';
 
 const Gunjan = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+      
             <Card.Body>
-          <h1 className="text-center mb-4">Gunjan Dewan: The Data Scientist Who Became Every Parent’s Mealtime Muse</h1>
-          <p className="lead text-center mb-5">
-          From decoding algorithms to decoding toddler tantrums at the dinner table—Gunjan Dewan’s journey is anything but conventional. A former data scientist turned parenting coach and digital creator, Gunjan has become a beacon of hope and relatability for thousands of parents striving to make mealtimes joyful. In a warm and engaging conversation with Devika Majumder, co-founder of Global Influencers Hub, Gunjan shares how she traded spreadsheets for spoon-feeding wisdom, all while building a powerful community of moms who trust her not just for recipes, but for reassurance. Blending science, sensitivity, and a lot of heart, her approach to baby-led weaning and positive parenting is refreshing, realistic, and rooted in love. Here's an exclusive glimpse into their heartfelt conversation:
-          </p>
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              Breathe deeply, stay calm, and try not to get overwhelmed. It’s easy to lose it in the moment, but focusing on your breath can help you regain control.
+              </q>{" "}
+              – <strong>Gunjan Dewan</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/gunjanArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            From decoding algorithms to decoding toddler tantrums at the dinner table—Gunjan Dewan’s journey is anything but conventional. A former data scientist turned parenting coach and digital creator, Gunjan has become a beacon of hope and relatability for thousands of parents striving to make mealtimes joyful. In a warm and engaging conversation with Devika Majumder, co-founder of Global Influencers Hub, Gunjan shares how she traded spreadsheets for spoon-feeding wisdom, all while building a powerful community of moms who trust her not just for recipes, but for reassurance. Blending science, sensitivity, and a lot of heart, her approach to baby-led weaning and positive parenting is refreshing, realistic, and rooted in love. Here’s an exclusive glimpse into their heartfelt conversation:
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/gunjanArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+
+    <Container className="my-5">
        
           <p>
             <strong>Devika Majumder:</strong> Welcome, Gunjan, to the Global Influencers Hub! This is where we delve into the inspiring journeys of social media influencers from around the world. This is a space where stories come alive—raw, real, and rooted in passion. We are thrilled to have you with us today, and we can’t wait to dive deep into your story. When I say “deep dive,” I mean we’re going to really explore your journey from the very beginning—your childhood, the challenges, and everything you’ve been through. We’re excited to hear your story, so feel free to take the stage.
@@ -209,6 +274,57 @@ const Gunjan = () => {
           <p><strong>Devika:</strong> That’s truly inspiring. Say hello to her from me!</p>
           <p><strong>Gunjan:</strong> I will, for sure!</p>
 
+
+          <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Gunjan
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/gunjanArticleVideo.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
           <p><strong>Devika:</strong> Alright, let's wrap this up with some rapid-fire questions!</p>
           <p><strong>Gunjan:</strong> Sure! Let's do it!</p>
 
@@ -267,12 +383,10 @@ const Gunjan = () => {
            
            
            
-           
+           </Container>
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+          
+    </>
   );
 };
 

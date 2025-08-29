@@ -1,19 +1,84 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card,Image } from "react-bootstrap";
 
 const Akansha = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+     
             <Card.Body>
-              <h2 className="text-center mb-4">Empowering Women's Health: A Conversation with Dr. Akansha Shrivastava</h2>
-             
-              <p>
-              In the ever-evolving world of medicine, few stories stand out as profoundly inspiring as that of Dr Akansha Shrivastava. A leading gynaecologist and laparoscopic surgeon, her journey is one of dedication, resilience, and passion for women’s health. From her unexpected entry into medicine to her groundbreaking work in laparoscopic surgeries, Dr. Shrivastava has dedicated her life to transforming patient care. In this engaging conversation with Devika Majumder, co-founder of the Global Influencers Hub, she shares her experiences, insights, and vision for the future of healthcare.
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              My life mantra consists of two things: firm faith in God and karma.
+              </q>{" "}
+              – <strong>Dr. Akansha Shrivastava</strong>
+            </p>
+          {/* </Col> */}
 
-              </p>
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/akanshaArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            In the ever-evolving world of medicine, few stories stand out as profoundly inspiring as that of Dr Akansha Shrivastava. A leading gynaecologist and laparoscopic surgeon, her journey is one of dedication, resilience, and passion for women’s health. From her unexpected entry into medicine to her groundbreaking work in laparoscopic surgeries, Dr. Shrivastava has dedicated her life to transforming patient care. In this engaging conversation with Devika Majumder, co-founder of the Global Influencers Hub, she shares her experiences, insights, and vision for the future of healthcare.
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/akanshaArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+
+    <Container className="my-5">
+
+             
 
               <p><strong>Devika Majumder:</strong> Hi, Akansha. Welcome to Global Influencers Hub! Here, we explore the life journeys of influencers, and we are excited to dive into yours.</p>
               <p><strong>Dr. Akansha Shrivastava:</strong> Thank you so much, Devika. I am really excited to be here and share my journey with you.</p>
@@ -145,8 +210,13 @@ const Akansha = () => {
                 and mineral levels could prevent these problems?
               </p>
 
-              <p>
-                <strong>Dr. Akansha:</strong> Exactly! People don’t realize how
+              <div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Dr. Akansha:</strong> Exactly! People don’t realize how
                 essential these nutrients are. Vitamin D, calcium, and iron play
                 a crucial role in a woman’s overall health, yet their deficiency
                 is rampant. Unfortunately, many women do not take calcium or
@@ -156,7 +226,22 @@ const Akansha = () => {
                 breastfeeding. If they don’t take proper calcium and vitamin D3
                 supplementation, they are at risk of long-term health
                 complications.
-              </p>
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/akanshaArticle2.jpg" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
 
               <p>
                 <strong>Devika:</strong> That’s alarming! So, for women at
@@ -293,6 +378,62 @@ const Akansha = () => {
               <p><strong>Devika:</strong> You really are making a global impact.</p>
               <p><strong>Dr. Akansha:</strong> Yeah, and it’s deeply fulfilling on an emotional level. It reminds me that what I’m doing is meaningful. Seeing people appreciate my work and my page motivates me to keep going. I know I have to keep improving and expanding this platform to reach and help even more people.</p>
 
+
+
+ 
+              <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Akansha
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/akanshaRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               <p><strong>Devika:</strong> Perfect, perfect! Absolutely. Now, let’s jump into some rapid-fire questions.</p>
               <p><strong>Dr. Akansha:</strong> Okay!</p>
 
@@ -349,11 +490,11 @@ const Akansha = () => {
 
             <p><strong>Devika:</strong> Wishing you all the best in everything you do. Doctors are truly a blessing from God.</p>
             <p><strong>Dr. Akansha:</strong> Thank you so much.</p>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
     </Container>
+          
+            </Card.Body>
+         
+    </>
   );
 };
 

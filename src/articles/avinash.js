@@ -1,21 +1,85 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card,Image } from 'react-bootstrap';
 
 const Avinash = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+    
             <Card.Body>
-          <h1 className="text-center mb-4">From the Battlefield to the Boardroom: The Strategic Mind of Avinash Sahani.</h1>
-          <p className="lead text-center mb-5">
-          Avinash Sahani, a former Indian Army Special Forces officer, is a leader forged in discipline, resilience, and precision. From high-stakes missions to navigating the complexities of the modern world, his journey is a testament to adaptability and excellence.
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              Once you truly understand who you are and where you come from, a big chunk of your life becomes clearer.
+              </q>{" "}
+              – <strong>Avinash Sahani</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/avinashArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            Avinash Sahani, a former Indian Army Special Forces officer, is a leader forged in discipline, resilience, and precision. From high-stakes missions to navigating the complexities of the modern world, his journey is a testament to adaptability and excellence.
+
 In this exclusive interview, Devika Majumder, co-founder of Global Influencer Hub, delves into his transformation—unpacking the leadership lessons, strategic mindset, and unwavering determination that define him. Avinash shares how military principles shape success beyond the battlefield, offering powerful insights for today’s fast-paced world.
+            </p>
+          </Col>
 
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/avinashArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+    <Container className="my-5">
 
-          </p>
-       
+          
           
           <p>
             <strong>Devika Majumder:</strong> Welcome to the Global Influencer
@@ -297,6 +361,59 @@ In this exclusive interview, Devika Majumder, co-founder of Global Influencer Hu
             <p><strong>Avinash:</strong> My best way to relax is by playing games on the computer or PlayStation. My brain is constantly active, so gaming feels like meditation to me—it helps me find solace. Spending time with my kids is also something I deeply enjoy. Whether I’m exercising or just being around them, it’s always quality time. I’m not really a gym person—I prefer running outdoors, coming back home, and staying active in my own way. Even when I exercise, my kids are around, and I enjoy that shared experience.</p>
             <p><strong>Devika:</strong> That’s great! So, have you ever had a structured fitness regime, or has it always been more about staying active in your own way?</p>
             <p><strong>Avinash:</strong> The only time I consistently went to a gym was for about three months in Delhi. Other than that, I don’t think a gym is necessary for fitness. It’s great for people living in European countries where it rains or snows often, providing a space to work out. But otherwise, you don’t necessarily need a gym to stay fit. For a country like India, we have plenty of open spaces. You have chin-up bars, pull-up bars, parallel bars, ropes, push-ups, bed hooks, lunges, squats, mountain climbs, sit-ups—so many ways to stay fit without needing a gym. Unless you're seeking social validation, I don’t see the necessity. Also, I’m not someone who wears earphones while working out. I enjoy my own company during exercise. Maybe I’ll listen to Kumar Sanu or Udit Narayan on a speaker, but running has to feel liberating. I can’t run with something in my ears—it takes away from the experience.</p>
+           
+           
+            <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Avinash
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/avinashArticleVideo.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
             <p><strong>Devika:</strong> That’s a great perspective! Now, let’s switch things up with a rapid-fire round. One word to describe life in the special forces?</p>
             <p><strong>Avinash:</strong> Challenging.</p>
             <p><strong>Devika:</strong> Toughest physical challenge you’ve ever faced?</p>
@@ -378,13 +495,12 @@ In this exclusive interview, Devika Majumder, co-founder of Global Influencer Hu
            
            
            
+    </Container>
            
            
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+         
+    </>
   );
 };
 

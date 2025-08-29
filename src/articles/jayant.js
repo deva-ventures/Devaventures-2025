@@ -1,19 +1,84 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card ,Image} from "react-bootstrap";
 
 const Jayant = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+      
             <Card.Body>
-              <h2 className="text-center mb-4">An Insightful Journey with Jayant Sankla: A Music Lover’s Evolution into a Music Composer</h2>
-             
-              <p>
-              Jayant Sankla, a talented music composer, producer, and singer, recently shared his journey into the world of music in an engaging conversation with DevikaMajumder, co-founder of Global Influencers Hub. From his early fascination with melodies to his evolution as a music professional, Jayant offers a peek into his childhood, his passion for music, and the struggles he overcame to make his mark. Here’s a glimpse into their conversation.
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              Essentially, you are your own product—you have to keep selling yourself.
+              </q>{" "}
+              – <strong>Jayant Sankla</strong>
+            </p>
+          {/* </Col> */}
 
-              </p>
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/jayantArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            Jayant Sankla, a talented music composer, producer, and singer, recently shared his journey into the world of music in an engaging conversation with DevikaMajumder, co-founder of Global Influencers Hub. From his early fascination with melodies to his evolution as a music professional, Jayant offers a peek into his childhood, his passion for music, and the struggles he overcame to make his mark. Here’s a glimpse into their conversation.
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/jayantArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+
+    <Container className="my-5">
+
+            
 
               <p>
                 <strong>Devika:</strong> Hi Jayant, welcome to Global Influencers Hub! 
@@ -373,7 +438,40 @@ const Jayant = () => {
 
 <p><strong>Devika:</strong> (laughs) Yeah, 100%—good for them, really. Now tell me, do you have any pre-performance rituals or lucky charms that you swear by before going on stage or starting a new project?</p>
 
-<p><strong>Jayant:</strong> Yes, I always take God’s name before stepping onto the stage or composing something new. Recently, I was talking to someone about this, and we both found it amusing. I never call out to God like, “Hey Mata, Hey Bhagwan,” before composing. But whenever I create something truly special, I instinctively thank Saraswati Maa. Then I wonder, “Am I being selfish? Why do I remember God only when something great happens?”</p>
+<div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Jayant:</strong> Yes, I always take God’s name before stepping onto the stage or composing something new. Recently, I was talking to someone about this, and we both found it amusing. I never call out to God like, “Hey Mata, Hey Bhagwan,” before composing. But whenever I create something truly special, I instinctively thank Saraswati Maa. Then I wonder, “Am I being selfish? Why do I remember God only when something great happens?”
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/jayantArticle2.jpg" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 
 <p><strong>Devika:</strong> You know, it’s because you have that creativity within you, and when something remarkable emerges, you naturally feel grateful. It’s your way of acknowledging that things are going in the right direction.</p>
 
@@ -384,6 +482,9 @@ const Jayant = () => {
 <p><strong>Jayant:</strong> Yeah, absolutely.</p>
 
 <p><strong>Devika:</strong> So tell me, what’s your dream collaboration?</p>
+
+
+
 
 <p><strong>Jayant:</strong> That would be singing alongside A.R. Rahman sir. That would be incredible.</p>
 
@@ -522,7 +623,60 @@ const Jayant = () => {
                 So, never isolate yourself—make friends and stay happy.
               </p>
 
-              <h4 className="mt-4 mb-3 fw-bold">Rapid Fire Round</h4>
+
+
+              <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Jayant
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/jayantRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+
+
+
+
+
+
+              <p>
+                <strong>Devika:</strong> Wonderful, excellent! Let’s do a rapid-fire round.
+              </p>
+              <p>
+                <strong>Jayant:</strong> Let’s go!
+              </p>
 
               <p>
                 <strong>Devika:</strong> Cool! Your all-time favorite retro
@@ -623,11 +777,11 @@ const Jayant = () => {
             <p><strong>Jayant:</strong> You too! Thank you.</p>
 
             <p><strong>Devika:</strong> Thank you! Bye.</p> 
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
     </Container>
+
+            </Card.Body>
+         
+    </>
   );
 };
 

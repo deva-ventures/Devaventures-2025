@@ -1,19 +1,86 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card,Image } from 'react-bootstrap';
 
 const Aakash = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+     
             <Card.Body>
-          <h1 className="text-center mb-4">Strings & Solitude: Aakash Barnabas’ Journey from Shy Schoolboy to Soulful Stage Star</h1>
-          <p className="lead text-center mb-5">
-          From quiet corners of school corridors to the buzzing lights of live gigs, Aakash Barnabas has walked a journey fueled by melody, meaning, and mindfulness. An introvert with a naughty streak, he found his voice not just in music—but through it. Today, he's not only serenading audiences across cities but also connecting souls through social media, heartfelt lyrics, and unplugged moments.
-In this deeply personal and inspiring conversation with Devika Majumder, Co-founder of Global Influencers Hub, Aakash opens up about discovering confidence in chaos, writing songs from heartbreak, resetting through nature, and the caffeinated calm that powers his creativity. Whether it’s jamming till 4 a.m. or making a stranger cry with a single note, Aakash proves that music is more than a career—it’s a calling.
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              If something’s meant to happen, it will, at the right time. You just have to be patient.
+              </q>{" "}
+              – <strong>Aakash Barnabas</strong>
+            </p>
+          {/* </Col> */}
 
-         </p>
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/aakashArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            From quiet corners of school corridors to the buzzing lights of live gigs, Aakash Barnabas has walked a journey fueled by melody, meaning, and mindfulness. An introvert with a naughty streak, he found his voice not just in music—but through it. Today, he’s not only serenading audiences across cities but also connecting souls through social media, heartfelt lyrics, and unplugged moments.
+
+In this deeply personal and inspiring conversation with Devika Majumder, Co-founder of Global Influencers Hub, Aakash opens up about discovering confidence in chaos, writing songs from heartbreak, resetting through nature, and the caffeinated calm that powers his creativity. Whether it’s jamming till 4 a.m. or making a stranger cry with a single note, Aakash proves that music is more than a career—it’s a calling.
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/aakashArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+
+    <Container className="my-5">
+
+          
        
           
          <p>
@@ -210,9 +277,34 @@ In this deeply personal and inspiring conversation with Devika Majumder, Co-foun
               <p>
                 <strong>Devika:</strong> So true. Now, tell us about your first live performance—outside of your college shows. What was that like?
               </p>
-              <p>
-                <strong>Aakash:</strong> My first live performance beyond college was actually in a café in Delhi. At the time, I was training in music at T-Series StageWorks, attending sessions there. One day, I got a call from a café I had visited much earlier. I’d approached them back then, asking if I could perform—and now, they were inviting me back to play. It was a big moment for me. The idea of performing in front of strangers, connecting with them not just through songs but through emotions—that was powerful. I wanted to put my music into their souls, to let them feel what I was feeling. And it happened. It really happened.
-              </p>
+
+
+              <div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Aakash:</strong> My first live performance beyond college was actually in a café in Delhi. At the time, I was training in music at T-Series StageWorks, attending sessions there. One day, I got a call from a café I had visited much earlier. I’d approached them back then, asking if I could perform—and now, they were inviting me back to play. It was a big moment for me. The idea of performing in front of strangers, connecting with them not just through songs but through emotions—that was powerful. I wanted to put my music into their souls, to let them feel what I was feeling. And it happened. It really happened.
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/preethaArticle2.jpg" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+
+
+            
               <p>
                 <strong>Devika:</strong> Wonderful. Now tell us—how do you prepare yourself before a live show?
               </p>
@@ -346,6 +438,55 @@ In this deeply personal and inspiring conversation with Devika Majumder, Co-foun
               <p>
                 <strong>Aakash:</strong> I’m on Instagram, YouTube, Twitter—but Instagram is where I’m most active. That’s my space.
               </p>
+
+
+              <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Aakash
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/aakashRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+
+
+
+
+
+
+
               <p>
                 <strong>Devika:</strong> Let’s jump into a fun round of rapid fire! Describe your music in three words.
               </p>
@@ -417,12 +558,11 @@ In this deeply personal and inspiring conversation with Devika Majumder, Co-foun
             <p><strong>Aakash:</strong> Thank you, ma’am.</p>
            
            
+    </Container>
            
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+         
+    </>
   );
 };
 

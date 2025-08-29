@@ -1,28 +1,83 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card,Image } from "react-bootstrap";
 
 const Rohit = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+      
             <Card.Body>
-              <h2 className="text-center mb-4">Rohit Jain: The Multifaceted Entrepreneur Behind Rupees with Rohit</h2>
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              Spending money is easy, but you won’t know it's true worth unless you’ve earned it yourself.
+              </q>{" "}
+              – <strong>Rohit Jain</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/rohitArticle.webp" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            Rohit Jain, a dynamic entrepreneur and finance influencer, shared his incredible journey in an engaging conversation with Devika Majumder, co-founder of Global Influencers Hub. From his humble beginnings as a shy child to managing multiple businesses and creating a strong digital presence through “Rupees with Rohit,” Rohit has carved a unique niche for himself in the world of personal finance and business mentorship. In this interview, Rohit reflects on his upbringing, his entrepreneurial journey, and the impact of his content on his followers. Here’s a glimpse into their conversation:
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/rohitArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+    <Container className="my-5">
+
              
-              <p>
-              Rohit Jain, a dynamic entrepreneur and finance influencer, shared his incredible journey in an engaging conversation with Devika Majumder. From his humble beginnings as a shy child to managing multiple businesses and creating a strong digital presence through "Rupees with Rohit," Rohit has carved a unique niche for himself in the world of personal finance and business mentorship. In this interview, Rohit reflects on his upbringing, his entrepreneurial journey, and the impact of his content on his followers. Here’s a glimpse into their conversation:
-
-              </p>
-
-              <p>
-                <strong>Devika Majumder:</strong> Hi, Rohit. Welcome to Global
-                Influencers Hub. Here, we speak about the life journeys of
-                influencers. And today, we’re delighted to have you with
-                us—Rupees with Rohit. We’d love to hear all about you. Let’s
-                start with your childhood. How were you as a child, and how did
-                your journey begin?
-              </p>
               <p>
                 <strong>Rohit Jain:</strong> Thank you, Devika. Well, in my
                 childhood, I was very shy. I didn’t like talking to people. If
@@ -390,12 +445,38 @@ const Rohit = () => {
                 what’s been your most viral post so far, aside from the
                 dowry-related one?
               </p>
-              <p>
-                <strong>Rohit:</strong> One of my most viral posts was about a
+
+
+              <div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Rohit:</strong> One of my most viral posts was about a
                 business idea involving honeycomb bubble wrap. It got over 7.5
                 million views.
-              </p>
+            </p>
+          </Col>
 
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/rohitArticle2.webp" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+
+
+
+
+              
               <p>
                 <strong>Devika:</strong> Wow! Why do you think that post
                 resonated with so many people?
@@ -510,6 +591,59 @@ const Rohit = () => {
               <p><strong>Devika:</strong> Any favorite movie? Anything that stands out?</p>
               <p><strong>Rohit:</strong> There are so many! I really enjoy Money Heist and an old Hindi movie called Hum Saath Saath Hain.</p>
 
+
+
+              <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Rohit
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/rohitRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
               <p><strong>Devika:</strong> Great choices! Alright, let’s dive into a rapid-fire round now. Ready?</p>
               <p><strong>Rohit:</strong> Sure!</p>
 
@@ -593,12 +727,11 @@ const Rohit = () => {
               <p><strong>Rohit:</strong> Sure, take care. Bye!</p>
               <p><strong>Devika:</strong> Bye!</p>
            
+    </Container>
            
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+          
+    </>
   );
 };
 

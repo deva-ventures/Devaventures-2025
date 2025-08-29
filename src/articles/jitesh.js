@@ -1,19 +1,84 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card,Image } from "react-bootstrap";
 
 const Jitesh = () => {
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <Card className="p-4 shadow-sm">
+    <>
+      
             <Card.Body>
-              <h2 className="text-center mb-4">From Teenage Hustles to Dhandhawithjitesh – A Conversation with Jitesh Bulchandani</h2>
-             
-              <p>
-              Charismatic, grounded, and driven by instinct — Jitesh Bulchandani is not your typical entrepreneur. Founder of Dhandhawithjitesh, a name that already sparks curiosity, Jitesh is someone who stepped into the business world at the age of sixteen and hasn’t looked back since. His journey began not in boardrooms or MBA classrooms, but on dusty construction sites, observing the hustle of real-life “Dhandha” — the street-smart, ground-level world of business. In this candid conversation with Devika Majumder, Co-founder of Global Influencers Hub, Jitesh opens up about his early beginnings, family legacy, and the invaluable lessons he learnt outside the pages of textbooks.
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              Once you let ego take over, you stop learning — and the moment you stop learning, you stop growing. That’s why the most successful entrepreneurs are the most humble.
+              </q>{" "}
+              – <strong> Jitesh Bulchandani</strong>
+            </p>
+          {/* </Col> */}
 
-              </p>
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/jiteshArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+          
+    <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Text */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
+            Charismatic, grounded, and driven by instinct — Jitesh Bulchandani is not your typical entrepreneur. Founder of Dhandhawithjitesh, a name that already sparks curiosity, Jitesh is someone who stepped into the business world at the age of sixteen and hasn’t looked back since. His journey began not in boardrooms or MBA classrooms, but on dusty construction sites, observing the hustle of real-life “Dhandha” — the street-smart, ground-level world of business. In this candid conversation with Devika Majumder, Co-founder of Global Influencers Hub, Jitesh opens up about his early beginnings, family legacy, and the invaluable lessons he learnt outside the pages of textbooks.
+            </p>
+          </Col>
+
+          {/* Right Side - Video */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "640px",
+      height: "360px", // same as container height
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    }}
+  >
+    <video
+      src="/jiteshArticleVideo.mp4"
+      controls
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // fills container, may crop sides
+      }}
+    />
+  </div>
+</Col>
+        </Row>
+      </Container>
+    </div>
+
+    <Container className="my-5">
+
+             
 
               <p>
                 <strong>Devika Majumder:</strong> Welcome, Jitesh, to the Global Influencers Hub. Here, we explore the inspiring journeys of changemakers and influencers — and we’re really excited to dive into yours. Let’s begin right from the start. Tell us about your childhood, your family, and how the seeds of “Dhandhawithjitesh” were first sown. And I must say — I absolutely love the name!
@@ -143,7 +208,38 @@ const Jitesh = () => {
               <p><strong>Jitesh:</strong> And the second thing — especially in India — I’ve noticed that strangers help you more than people you know. That’s something I’ve seen during my travels too — in many countries, support from strangers is stronger.Also, never let money come between friendship. Either maintain a professional boundary or keep the friendship pure — but don’t mix the two. Those two lessons have shaped me a lot.</p>
            
               <p><strong>Devika:</strong> Very cool. Now you’ve interacted with so many aspiring entrepreneurs — tell me, what’s one trend you’ve noticed among them?</p>
-              <p><strong>Jitesh:</strong> Across all the inquiries I’ve received from different states, one trend I noticed is that people are obsessed with weddings! For example, there was a time when customized water bottles — with the couple’s names printed on them — became a massive trend. Everyone wanted to jump into that business.</p>
+           
+              <div className=" py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Section - Text */}
+          <Col xs={12} md={7} className="mb-4 mb-md-0">
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#1a1a1a" }}>
+              <strong style={{ color: "#002366" }}>Jitesh:</strong>Across all the inquiries I’ve received from different states, one trend I noticed is that people are obsessed with weddings! For example, there was a time when customized water bottles — with the couple’s names printed on them — became a massive trend. Everyone wanted to jump into that business.
+            </p>
+          </Col>
+
+          {/* Right Section - Image */}
+          <Col xs={12} md={5} className="text-center">
+            <Image
+              src="/jiteshArticle2.jpg" // <-- your second image
+              alt="Preetha"
+              fluid
+              rounded
+              style={{ maxHeight: "320px", objectFit: "cover" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+
+           
+           
+           
+           
+           
+           
+              
               <p>But people didn’t recognise the competition. Nowadays, people buy clothes just because there’s a sale. Everyone wants to start something in fashion, but they don’t realise how much money goes into PR, product shoots, marketing — it’s a lot.</p>
               <p>The same happened with cloud kitchens — there was a huge hype initially, but now people have lost interest.</p>
               <p><strong>My suggestion?</strong> Be creative. Don’t just copy what’s trending. Think differently.</p>
@@ -192,6 +288,57 @@ const Jitesh = () => {
               <p><strong>Devika:</strong> Are you asking me?</p>
               <p><strong>Jitesh:</strong> Yes.</p>
               <p><strong>Devika:</strong> I mean, I do — in a way. My mantra is “innocent until proven guilty.” I assume people are good until they give me a reason not to. But the moment someone shows their true colors, I have no problem cutting them off — even overnight. So, it kind of balances out. That philosophy has worked for me so far.</p>
+              
+              
+              <div style={{  padding: "60px 0" }}>
+      <Container className="d-flex flex-column align-items-center">
+        {/* Title */}
+        <h4
+          style={{
+            color: "#1d3557",
+            fontWeight: "700",
+          
+            textAlign: "center",
+          }}
+        >
+          Rapid Fire with Jitesh
+        </h4>
+
+        {/* Video container with same size as video */}
+        <div
+          style={{
+            width: "360px",  // portrait width
+            height: "640px", // portrait height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <video
+            src="/jiteshRapid.mp4" // <-- use your vertical video file
+            controls
+            style={{
+              width: "360px",
+              height: "440px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </Container>
+    </div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
               <p><strong>Devika:</strong> Alright, now let’s shift gears and jump into a quick rapid-fire round!</p>
             <p><strong>Devika:</strong> Work hard or work smart?</p>
             <p><strong>Jitesh:</strong> Smart.</p>
@@ -254,11 +401,12 @@ const Jitesh = () => {
 
             <p><strong>Devika:</strong> Absolutely. Jitesh, it was lovely talking to you. Wishing you all the best for everything you’re building and dreaming. Thank you so much!</p>
             <p><strong>Jitesh:</strong> Thank you, ma’am.</p>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
     </Container>
+            
+            </Card.Body>
+         
+      
+    </>
   );
 };
 
