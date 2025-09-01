@@ -5,6 +5,34 @@ const Niranjan = () => {
   return (
     <>
       <Card.Body>
+         {/* Top Notice Section */}
+  <div style={{ backgroundColor: "#7a879b", padding: "105px 0" }}>
+        <Container>
+          <Row className="justify-content-center text-center">
+            <Col xs={12}>
+              <p
+                style={{
+                  fontSize: "1rem",
+                  fontWeight: "500",
+                  color: "#1d3557",
+                  margin: 0,
+                }}
+              >
+                📺 Watch the video on YouTube –{" "}
+                <a
+                  href="https://youtu.be/KdE45Y7trWU?si=AZDq4ZQfI0BCnEC7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "white", textDecoration: "none" }}
+                >
+                 Click Here
+                </a>
+              </p>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
       <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
       <Container>
         <Row className="align-items-center">
@@ -19,7 +47,7 @@ const Niranjan = () => {
               }}
             >
               <q>
-              If you’re out there feeling like you’re lost, or things don’t make sense right now, just stay put. Be honest. Do your best. Don’t harm anyone. Be true to yourself."  
+              If you’re out there feeling like you’re lost, or things don’t make sense right now, just stay put. Be honest. Do your best. Don’t harm anyone. Be true to yourself. 
               </q>{" "}
               – <strong>Dr. Niranjan Samani</strong>
             </p>

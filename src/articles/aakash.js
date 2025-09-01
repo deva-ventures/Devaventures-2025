@@ -6,6 +6,34 @@ const Aakash = () => {
     <>
      
             <Card.Body>
+               {/* Top Notice Section */}
+  <div style={{ backgroundColor: "#7a879b", padding: "105px 0" }}>
+        <Container>
+          <Row className="justify-content-center text-center">
+            <Col xs={12}>
+              <p
+                style={{
+                  fontSize: "1rem",
+                  fontWeight: "500",
+                  color: "#1d3557",
+                  margin: 0,
+                }}
+              >
+                📺 Watch the video on YouTube –{" "}
+                <a
+                  href="https://youtu.be/Q4LPsO_qtKE?si=sgUiKT61IsLaZxCC"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "white", textDecoration: "none" }}
+                >
+                 Click Here
+                </a>
+              </p>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
             <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
       <Container>
         <Row className="align-items-center">

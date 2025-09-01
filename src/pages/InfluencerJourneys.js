@@ -173,15 +173,6 @@ const InfluencerJourneys = () => {
   youtube: 'https://www.youtube.com/watch?v=KdE45Y7trWU&feature=youtu.be',
   article: '/articles/niranjan',
 },
-
-{
-  name: 'Pablo Montana',
-  des: 'Musician | Latin Artist | Salsa & Bachata Performer | Traveller',
-  img: '/pablo.jpg',
-  youtube: 'https://www.youtube.com/watch?v=-oq8VYhFcHw',
-  article: '/articles/pablo',
-},
-
 {
   name: 'Sohum Deb',
   des: 'Aspiring Dancer | Expressive Dancer | Content Creator | Voice of Grace | Breaking Norms with Rhythm',
