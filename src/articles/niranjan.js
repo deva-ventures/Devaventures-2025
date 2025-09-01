@@ -19,9 +19,9 @@ const Niranjan = () => {
               }}
             >
               <q>
-              If you’re out there feeling like you’re lost, or things don’t make sense right now, just stay put. Be honest. Do your best. Don’t harm anyone. Be true to yourself." - Dr. Niranjan Samani
+              If you’re out there feeling like you’re lost, or things don’t make sense right now, just stay put. Be honest. Do your best. Don’t harm anyone. Be true to yourself."  
               </q>{" "}
-              – <strong>Preetha Athrey</strong>
+              – <strong>Dr. Niranjan Samani</strong>
             </p>
           {/* </Col> */}
 
