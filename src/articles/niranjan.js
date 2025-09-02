@@ -122,7 +122,7 @@ const Niranjan = () => {
           </Col>
 
           {/* RIGHT IMAGE */}
-          <Col xs={12} md={6} className="text-center">
+          <Col xs={12} md={5} className="text-center">
             <div
               style={{
                
