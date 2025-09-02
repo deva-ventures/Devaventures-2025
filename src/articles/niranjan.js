@@ -54,7 +54,7 @@ const Niranjan = () => {
       <Container>
         <Row className="align-items-center">
           {/* LEFT CONTENT */}
-          <Col xs={12} md={6} className="text-center text-md-start mb-4 mb-md-0">
+          <Col xs={12} md={7} className="text-center text-md-start mb-4 mb-md-0">
             <p
               style={{
                 fontSize: "1.4rem",
@@ -63,8 +63,8 @@ const Niranjan = () => {
               }}
             
 >
-              We couldn't put the best moments in writing. See for yourself.<br/>   
-              This conversation got too real for the blog. <br />
+We couldn't put the best moments in writing. See for yourself. <br/>   
+This conversation🔊 got too real for the blog.  <br />
            
             </p>
 
@@ -80,7 +80,7 @@ const Niranjan = () => {
                 color: "#1d3557",
               }}
             >
-             Watch the uncut version on YouTube and Feel the Vibe before the buzz blows up!    <br />
+             Watch the uncut version on 👉  YouTube and Feel the Vibe before the buzz blows up!    <br />
               
             </p>
            
