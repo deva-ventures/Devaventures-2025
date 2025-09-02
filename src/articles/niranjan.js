@@ -11,7 +11,7 @@ const Niranjan = () => {
 
    
 
-      <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <div style={{ backgroundColor: "#7a879b", padding: "100px 0" }}>
       <Container>
         <Row className="align-items-center">
           {/* Left Side - Quote */}
@@ -47,19 +47,17 @@ const Niranjan = () => {
 
     <div
       style={{
-        // backgroundColor: "#d3d3d3",
         padding: "90px 70px",
-        // borderBottomLeftRadius: "100px",
-        // borderBottomRightRadius: "100px",
+     
       }}
     >
       <Container>
         <Row className="align-items-center">
           {/* LEFT CONTENT */}
-          <Col xs={12} md={7} className="text-center text-md-start mb-4 mb-md-0">
+          <Col xs={12} md={6} className="text-center text-md-start mb-4 mb-md-0">
             <p
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1.4rem",
                 fontWeight: "400",
                 color: "#1d3557",
               }}
@@ -124,7 +122,7 @@ const Niranjan = () => {
           </Col>
 
           {/* RIGHT IMAGE */}
-          <Col xs={12} md={5} className="text-center">
+          <Col xs={12} md={6} className="text-center">
             <div
               style={{
                
@@ -139,7 +137,7 @@ const Niranjan = () => {
                 alt="Personality"
                 style={{
                   width: "100%",
-                  maxWidth: "450px",
+                  maxWidth: "550px",
                   borderRadius: "20px",
                   objectFit: "cover",
                 }}
