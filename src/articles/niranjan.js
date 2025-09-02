@@ -9,12 +9,48 @@ const Niranjan = () => {
   
 
 
-      <div
+   
+
+      <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              If you’re out there feeling like you’re lost, or things don’t make sense right now, just stay put. Be honest. Do your best. Don’t harm anyone. Be true to yourself. 
+              </q>{" "}
+              – <strong>Dr. Niranjan Samani</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/niranjanArticle.png" // <-- second image here
+              alt="niranjan"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+
+
+    <div
       style={{
-        backgroundColor: "#d3d3d3",
+        // backgroundColor: "#d3d3d3",
         padding: "90px 70px",
-        borderBottomLeftRadius: "100px",
-        borderBottomRightRadius: "100px",
+        // borderBottomLeftRadius: "100px",
+        // borderBottomRightRadius: "100px",
       }}
     >
       <Container>
@@ -130,38 +166,9 @@ const Niranjan = () => {
     </div>
 
 
-      <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
-      <Container>
-        <Row className="align-items-center">
-          {/* Left Side - Quote */}
-          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
-            <p
-              style={{
-                fontSize: "1.2rem",
-                color: "#fff",
-                maxWidth: "500px",
-                margin: "0 auto",
-              }}
-            >
-              <q>
-              If you’re out there feeling like you’re lost, or things don’t make sense right now, just stay put. Be honest. Do your best. Don’t harm anyone. Be true to yourself. 
-              </q>{" "}
-              – <strong>Dr. Niranjan Samani</strong>
-            </p>
-          {/* </Col> */}
 
-          {/* Right Side - Complete Image */}
-          <Col xs={12} md={6} className="text-center text-md-start">
-            <Image
-              src="/niranjanArticle.png" // <-- second image here
-              alt="niranjan"
-              fluid
-              style={{ maxWidth: "100%", height: "auto" }}
-            />
-          </Col>
-        </Row>
-      </Container>
-    </div>
+
+
           
     <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
       <Container>
