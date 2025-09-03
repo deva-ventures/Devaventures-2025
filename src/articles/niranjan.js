@@ -7,10 +7,6 @@ const Niranjan = () => {
       <Card.Body>
          {/* Top Notice Section */}
   
-
-
-   
-
       <div style={{ backgroundColor: "#7a879b", padding: "100px 0" }}>
       <Container>
         <Row className="align-items-center">
@@ -71,15 +67,23 @@ This conversation🔊 got too real for the blog.  <br />
           
           
             <p
-              style={{
-                fontSize: "1.7rem",
-                fontWeight: "700",
-                color: "#1d3557",
-              }}
-            >
-             Watch the uncut version on 👉  YouTube and Feel the Vibe before the buzz blows up!    <br />
-              
-            </p>
+  style={{
+    fontSize: "1.7rem",
+    fontWeight: "700",
+    color: "#1d3557",
+  }}
+>
+  Watch the uncut version on 👉{" "}
+  <a
+    href="https://youtu.be/KdE45Y7trWU?si=38TBcDQMPhe6GjNb"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: "#e63946", textDecoration: "none" }}
+  >
+    YouTube
+  </a>{" "}
+  and Feel the Vibe before the buzz blows up! <br />
+</p>
            
             <div className="d-flex align-items-center gap-3 mt-4">
             <Button
@@ -120,41 +124,45 @@ This conversation🔊 got too real for the blog.  <br />
 
           {/* RIGHT IMAGE */}
           <Col xs={12} md={5} className="text-center">
-            <div
-              style={{
-               
-                borderRadius: "30% 30% 30% 30%",
-                padding: "20px",
-                display: "inline-block",
-                position: "relative",
-              }}
-            >
-              <img
-                src="/niranjanTop.png" // replace with your image path
-                alt="Personality"
-                style={{
-                  width: "100%",
-                  maxWidth: "550px",
-                  borderRadius: "20px",
-                  objectFit: "cover",
-                }}
-              />
+          <a
+  href="https://youtu.be/KdE45Y7trWU?si=38TBcDQMPhe6GjNb"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{ textDecoration: "none" }}
+>
+  <div
+    style={{
+      borderRadius: "30% 30% 30% 30%",
+      padding: "20px",
+      display: "inline-block",
+      position: "relative",
+    }}
+  >
+    <img
+      src="/niranjanConvo.jpg" // replace with your image path
+      alt="Personality"
+      style={{
+        width: "100%",
+        maxWidth: "550px",
+        borderRadius: "20px",
+        objectFit: "cover",
+      }}
+    />
 
-              {/* Decorative elements */}
-             
-             
-              <span
-                style={{
-                  position: "absolute",
-                  top: "-20px",
-                  right: "20%",
-                  fontSize: "2rem",
-                  color: "#8b3e3e",
-                }}
-              >
-                ✦
-              </span>
-            </div>
+    {/* Decorative elements */}
+    <span
+      style={{
+        position: "absolute",
+        top: "-20px",
+        right: "20%",
+        fontSize: "2rem",
+        color: "#8b3e3e",
+      }}
+    >
+      ✦
+    </span>
+  </div>
+</a>
           </Col>
         </Row>
       </Container>

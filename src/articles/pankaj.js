@@ -6,138 +6,9 @@ const Pankaj = () => {
     <>
             <Card.Body>
    {/* Top Notice Section */}
-<div
-      style={{
-        backgroundColor: "#d3d3d3",
-        padding: "90px 70px",
-        borderBottomLeftRadius: "100px",
-        borderBottomRightRadius: "100px",
-      }}
-    >
-      <Container>
-        <Row className="align-items-center">
-          {/* LEFT CONTENT */}
-          <Col xs={12} md={7} className="text-center text-md-start mb-4 mb-md-0">
-            <p
-              style={{
-                fontSize: "1.7rem",
-                fontWeight: "400",
-                color: "#1d3557",
-              }}
-            
->
-              We couldn't put the best moments in writing. See for yourself.<br/>   
-              This conversation got too real for the blog. <br />
-           
-            </p>
-
-            {/* <p style={{ color: "#6c6c6c", marginTop: "15px" }}>
-            This conversation got too real for the blog. <br />
-              Character
-            </p> */}
-          
-            <p
-              style={{
-                fontSize: "1.7rem",
-                fontWeight: "700",
-                color: "#1d3557",
-              }}
-            >
-             Watch the uncut version on YouTube and Feel the Vibe before the buzz blows up!    <br />
-              
-            </p>
-           
-            <div className="d-flex align-items-center gap-3 mt-4">
-            <Button
-  style={{
-    backgroundColor: "#1d3557",
-    border: "none",
-    padding: "10px 20px",
-    borderRadius: "30px",
-  }}
-  onClick={() => {
-    window.open("https://youtu.be/RUJ-LV58m9I?si=1H84FsRJokNTOMeB", "_blank");
-  }}
->
-  Learn More
-</Button>
-
-<Button
-  variant="light"
-  style={{
-    width: "50px",
-    height: "50px",
-    borderRadius: "50%",
-    border: "1px solid #ddd",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    boxShadow: "0px 2px 6px rgba(0,0,0,0.1)",
-    marginLeft: "10px",
-  }}
-  onClick={() => {
-    window.open("https://youtu.be/RUJ-LV58m9I?si=1H84FsRJokNTOMeB", "_blank");
-  }}
->
-  ▶
-</Button>
-            </div>
-          </Col>
-
-          {/* RIGHT IMAGE */}
-          <Col xs={12} md={5} className="text-center">
-            <div
-              style={{
-               
-                borderRadius: "30% 30% 30% 30%",
-                padding: "20px",
-                display: "inline-block",
-                position: "relative",
-              }}
-            >
-              <img
-                src="/niranjanTop.png" // replace with your image path
-                alt="Personality"
-                style={{
-                  width: "100%",
-                  maxWidth: "450px",
-                  borderRadius: "20px",
-                  objectFit: "cover",
-                }}
-              />
-
-              {/* Decorative elements */}
-             
-             
-              <span
-                style={{
-                  position: "absolute",
-                  top: "-20px",
-                  right: "20%",
-                  fontSize: "2rem",
-                  color: "#8b3e3e",
-                }}
-              >
-                ✦
-              </span>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
 
 
-
-
-
-
-
-
-
-
-
-
-            <div style={{  padding: "60px 0" }}>
+            <div style={{backgroundColor: "#7a879b",  padding: "60px 0" }}>
       <Container>
         <Row className="align-items-center">
           {/* Left Side - Quote */}
@@ -169,7 +40,133 @@ const Pankaj = () => {
         </Row>
       </Container>
     </div>
+    <div
+      style={{
+        padding: "90px 70px",
+     
+      }}
+    >
+      <Container>
+        <Row className="align-items-center">
+          {/* LEFT CONTENT */}
+          <Col xs={12} md={7} className="text-center text-md-start mb-4 mb-md-0">
+            <p
+              style={{
+                fontSize: "1.4rem",
+                fontWeight: "400",
+                color: "#1d3557",
+              }}
+            
+>
+We couldn't put the best moments in writing. See for yourself. <br/>   
+This conversation🔊 got too real for the blog.  <br />
+           
+            </p>
+
           
+          
+            <p
+  style={{
+    fontSize: "1.7rem",
+    fontWeight: "700",
+    color: "#1d3557",
+  }}
+>
+  Watch the uncut version on 👉{" "}
+  <a
+    href="https://youtu.be/RUJ-LV58m9I?si=FGf5Fp8TeXDv2QbW"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: "#e63946", textDecoration: "none" }}
+  >
+    YouTube
+  </a>{" "}
+  and Feel the Vibe before the buzz blows up! <br />
+</p>
+           
+            <div className="d-flex align-items-center gap-3 mt-4">
+            <Button
+  style={{
+    backgroundColor: "#1d3557",
+    border: "none",
+    padding: "10px 20px",
+    borderRadius: "30px",
+  }}
+  onClick={() => {
+    window.open("https://youtu.be/RUJ-LV58m9I?si=FGf5Fp8TeXDv2QbW", "_blank");
+  }}
+>
+  Learn More
+</Button>
+
+<Button
+  variant="light"
+  style={{
+    width: "50px",
+    height: "50px",
+    borderRadius: "50%",
+    border: "1px solid #ddd",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    boxShadow: "0px 2px 6px rgba(0,0,0,0.1)",
+    marginLeft: "10px",
+  }}
+  onClick={() => {
+    window.open("https://youtu.be/RUJ-LV58m9I?si=FGf5Fp8TeXDv2QbW", "_blank");
+  }}
+>
+  ▶
+</Button>
+            </div>
+          </Col>
+
+          {/* RIGHT IMAGE */}
+          <Col xs={12} md={5} className="text-center">
+          <a
+  href="https://youtu.be/RUJ-LV58m9I?si=FGf5Fp8TeXDv2QbW"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{ textDecoration: "none" }}
+>
+  <div
+    style={{
+      borderRadius: "30% 30% 30% 30%",
+      padding: "20px",
+      display: "inline-block",
+      position: "relative",
+    }}
+  >
+    <img
+      src="/pankajConvo.jpg" // replace with your image path
+      alt="Personality"
+      style={{
+        width: "100%",
+        maxWidth: "550px",
+        borderRadius: "20px",
+        objectFit: "cover",
+      }}
+    />
+
+    {/* Decorative elements */}
+    <span
+      style={{
+        position: "absolute",
+        top: "-20px",
+        right: "20%",
+        fontSize: "2rem",
+        color: "#8b3e3e",
+      }}
+    >
+      ✦
+    </span>
+  </div>
+</a>
+          </Col>
+        </Row>
+      </Container>
+    </div>
+ 
     <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
       <Container>
         <Row className="align-items-center">

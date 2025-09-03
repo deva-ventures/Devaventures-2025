@@ -7,38 +7,44 @@ const Akansha = () => {
      
             <Card.Body>
                {/* Top Notice Section */}
-  {/* <div style={{ backgroundColor: "#7a879b", padding: "105px 0" }}>
-        <Container>
-          <Row className="justify-content-center text-center">
-            <Col xs={12}>
-              <p
-                style={{
-                  fontSize: "1rem",
-                  fontWeight: "500",
-                  color: "#1d3557",
-                  margin: 0,
-                }}
-              >
-                📺 Watch the video on YouTube –{" "}
-                <a
-                  href="https://youtu.be/URwi0CRmDSY?si=XWi9StxAEbCiwg6d"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "white", textDecoration: "none" }}
-                >
-                 Click Here
-                </a>
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </div> */}
-<div
+  
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              My life mantra consists of two things: firm faith in God and karma.
+              </q>{" "}
+              – <strong>Dr. Akansha Shrivastava</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/akanshaArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+
+    <div
       style={{
-        backgroundColor: "#d3d3d3",
         padding: "90px 70px",
-        borderBottomLeftRadius: "100px",
-        borderBottomRightRadius: "100px",
+     
       }}
     >
       <Container>
@@ -47,32 +53,37 @@ const Akansha = () => {
           <Col xs={12} md={7} className="text-center text-md-start mb-4 mb-md-0">
             <p
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1.4rem",
                 fontWeight: "400",
                 color: "#1d3557",
               }}
             
 >
-              We couldn't put the best moments in writing. See for yourself.<br/>   
-              This conversation got too real for the blog. <br />
+We couldn't put the best moments in writing. See for yourself. <br/>   
+This conversation🔊 got too real for the blog.  <br />
            
             </p>
 
-            {/* <p style={{ color: "#6c6c6c", marginTop: "15px" }}>
-            This conversation got too real for the blog. <br />
-              Character
-            </p> */}
+          
           
             <p
-              style={{
-                fontSize: "1.7rem",
-                fontWeight: "700",
-                color: "#1d3557",
-              }}
-            >
-             Watch the uncut version on YouTube and Feel the Vibe before the buzz blows up!    <br />
-              
-            </p>
+  style={{
+    fontSize: "1.7rem",
+    fontWeight: "700",
+    color: "#1d3557",
+  }}
+>
+  Watch the uncut version on 👉{" "}
+  <a
+    href="https://youtu.be/URwi0CRmDSY?si=0OYFatrW8CQp4FJ8"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: "#e63946", textDecoration: "none" }}
+  >
+    YouTube
+  </a>{" "}
+  and Feel the Vibe before the buzz blows up! <br />
+</p>
            
             <div className="d-flex align-items-center gap-3 mt-4">
             <Button
@@ -113,41 +124,45 @@ const Akansha = () => {
 
           {/* RIGHT IMAGE */}
           <Col xs={12} md={5} className="text-center">
-            <div
-              style={{
-               
-                borderRadius: "30% 30% 30% 30%",
-                padding: "20px",
-                display: "inline-block",
-                position: "relative",
-              }}
-            >
-              <img
-                src="/niranjanTop.png" // replace with your image path
-                alt="Personality"
-                style={{
-                  width: "100%",
-                  maxWidth: "450px",
-                  borderRadius: "20px",
-                  objectFit: "cover",
-                }}
-              />
+          <a
+  href="https://youtu.be/URwi0CRmDSY?si=0OYFatrW8CQp4FJ8"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{ textDecoration: "none" }}
+>
+  <div
+    style={{
+      borderRadius: "30% 30% 30% 30%",
+      padding: "20px",
+      display: "inline-block",
+      position: "relative",
+    }}
+  >
+    <img
+      src="/akanshaConvo.jpg" // replace with your image path
+      alt="Personality"
+      style={{
+        width: "100%",
+        maxWidth: "550px",
+        borderRadius: "20px",
+        objectFit: "cover",
+      }}
+    />
 
-              {/* Decorative elements */}
-             
-             
-              <span
-                style={{
-                  position: "absolute",
-                  top: "-20px",
-                  right: "20%",
-                  fontSize: "2rem",
-                  color: "#8b3e3e",
-                }}
-              >
-                ✦
-              </span>
-            </div>
+    {/* Decorative elements */}
+    <span
+      style={{
+        position: "absolute",
+        top: "-20px",
+        right: "20%",
+        fontSize: "2rem",
+        color: "#8b3e3e",
+      }}
+    >
+      ✦
+    </span>
+  </div>
+</a>
           </Col>
         </Row>
       </Container>
@@ -155,49 +170,6 @@ const Akansha = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
-      <Container>
-        <Row className="align-items-center">
-          {/* Left Side - Quote */}
-          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
-            <p
-              style={{
-                fontSize: "1.2rem",
-                color: "#fff",
-                maxWidth: "500px",
-                margin: "0 auto",
-              }}
-            >
-              <q>
-              My life mantra consists of two things: firm faith in God and karma.
-              </q>{" "}
-              – <strong>Dr. Akansha Shrivastava</strong>
-            </p>
-          {/* </Col> */}
-
-          {/* Right Side - Complete Image */}
-          <Col xs={12} md={6} className="text-center text-md-start">
-            <Image
-              src="/akanshaArticle.png" // <-- second image here
-              alt="Preetha Athrey"
-              fluid
-              style={{ maxWidth: "100%", height: "auto" }}
-            />
-          </Col>
-        </Row>
-      </Container>
-    </div>
-          
     <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
       <Container>
         <Row className="align-items-center">

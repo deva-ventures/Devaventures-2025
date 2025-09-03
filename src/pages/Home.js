@@ -154,6 +154,22 @@ const Home = () => {
       img: "/niranjan.png",
       link: "/articles/niranjan",
     },
+    {
+      img: "/devanFeatured.png",
+      link: "/articles/devan",
+    },
+    {
+      img: "/pabloFeatured.png",
+      link: "/articles/pablo",
+    },
+    {
+      img: "/vaidehiFeatured.png",
+      link: "/articles/vaidehi",
+    },
+    {
+      img: "/sarinaFeatured.png",
+      link: "/articles/sarina",
+    },
     
   ];
 
@@ -171,8 +187,8 @@ const Home = () => {
       link: "/articles/neole",
     },
     {
-      img: "/harish.png",
-      link: "/articles/harish",
+      img: "/ragendu.png",
+      link: "/articles/ragendu",
     },
     
   ];
