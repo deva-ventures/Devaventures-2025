@@ -68,10 +68,7 @@ This conversation🔊 got too real for the blog.  <br />
            
             </p>
 
-            {/* <p style={{ color: "#6c6c6c", marginTop: "15px" }}>
-            This conversation got too real for the blog. <br />
-              Character
-            </p> */}
+          
           
             <p
               style={{
