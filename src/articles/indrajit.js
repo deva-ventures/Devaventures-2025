@@ -6,34 +6,45 @@ const Indrajit = () => {
     <>
       
             <Card.Body>
-            <div style={{ backgroundColor: "#7a879b", padding: "105px 0" }}>
-        <Container>
-          <Row className="justify-content-center text-center">
-            <Col xs={12}>
-              <p
-                style={{
-                  fontSize: "1rem",
-                  fontWeight: "500",
-                  color: "#1d3557",
-                  margin: 0,
-                }}
-              >
-                📺 Watch the video on YouTube –{" "}
-                <a
-                  href="https://youtu.be/aps1v6sNFWw?si=xnlrHxiDzCQoP3DY"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "white", textDecoration: "none" }}
-                >
-                 Click Here
-                </a>
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+            
+     
 
-      <div
+
+
+
+            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Side - Quote */}
+          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#fff",
+                maxWidth: "500px",
+                margin: "0 auto",
+              }}
+            >
+              <q>
+              Tough times never last, tough people do”—it actually works.
+              </q>{" "}
+              – <strong> Indrajit Lahiri</strong>
+            </p>
+          {/* </Col> */}
+
+          {/* Right Side - Complete Image */}
+          <Col xs={12} md={6} className="text-center text-md-start">
+            <Image
+              src="/indrajitArticle.png" // <-- second image here
+              alt="Preetha Athrey"
+              fluid
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+    <div
       style={{
         padding: "90px 70px",
      
@@ -159,44 +170,7 @@ This conversation🔊 got too real for the blog.  <br />
         </Row>
       </Container>
     </div>
-
-
-
-
-
-            <div style={{ backgroundColor: "#7a879b", padding: "60px 0" }}>
-      <Container>
-        <Row className="align-items-center">
-          {/* Left Side - Quote */}
-          {/* <Col xs={12} md={6} className="mb-4 mb-md-0 text-center text-md-start"> */}
-            <p
-              style={{
-                fontSize: "1.2rem",
-                color: "#fff",
-                maxWidth: "500px",
-                margin: "0 auto",
-              }}
-            >
-              <q>
-              Tough times never last, tough people do”—it actually works.
-              </q>{" "}
-              – <strong> Indrajit Lahiri</strong>
-            </p>
-          {/* </Col> */}
-
-          {/* Right Side - Complete Image */}
-          <Col xs={12} md={6} className="text-center text-md-start">
-            <Image
-              src="/indrajitArticle.png" // <-- second image here
-              alt="Preetha Athrey"
-              fluid
-              style={{ maxWidth: "100%", height: "auto" }}
-            />
-          </Col>
-        </Row>
-      </Container>
-    </div>
-          
+ 
     <div style={{ backgroundColor: "#d3d3d3", padding: "60px 0" }}>
       <Container>
         <Row className="align-items-center">
