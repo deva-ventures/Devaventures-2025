@@ -8,6 +8,45 @@ const InfluencerJourneys = () => {
 
   const people = [
     {
+      name: 'Rachna Kal Kal',
+      des: 'Athlete & Fitness | National Medalist | Sports Youth Icon | Individual Sports Champion',
+      img: '/rachna.jpg',
+      youtube: 'https://youtu.be/CsCLElXZU3s',
+      article: '/articles/rachna ',
+    },
+    
+    {
+      name: 'Aakash Shukla',
+      des: 'Dog Trainer &Behaviorist | Canine Psychology | Pet Parent Empowerment',
+      img: '/aakashShukla.jpg',
+      youtube: 'https://youtu.be/KqfT6xMd8lY',
+      article: '/articles/aakashShukla ',
+    },
+      
+    {
+      name: 'Yogita Aggarwal',
+      des: 'Parenting & Lifestyle Influencer | Founder @myfirstlovebyyogita | Author',
+      img: '/yogita.jpg',
+      youtube: 'https://www.youtube.com/watch?v=Q4LPsO_qtKE&feature=youtu.be',
+      article: '/articles/yogita ',
+    },
+    
+    {
+      name: 'Umang Shah',
+      des: 'Human Resource | Linkedin Growth Expert | Ghost Writer ',
+      img: '/umang.jpeg',
+      youtube: 'https://youtu.be/7yNKPQ_JVHI',
+      article: '/articles/umang',
+    },
+    {
+      name: 'Sinchu Raju',
+      des: 'Iron-Willed. Insight-Driven. Impact-Obsessed. | The Woman Who Turned Her “What If” into “Watch Me.',
+      img: '/sinchu.jpg',
+      youtube: 'https://www.youtube.com/watch?v=oU1cyMe1VDQ&feature=youtu.be',
+      article: '/articles/sinchu',
+    },
+
+    {
       name: 'Pankaj Dubey',
       des: 'Founder DSPIN | TEDx Speaker | Top 50 Indian Icon | Investor',
       img: '/pankaj.jpg',
@@ -297,15 +336,7 @@ const InfluencerJourneys = () => {
   article: '/articles/aakash',
 },
 
-{
-  name: 'Sinchu Raju',
-  des: 'Iron-Willed. Insight-Driven. Impact-Obsessed. | The Woman Who Turned Her “What If” into “Watch Me.',
-  img: '/sinchu.jpg',
-  youtube: 'https://www.youtube.com/watch?v=oU1cyMe1VDQ&feature=youtu.be',
-  article: '/articles/sinchu',
-},
 
-    
 
   ];
 
