@@ -8,6 +8,32 @@ const InfluencerJourneys = () => {
 
   const people = [
     {
+      name: 'Tom Lawrence',
+      des: 'Leadership & Coaching | Author of 5 Books | From Engineer to Empowerer | Speaker',
+      img: '/tom.jpg',
+      youtube: 'https://youtu.be/qTACgjL39tM',
+      article: '/articles/tom ',
+    },
+   
+    {
+      name: 'Alexandra Daccache',
+      des: 'Gut Health Expert  |Registeres Dietitian | Wellness & Healing | Holistic Health Educator',
+      img: '/alexandra.jpg',
+      youtube: 'https://www.youtube.com/watch?v=ivSPNwOvAdg',
+      article: '/articles/alexandra ',
+    },
+   
+    {
+      name: 'Gotha Hari Priya',
+      des: 'Parenting & Lifestyle | Conscious Motherhood | Entrepreneur with Heart | Voice for Modern Parents',
+      img: '/gotha.jpeg',
+      youtube: 'https://youtu.be/xRje6s3CKR0',
+      article: '/articles/gotha ',
+    },
+    
+    
+    
+    {
       name: 'Rachna Kal Kal',
       des: 'Athlete & Fitness | National Medalist | Sports Youth Icon | Individual Sports Champion',
       img: '/rachna.jpg',

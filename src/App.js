@@ -60,6 +60,9 @@ import Yogita from './articles/yogita';
 import Umang from './articles/umang';
 import AakashShukla from './articles/aakashShukla';
 import Rachna from './articles/rachna';
+import Gotha from './articles/gotha';
+import Alexandra from './articles/alexandra';
+import Tom from './articles/tom';
 
 
 
@@ -117,6 +120,9 @@ function App() {
             <Route path="/articles/umang" element={<Umang/>} />
             <Route path="/articles/aakashShukla" element={<AakashShukla/>} />
             <Route path="/articles/rachna" element={<Rachna/>} />
+            <Route path="/articles/gotha" element={<Gotha/>} />
+            <Route path="/articles/alexandra" element={<Alexandra/>} />
+            <Route path="/articles/tom" element={<Tom/>} />
 
 
 

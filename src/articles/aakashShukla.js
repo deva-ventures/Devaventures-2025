@@ -439,7 +439,7 @@ When I walked in, he was already on edge. I ignored him initially, like we alway
           }}
         >
           <video
-            src="/aakashShuklaArticleVideo.mp4" // <-- use your vertical video file
+            src="/aakashShuklaRapid.mp4" // <-- use your vertical video file
             controls
             style={{
               width: "360px",

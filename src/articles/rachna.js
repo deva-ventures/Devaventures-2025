@@ -73,7 +73,7 @@ This conversation🔊 got too real for the blog.  <br />
 >
   Watch the uncut version on 👉{" "}
   <a
-    href="https://youtu.be/pSwAvBBWTlU?si=jUKmDoTJEHJIXexq"
+    href="https://youtu.be/CsCLElXZU3s"
     target="_blank"
     rel="noopener noreferrer"
     style={{ color: "#e63946", textDecoration: "none" }}
@@ -92,7 +92,7 @@ This conversation🔊 got too real for the blog.  <br />
     borderRadius: "30px",
   }}
   onClick={() => {
-    window.open("https://youtu.be/pSwAvBBWTlU?si=jUKmDoTJEHJIXexq", "_blank");
+    window.open("https://youtu.be/CsCLElXZU3s", "_blank");
   }}
 >
   Learn More
@@ -112,7 +112,7 @@ This conversation🔊 got too real for the blog.  <br />
     marginLeft: "10px",
   }}
   onClick={() => {
-    window.open("https://youtu.be/pSwAvBBWTlU?si=jUKmDoTJEHJIXexq", "_blank");
+    window.open("https://youtu.be/CsCLElXZU3s", "_blank");
   }}
 >
   ▶
@@ -123,7 +123,7 @@ This conversation🔊 got too real for the blog.  <br />
           {/* RIGHT IMAGE */}
           <Col xs={12} md={5} className="text-center">
           <a
-  href="https://youtu.be/pSwAvBBWTlU?si=jUKmDoTJEHJIXexq"
+  href="https://youtu.be/CsCLElXZU3s"
   target="_blank"
   rel="noopener noreferrer"
   style={{ textDecoration: "none" }}
