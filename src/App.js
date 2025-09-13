@@ -63,6 +63,7 @@ import Rachna from './articles/rachna';
 import Gotha from './articles/gotha';
 import Alexandra from './articles/alexandra';
 import Tom from './articles/tom';
+import Ranbir from './articles/ranbir';
 
 
 
@@ -123,6 +124,7 @@ function App() {
             <Route path="/articles/gotha" element={<Gotha/>} />
             <Route path="/articles/alexandra" element={<Alexandra/>} />
             <Route path="/articles/tom" element={<Tom/>} />
+            <Route path="/articles/ranbir" element={<Ranbir/>} />
 
 
 

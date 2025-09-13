@@ -222,7 +222,7 @@ const AmplifyYourBrand = () => {
         >
           <div
             style={{
-              maxWidth: "360px",
+              maxWidth: "400px",
               color: "#fff",
               textAlign: "center",
             }}
@@ -233,7 +233,7 @@ const AmplifyYourBrand = () => {
             >
               FILL OUT THE FORM
             </h5>
-            <p style={{ fontSize: "14px", lineHeight: "1.6" }}>
+            <p style={{ fontSize: "18px", lineHeight: "1.6" }}>
               Reserve your spot today and take the first step toward unmatched
               visibility and engagement!
             </p>

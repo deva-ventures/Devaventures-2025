@@ -8,6 +8,17 @@ const InfluencerJourneys = () => {
 
   const people = [
     {
+      name: 'Ranbbir Banerjee',
+      des: 'Classical & Contemporary Dance | Fearless Innovator | Global Mentor | Founder of Vritii',
+      img: '/ranbir.png',
+      youtube: 'https://youtu.be/xRJyMHSJjzQ',
+      article: '/articles/ranbir ',
+    },
+   
+   
+   
+   
+    {
       name: 'Tom Lawrence',
       des: 'Leadership & Coaching | Author of 5 Books | From Engineer to Empowerer | Speaker',
       img: '/tom.jpg',
