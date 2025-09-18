@@ -23,7 +23,7 @@ const Ranbir = () => {
               }}
             >
               <q>
-              If something’s meant to happen, it will, at the right time. You just have to be patient.
+              As teachers, we often expect students to understand us. But I believe it’s just as important for mentors to understand their students.
               </q>{" "}
               – <strong>Ranbbir Banerjee</strong>
             </p>
@@ -140,7 +140,7 @@ This conversation🔊 got too real for the blog.  <br />
     }}
   >
     <img
-      src="/ranbirConvo.jpg" // replace with your image path
+      src="/ranbirConvo.png" // replace with your image path
       alt="Personality"
       style={{
         width: "100%",
@@ -186,7 +186,7 @@ This conversation🔊 got too real for the blog.  <br />
           <Col xs={12} md={6} className="mb-4 mb-md-0">
             <p style={{ fontSize: "1.1rem", color: "#1d3557", lineHeight: "1.6" }}>
             There are dancers — and then there are visionaries who shake the very ground they perform on. Ranbbir Banerjee belongs to the latter. Fearless, unapologetic, and relentlessly committed to his art, he is not just carrying classical dance forward — he’s rewriting its narrative for a new generation.
-In his candid conversation with DevikaMajumder, Co-founder of Global Influencers Hub, Ranbbir strips away the noise of “influencer culture” and brings the focus back to what truly matters — authenticity, impact, and building a world where dancers can thrive without compromise. He speaks of influence as responsibility, of success as building ecosystems, and of dance as something far greater than performance — a movement, a calling, a way of life.
+In his candid conversation with Devika Majumder, Co-founder of Global Influencers Hub, Ranbbir strips away the noise of “influencer culture” and brings the focus back to what truly matters — authenticity, impact, and building a world where dancers can thrive without compromise. He speaks of influence as responsibility, of success as building ecosystems, and of dance as something far greater than performance — a movement, a calling, a way of life.
 This isn’t just an interview. It’s a rare glimpse into the mind of an artist who refuses to dilute his truth — and in doing so, is inspiring countless others to find theirs.
 
             </p>
