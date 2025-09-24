@@ -64,6 +64,7 @@ import Gotha from './articles/gotha';
 import Alexandra from './articles/alexandra';
 import Tom from './articles/tom';
 import Ranbir from './articles/ranbir';
+import Arpit from './articles/arpit';
 
 
 
@@ -125,6 +126,7 @@ function App() {
             <Route path="/articles/alexandra" element={<Alexandra/>} />
             <Route path="/articles/tom" element={<Tom/>} />
             <Route path="/articles/ranbir" element={<Ranbir/>} />
+            <Route path="/articles/arpit" element={<Arpit/>} />
 
 
 

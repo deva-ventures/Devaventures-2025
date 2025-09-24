@@ -8,6 +8,13 @@ const InfluencerJourneys = () => {
 
   const people = [
     {
+      name: 'Dr.Arpit Bansal',
+      des: 'Medical & Health | The Aquaman Biohacker | Resilience Coach | TEDx Speaker',
+      img: '/arpit.jpg',
+      youtube: 'https://youtu.be/TVc93BIofMs',
+      article: '/articles/arpit ',
+    },
+    {
       name: 'Ranbbir Banerjee',
       des: 'Classical & Contemporary Dance | Fearless Innovator | Global Mentor | Founder of Vritii',
       img: '/ranbir.png',
