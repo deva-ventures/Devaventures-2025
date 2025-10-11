@@ -1,12 +1,18 @@
 import React from 'react';
 import "../App.css";
-import { featuredStories, trendingStories } from '../data/mockData';
 import { useNavigate } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Container, Row, Col, Card, Button , Carousel} from 'react-bootstrap';
 const InfluencerJourneys = () => {
 
   const people = [
+    {
+      name: 'Roshan Agni Sreedhar Bachan',
+      des: 'International Athlete & Coach | Asian Silver Medalist | Athletics & Fitness Trainer | Founder – Indian Athletic Academy',
+      img: '/roshan.jpg',
+      youtube: 'https://youtu.be/DGfQk5JWeps',
+      article: '/articles/roshan ',
+    },
     {
       name: 'Dr.Arpit Bansal',
       des: 'Medical & Health | The Aquaman Biohacker | Resilience Coach | TEDx Speaker',
@@ -593,8 +599,9 @@ const InfluencerJourneys = () => {
                 }}
               />
               <Card.Body>
+              <Card.Title className="fw-bold">{home.name}</Card.Title>
+
                 <div className="text-muted small mb-2">{home.des}</div>
-                <Card.Title className="fw-bold">{home.name}</Card.Title>
 
                 <div className="d-flex flex-column mt-3 gap-2">
                   <a
