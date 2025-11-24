@@ -3,6 +3,7 @@ import { Navbar, Nav, Container, Button, Image } from 'react-bootstrap';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,8 +13,23 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
+    <>
+    <style>
+      {`
+        @media (max-width: 991.98px) {
+          .mobile-nav-bg {
+            background: rgb(176, 170, 170);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-top: 0.75rem;
+          }
+        }
+      `}
+    </style>
     <Navbar
     expand="lg"
+    expanded={isExpanded}
+    onToggle={(val) => setIsExpanded(val)}
     className={`py-3 ${scrolled ? "bg-light shadow-sm" : "bg-transparent"}`}
     style={{
       position: "fixed",
@@ -36,7 +52,7 @@ const Header = () => {
       </Navbar.Brand>
   
       <Navbar.Toggle aria-controls="main-navbar" />
-      <Navbar.Collapse id="main-navbar">
+      <Navbar.Collapse id="main-navbar" className={isExpanded ? 'mobile-nav-bg' : ''}>
         {/* LEFT SIDE MENU */}
         <Nav className="me-auto gap-3 ms-5">
           <Nav.Link
@@ -55,7 +71,7 @@ const Header = () => {
             href="/influencer-journeys"
             style={{ color: scrolled ? "black" : "white" }}
           >
-            Storyfluence
+            Global Influencers Hub
           </Nav.Link>
           <Nav.Link
             href="/trending"
@@ -103,6 +119,7 @@ const Header = () => {
       </Navbar.Collapse>
     </Container>
   </Navbar>
+  </>
   
   
   

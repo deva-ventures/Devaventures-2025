@@ -4,7 +4,7 @@ import { Container, Row, Col, Image, ListGroup } from 'react-bootstrap';
 const BagYourFirstBigBrand = () => {
   return (
     <>
-    <Container className="py-1" style={{ maxWidth: '900px' }}>
+    <Container className="py-5" style={{ maxWidth: '900px' }}>
       <h5 className="text-center fw-bold" style={{ color: '#0f3052' }}>
         Bag Your First Big Brand Deal in 30 Days—No Matter Your Following!
       </h5>

@@ -3,44 +3,36 @@ import { Container, Row, Col, Card, Button , Carousel} from 'react-bootstrap';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 const Trending = () => {
 
-  const people = [
-    {
-      name: 'Pankaj Dubey',
-      des: 'Founder DSPIN | TEDx Speaker | Top 50 Indian Icon | Investor',
-      img: '/pankaj.jpg',
-      youtube: 'https://youtu.be/RUJ-LV58m9I?si=Fzn9UkQRoXSRt5ZM',
-      article: '/articles/pankaj',
-    },
-    {
-      name: 'Pablo Montana',
-      des: 'Musician | Latin Artist | Salsa & Bachata Performer | Traveller',
-      img: '/pabloTrendin.jpg',
-      youtube: 'https://youtu.be/-oq8VYhFcHw?si=FVXr_fPIrhPjG0Ec',
-      article: '/articles/pablo',
-    },
-    {
-      name: 'Sweta Desai',
-      des: 'Reset, Rebuild, Reign | From Late Starts to Global Fashion Weeks & Full House Shows',
-      img: '/swetaTrending.jpg',
-      youtube: 'https://youtu.be/va1t7bxevtc?si=kvmnn3vYRFnyYWpp',
-      article: '/articles/sweta',
-    },
-    {
-      name: 'Pankaj Dubey',
-      des: 'Founder DSPIN | TEDx Speaker | Top 50 Indian Icon | Investor',
-      img: '/pankaj.jpg',
-      youtube: 'https://youtu.be/RUJ-LV58m9I?si=Fzn9UkQRoXSRt5ZM',
-      article: '/articles/pankaj',
-    },
-  ];
-  
-  // Group items into chunks of 3 for each slide
   const chunkArray = (arr, size) =>
     Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
       arr.slice(i * size, i * size + size)
     );
-  
-  const groupedSlides = chunkArray(people, 3);
+
+  const videoStories = [
+    {
+      title: 'Sweta Desai',
+      subtitle: 'Watch the full story',
+      video: '/swetaTeaser.mp4',
+    },
+    {
+      title: 'Sohum Deb',
+      subtitle: 'Watch the full story',
+      video: '/sohumTeaser.mp4',
+    },
+    {
+      title: 'Raj Sharma',
+      subtitle: 'Watch the full story',
+      video: '/rajTeaser.mp4',
+    },
+    {
+      title: 'Sweta Desai',
+      subtitle: 'Watch the full story',
+      video: '/swetaTeaser.mp4',
+    },
+    
+  ];
+
+  const videoSlides = chunkArray(videoStories, 3);
   return (
     <div style={{ backgroundColor: "#f5f5f0" }}>
     <div
@@ -95,70 +87,79 @@ const Trending = () => {
           This is where real impact begins — not in noise, but in truth.
         </p>
       </div>
-  
-      <Row className="g-4" style={{marginTop:"40px"}}>
-  <Col xs={12} sm={6} lg={4}>
-    <Card className="h-100 border-0 shadow-sm">
-      <video
-        src="/swetaTeaser.mp4"
-        controls
-        className="w-100"
-        style={{
-          borderRadius: "12px",
-          height: "auto",
-          maxHeight: "400px", // increased height
-          objectFit: "cover",
-        }}
-      />
-      <Card.Body>
-        <Card.Title className="fw-bold">Sweta Desai</Card.Title>
-        <div className="text-muted small mb-2">Watch the full story</div>
-      </Card.Body>
-    </Card>
-  </Col>
+      <style>
+        {`
+          .video-carousel .carousel-item {
+            padding: 10px 0;
+          }
 
-  <Col xs={12} sm={6} lg={4}>
-    <Card className="h-100 border-0 shadow-sm">
-      <video
-        src="/sohumTeaser.mp4"
-        controls
-        className="w-100"
-        style={{
-          borderRadius: "12px",
-          height: "auto",
-          maxHeight: "400px", // increased height
-          objectFit: "cover",
-        }}
-      />
-      <Card.Body>
-        <Card.Title className="fw-bold">Sohum Deb</Card.Title>
-        <div className="text-muted small mb-2">Watch the full story</div>
-      </Card.Body>
-    </Card>
-  </Col>
+          .video-carousel .carousel-control-prev,
+          .video-carousel .carousel-control-next {
+            width: auto;
+          }
 
-  <Col xs={12} sm={6} lg={4}>
-    <Card className="h-100 border-0 shadow-sm">
-      <video
-        src="/rajTeaser.mp4"
-        controls
-        className="w-100"
-        style={{
-          borderRadius: "12px",
-          height: "auto",
-          maxHeight: "400px", // increased height
-          objectFit: "cover",
-        }}
-      />
-      <Card.Body>
-        <Card.Title className="fw-bold">Raj Sharma</Card.Title>
-        <div className="text-muted small mb-2">Watch the full story</div>
-      </Card.Body>
-    </Card>
-  </Col>
-</Row>
+          .carousel-control-btn {
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
 
-
+          @media (max-width: 576px) {
+            .video-carousel .carousel-item {
+              padding: 0;
+            }
+          }
+        `}
+      </style>
+      <Carousel
+        className="video-carousel"
+        interval={null}
+        indicators={false}
+        prevIcon={
+          <span className="carousel-control-btn" aria-hidden="true">
+            <FaChevronLeft />
+          </span>
+        }
+        nextIcon={
+          <span className="carousel-control-btn" aria-hidden="true">
+            <FaChevronRight />
+          </span>
+        }
+      >
+        {videoSlides.map((slide, idx) => (
+          <Carousel.Item key={`video-slide-${idx}`}>
+            <Row className="g-4" style={{ marginTop: "20px" }}>
+              {slide.map((story, cardIdx) => (
+                <Col xs={12} sm={6} lg={4} key={`video-card-${idx}-${cardIdx}`}>
+                  <Card className="h-100 border-0 shadow-sm">
+                    <video
+                      src={story.video}
+                      controls
+                      className="w-100"
+                      style={{
+                        borderRadius: "12px",
+                        height: "auto",
+                        maxHeight: "400px",
+                        objectFit: "cover",
+                      }}
+                    />
+                    <Card.Body>
+                      <Card.Title className="fw-bold">{story.title}</Card.Title>
+                      <div className="text-muted small mb-2">
+                        {story.subtitle}
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </Carousel.Item>
+        ))}
+      </Carousel>
     </Container>
   
     {/* About Section */}

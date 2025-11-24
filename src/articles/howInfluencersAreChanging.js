@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 const HowInfluencersAreChanging = () => {
   return (
-    <div className="py-5" style={{ backgroundColor: '#d9d9d9' }}>
+    <div className="py-10" style={{ backgroundColor: '#d9d9d9' }}>
       <Container>
         <h4 className="text-center fw-bold mb-4" style={{ color: '#0f3052' }}>
           How Influencers Are Changing the Way We Shop (And Why You Should Be Part of It)
@@ -114,7 +114,7 @@ const HowInfluencersAreChanging = () => {
 
           {/* RIGHT: CONTENT */}
           <Col xs={12} md={6}>
-            <h5 className="text-warning fw-semibold mb-4">
+            <h5 className=" fw-semibold mb-4">
               Section 4: How to Get Started in Social Commerce
             </h5>
 

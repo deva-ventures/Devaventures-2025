@@ -85,8 +85,8 @@ const Bidding = () => {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    height: '100vh',
-    width: '100vw',
+    minHeight: '100vh',
+    width: '100%',
   };
 
   const sectionStyle = {
@@ -132,20 +132,122 @@ const Bidding = () => {
   };
   return (
     <>
-    <Container fluid style={backgroundStyle}>
+    <style>
+      {`
+        .bidding-hero {
+          width: 100%;
+        }
+
+        .bidding-section-row {
+          row-gap: 2rem;
+        }
+
+        .bidding-text-col {
+          padding-left: 2rem !important;
+          padding-right: 2.5rem !important;
+        }
+
+        .bidding-heading {
+          font-size: 3rem;
+          font-weight: bold;
+        }
+
+        .bidding-subheading {
+          font-size: 1rem;
+          margin-bottom: 20px;
+        }
+
+        .bidding-paragraph {
+          color: #ccc;
+          font-size: 1rem;
+          line-height: 1.6;
+        }
+
+        .right-hero-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 0;
+        }
+
+        .overlay-image,
+        .overlay-image-alt {
+          width: 100%;
+          height: 300px;
+          max-width: 250px;
+          position: relative;
+          z-index: 2;
+        }
+
+        @media (max-width: 992px) {
+          .bidding-text-col {
+            padding-left: 1.5rem !important;
+            padding-right: 1.5rem !important;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .bidding-hero {
+            min-height: 60vh;
+            height: auto;
+            background-size: contain !important;
+            background-position: top center !important;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            background-color: #000;
+          }
+
+          .bidding-section-row {
+            text-align: center;
+          }
+
+          .bidding-text-col {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+          }
+
+          .bidding-heading {
+            font-size: 2rem;
+            line-height: 1.2;
+          }
+
+          .bidding-subheading,
+          .bidding-paragraph {
+            font-size: 0.95rem;
+          }
+
+          .overlay-image,
+          .overlay-image-alt {
+            height: auto;
+            max-width: 70%;
+            margin: 0 !important;
+          }
+
+          .right-hero-img {
+            height: auto;
+            object-fit: contain;
+          }
+
+          .countdown-timer {
+            justify-content: flex-start;
+          }
+        }
+      `}
+    </style>
+    <Container fluid className="bidding-hero" style={backgroundStyle}>
       </Container>
     <div style={sectionStyle}>
       <Container fluid>
-        <Row className="align-items-center">
+        <Row className="align-items-center bidding-section-row">
           {/* LEFT TEXT BLOCK */}
-          <Col md={5} className="px-5 mb-4 mb-md-0">
+          <Col md={5} className="px-5 mb-4 mb-md-0 bidding-text-col">
             <div style={textBlockStyle}>
-              <h1 style={headingStyle}>What Happens in The Bidding Room?</h1>
-              <p style={subheadingStyle}>
+              <h1 className="bidding-heading" style={headingStyle}>What Happens in The Bidding Room?</h1>
+              <p className="bidding-subheading" style={subheadingStyle}>
               Only the boldest brands and the most ambitious influencers will know. <br />
                 This isn’t just another marketplace—this is a battleground for creativity, innovation, and opportunity.
               </p>
-              <p style={paragraphStyle}>
+              <p className="bidding-paragraph" style={paragraphStyle}>
               <b>For Small Businesses:</b> List your gigs, set your terms, and watch influencers compete to amplify your brand like never before.<br/>
             <b> For Influencers:</b>  Don’t just wait for opportunities—seize them. Bid, win, and collaborate with brands that resonate with your personal brand.
               </p>
@@ -158,6 +260,7 @@ const Bidding = () => {
               src="/grid1.jpeg"
               alt="Overlay"
               style={overlayImageStyle}
+              className="overlay-image"
             />
           </Col>
 
@@ -167,6 +270,7 @@ const Bidding = () => {
               src="/pastel1.jpeg"
               alt="Right Full"
               style={rightImageStyle}
+              className="right-hero-img"
             />
           </Col>
         </Row>
@@ -175,13 +279,14 @@ const Bidding = () => {
   
     <div style={{ backgroundColor: 'white', color: 'white'}}>
       <Container fluid>
-        <Row className="align-items-center">
+        <Row className="align-items-center bidding-section-row">
           {/* RIGHT FULL IMAGE */}
           <Col md={5}>
             <img
               src="/white1.jpg"
               alt="Right Full"
               style={rightImageStyle}
+              className="right-hero-img"
             />
           </Col>
 
@@ -198,6 +303,7 @@ const Bidding = () => {
                 zIndex: 2,
                 position: 'relative'
               }}
+              className="overlay-image-alt"
             />
           </Col>
 

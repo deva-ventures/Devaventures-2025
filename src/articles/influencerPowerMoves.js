@@ -116,10 +116,10 @@ How New Influencers Can Leverage Their Influence for Good
 If you’re an emerging influencer looking to make an impact, here are some actionable steps you can take to start leveraging your influence for real-world change:
             </p>
             <p><strong>Identify Your Passion:</strong>  Choose a cause that resonates deeply with you. Whether it’s gender equality, environmental conservation, or mental health, your audience will appreciate your authenticity when you speak from the heart.
-Educate and Inspire: Use your platform to educate your followers on important issues. Share facts, statistics, and resources that help spread awareness. Hosting webinars or Instagram Lives with experts can also offer valuable information to your audience.
-Partner with Like-minded Organizations: Collaborate with charities, nonprofit organizations, or eco-conscious brands that align with your values. These partnerships allow you to amplify the impact of your content and reach a wider audience.
-Practice What You Preach: Be a role model by practicing the values you promote. For example, if you advocate for sustainability, make sure your personal choices reflect this. Your followers are more likely to be inspired if they see you walking the talk.
-Create Call-to-Action Campaigns: Encourage your audience to take action. This can range from donating to a cause, participating in a petition, or making small lifestyle changes that benefit society and the planet.
+<b>Educate and Inspire:</b> Use your platform to educate your followers on important issues. Share facts, statistics, and resources that help spread awareness. Hosting webinars or Instagram Lives with experts can also offer valuable information to your audience.
+<br/><b>Partner with Like-minded Organizations:</b> Collaborate with charities, nonprofit organizations, or eco-conscious brands that align with your values. These partnerships allow you to amplify the impact of your content and reach a wider audience.
+Practice What You Preach: Be a role model by practicing the values you promote. For example, if you advocate for sustainability, make sure your personal choices reflect this. Your followers are more likely to be inspired if they see you walking the talk.<br/>
+<b>Create Call-to-Action Campaigns:</b> Encourage your audience to take action. This can range from donating to a cause, participating in a petition, or making small lifestyle changes that benefit society and the planet.
 
 Influencers are no longer just trendsetters; they are powerful voices for change. Whether advocating for social justice, raising awareness for sustainability, or supporting mental health initiatives, influencers have the ability to make a real-world impact. By following the example set by those who came before them, new influencers can use their platforms to champion the causes that matter most, inspire their followers, and lead the way for a better, more inclusive world.
             </p>

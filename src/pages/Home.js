@@ -42,7 +42,7 @@ const Home = () => {
   };
    const headingStyle = {
     fontSize: 'clamp(2.5rem, 6vw, 6rem)',
-    letterSpacing: '-5.05px',
+    letterSpacing: '-3.0px',
     fontWeight: 'bold',
     color: '#0f3052'
   };
@@ -521,7 +521,7 @@ const Home = () => {
     <Row style={{ marginLeft: 0, marginRight: 0 }}>
       <Col md={8} sm={12} style={{ paddingLeft: '20px' }}>
        
-        <h1 className="display-5 fw-bold" style={{color: '#0f3052',letterSpacing: '-3.05px'}}>
+        <h1 className="display-5 fw-bold" style={{color: '#0f3052',letterSpacing: '-2.0px'}}>
       Masterfluence
         </h1>
       </Col>
@@ -533,35 +533,64 @@ const Home = () => {
 <div className="bg-light py-5">
   <style>
     {`
+      .hero-card {
+        border-radius: 15px;
+        overflow: hidden;
+      }
+
       @media (max-width: 768px) {
+        .hero-card {
+          background-size: contain !important;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: #000;
+          min-height: 320px;
+          aspect-ratio: 3 / 4;
+          display: flex;
+          align-items: stretch;
+        }
+
+        .hero-card .card-body {
+          flex: 1;
+        }
+
         .first-card-body {
           padding: 0 !important;
-          height: 350px !important;
+          height: auto !important;
           display: flex;
           justify-content: flex-end;
           align-items: flex-end;
         }
+
         .first-card-body a {
-          margin: 0 20px 20px 0; /* button spacing bottom-right */
+          margin: 0 20px 20px 0;
         }
+
         .second-card {
-          height: 350px !important;
+          height: auto !important;
         }
+
+        .second-card-body {
+          height: auto !important;
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          padding: 20px !important;
+        }
+
         .second-card-button {
-          top: auto !important;
-          bottom: 20px !important;
-          right: 20px !important;
+          position: static !important;
+          margin-left: auto;
         }
       }
     `}
   </style>
-
   <Container fluid>
     <Row className="g-4 justify-content-start px-3">
       {/* Card 1 */}
       <Col xs={12} md={6}>
         <Card
-          className="h-100 text-white border-0"
+          className="h-100 text-white border-0 hero-card"
           style={{
             backgroundImage: `url('/Micro-Influencers.png')`,
             backgroundSize: 'cover',
@@ -605,7 +634,7 @@ const Home = () => {
       {/* Card 2 */}
       <Col xs={12} md={6}>
         <Card
-          className="h-100 text-white border-0 position-relative second-card"
+          className="h-100 text-white border-0 position-relative second-card hero-card"
           style={{
             backgroundImage: `url('/howInfluencers.png')`,
             backgroundSize: 'cover',
@@ -614,7 +643,10 @@ const Home = () => {
             height: '400px',
           }}
         >
-          <Card.Body style={{ height: '100%', position: 'relative' }}>
+          <Card.Body
+            className="second-card-body"
+            style={{ height: '100%', position: 'relative' }}
+          >
             <a
               href="/articles/influencerPowerMoves"
               target="_blank"
@@ -648,50 +680,94 @@ const Home = () => {
 
 
 
-
     <div className="bg-light py-5">
+      <style>
+        {`
+          .feature-card {
+            border-radius: 15px;
+            overflow: hidden;
+          }
+
+          @media (max-width: 768px) {
+            .feature-card {
+              background-size: contain !important;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-color: #000;
+              min-height: 320px;
+              aspect-ratio: 3 / 4;
+              display: flex;
+              align-items: stretch;
+            }
+
+            .feature-card .card-body {
+              height: auto !important;
+              padding: 20px !important;
+              display: flex;
+              justify-content: flex-end;
+              align-items: flex-end;
+            }
+          }
+        `}
+      </style>
       <Container fluid>
         <Row className="g-4 justify-content-start px-3">
           {/* Card 3 */}
-          
-<Col xs={12} md={6}>
-  <Card
-    className="h-100 text-white border-0"
-    style={{
-      backgroundImage: `url('/influencerPower.png')`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      borderRadius: '15px',
-    }}
-  >
-    <Card.Body
-      className="d-flex flex-column justify-content-end align-items-center"
-      style={{
-        height: '550px',
-        borderRadius: '15px',
-        paddingBottom: '40px', 
-      }}
-    >
-<a href="/articles/howInfluencersAreChanging" target="_blank" rel="noopener noreferrer"> <Button variant="outline-light">Read More</Button></a>
-     
-    </Card.Body>
-  </Card>
-</Col>
-      {/* Card 2 */}
           <Col xs={12} md={6}>
-            <Card className="h-100 text-white border-0" style={{ backgroundImage: `url('/bagYourFirst.png')`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '15px' }}>
-            <Card.Body
-      className="d-flex flex-column justify-content-end align-items-center"
-      style={{
-        height: '400px',
-        borderRadius: '15px',
-        paddingBottom: '40px', 
-       
-      }}
-    >
-<a href="/articles/bagYourFirstBigBrand" target="_blank" rel="noopener noreferrer"> <Button variant="outline-light" >Read More</Button></a>
-      
-    </Card.Body >
+            <Card
+              className="h-100 text-white border-0 feature-card"
+              style={{
+                backgroundImage: `url('/influencerPower.png')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                borderRadius: '15px',
+              }}
+            >
+              <Card.Body
+                className="d-flex flex-column justify-content-end align-items-center"
+                style={{
+                  height: '550px',
+                  borderRadius: '15px',
+                  paddingBottom: '20px',
+                }}
+              >
+                <a
+                  href="/articles/howInfluencersAreChanging"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline-light">Read More</Button>
+                </a>
+              </Card.Body>
+            </Card>
+          </Col>
+          {/* Card 4 */}
+          <Col xs={12} md={6}>
+            <Card
+              className="h-100 text-white border-0 feature-card"
+              style={{
+                backgroundImage: `url('/bagYourFirst.png')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                borderRadius: '15px',
+              }}
+            >
+              <Card.Body
+                className="d-flex flex-column justify-content-end align-items-center"
+                style={{
+                  height: '400px',
+                  borderRadius: '15px',
+                  paddingBottom: '15px',
+                }}
+              >
+                <a
+                  href="/articles/bagYourFirstBigBrand"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline-light">Read More</Button>
+                </a>
+              </Card.Body>
             </Card>
           </Col>
         </Row>

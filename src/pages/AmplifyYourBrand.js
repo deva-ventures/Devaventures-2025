@@ -222,9 +222,19 @@ const AmplifyYourBrand = () => {
         >
           <div
             style={{
-              maxWidth: "400px",
+              position: "absolute",
+              inset: 0,
+              backgroundColor: "rgba(0, 0, 0, 0.45)",
+              zIndex: 1,
+            }}
+          />
+          <div
+            style={{
+              maxWidth: "500px",
               color: "#fff",
               textAlign: "center",
+              position: "relative",
+              zIndex: 2,
             }}
           >
             <h5
@@ -233,7 +243,7 @@ const AmplifyYourBrand = () => {
             >
               FILL OUT THE FORM
             </h5>
-            <p style={{ fontSize: "18px", lineHeight: "1.6" }}>
+            <p style={{ fontSize: "20px", lineHeight: "1.6" }}>
               Reserve your spot today and take the first step toward unmatched
               visibility and engagement!
             </p>
@@ -243,6 +253,8 @@ const AmplifyYourBrand = () => {
                   backgroundColor: "#0f3052",
                   border: "none",
                   marginTop: "10px",
+                  fontSize:"20px",
+                  padding:"20px"
                 }}
               >
                 Discover More
