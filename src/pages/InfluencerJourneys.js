@@ -6,6 +6,41 @@ import { Container, Row, Col, Card, Button , Carousel} from 'react-bootstrap';
 const InfluencerJourneys = () => {
 
   const people = [
+    // {
+    //   name: 'Dr. Akshat Chadha',
+    //   des: 'Medical & Health | Doctor with a Twist Tedx Speaker',
+    //   img: '/akshat.jpg',
+    //   youtube: 'https://youtu.be/eNgruHubBmI',
+    //   article: '/articles/akshat',
+    // },
+    // {
+    //   name: 'Yaashi Jain',
+    //   des: 'Mountaineer | Asia Book of Records Mt. Everest + Lhotse (26hrs) | 4/7 Summits',
+    //   img: '/yaashi.jpg',
+    //   youtube: 'https://youtu.be/WT74kPRWiJM',
+    //   article: '/articles/yaashi',
+    // },
+    // {
+    //   name: 'Neelam Agarwal',
+    //   des: 'Chef | Curating easy recipes | Mom | Content Creator',
+    //   img: '/neelam.jpg',
+    //   youtube: 'https://youtu.be/vsPj3Cf0g9M',
+    //   article: '/articles/neelam',
+    // },
+    // {
+    //   name: 'Perminder Singh Malik',
+    //   des: 'Social Impact | Community Builder | Purpose-Led Leader | Voice for Change',
+    //   img: '/parminder.jpg',
+    //   youtube: 'https://www.youtube.com/watch?v=UinMdMWfLKU',
+    //   article: '/articles/parminder ',
+    // },
+    // {
+    //   name: 'Punita Parekh',
+    //   des: 'The Content Alchemist | Turning Experience into Expertise, Strategy into Story',
+    //   img: '/punita.jpg',
+    //   youtube: 'https://youtu.be/DGfQk5JWeps',
+    //   article: '/articles/punita ',
+    // },
     {
       name: 'Roshan Agni Sreedhar Bachan',
       des: 'International Athlete & Coach | Asian Silver Medalist | Athletics & Fitness Trainer | Founder – Indian Athletic Academy',

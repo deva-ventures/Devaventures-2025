@@ -66,6 +66,11 @@ import MicroInfluencerArticle from "./articles/riseOfMicro";
 import InfluencerPowerMoves from "./articles/influencerPowerMoves";
 import HowInfluencersAreChanging from './articles/howInfluencersAreChanging';
 import BagYourFirstBigBrand from './articles/bagYourFirstBigBrand';
+import Punita from './articles/punita';
+import Parminder from './articles/perminder';
+import Neelam from './articles/neelam';
+import Yaashi from './articles/yaashi';
+import Akshat from './articles/akshat';
 
 
 
@@ -128,6 +133,12 @@ function App() {
             <Route path="/articles/ranbir" element={<Ranbir/>} />
             <Route path="/articles/arpit" element={<Arpit/>} />
             <Route path="/articles/roshan" element={<Roshan/>} />
+m           <Route path="/articles/punita" element={<Punita/>} />
+m           <Route path="/articles/parminder" element={<Parminder/>} />
+
+m           <Route path="/articles/neelam" element={<Neelam/>} />
+m           <Route path="/articles/yaashi" element={<Yaashi/>} />
+m           <Route path="/articles/akshat" element={<Akshat/>} />
 
 
 
