@@ -16,14 +16,15 @@ const AboutSection = () => {
     alt="www sculpture"
     fluid
     style={{
-      borderRadius: "0px", // remove curve if you want full edge-to-edge
-      height: "90vh",
-      width: "100vw",
-      objectFit: "cover",
+      borderRadius: "0px",
+      width: "100%",
+      height: window.innerWidth < 768 ? "auto" : "90vh",   // mobile fix
+      objectFit: window.innerWidth < 768 ? "contain" : "cover", // show full image on mobile
       boxShadow: "0 0 20px rgba(255,255,255,0.1)",
     }}
   />
 </Container>
+
 
 
     <Container fluid className="bg-light py-5">
@@ -54,7 +55,7 @@ const AboutSection = () => {
       }
     `}
   </style>
-          <h1 className="fw-bold display-5 mb-4" style={{ color: '#0f3052' ,letterSpacing: '-3px'}}>Unlock Your Potential</h1>
+          <h1 className="fw-bold display-5 mb-4" style={{ color: '#0f3052'}}>Unlock Your Potential</h1>
           <p className="fs-5 text-secondary">
           Unlock Your Potential
           Enhance your skills with our Influencer Academy, offering tailored resources and expert-led workshops.
@@ -99,7 +100,7 @@ const AboutSection = () => {
       }
     `}
   </style>
-          <h2 className="fw-bold display-5 mb-4" style={{ color: '#0f3052',letterSpacing: '-3px' }}>Stay Ahead of the Curve</h2>
+          <h2 className="fw-bold display-5 mb-4" style={{ color: '#0f3052' }}>Stay Ahead of the Curve</h2>
           <p className="fs-5 text-secondary">
           Gain insights into trending topics and strategies to amplify your brand visibility through impactful partnerships.
           </p>
@@ -123,7 +124,7 @@ const AboutSection = () => {
       }
     `}
   </style>
-          <h2 className="fw-bold display-5 mb-4" style={{ color: '#0f3052',letterSpacing: '-3px' }}>The Bidding Room</h2>
+          <h2 className="fw-bold display-5 mb-4" style={{ color: '#0f3052' }}>The Bidding Room</h2>
           <p className="fs-5 text-secondary">
           Connect with small businesses showcasing exciting opportunities, and bid on projects that align with your passions.
           </p>
@@ -168,7 +169,7 @@ const AboutSection = () => {
       }
     `}
   </style>
-          <h2 className="fw-bold display-5 mb-4" style={{ color: '#0f3052' ,letterSpacing: '-3px'}}>Our Thriving Community</h2>
+          <h2 className="fw-bold display-5 mb-4" style={{ color: '#0f3052' }}>Our Thriving Community</h2>
           <p className="fs-5 text-secondary">
           Transform your aspirations into achievements and take the next step in your journey with Global Influencers Hub.
           </p>
