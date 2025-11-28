@@ -42,7 +42,7 @@ const ShareYourSpotlight = () => {
   <Container className="py-5">
       <Row className="align-items-center">
         {/* Left - Circular Image */}
-        <Col xs={12} md={6} className="text-center mb-4 mb-md-0">
+        <Col xs={12} md={4} className="text-center mb-4 mb-md-0">
           <div
             style={{
               width: "300px",
@@ -63,12 +63,13 @@ const ShareYourSpotlight = () => {
         </Col>
 
         {/* Right - Text Content */}
-        <Col xs={12} md={6}>
+        <Col xs={12} md={8}>
          
           <h3 className="fw-bold mb-3" style={{ color: "#0f3052" }}>
-            Hey there!<br/> If you’ve clicked on Share Your Spotlight, buddy, we already know you’ve got <br/> something special up your sleeve!
+            Hey there!
           </h3>
-          <p style={{ color: "#666", fontSize: "1.05rem" }}>
+          <h5 className=" mb-3 " style={{ color: "#0f3052",fontSize:"20px"}}>If you’ve clicked on Share Your Spotlight, buddy, we already know you’ve got <br/> something special up your sleeve!</h5>
+          <p style={{ color: "#666", fontSize: "1.20rem" }}>
             Do you have a story to share?<br />
             Need a platform to amplify your journey?<br />
             Or know someone whose story deserves more recognition?
@@ -77,11 +78,12 @@ const ShareYourSpotlight = () => {
           <Link to="https://docs.google.com/forms/d/e/1FAIpQLSeW3IfgzGfq6p3zpRrd2ltp2URzFy9av5GBV07svhRgmd64jg/viewform">
   <Button
     style={{
-      backgroundColor: "white",
+      backgroundColor: "rgba(15,48,82,0.95)",
       border: "none",
       borderRadius: "8px",
       padding: "10px 24px",
-      color: "#0f3052",
+      color: "white",
+      fontWeight:"bold"
     }}
   >
     Submit Your Story
@@ -133,14 +135,12 @@ const ShareYourSpotlight = () => {
       </Row>
     </Container>
 
-    <Container
+<Container
       fluid
       className="py-5 px-3"
       style={{
-        backgroundImage: "url('/shareYourStory.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        backgroundColor: "#0f3052",
+        backgroundImage: "linear-gradient(135deg, rgba(15,48,82,0.95), rgba(9,30,52,0.95))",
       }}
     >
       <Row
@@ -156,7 +156,7 @@ const ShareYourSpotlight = () => {
           <h2 className="fw-bold" style={{ color: "#ffffff" }}>
             Submit your story now or get in touch with us!
           </h2>
-          <p className="my-3" style={{ color: "#ccc", maxWidth: "100%" }}>
+          <p className="my-3" style={{ color: "#ccc", maxWidth: "100%",fontSize:"20px" }}>
             Our executive team will carefully curate your submission and give it the attention it truly deserves
           </p>
           <Link to="https://docs.google.com/forms/d/e/1FAIpQLSeW3IfgzGfq6p3zpRrd2ltp2URzFy9av5GBV07svhRgmd64jg/viewform">
@@ -167,6 +167,7 @@ const ShareYourSpotlight = () => {
       borderRadius: "8px",
       padding: "10px 24px",
       color: "#0f3052",
+      fontWeight:"bold"
     }}
   >
     Submit Your Story
